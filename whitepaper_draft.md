@@ -43,7 +43,7 @@ Challenges and subspecies
 
 Use beyond trait analyses
 
-Taxonomic level resolution: some traits will be assessed on family or genus level
+Taxonomic level resolution: some traits will be assessed on family or genus level. This information can be later used for trait prediction of higher taxonomic resolution using hierarchical probabilistic matrix factorization (Shan et al 2012, Schrodt et al 2015).  
 
 Maintainance of this list is with BExIS and a group of curators for different taxonomic groups.
 
