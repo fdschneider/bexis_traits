@@ -1,0 +1,8 @@
+UniqueID;AcceptedSpeciesID;OriginalSpeciesID;Sex;LifeStage;Morphotype;SampleOrigin;ExploPlotID;TraitID;Value;NrIndividuals;Variance;MinValue;MaxValue;TypeofSource;SourceDescription;Author;Date;DatasetID;DataQuality
+;;;male;Larvae;Winged;Exploratories;AEW01;Body_length;0.5;1;NA;NA;NA;Measurement;Measurement with Leica;John Doe;01.01.2017;Dataset_01;High
+;;;female;Puppae;Unwinged;Museum;NA;;;;;;;;;;;;Low
+;;;hermaphrodite;Subadult;;;;;;;;;;;;;;;Unknown
+;;;unknown;Adult;;;;;;;;;;;;;;;
+;;;;Instar_1;;;;;;;;;;;;;;;
+;;;;Instar_2;;;;;;;;;;;;;;;
+;;;;Instar_3;;;;;;;;;;;;;;;
