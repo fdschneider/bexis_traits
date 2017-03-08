@@ -1,2 +1,7 @@
-TraitID,Unit,MaxAllowedValue,MinAllowedValue,FactorLevels
-Body_length,cm,999,0,NA
+TraitId,Grouplist,Traitname,traitclass,Unit,MaxAllowedValue,MinAllowedValue,FactorLevels,Definition
+A1,arthropods,Body_length,lifehistory,cm,999,0,NA,"total body length including head and abdomen, "
+B1,birds,,morphometric,,,,,
+M12,mammals,,phenological,,,,,
+P4,plants,,habitat,,,,,
+F34,fungi,,,,,,,
+P2,protists,,,,,,,
