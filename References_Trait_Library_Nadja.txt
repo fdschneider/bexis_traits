@@ -1,0 +1,2080 @@
+﻿@book{FHL_I,
+   title = {Die Käfer Mitteleuropas Erster Supplementband mit Katalogteil},
+   address = {Krefeld},
+   volume = {12},
+   year = {1989},
+   type = {Book}
+}
+
+@book{FHL_II,
+   title = {Die Käfer Mitteleuropas. Zweiter Supplementband mit Katalogteil},
+   address = {Krefeld},
+   volume = {13},
+   year = {1992},
+   type = {Book}
+}
+
+@book{FHL_III,
+   title = {Die Käfer Mitteleuropas. Dritter Supplementband mit Katalogteil},
+   address = {Krefeld},
+   volume = {14},
+   year = {1993},
+   type = {Book}
+}
+
+@book{FHL_IV,
+   title = {Die Käfer Mitteleuropas. Vierter Supplementband},
+   address = {Jena},
+   volume = {15},
+   year = {1998},
+   type = {Book}
+}
+
+@book{Aspöck1980,
+   author = {Aspöck, H. and Aspöck, U. and Hölzel, H.},
+   title = {Die Neuropteren Europas},
+   address = {Krefeld},
+   volume = {1-2},
+   year = {1980},
+   type = {Book}
+}
+
+@article{Aubin2013,
+   author = {Aubin, Isabelle and Venier, Lisa and Pearce, Jennie and Moretti, Marco},
+   title = {Can a trait-based multi-taxa approach improve our assessment of forest management impact on biodiversity?},
+   journal = {Biodiversity and Conservation},
+   volume = {22},
+   number = {12},
+   pages = {2957-2975},
+   ISSN = {0960-3115
+1572-9710},
+   DOI = {10.1007/s10531-013-0565-6},
+   year = {2013},
+   type = {Journal Article}
+}
+
+@article{Augenstein2012,
+   author = {Augenstein, B. and Ulrich, W. and Habel, J. C.},
+   title = {Directional temporal shifts in community structure of butterflies and ground beetles in fragmented oligotrophic grasslands of Central Europe},
+   journal = {Basic and Applied Ecology},
+   volume = {13},
+   number = {8},
+   pages = {715-724},
+   abstract = {Oligotrophic calcareous grasslands are among the most species-rich habitats in temperate Europe. Land use changes caused a severe decline of these species-rich grasslands over the last decades. Today, these ecosystems exist as highly isolated and small remnants being threatened by abandonment, afforestation and the transformation into agricultural land. Local conservation activities caused changes in habitat structures within such oligotrophic calcareous grasslands and their often isolated character may have led to stochastic species extinctions due to population fluctuations. In this study we focus on potential changes of grassland biota over the past decades. We analyse retrospective species inventories (14 for carabid beetles and 7 for butterflies) from calcareous grasslands located in western Germany with adjoining parts of Luxembourg over a period from 1972 to 2011. Our data indicate two distinct temporal cohorts (past versus present) that differ strongly in the composition and structure of carabid beetles and butterfly communities. Patterns of species co-occurrences tended to be segregated in the past communities while the co-occurrences in recent communities were either random or aggregated. beta-Diversity increased with time. Our results indicate a temporal shift from past communities dominated by species interactions towards recent neutral assemblages. These changes might be caused by diverging conservation management being restricted to local sites. This resulted in a higher diversity of environmental structures combined with a loss of grassland habitats and declining matrix permeability. However, we detected no loss of rare carabid beetles, while butterflies showed severe extinctions of species with specific habitat demands, high endangerment and/or low dispersal behaviour. These trends let us argue that carabid communities mirror local changes in habitat structure (caused by conservation action), while butterflies show additional effects due to environmental stochasticity, local extinctions and a subsequent lack of re-colonization from adjoining populations.},
+   keywords = {Fragmented grasslands
+Species communities
+Nonmetric multidimensional
+scaling analyses
+Nestedness
+Species co-occurrence
+Butterflies
+Carabid beetles
+null model analysis
+species-abundance distributions
+calcareous
+grasslands
+environmental-conditions
+nestedness analysis
+landscape
+restoration
+responses
+patterns
+cooccurrence},
+   ISSN = {1439-1791},
+   DOI = {10.1016/j.baae.2012.09.004},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@article{Batary2012,
+   author = {Batary, P. and Holzschuh, A. and Orci, K. M. and Samu, F. and Tscharntke, T.},
+   title = {Responses of plant, insect and spider biodiversity to local and landscape scale management intensity in cereal crops and grasslands},
+   journal = {Agriculture, Ecosystems & Environment},
+   volume = {146},
+   number = {1},
+   pages = {130-136},
+   abstract = {The aim of this study was to determine the relative effects of landscape scale management intensity, agroecosystem type, local management intensity and edges on diversity patterns of functional groups of plants, carabid beetles, spiders and grasshoppers. Nine landscapes were selected differing in percent intensively used agricultural area (IAA), each with a pair of organic and conventional winter wheat fields and a pair of organic and conventional mown meadows. Within fields, plants were surveyed in the edge and in the interior. Carabid beetles and spiders were captured by funnel traps, while grasshoppers were sweep-netted in the meadows. Diversity patterns of study organisms were affected both by local variables (local management. agroecosystem type and within-field position) and by landscape scale management intensity. Species richness of grasses, presumably because of sowing low-diversity mixtures, and hunting spiders decreased with percent cover of IAA. Meadows differed from wheat fields in that they had higher species richness of forbs and grasses, as well as higher densities of hunting spiders. In contrast, more carabid individuals, especially of non-carnivore species, were captured in wheat fields. In field edges with their reduced management intensity and increased immigration, species richness of plants, carabids and spiders was higher than in the interiors regardless of agroecosystem type and management. Organic management enhanced forb richness and cover in both agroecosystem types. Organic management also increased grass cover in wheat fields, but not in meadows, and promoted species richness of non-carnivore carabids and hunting spiders, but not grasshoppers. The results show that agri-environmental management needs to be targeted to the agroecosystem's field size, because higher edge area led to higher species richness. Organic management affected several functional groups positively (forbs, non-carnivore carabids, hunting spiders), while lower landscape scale management intensity only increased species richness of grasses and spiders. The great differences in responses of functional groups to local cereal and grassland as well as landscape management suggest implementing more scale and group specific targets for agri-environmental schemes to improve their efficiency. (C) 2011 Elsevier B.V. All rights reserved.},
+   keywords = {Carabid beetles
+Functional groups
+Grasshoppers
+Meadows
+Organic
+management
+Species traits
+Wheat fields
+agri-environment schemes
+different spatial scales
+weed
+species-diversity
+land-use intensity
+agricultural landscapes
+farmland
+biodiversity
+contrasting responses
+european countries
+grazing
+intensity
+habitat diversity
+Agriculture
+Environmental Sciences & Ecology},
+   ISSN = {0167-8809},
+   DOI = {10.1016/j.agee.2011.10.018},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@book{Baur2006,
+   author = {Baur, Bertrand and Baur, Hannes and Roesti, Christian and Roesti, Daniel},
+   title = {Die Heuschrecken der Schweiz},
+   publisher = {Haupt Verlag},
+   address = {Bern},
+   year = {2006},
+   type = {Book}
+}
+
+@article{Bertzholtz2013,
+   author = {Betzholtz, Per-Eric and Franzén, Markus},
+   title = {Ecological characteristics associated with high mobility in night-active moths},
+   journal = {Basic and Applied Ecology},
+   volume = {14},
+   number = {3},
+   pages = {271-279},
+   abstract = {Mobility is an important factor influencing the range and persistence of local populations. However, mobility is very difficult to measure empirically and thus is poorly known in most taxa. Since ecological characteristics have been suggested as good estimators of mobility, we here explore the association between ecological characteristics and mobility. We surveyed night-active moths on a Swedish island, situated 16 km from the mainland, and compared ecological characteristics of the non-resident moths found on the island with those of a species pool of assumed potential vagrants from the neighbouring mainland. Species associated with high mobility were characterised by a large range, a high population density, an activity period during warm temperatures and by being habitat generalists or preferring open habitats. The generally assumed view of poly- and oligophagous species being more mobile than monophagous species was obscured by the effect of population density. Poly- and oligophagous species had higher population densities than did monophagous species, which probably explain their higher mobility found in this study. Our result highlights the need to consider the influence of ecological characteristics on mobility. This in turn will have implications for an increased understanding of distribution patterns, population persistence and how to prioritise conservation actions, especially since habitats and climate are under dramatic changes. In taxa where data on mobility are poor, ecological characteristics can be used as a proxy for mobility.},
+   keywords = {Dispersal
+Island
+Lepidoptera
+Life-history trait
+Light-trap
+Migration
+Moth
+Species trait
+Sweden},
+   ISSN = {1439-1791},
+   DOI = {http://dx.doi.org/10.1016/j.baae.2013.01.004},
+   year = {2013},
+   type = {Journal Article}
+}
+
+@article{Birkhofer2017,
+   author = {Birkhofer, Klaus and Bylund, Helena and Dalin, Peter and Ferlian, Olga and Gagic, Vesna and Hambäck, Peter A. and Klapwijk, Maartje and Mestre, Laia and Roubinet, Eve and Schroeder, Martin and Stenberg, Johan A. and Porcel, Mario and Björkman, Christer and Jonsson, Mattias},
+   title = {Methods to identify the prey of invertebrate predators in terrestrial field studies},
+   journal = {Ecology and Evolution},
+   ISSN = {20457758},
+   DOI = {10.1002/ece3.2791},
+   year = {2017},
+   type = {Journal Article}
+}
+
+@inbook{Birkhofer2013,
+   author = {Birkhofer, K. and Entling, Martin H. and Lubin, Yael},
+   title = {Agroecology: Trait composition, spatial relationships, trophic interactions},
+   booktitle = {Spider research in the 21st century},
+   editor = {Penney, D.},
+   publisher = {Siri Scientific Press},
+   address = {Manchester},
+   pages = {200-229},
+   year = {2013},
+   type = {Book Section}
+}
+
+@article{Birkhofer2017,
+   author = {Birkhofer, K. and Gossner, M. M. and Diekotter, T. and Drees, C. and Ferlian, O. and Maraun, M. and Scheu, S. and Weisser, W. W. and Wolters, V. and Wurst, S. and Zaitsev, A. S. and Smith, H. G.},
+   title = {Land-use type and intensity differentially filter traits in above- and below-ground arthropod communities},
+   journal = {J Anim Ecol},
+   abstract = {Along with the global decline of species richness goes a loss of ecological traits. Associated biotic homogenization of animal communities and narrowing of trait diversity threaten ecosystem functioning and human well-being. High management intensity is regarded as an important ecological filter, eliminating species that lack suitable adaptations. Below-ground arthropods are assumed to be less sensitive to such effects than above-ground arthropods. Here, we compared the impact of management intensity between (grassland vs. forest) and within land-use types (local management intensity) on the trait diversity and composition in below- and above-ground arthropod communities. We used data on 722 arthropod species living above-ground (Auchenorrhyncha and Heteroptera), primarily in soil (Chilopoda and Oribatida) or at the interface (Araneae and Carabidae). Our results show that trait diversity of arthropod communities is not primarily reduced by intense local land use, but is rather affected by differences between land-use types. Communities of Auchenorrhyncha and Chilopoda had significantly lower trait diversity in grassland habitats as compared to forests. Carabidae showed the opposite pattern with higher trait diversity in grasslands. Grasslands had a lower proportion of large Auchenorrhyncha and Carabidae individuals, whereas Chilopoda and Heteroptera individuals were larger in grasslands. Body size decreased with land-use intensity across taxa, but only in grasslands. The proportion of individuals with low mobility declined with land-use intensity in Araneae and Auchenorrhyncha, but increased in Chilopoda and grassland Heteroptera. The proportion of carnivorous individuals increased with land-use intensity in Heteroptera in forests and in Oribatida and Carabidae in grasslands. Our results suggest that gradients in management intensity across land-use types will not generally reduce trait diversity in multiple taxa, but will exert strong trait filtering within individual taxa. The observed patterns for trait filtering in individual taxa are not related to major classifications into above- and below-ground species. Instead, ecologically different taxa resembled each other in their trait diversity and compositional responses to land-use differences. These previously undescribed patterns offer an opportunity to develop management strategies for the conservation of trait diversity across taxonomic groups in permanent grassland and forest habitats.},
+   keywords = {biodiversity exploratories
+biotic homogenization
+ecological filters
+ecosystem functioning
+environmental filtering
+forest
+grassland
+soil animals
+trait composition
+trait diversity},
+   ISSN = {1365-2656 (Electronic)
+0021-8790 (Linking)},
+   DOI = {10.1111/1365-2656.12641},
+   year = {2017},
+   type = {Journal Article}
+}
+
+@article{Birkhofer2012,
+   author = {Birkhofer, K. and Schoning, I. and Alt, F. and Herold, N. and Klarner, B. and Maraun, M. and Marhan, S. and Oelmann, Y. and Wubet, T. and Yurkov, A. and Begerow, D. and Berner, D. and Buscot, F. and Daniel, R. and Diekotter, T. and Ehnes, R. B. and Erdmann, G. and Fischer, C. and Foesel, B. and Groh, J. and Gutknecht, J. and Kandeler, E. and Lang, C. and Lohaus, G. and Meyer, A. and Nacke, H. and Nather, A. and Overmann, J. and Polle, A. and Pollierer, M. M. and Scheu, S. and Schloter, M. and Schulze, E. D. and Schulze, W. and Weinert, J. and Weisser, W. W. and Wolters, V. and Schrumpf, M.},
+   title = {General relationships between abiotic soil properties and soil biota across spatial scales and different land-use types},
+   journal = {PLoS One},
+   volume = {7},
+   number = {8},
+   pages = {e43292},
+   abstract = {Very few principles have been unraveled that explain the relationship between soil properties and soil biota across large spatial scales and different land-use types. Here, we seek these general relationships using data from 52 differently managed grassland and forest soils in three study regions spanning a latitudinal gradient in Germany. We hypothesize that, after extraction of variation that is explained by location and land-use type, soil properties still explain significant proportions of variation in the abundance and diversity of soil biota. If the relationships between predictors and soil organisms were analyzed individually for each predictor group, soil properties explained the highest amount of variation in soil biota abundance and diversity, followed by land-use type and sampling location. After extraction of variation that originated from location or land-use, abiotic soil properties explained significant amounts of variation in fungal, meso- and macrofauna, but not in yeast or bacterial biomass or diversity. Nitrate or nitrogen concentration and fungal biomass were positively related, but nitrate concentration was negatively related to the abundances of Collembola and mites and to the myriapod species richness across a range of forest and grassland soils. The species richness of earthworms was positively correlated with clay content of soils independent of sample location and land-use type. Our study indicates that after accounting for heterogeneity resulting from large scale differences among sampling locations and land-use types, soil properties still explain significant proportions of variation in fungal and soil fauna abundance or diversity. However, soil biota was also related to processes that act at larger spatial scales and bacteria or soil yeasts only showed weak relationships to soil properties. We therefore argue that more general relationships between soil properties and soil biota can only be derived from future studies that consider larger spatial scales and different land-use types.},
+   keywords = {Animals
+Biomass
+*Biota
+Ecosystem
+Oligochaeta
+*Soil},
+   ISSN = {1932-6203 (Electronic)
+1932-6203 (Linking)},
+   DOI = {10.1371/journal.pone.0043292},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@article{Birkhofer2014,
+   author = {Birkhofer, Klaus and Wolters, Volkmar and Diekötter, Tim and Stewart, Alan and Bezemer, Martijn},
+   title = {Grassy margins along organically managed cereal fields foster trait diversity and taxonomic distinctness of arthropod communities},
+   journal = {Insect Conservation and Diversity},
+   volume = {7},
+   number = {3},
+   pages = {274-287},
+   ISSN = {1752458X},
+   DOI = {10.1111/icad.12051},
+   year = {2014},
+   type = {Journal Article}
+}
+
+@book{Blick2009,
+   author = {Blick, T.},
+   title = {Die Spinnen (Araneae) des Naturwaldreservats Goldbachs- und Ziebachsrück (Hessen). Untersuchungszeitraum 1994–1996},
+   publisher = {Mitteilungen der Hessischen Landesforstverwaltung},
+   volume = {45},
+   year = {2009},
+   type = {Book}
+}
+
+@article{Boersma2015,
+   author = {Boersma, Kate S. and Dee, Laura E. and Miller, Steve J. and Bogan, Michael Thomas and Lytle, David A. and Gitelman, Alix I.},
+   title = {Linking multidimensional functional diversity to quantitative methods: A graphical hypothesis-evaluation framework},
+   journal = {Ecology},
+   ISSN = {0012-9658},
+   DOI = {10.1890/15-0688.1},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{Brederveld2011,
+   author = {Brederveld, Robert J. and Jähnig, Sonja C. and Lorenz, Armin W. and Brunzel, Stefan and Soons, Merel B.},
+   title = {Dispersal as a limiting factor in the colonization of restored mountain streams by plants and macroinvertebrates},
+   journal = {Journal of Applied Ecology},
+   volume = {48},
+   number = {5},
+   pages = {1241-1250},
+   abstract = {1.Over the past centuries, European streams have been heavily influenced by humans through pollution and regulation. As a result, the quality and diversity of freshwater riparian habitats have declined strongly, and the diversity of riparian flora and fauna has decreased. Recent restoration measures have resulted in stream habitat improvements, but biodiversity improvements have failed to follow in fragmented streams. It has been suggested that dispersal limitation could play an important role in the lack of biodiversity improvement in restored streams, but to date, there is no conclusive evidence for this assumption. 2.In this study, we investigated whether colonization of restored streams by plants and macroinvertebrates is limited by dispersal. We hypothesized that colonization success increases with increasing availability of (nearby) source populations and with increasing ability of species to disperse over long distances. We related species composition in seven restored stream sections to species’ abundances in the surroundings and to species’ dispersal abilities. 3.For both plants and macroinvertebrates, colonization success is strongly related to the abundance of species in the local and regional species pools. 4.For plants, dispersal strategy has an additional influence on colonization success: short-lived plants with high production of small, well-dispersed seeds colonized best within the 3- to 5-year period after restoration. 5.The existence of dispersal strategy constraints could not be confirmed in macroinvertebrates, possibly because these are limited by a lack of connectivity on larger spatial scales. On the landscape scale, beneficial effects of increased plant diversity might further improve habitat suitability for macroinvertebrates. 6.Synthesis and applications. Dispersal appears to be a limiting factor for successful (re)colonization of restored streams in fragmented landscapes. In plants, this is attributed to limitations in seed dispersal abilities and likely to a lack of nearby source populations as well. In macroinvertebrates, lack of nearby source populations may also be a limiting factor. Hence, we suggest restoring landscape connectivity at larger spatial scales and optimizing the availability of near-natural ‘source’ areas in the vicinity of restoration projects, at least for plants, to improve the success of biodiversity restoration in fragmented habitats.},
+   keywords = {benthic invertebrates
+colonization success
+dispersal ability
+dispersal limitation
+recolonization
+regional species pool
+riparian flora and fauna
+stream restoration
+vegetation},
+   ISSN = {1365-2664},
+   DOI = {10.1111/j.1365-2664.2011.02026.x},
+   year = {2011},
+   type = {Journal Article}
+}
+
+@article{Burrows2008,
+   author = {Burrows, M. and Sutton, G. P.},
+   title = {The effect of leg length on jumping performance of short- and long-legged leafhopper insects},
+   journal = {Journal of Experimental Biology},
+   volume = {211},
+   number = {Pt 8},
+   pages = {1317-1325},
+   abstract = {To assess the effect of leg length on jumping ability in small insects, the jumping movements and performance of a sub-family of leafhopper insects (Hemiptera, Auchenorrhyncha, Cicadellidae, Ulopinae) with short hind legs were analysed and compared with other long-legged cicadellids (Hemiptera, Auchenorrhyncha, Cicadellidae). Two species with the same jumping characteristics but distinctively different body shapes were analysed: Ulopa, which had an average body length of 3 mm and was squat, and Cephalelus, which had an average body length of 13 mm with an elongated body and head. In both, the hind legs were only 1.4 times longer than the front legs compared with 1.9-2.3 times in other cicadellid leafhoppers. When the length of the hind legs was normalised relative to the cube root of their body mass, their hind legs had a value of 1-1.1 compared with 1.6-2.3 in other cicadellids. The hind legs of Cephalelus were only 20% of the body length. The propulsion for a jump was delivered by rapid and synchronous rotation of the hind legs about their coxo-trochanteral joints in a three-phase movement, as revealed by high-speed sequences of images captured at rates of 5000 s(-1). The hind tarsi were initially placed outside the lateral margins of the body and not apposed to each other beneath the body as in long-legged leafhoppers. The hind legs were accelerated in 1.5 ms (Ulopa) and 2 ms (Cephalelus) and thus more quickly than in the long-legged cicadellids. In their best jumps these movements propelled Ulopa to a take-off velocity of 2.3 m s(-1) and Cephalelus to 2 m s(-1), which matches that of the long-legged cicadellids. Both short-legged species had the same mean take-off angle of 56 degrees but Cephalelus adopted a lower angle of the body relative to the ground (mean 15 degrees) than Ulopa (mean 56 degrees). Once airborne, Cephalelus pitched slowly and rolled quickly about its long axis and Ulopa rotated quickly about both axes. To achieve their best performances Ulopa expended 7 microJ of energy, generated a power output of 7 mW, and exerted a force of 6 mN; Cephalelus expended 23 microJ of energy, generated a power output of 12 mW and exerted a force of 11 mN. There was no correlation between leg length and take-off velocity in the long- and short-legged species, but longer legged leafhoppers had longer take-off times and generated lower ground reaction forces than short-legged leafhoppers, possibly allowing the longer legged leafhoppers to jump from less stiff substrates.},
+   keywords = {Animals
+Extremities/anatomy & histology/*physiology
+Hemiptera/*anatomy & histology/*physiology/ultrastructure
+Lower Extremity/anatomy & histology/*physiology
+Movement
+Rotation},
+   ISSN = {0022-0949 (Print)
+0022-0949 (Linking)},
+   DOI = {10.1242/jeb.015354},
+   year = {2008},
+   type = {Journal Article}
+}
+
+@article{Cadotte2011,
+   author = {Cadotte, Marc W. and Carscadden, Kelly and Mirotchnick, Nicholas},
+   title = {Beyond species: functional diversity and the maintenance of ecological processes and services},
+   journal = {Journal of Applied Ecology},
+   volume = {48},
+   number = {5},
+   pages = {1079-1087},
+   abstract = {1. The goal of conservation and restoration activities is to maintain biological diversity and the ecosystem services that this diversity provides. These activities traditionally focus on the measures of species diversity that include only information on the presence and abundance of species. Yet how diversity influences ecosystem function depends on the traits and niches filled by species.
+2. Biological diversity can be quantified in ways that account for functional and phenotypic differences. A number of such measures of functional diversity (FD) have been created, quantifying the distribution of traits in a community or the relative magnitude of species similarities and differences. We review FD measures and why they are intuitively useful for understanding ecological patterns and are important for management.
+3. In order for FD to be meaningful and worth measuring, it must be correlated with ecosystem function, and it should provide information above and beyond what species richness or diversity can explain. We review these two propositions, examining whether the strength of the correlation between FD and species richness varies across differing environmental gradients and whether FD offers greater explanatory power of ecosystem function than species richness.
+4. Previous research shows that the relationship between FD and richness is complex and context dependent. Different functional traits can show individual responses to different gradients, meaning that important changes in diversity can occur with minimal change in richness. Further, FD can explain variation in ecosystem function even when richness does not.
+5. Synthesis and applications. FD measures those aspects of diversity that potentially affect community assembly and function. Given this explanatory power, FD should be incorporated into conservation and restoration decision-making, especially for those efforts attempting to reconstruct or preserve healthy, functioning ecosystems.},
+   keywords = {biodiversity conservation
+community assembly
+ecosystem function
+ecosystem services
+functional diversity
+restoration
+species richness
+ecosystem processes
+plant-communities
+trait diversity
+biodiversity
+richness
+patterns
+framework
+productivity
+environments
+consequences},
+   ISSN = {00218901},
+   DOI = {10.1111/j.1365-2664.2011.02048.x},
+   year = {2011},
+   type = {Journal Article}
+}
+
+@article{Carlucci2012,
+   author = {Carlucci, Marcos B. and Streit, Helena and Duarte, Leandro D.S. and Pillar, Valério D.},
+   title = {Individual-based trait analyses reveal assembly patterns in tree sapling communities},
+   journal = {Journal of Vegetation Science},
+   volume = {23},
+   number = {1},
+   pages = {176-186},
+   abstract = {Question: Are trait-convergence assembly patterns (TCAP) and/or traitdivergence assembly patterns (TDAP) of tree sapling communities related to microhabitat gradients in forest patches? If so, which traits are related to such patterns? What are the niche mechanisms potentially responsible for community assembly?
+
+Location: Grassland–forest mosaic in Serra do Sudeste region, southern Brazil (ca. 30.8°S, 53.1°W).
+
+Methods: We used individual-based trait information of 1132 tree saplings in 40 plots along gradients of canopy openness and grazing intensity in forest patches in southern Brazil. We used a trait-based approach, bypassing taxonomic identification, as a first assessment of sapling community assembly in forest patches.
+
+Results: Both TCAP and TDAP indicate nichemechanisms underlying assembly of tree sapling communities. Specific leaf area (SLA), mean leaf area (LA) and relative abundance of toothed leaf margin (TLM) maximized TCAP. SLA and TLMtended to increase undermore closed canopies,whereas LA had higher values at intermediate canopy openness. SLA and LA maximized TDAP and tended to vary more in more closed canopies, whereas SLA and presence of spines, which also maximized TDAP, showed higher variation under lower grazing intensity.
+
+Conclusion: The taxon-free approach was very useful to infer niche mechanisms of tree sapling assembly in forest patches. By adopting an individual-based trait approach, we assumed that both intra-specific and intra-population trait variability were relevant for revealing assembly patterns. We highlight that the use of individual-based trait data in ametacommunity framework is an excellent way to evaluate TCAP and TDAP at themetacommunity scale, since it takes into account the entire variation of traits throughout communities.},
+   keywords = {Araucaria angustifolia
+Assembly rules
+Biotic interactions
+Campos grassland
+Environmental filtering
+Limiting similarity
+Niche partitioning
+Trait convergence
+Trait divergence},
+   ISSN = {1100-9233},
+   DOI = {10.1111/j.1654-1103.2011.01339.x},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@article{Chown2010,
+   author = {Chown, S. L. and Gaston, K. J.},
+   title = {Body size variation in insects: a macroecological perspective},
+   journal = {Biol Rev Camb Philos Soc},
+   volume = {85},
+   number = {1},
+   pages = {139-169},
+   abstract = {Body size is a key feature of organisms and varies continuously because of the effects of natural selection on the size-dependency of resource acquisition and mortality rates. This review provides a critical and synthetic overview of body size variation in insects from a predominantly macroecological (large-scale temporal and spatial) perspective. Because of the importance of understanding the proximate determinants of adult size, it commences with a brief summary of the physiological mechanisms underlying adult body size and its variation, based mostly on findings for the model species Drosophila melanogaster and Manduca sexta. Variation in nutrition and temperature have variable effects on critical weight, the interval to cessation of growth (or terminal growth period) and growth rates, so influencing final adult size. Ontogenetic and phylogenetic variation in size, compensatory growth, scaling at the intra- and interspecific levels, sexual size dimorphism, and body size optimisation are then reviewed in light of their influences on individual and species body size frequency distributions. Explicit attention is given to evolutionary trends, including gigantism, Cope's rule and the rates at which size change has taken place, and to temporal ecological trends such as variation in size with succession and size-selectivity during the invasion process. Large-scale spatial variation in size at the intraspecific, interspecific and assemblage levels is considered, with special attention being given to the mechanisms proposed to underlie clinal variation in adult body size. Finally, areas particularly in need of additional research are identified.},
+   keywords = {Animals
+Biological Evolution
+Ecosystem
+Insects/*anatomy & histology/*physiology},
+   ISSN = {1469-185X (Electronic)
+0006-3231 (Linking)},
+   DOI = {10.1111/j.1469-185X.2009.00097.x},
+   year = {2010},
+   type = {Journal Article}
+}
+
+@article{Cole2002,
+   author = {Cole, L. J. and McCracken, D. I. and Dennis, P. and Downie, I. S. and Griffin, A. L. and Foster, G. N. and Murphy, K. J. and Waterhouse, T.},
+   title = {Relationships between agricultural management and ecological groups of ground beetles (Coleoptera : Carabidae) on Scottish farmland},
+   journal = {Agriculture, Ecosystems & Environment},
+   volume = {93},
+   number = {1-3},
+   pages = {323-336},
+   abstract = {The primary aim of this research was to classify ground beetle species, collected from farmland habitats in Scotland, into distinct groups based on their ecological traits. The objective classification of 68 species on this basis, using multivariate analyses, identified seven distinct ecological groups that were primarily determined by size, diel activity and diet (e.g. large Carabus spp., nocturnal plant feeders and species feeding on Collembola). The influence of agricultural land use and management intensity on these ecological groups was then investigated. The percentage of both Carabus spp. and individuals was greater on heather moorland and semi-natural grassland sites than in intensively managed arable or grassland sites. The percentage of Carabus spp. was also adversely affected by intensive agricultural management. A higher percentage of carabids feed specifically on Collembola in intensive grassland sites than in arable or semi-natural grassland sites suggesting that Collembola were more available in intensive grassland. This study introduces a non-taxonomic method of classifying carabids on the basis of their ecology. Such classification methods not only enable influences of agriculture to be detected across broad ecological groups rather than being reliant on the presence of a few key indicator species, but may also help in predicting how such changes to the community structure may influence ecosystem functioning. (C) 2002 Elsevier Science B.V.. All rights reserved.},
+   keywords = {carabids
+function
+farmland
+ecology
+land use
+southern scotland
+feeding ecology
+arable farmland
+body form
+grasslands
+communities
+diversity
+land
+classification
+abundance},
+   ISSN = {0167-8809},
+   DOI = {10.1016/s0167-8809(01)00333-4},
+   year = {2002},
+   type = {Journal Article}
+}
+
+@article{Cornelissen2007,
+   author = {Cornelissen, J. H. and Lang, S. I. and Soudzilovskaia, N. A. and During, H. J.},
+   title = {Comparative cryptogam ecology: a review of bryophyte and lichen traits that drive biogeochemistry},
+   journal = {Annals of Botany},
+   volume = {99},
+   number = {5},
+   pages = {987-1001},
+   abstract = {BACKGROUND: Recent decades have seen a major surge in the study of interspecific variation in functional traits in comparative plant ecology, as a tool to understanding and predicting ecosystem functions and their responses to environmental change. However, this research has been biased almost exclusively towards vascular plants. Very little is known about the role and applicability of functional traits of non-vascular cryptogams, particularly bryophytes and lichens, with respect to biogeochemical cycling. Yet these organisms are paramount determinants of biogeochemistry in several biomes, particularly cold biomes and tropical rainforests, where they: (1) contribute substantially to above-ground biomass (lichens, bryophytes); (2) host nitrogen-fixing bacteria, providing major soil N input (lichens, bryophytes); (3) control soil chemistry and nutrition through the accumulation of recalcitrant polyphenols (bryophytes) and through their control over soil and vegetation hydrology and temperatures; (4) both promote erosion (rock weathering by lichens) and prevent it (biological crusts in deserts); (5) provide a staple food to mammals such as reindeer (lichens) and arthropodes, with important feedbacks to soils and biota; and (6) both facilitate and compete with vascular plants. APPROACH: Here we review current knowledge about interspecific variation in cryptogam traits with respect to biogeochemical cycling and discuss to what extent traits and measuring protocols needed for bryophytes and lichens correspond with those applied to vascular plants. We also propose and discuss several new or recently introduced traits that may help us understand and predict the control of cryptogams over several aspects of the biogeochemistry of ecosystems. CONCLUSIONS: Whilst many methodological challenges lie ahead, comparative cryptogam ecology has the potential to meet some of the important challenges of understanding and predicting the biogeochemical and climate consequences of large-scale environmental changes driving shifts in the cryptogam components of vegetation composition.},
+   keywords = {Bryophyta/*physiology
+Carbon/metabolism
+Ecology
+*Ecosystem
+Lichens/*physiology
+Nitrogen Fixation
+Soil},
+   ISSN = {0305-7364 (Print)
+0305-7364 (Linking)},
+   DOI = {10.1093/aob/mcm030},
+   year = {2007},
+   type = {Journal Article}
+}
+
+@article{deBello2011,
+   author = {de Bello, F. and Lavorel, S. and Albert, C. H. and Thuiller, W. and Grigulis, K. and Dolezal, J. and Janecek, S. and Leps, J.},
+   title = {Quantifying the relevance of intraspecific trait variability for functional diversity},
+   journal = {Methods in Ecology and Evolution},
+   volume = {2},
+   number = {2},
+   pages = {163-174},
+   abstract = {P>1. Intraspecific trait variability is a crucial, often neglected, component of functional diversity (FD) in ecological communities. In particular, uncertainty remains as to the importance of intraspecific variability in the quantification of FD. 2. To explore this uncertainty, we propose two methods addressing two critical and complementary, but largely unexplored, questions: (i) what is the extent of within- vs. between-species FD in different communities? and (ii) to what extent is the response of FD to environment because of compositional turnover vs. intraspecific trait variability across habitats? The methods proposed to address these questions are built on a variance partitioning approach and have the advantage of including species relative abundance, therefore taking into account species dominance and rarity. For each of the questions, we illustrate one dedicated case study in semi-natural grasslands with associated sampling strategies. 3. The decomposition of total community variance into within- vs. between-species effects can be implemented in a manner similar to the decomposition of quadratic entropy on pairwise individual dissimilarity. The approach can be applied with single and multiple traits, although it proves more informative for single traits. It can prove particularly useful when assessing the role of different sources of trait variability in the assembly of communities. 4. The assessment of the relative contribution of intraspecific trait variability and species turnover to the response of FD to environment is based on a variance partitioning comparing FD indices computed (i) either using individuals measured in a specific habitat alone (FDhabitat) or (ii) all individuals measured across different habitats (FDfixed). This approach provides a more complete understanding of the response of FD to environment. 5. We further propose a guide to apply these two methods and to choose the most suitable method for intraspecific trait measurements. Assessing the role of intraspecific trait variability should allow a more comprehensive understanding of the processes that link species and ecosystems.},
+   keywords = {biodiversity
+community dynamics
+grassland management
+mass-ratio
+hypothesis
+repeated measures
+trait convergence and divergence
+trait
+intraspecific variability
+variance partitioning
+land-use change
+ecosystem processes
+quadratic entropy
+multiple
+traits
+plant traits
+leaf traits
+dry forest
+community
+framework
+plasticity},
+   ISSN = {2041-210X},
+   DOI = {10.1111/j.2041-210X.2010.00071.x},
+   year = {2011},
+   type = {Journal Article}
+}
+
+@article{Debastiani2012,
+   author = {Debastiani, Vanderlei J. and Pillar, Valério D.},
+   title = {SYNCSA—R tool for analysis of metacommunities based on functional traits and phylogeny of the community components},
+   journal = {Bioinformatics},
+   volume = {28},
+   number = {15},
+   pages = {2067-2068},
+   abstract = {Summary: SYNCSA is an R package for the analysis of metacommunities based on functional traits and phylogeny of the community components. It offers tools to calculate several matrix correlations that express trait-convergence assembly patterns, traitdivergence assembly patterns and phylogenetic signal in functional traits at the species pool level and at the metacommunity level.
+Availability and implementation: SYNCSA is a package for the R environment, under a GPL-2 open-source license and freely available on CRAN official web server for R (http://cran.r-project.org).},
+   keywords = {*Biota
+Computational Biology/methods
+Ecology/*methods
+*Phylogeny
+*Software},
+   ISSN = {1367-4811 (Electronic)
+1367-4803 (Linking)},
+   DOI = {10.1093/bioinformatics/bts325},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@article{Boer1990,
+   author = {den Boer, P. J.},
+   title = {The survival value of dispersal in terrestrial arthropods},
+   journal = {Biological Conservation},
+   volume = {54},
+   number = {3},
+   pages = {175-192},
+   keywords = {Biodiversity & Conservation
+Environmental Sciences & Ecology},
+   ISSN = {00063207},
+   DOI = {10.1016/0006-3207(90)90050-y},
+   year = {1990},
+   type = {Journal Article}
+}
+
+@article{Diaz2013,
+   author = {Díaz, Sandra and Purvis, Andy and Cornelissen, Johannes H. C. and Mace, Georgina M. and Donoghue, Michael J. and Ewers, Robert M. and Jordano, Pedro and Pearse, William D.},
+   title = {Functional traits, the phylogeny of function, and ecosystem service vulnerability},
+   journal = {Ecology and Evolution},
+   volume = {3},
+   number = {9},
+   pages = {2958-2975},
+   abstract = {People depend on benefits provided by ecological systems. Understanding how these ecosystem services - and the ecosystem properties underpinning them - respond to drivers of change is therefore an urgent priority. We address this challenge through developing a novel risk-assessment framework that integrates ecological and evolutionary perspectives on functional traits to determine species' effects on ecosystems and their tolerance of environmental changes. We define Specific Effect Function (SEF) as the per-gram or per capita capacity of a species to affect an ecosystem property, and Specific Response Function (SRF) as the ability of a species to maintain or enhance its population as the environment changes. Our risk assessment is based on the idea that the security of ecosystem services depends on how effects (SEFs) and tolerances (SRFs) of organisms - which both depend on combinations of functional traits - correlate across species and how they are arranged on the species' phylogeny. Four extreme situations are theoretically possible, from minimum concern when SEF and SRF are neither correlated nor show a phylogenetic signal, to maximum concern when they are negatively correlated (i.e., the most important species are the least tolerant) and phylogenetically patterned (lacking independent backup). We illustrate the assessment with five case studies, involving both plant and animal examples. However, the extent to which the frequency of the four plausible outcomes, or their intermediates, apply more widely in real-world ecological systems is an open question that needs empirical evidence, and suggests a research agenda at the interface of evolutionary biology and ecosystem ecology.},
+   keywords = {Biodiversity loss
+ecosystem vulnerability
+functional traits
+phylogenetic conservatism
+specific effect function
+specific response function},
+   ISSN = {2045-7758},
+   DOI = {10.1002/ece3.601},
+   year = {2013},
+   type = {Journal Article}
+}
+
+@article{Dray2008,
+   author = {Dray, Stéphane and Legendre, Pierre},
+   title = {Testing the species traits-environment relationships: the fourth-corner problem revisited},
+   journal = {Ecology},
+   volume = {89},
+   number = {12},
+   pages = {3400-3412},
+   abstract = {Functional ecology aims at determining the relationships between species traits and environmental variables in order to better understand biological processes in ecosystems. From a methodological point of view, this biological objective calls for a method linking three data matrix tables: a table L with abundance or presence-absence values for species at a series of sites, a table R with variables describing the environmental conditions of the sites, and a table Q containing traits (e.g., morphological or behavioral attributes) of the species. Ten years ago, the fourth-corner method was proposed to measure and test the relationships between species traits and environmental variables using tables R, L, and Q simultaneously. In practice, this method is rarely used. The major reasons for this lack of interest are the restriction of the original method and program to presence-absence data in L and to the analysis of a single trait and a single environmental variable at a time. Moreover, ecologists often have problems in choosing a permutation model among the four originally proposed. In this paper, we revisit the fourth-corner method and propose improvements to the original approach. First, we present an extension to measure the link between species traits and environmental variables when the ecological community is described by abundance data. A new multivariate fourth-corner statistic is also proposed. Then, using numerical simulations, we discuss and evaluate the existing testing procedures. A new two-step testing procedure is presented. We hope that these elements will help ecologists use the best possible methodology to analyze this type of ecological problem.},
+   keywords = {Animals
+Data Collection
+Ecology/*methods/*statistics & numerical data
+*Ecosystem
+*Environment
+*Models, Biological
+Population Dynamics
+Species Specificity
+*Statistics as Topic},
+   ISSN = {0012-9658},
+   year = {2008},
+   type = {Journal Article}
+}
+
+@article{Duarte2011,
+   author = {Duarte, Leandro D.S. and Carlucci, M. B. and Fontana, C. S. and Hartz, S. M. and Pillar, Valério D.},
+   title = {Plant diaspore traits as indicators of mutualistic interactions in woody vegetation patches developing into a grassland-forest mosaic},
+   journal = {Community Ecology},
+   volume = {12},
+   number = {1},
+   pages = {126-134},
+   abstract = {We evaluated the functional relevance of diaspore traits related to disperser attraction (DAT) of woody plants as indicators of plant-disperser mutualisms in the colonization of Araucaria forest patches in southern Brazil. Diaspores of colonizer plant genera were characterized in relation to DAT (diaspore type, size and color). We discriminated the influences of phylogenetic relationships among plant genera, forest patch size and interaction records with frugivorous birds on DAT by using variation partitioning based on Redundancy Analysis (RDA). DAT variation was poorly explained by each factor separately. Nonetheless, variation explanation shared between phylogeny and interactions was considerably high, indicating that the influence of interactions with frugivorous birds on DAT tended to be phylogenetically conserved. Furthermore, the variation related to patch size was high only when shared with phylogeny and interactions. Large, red, orange or brown diaspores, mainly berries and figs were related to more developed patches, while small to medium, violet or black drupes were related to small patches. Patch colonization is likely to result from a balance between plant responses to habitat conditions and plant diaspore traits, which is expected to influence seed deposition patterns depending on habitat use and diaspore handling by dispersers. Although phylogenetic habitat filtering is commonly thought to reflect ecophysiological plant traits, our results suggest that interactions with dispersers could also explain phylogenetic habitat filtering in plants.},
+   keywords = {Araucaria forest
+Community phylogenetics
+Forest patch nucleation
+Niche conservatism
+Plant colonization},
+   ISSN = {1585-8553},
+   DOI = {10.1556/ComEc.12.2011.1.15},
+   year = {2011},
+   type = {Journal Article}
+}
+
+@article{Entling2007,
+   author = {Entling, Wiebke and Schmidt, Martin H. and Bacher, Sven and Brandl, Roland and Nentwig, Wolfgang},
+   title = {Niche properties of Central European spiders: shading, moisture and the evolution of the habitat niche},
+   journal = {Global Ecology and Biogeography},
+   volume = {16},
+   number = {4},
+   pages = {440-448},
+   abstract = {Aim Niche theory emphasizes the importance of environmental conditions for the distribution and abundance of species. Using a macroecological approach our study aimed at identifying the important environmental gradients for spiders. We generated numerical values of niche position and niche width. We also investigated relationships between these niche properties as well as the degree of phylogenetic conservatism in order to draw conclusions about the evolution of the habitat niche.
+Location Central Europe: lowlands of Austria, Belgium, Germany, Luxembourg, the Netherlands and Switzerland.
+Methods We analysed 244 published spider communities from 70 habitat types by correspondence analysis. The resulting community scores were used to test for correlations with habitat characteristics. Species scores were used to derive niche position (mean scores) and niche width (standard deviation of scores). To test for niche conservatism we estimated variance components across the taxonomic hierarchy.
+Results The first two axes of the correspondence analysis were correlated with shading and moisture, respectively. Niche width had a hump-shaped relationship to both environmental gradients. beta-diversity was strikingly higher in open habitats than in forests. Habitat niche conservatism was lower than phylogenetic conservatism in body size.
+Main conclusions Environmental factors are important drivers for the beta-diversity of spiders, especially across open habitats. This underlines the importance of preserving the whole range of moisture conditions in open habitats. Narrow niches of species occurring at the ends of both environmental gradients indicate that adaptations to extreme habitats lead to constraints in ecological flexibility. Nevertheless, the habitat niche of species seems to evolve much faster than morphological or physiological traits.},
+   keywords = {araneae
+correspondence analysis
+environmental gradients
+habitat specialization
+habitat types
+indirect gradient analysis
+niche position
+niche width
+spiders
+ecology
+birds
+diversity
+araneae
+traits
+conservation
+assemblages
+gradient
+breadth},
+   ISSN = {1466-822X
+1466-8238},
+   DOI = {10.1111/j.1466-8238.2006.00305.x},
+   year = {2007},
+   type = {Journal Article}
+}
+
+@article{Ernst2012,
+   author = {Ernst, Raffael and Keller, Alexander and Landburg, Gwendolyn and Grafe, T. Ulmar and Linsenmair, K. Eduard and Rödel, Mark-Oliver and Dziock, Frank},
+   title = {Common ancestry or environmental trait filters: cross-continental comparisons of trait-habitat relationships in tropical anuran amphibian assemblages},
+   journal = {Global Ecology and Biogeography},
+   volume = {21},
+   number = {7},
+   pages = {704-715},
+   abstract = {Aim To investigate whether traithabitat relations in biological communities converge across three global regions. The goal is to assess the role of habitat templets in shaping trait assemblages when different assembly mechanisms are operating and to test whether traithabitat relations reflect a common evolutionary history or environmental trait filters. Location Guiana Shield, South America; Upper Guinea Forest Block, West Africa; Borneo rain forests, Southeast Asia. Methods We compared large anuran amphibian data sets at both the regional and cross-continental scale. We applied a combination of three-table ordinations (RLQ) and permutation model-based multivariate fourth-corner statistics to test for traithabitat relationships at both scales and used phylogenetic comparative methods to quantify phylogenetic signal in traits that enter these analyses. Results Despite the existence of significant traithabitat links and congruent trait patterns, we did not find evidence for the existence of a universal traithabitat relationship at the assemblage level and no clear sign for cross-continental convergence of traithabitat relations. Patterns rather varied between continents. Despite the fact that a number of traits were conserved across phylogenies, the phylogenetic signal varied between regions. Traithabitat relations therefore not only reflect a common evolutionary history, but also more recently operating environmental trait filters that ultimately determine the trait composition in regional assemblages. Main conclusions Integrating traithabitat links into analyses of biological assemblages can enhance the predictive power and general application of species assembly rules in community and macroecology, particularly when phylogenetic comparative methods are simultaneously applied. However, in order to predict trait composition based on habitat templets, traithabitat links cannot be assumed to be universal but rather have to be individually established in different regions prior to model building. Only then can direct trait-based approaches be useful tools for predicting fundamental community patterns.},
+   keywords = {amphibian assemblages
+environmental filters
+fourth-corner
+habitat templets
+phylogeny
+south america
+southeast asia
+trait-based community ecology
+trait-environment relationships
+west africa
+species traits
+community ecology
+functional diversity
+frog assemblages
+convergence
+variables
+forest
+divergence
+strategies
+phylogeny},
+   ISSN = {1466822X},
+   DOI = {10.1111/j.1466-8238.2011.00719.x},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@article{Fontaine2006,
+   author = {Fontaine, Colin and Dajoz, Isabelle and Meriguet, Jacques and Loreau, Michel},
+   title = {Functional diversity of plant-pollinator interaction webs enhances the persistence of plant communities},
+   journal = {Plos Biology},
+   volume = {4},
+   number = {1},
+   pages = {e1},
+   abstract = {Pollination is exclusively or mainly animal mediated for 70% to 90% of angiosperm species. Thus, pollinators provide an essential ecosystem service to humankind. However, the impact of human-induced biodiversity loss on the functioning of plant-pollinator interactions has not been tested experimentally. To understand how plant communities respond to diversity changes in their pollinating fauna, we manipulated the functional diversity of both plants and pollinators under natural conditions. Increasing the functional diversity of both plants and pollinators led to the recruitment of more diverse plant communities. After two years the plant communities pollinated by the most functionally diverse pollinator assemblage contained about 50% more plant species than did plant communities pollinated by less-diverse pollinator assemblages. Moreover, the positive effect of functional diversity was explained by a complementarity between functional groups of pollinators and plants. Thus, the functional diversity of pollination networks may be critical to ecosystem sustainability.},
+   keywords = {Animals
+*Bees/anatomy & histology/physiology
+Biodiversity
+*Diptera/anatomy & histology/physiology
+*Ecosystem
+Lotus/anatomy & histology/physiology
+Matricaria/anatomy & histology/physiology
+Medicago sativa/anatomy & histology/physiology
+Mimulus/anatomy & histology/physiology
+*Plant Physiological Phenomena
+Pollen/*physiology
+Raphanus/anatomy & histology/physiology
+Reproduction/physiology
+Seeds/physiology},
+   ISSN = {1544-9173},
+   DOI = {10.1371/journal.pbio.0040001.g004},
+   year = {2006},
+   type = {Journal Article}
+}
+
+@article{Forister2015,
+   author = {Forister, M. L. and Novotny, V. and Panorska, A. K. and Baje, L. and Basset, Y. and Butterill, P. T. and Cizek, L. and Coley, P. D. and Dem, F. and Diniz, I. R. and Drozd, P. and Fox, M. and Glassmire, A. E. and Hazen, R. and Hrcek, J. and Jahner, J. P. and Kaman, O. and Kozubowski, T. J. and Kursar, T. A. and Lewis, O. T. and Lill, J. and Marquis, R. J. and Miller, S. E. and Morais, H. C. and Murakami, M. and Nickel, H. and Pardikes, N. A. and Ricklefs, R. E. and Singer, M. S. and Smilanich, A. M. and Stireman, J. O. and Villamarin-Cortez, S. and Vodka, S. and Volf, M. and Wagner, D. L. and Walla, T. and Weiblen, G. D. and Dyer, L. A.},
+   title = {The global distribution of diet breadth in insect herbivores},
+   journal = {Proceedings of the National Academy of Sciences of the United States of America},
+   volume = {112},
+   number = {2},
+   pages = {442-447},
+   abstract = {Understanding variation in resource specialization is important for progress on issues that include coevolution, community assembly, ecosystem processes, and the latitudinal gradient of species richness. Herbivorous insects are useful models for studying resource specialization, and the interaction between plants and herbivorous insects is one of the most common and consequential ecological associations on the planet. However, uncertainty persists regarding fundamental features of herbivore diet breadth, including its relationship to latitude and plant species richness. Here, we use a global dataset to investigate host range for over 7,500 insect herbivore species covering a wide taxonomic breadth and interacting with more than 2,000 species of plants in 165 families. We ask whether relatively specialized and generalized herbivores represent a dichotomy rather than a continuum from few to many host families and species attacked and whether diet breadth changes with increasing plant species richness toward the tropics. Across geographic regions and taxonomic subsets of the data, we find that the distribution of diet breadth is fit well by a discrete, truncated Pareto power law characterized by the predominance of specialized herbivores and a long, thin tail of more generalized species. Both the taxonomic and phylogenetic distributions of diet breadth shift globally with latitude, consistent with a higher frequency of specialized insects in tropical regions. We also find that more diverse lineages of plants support assemblages of relatively more specialized herbivores and that the global distribution of plant diversity contributes to but does not fully explain the latitudinal gradient in insect herbivore specialization.},
+   ISSN = {1091-6490 (Electronic)
+0027-8424 (Linking)},
+   DOI = {10.1073/pnas.1423042112},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{Forsman2015,
+   author = {Forsman, A. and Betzholtz, P. E. and Franzen, M.},
+   title = {Variable coloration is associated with dampened population fluctuations in noctuid moths},
+   journal = {Proceedings of the Royal Society B-Biological Sciences},
+   volume = {282},
+   number = {1808},
+   pages = {20142922},
+   abstract = {Theory and recent reviews state that greater genetic and phenotypic variation should be beneficial for population abundance and stability. Experimental evaluations of this prediction are rare, of short duration and conducted under controlled environmental settings. The question whether greater diversity in functionally important traits stabilizes populations under more complex ecological conditions in the wild has not been systematically evaluated. Moths are mainly nocturnal, with a large variation in colour patterns among species, and constitute an important food source for many types of organisms. Here, we report the results of a long-term (2003-2013) monitoring study of 115 100 noctuid moths from 246 species. Analysis of time-series data provide rare evidence that species with higher levels of inter-individual variation in colour pattern have higher average abundances and undergo smaller between-year fluctuations compared with species having less variable colour patterns. The signature of interspecific temporal synchronization of abundance fluctuations was weak, suggesting that the dynamics were driven by species-specific biotic interactions rather than by some common, density-independent factor(s). We conclude that individual variation in colour patterns dampens population abundance fluctuations, and suggest that this may partly reflect that colour pattern polymorphism provides protection from visually oriented predators and parasitoids.},
+   keywords = {colour polymorphism
+dynamics
+ecological diversity
+moths
+noctuidae
+population fluctuations},
+   ISSN = {1471-2954 (Electronic)
+0962-8452 (Linking)},
+   DOI = {10.1098/rspb.2014.2922},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@book{Freude1976,
+   author = {Freude, H. and Harde, K. and Lohse, G. and Lucht, W.},
+   title = {Die Käfer Mitteleuropas},
+   publisher = {Spektrum Akademischer Verlag},
+   address = {Heidelberg},
+   volume = {1-15},
+   year = {1976},
+   type = {Book}
+}
+
+@book{Freude1964,
+   author = {Freude, H. and Warde, K. W. and Lohse, G. A.},
+   title = {Die Käfer Mitteleuropas},
+   address = {Krefeld},
+   volume = {1-11},
+   year = {1964-1983},
+   type = {Book}
+}
+
+@article{Garnier2001,
+   author = {Garnier, E. and Laurent, G. and Bellmann, A. and Debain, S. and Berthelier, P. and Ducout, B. and Roumet, C. and Navas, M. L.},
+   title = {Consistency of species ranking based on functional leaf traits},
+   journal = {New Phytologist},
+   volume = {152},
+   number = {1},
+   pages = {69-83},
+   ISSN = {0028646X
+14698137},
+   DOI = {10.1046/j.0028-646x.2001.00239.x},
+   year = {2001},
+   type = {Journal Article}
+}
+
+@article{Gibb2006,
+   author = {Gibb, H. and Hjältén, J. and Ball, John P. and Pettersson, R. B. and Landin, J. and Alvini, O. and Danell, K.},
+   title = {Wing loading and habitat selection in forest beetles: Are red-listed species poorer dispersers or more habitat-specific than common congenerics?},
+   journal = {Biological Conservation},
+   volume = {132},
+   number = {2},
+   pages = {250-260},
+   ISSN = {00063207},
+   DOI = {10.1016/j.biocon.2006.04.017},
+   year = {2006},
+   type = {Journal Article}
+}
+
+@article{Gluck2005,
+   author = {Gluck, E. and Deuschle, J.},
+   title = {Ground beetle distribution of distinct size and feeding type due to grassland management treatments in orchards (Coleoptera : Carabidae)},
+   journal = {Entomologia Generalis},
+   volume = {28},
+   number = {1},
+   pages = {39-63},
+   abstract = {From April 1995 to November 1997 the following investigation was carried out on 62.7 ha of the nature reserve 'Limburg' (48.36 N/9.23E): data on the type and frequency of grassland use was collected and mapped as well as data on the carabid fauna. 17 sample plots were selected. Parts of the plots have had 25 years of unchanged management regimes. The regimes included three-cutting meadows (3), two-cutting meadows (3), mulched meadows (4), abandoned meadows (3), a horse pasture, a sheep pasture with rotational grazing, a continuously grazed sheep pasture, and a sheep pasture which had been abandoned in 1994. 5229 beetles representing 68 Carabidae species were caught in pitfall traps during the three years of investigation, 18 species (26%) could only be verified by one single individium. Meadows cut once or twice a year did not differ substantially from pastures regarding their mean number of species. But these three management forms show a significant higher number of species compared to mulched meadows or abandoned plots. The number of species on sample plots diminishes with decreasing land use intensity. The carabid species caught were divided into 5 classes according to their size: Large species (SCI, SC II) held percentages between 6 and 29% and between 0 and 29% respectively. Medium-sized and smaller species (SC III, SC IV) were more abundant with 8-54% and 15-63%. Very small species (SC V) were less frequent 0-19%. The percentage of large species increased along the gradient of land use intensity, while the percentage of medium-sized species decreased. Two classes were built regarding the food preferences of carabids: Phytohagous species held percentages between 14 and 41%, predominantly zoophagous species between 54 and 86%. The distribution of food preferences does not show any land use-specific influence. Three discriminant functions on the basis of 20 characters (variables) of the carabid assemblage were extracted, which significantly separated the carabid assemblages from the live groups of management forms. The ecological characteristics of the assemblages in the orchard habitat are quite different.},
+   keywords = {shading
+pasturing
+biodiversity
+discriminant analysis
+nutrition
+strategy
+competition
+food
+reproduction
+communities
+abundance
+field
+predators
+granivory
+prey
+Entomology},
+   ISSN = {0171-8177},
+   year = {2005},
+   type = {Journal Article}
+}
+
+@article{Grace2001,
+   author = {Grace, J. B.},
+   title = {The roles of community biomass and species pools in the regulation of plant diversity},
+   journal = {Oikos},
+   volume = {92},
+   number = {2},
+   pages = {193-207},
+   abstract = {Considerable debate has developed over the importance of community biomass and species pools in the regulation of community diversity. Attempts to explain patterns of plant diversity as a function of community biomass or productivity have been only partially successful and, in general, have explained only a fraction of the observed variation in diversity. At the same time, studies that have focused on the importance of species pools have led some to conclude that diversity is primarily regulated in the short term by the size of the species pool rather than by biotic interactions. In this paper, I explore how community biomass and species pools may work in combination to regulate diversity in herbaceous plant communities. To address this problem, I employ a simple model in which the dynamics of species richness are a function of aboveground community biomass and environmentally controlled gradients in species pools. Model results lead to two main predictions about the role of biomass regulation: (1) Seasonal dynamics of richness will tend to follow a regular oscillation, with richness rising to peak values during the early to middle portion of the growing season and then declining during the latter part of the season. (2) Seasonal dieback of aboveground tissues facilitates the long-term maintenance of high levels of richness in the community. The persistence of aboveground tissues and accumulation of litter are especially important in limiting the number of species through the suppression of recruitment. Model results also lead to two main predictions about the role of species pools: (1) The height and position of peak richness relative to community biomass will be influenced by the rate at which the species pool increases as available soil resources increase. (2) Variations in nonresource environmental factors (e.g. soil pH or soil salinity) have the potential to regulate species pools in a way that is uncorrelated with aboveground biomass. Under extreme conditions, such nonresource effects can create a unimodal envelope of biomass-richness values. Available evidence from the literature provides partial support for these predictions, though additional data are needed to provide more convincing tests.},
+   keywords = {below-ground competition
+old-field
+productivity gradients
+coastal wetland
+standing crop
+richness
+density
+litter
+grassland
+vegetation},
+   ISSN = {0030-1299},
+   DOI = {DOI 10.1034/j.1600-0706.2001.920201.x},
+   year = {2001},
+   type = {Journal Article}
+}
+
+@article{Hendrickx2009,
+   author = {Hendrickx, Frederik and Maelfait, Jean-Pierre and Desender, Konjev and Aviron, Stephanie and Bailey, Debra and Diekotter, Tim and Lens, Luc and Liira, Jaan and Schweiger, Oliver and Speelmans, Marjan and Vandomme, Viki and Bugter, Rob},
+   title = {Pervasive effects of dispersal limitation on within- and among-community species richness in agricultural landscapes},
+   journal = {Global Ecology and Biogeography},
+   volume = {18},
+   number = {5},
+   pages = {607-616},
+   abstract = {Aim
+To determine whether the effect of habitat fragmentation and habitat heterogeneity on species richness at different spatial scales depends on the dispersal ability of the species assemblages and if this results in nested species assemblages.
+Location
+Agricultural landscapes distributed over seven temperate Europe countries covering a range from France to Estonia.
+Methods
+We sampled 16 local communities in each of 24 agricultural landscapes (16 km(2)) that differ in the amount and heterogeneity of semi-natural habitat patches. Carabid beetles were used as model organisms as dispersal ability can easily be assessed on morphological traits. The proximity and heterogeneity of semi-natural patches within the landscape were related to average local (alpha), between local (beta) and landscape (gamma) species richness and compared among four guilds that differ in dispersal ability.
+Results
+For species assemblages with low dispersal ability, local diversity increased as the proximity of semi-natural habitat increased, while mobile species showed an opposite trend. Beta diversity decreased equally for all dispersal classes in relation to proximity, suggesting a homogenizing effect of increased patch isolation. In contrast, habitat diversity of the semi-natural patches affected beta diversity positively only for less mobile species, probably due to the low dispersal ability of specialist species. Species with low mobility that persisted in highly fragmented landscapes were consistently present in less fragmented ones, resulting in nested assemblages for this mobility class only.
+Main conclusions
+The incorporation of dispersal ability reveals that only local species assemblages with low dispersal ability show a decrease of richness as a result of fragmentation. This local species loss is compensated at least in part by an increase in species with high dispersal ability, which obscures the effect of fragmentation when investigated across dispersal groups. Conversely, fragmentation homogenizes the landscape fauna for all dispersal groups, which indicates the invasion of non-crop habitats by similar good dispersers across the whole landscape. Given that recolonization of low dispersers is unlikely, depletion of these species in modern agricultural landscapes appears temporally pervasive.},
+   keywords = {agricultural intensification
+arthropods
+community ecology
+diversity partitioning
+europe
+habitat diversity
+metacommunity
+nestedness
+spatial scale
+source-sink metacommunities
+habitat diversity affect
+land-use intensity
+beetle assemblages
+spatial-pattern
+ground beetles
+patch size
+biodiversity
+fragmentation
+traits},
+   ISSN = {1466822X
+14668238},
+   DOI = {10.1111/j.1466-8238.2009.00473.x},
+   year = {2009},
+   type = {Journal Article}
+}
+
+@article{Hopfenmuller2014,
+   author = {Hopfenmuller, S. and Steffan-Dewenter, I. and Holzschuh, A.},
+   title = {Trait-specific responses of wild bee communities to landscape composition, configuration and local factors},
+   journal = {PLoS One},
+   volume = {9},
+   number = {8},
+   pages = {e104439},
+   abstract = {Land-use intensification and loss of semi-natural habitats have induced a severe decline of bee diversity in agricultural landscapes. Semi-natural habitats like calcareous grasslands are among the most important bee habitats in central Europe, but they are threatened by decreasing habitat area and quality, and by homogenization of the surrounding landscape affecting both landscape composition and configuration. In this study we tested the importance of habitat area, quality and connectivity as well as landscape composition and configuration on wild bees in calcareous grasslands. We made detailed trait-specific analyses as bees with different traits might differ in their response to the tested factors. Species richness and abundance of wild bees were surveyed on 23 calcareous grassland patches in Southern Germany with independent gradients in local and landscape factors. Total wild bee richness was positively affected by complex landscape configuration, large habitat area and high habitat quality (i.e. steep slopes). Cuckoo bee richness was positively affected by complex landscape configuration and large habitat area whereas habitat specialists were only affected by the local factors habitat area and habitat quality. Small social generalists were positively influenced by habitat area whereas large social generalists (bumblebees) were positively affected by landscape composition (high percentage of semi-natural habitats). Our results emphasize a strong dependence of habitat specialists on local habitat characteristics, whereas cuckoo bees and bumblebees are more likely affected by the surrounding landscape. We conclude that a combination of large high-quality patches and heterogeneous landscapes maintains high bee species richness and communities with diverse trait composition. Such diverse communities might stabilize pollination services provided to crops and wild plants on local and landscape scales.},
+   ISSN = {1932-6203 (Electronic)
+1932-6203 (Linking)},
+   DOI = {10.1371/journal.pone.0104439},
+   year = {2014},
+   type = {Journal Article}
+}
+
+@article{Hutchinson1959,
+   author = {Hutchinson, G. E. and Macarthur, R. H.},
+   title = {A theoretical ecological model of size distributions among species of animals},
+   journal = {The American Naturalist},
+   volume = {93},
+   number = {869},
+   pages = {117-125},
+   ISSN = {0003-0147},
+   DOI = {Doi 10.1086/282063},
+   year = {1959},
+   type = {Journal Article}
+}
+
+@article{Jennings2009,
+   author = {Jennings, N. and Pocock, M. J. O.},
+   title = {Relationships between Sensitivity to Agricultural Intensification and Ecological Traits of Insectivorous Mammals and Arthropods},
+   journal = {Conservation Biology},
+   volume = {23},
+   number = {5},
+   pages = {1195-1203},
+   abstract = {We tested the hypothesis that variation in the sensitivity of animals to habitat change is explained by ecological traits (life-history traits, trophic level, and mobility). We measured the sensitivity of insectivorous mammals (shrews and bats) and their prey (arthropods active at the soil surface and nocturnal aerial arthropods) to three aspects of agricultural intensification in a matched-pair experimental design: increased use of agrochemicals (comparison of organic and conventional cereal crops, with pairing for the size of the boundary hedge), change in grassland management from hay to silage (with pairing for the size of the boundary hedge), and increased field size due to hedgerow loss (with boundary-field comparisons as a proxy). We assessed the sensitivity of taxa as the difference in their relative abundance between pairs of high- and low-intensity sites for each aspect of agricultural intensification. We used phylogenetically informed analyses to explore cross-species relationships between our measures of sensitivity and seven ecological traits of animals (e.g., trophic level, mobility, and reproductive rate). Several traits were related to the sensitivity of animals to agricultural intensification. These traits were mainly associated with fast life histories (high reproductive output and low trophic level) and low mobility. Trophic level of adults was related to sensitivity to habitat change for all three aspects of agricultural intensification, but the direction of the relationship differed between the three aspects of intensification. The significance of the relationship between other ecological traits and sensitivity to intensification varied for the three aspects of agricultural intensification. Our results show that some ecological traits can be used to preselect taxa that are predicted to be sensitive to habitat change, and their sensitivity can be tested empirically for use as biotic indicator taxa. Understanding which traits are related to sensitivity to habitat change is vital because sensitivity is important in determining a taxon's ability to survive in dynamic environments.},
+   keywords = {bioindicator
+ecological trait
+habitat change
+habitat quality
+invertebrate
+life history
+mobility
+trophic level
+extinction risk
+indicator taxa
+selection
+britain
+bat
+identification
+biodiversity
+lepidoptera
+ecosystems
+phylogeny
+Biodiversity & Conservation
+Environmental Sciences & Ecology},
+   ISSN = {0888-8892},
+   DOI = {10.1111/j.1523-1739.2009.01208.x},
+   year = {2009},
+   type = {Journal Article}
+}
+
+@article{Jerrentrup2014,
+   author = {Jerrentrup, J. S. and Wrage-Monnig, N. and Rover, K. U. and Isselstein, J.},
+   title = {Grazing intensity affects insect diversity via sward structure and heterogeneity in a long-term experiment},
+   journal = {Journal of Applied Ecology},
+   volume = {51},
+   number = {4},
+   pages = {968-977},
+   abstract = {1. In the past, insect diversity in grasslands showed a severe decline due to management intensification or abandonment. In this study, we investigate the long-term influence of grazing and the potential for spatial patterns created by different grazing intensities to enhance insect diversity. 2. In a long-term experiment (2002-2011), three grazing intensities were applied to 1-ha paddocks in a triplicate block design: moderate grazing (MC), lenient grazing (LC) and very lenient grazing (VLC, since 2005). The experiment was conducted in a moderately species-rich grassland at the edge of the Solling Uplands in Lower Saxony, Germany. Orthoptera (grasshoppers) and Lepidoptera (butterflies) on three 50-m transects per paddock were counted in 2002-2004 and again in 2010 and 2011. Statistics were performed using linear mixed modelling. 3. Grasshopper diversity measures (species richness and abundance) were significantly affected by grazing intensity; abundance increased from 2002 to 2011 more strongly in the LC than in the MC treatment. Butterfly species richness response to grazing intensity varied among years. Data from 2010 and 2011 did not reveal any advantage of the lowest grazing intensity (VLC) compared to the intermediate grazing intensity treatment (LC) in either insect group. 4. Multiple regressions were used to investigate diversity patterns. Along with compressed sward height, spatial patchiness was important for grasshopper species richness and abundance as well as for butterfly species numbers. Butterfly abundance was mainly influenced by vertical sward height heterogeneity in addition to the significant effects of thistle abundance and number of nectar plant species. 5. Synthesis and applications. Cattle grazing intensity affects the proportions and spatial heterogeneity of short and tall sward patches on pastures. The less mobile grasshoppers particularly benefitted from the structural modifications created by cattle at lenient grazing levels (stocking rate 1.14 SLU ha(-1), standard livestock unit (SLU) = 500 kg). In the final study years, areas with intermediate grazing intensity revealed high diversity indices and the most distinct patchiness, therefore a further reduction in grazing intensity is not recommended. This indicates that commercial livestock production may be compatible with conservation targets.},
+   keywords = {butterflies
+cattle pastures
+grasshoppers
+grassland
+grazing pressure
+patches
+plant diversity
+stocking rate
+sward height
+sward
+heterogeneity
+habitat heterogeneity
+spatial heterogeneity
+vegetation patterns
+arthropod diversity
+temperate pastures
+livestock breed
+plant
+diversity
+grassland
+biodiversity
+abundance
+Environmental Sciences & Ecology},
+   ISSN = {0021-8901},
+   DOI = {10.1111/1365-2664.12244},
+   year = {2014},
+   type = {Journal Article}
+}
+
+@article{Kennedy2000,
+   author = {Kennedy, G. G. and Storer, N. P.},
+   title = {Life systems of polyphagous arthropod pests in temporally unstable cropping systems},
+   journal = {Annual Review of Entomology},
+   volume = {45},
+   pages = {467-493},
+   abstract = {Annual cropping systems consist of a shifting mosaic of habitats that vary through time in their availability and suitability to insect pests. Agroecosystem instability results from changes that occur within a season with crop planting, development, and harvest. Further instability results from continuous alterations in biotic and abiotic insect life system components and from agricultural inputs. Changes to agroecosystems occur across seasons with changing agricultural practices, changing cropping patterns, and technological innovations. Much of this instability is a result of events unconnected with pest management. The abilities of polyphagous pest species to move among and utilize different habitat patches in response to changes in suitability enable the pests to exploit unstable cropping systems. These pest characteristics determine the location and timing of damaging populations. Habitat suitability is influenced by plant species and cultivar, crop phenology, and agricultural inputs. Pest movement is affected by a suite of intrinsic factors, such as population age structure and mobility, and extrinsic factors, including weather systems and habitat distribution. The life systems of three selected polyphagous pests are presented to demonstrate how an understanding of such systems in agricultural ecosystems improves our ability to predict and hence manage these populations.},
+   keywords = {Agriculture
+Animals
+*Arthropods
+*Ecosystem
+Seasons},
+   ISSN = {0066-4170 (Print)
+0066-4170 (Linking)},
+   DOI = {10.1146/annurev.ento.45.1.467},
+   year = {2000},
+   type = {Journal Article}
+}
+
+@article{Klaus2011,
+   author = {Klaus, Valentin H. and Kleinebecker, Till and Hölzel, Norbert and Blüthgen, Nico and Boch, Steffen and Müller, Jörg and Socher, Stephanie A. and Prati, Daniel and Fischer, Markus},
+   title = {Nutrient concentrations and fibre contents of plant community biomass reflect species richness patterns along a broad range of land-use intensities among agricultural grasslands},
+   journal = {Perspectives in Plant Ecology, Evolution and Systematics},
+   volume = {13},
+   number = {4},
+   pages = {287-295},
+   abstract = {Understanding changes in biodiversity in agricultural landscapes in relation to land-use type and intensity is a major issue in current ecological research. In this context nutrient enrichment has been identified as a key mechanism inducing species loss in Central European grassland ecosystems. At the same time, insights into the linkage between agricultural land use and plant nutrient status are largely missing. So far, studies on the relationship between chemical composition of plant community biomass and biodiversity have mainly been restricted to wetlands and all these studies neglected the effects of land use. Therefore, we analyzed aboveground biomass of 145 grassland plots covering a gradient of land-use intensities in three regions across Germany. In particular, we explored relationships between vascular plant species richness and nutrient concentrations as well as fibre contents (neutral and acid detergent fibre and lignin) in the aboveground community biomass.
+We found the concentrations of several nutrients in the biomass to be closely linked to plant species richness and land use. Whereas phosphorus concentrations increased with land-use intensity and decreased with plant species richness, nitrogen and potassium concentrations showed less clear patterns. Fibre fractions were negatively related to nutrient concentrations in biomass, but hardly to land-use measures and species richness. Only high lignin contents were positively associated with species richness of grasslands. The N:P ratio was strongly positively related to species richness and even more so to the number of endangered plant species, indicating a higher persistence of endangered species under P (co-)limited conditions. Therefore, we stress the importance of low P supply for species-rich grasslands and suggest the N:P ratio in community biomass to be a useful proxy of the conservation value of agriculturally used grasslands. (C) 2011 Perspectives in Plant Ecology, Evolution and Systematics. Published by Elsevier GmbH. All rights reserved.},
+   keywords = {biodiversity exploratories
+fertilization
+grazing
+land use
+mowing
+nitrogen
+nutrient limitation
+phosphorus
+productivity
+n-p ratios
+fertilizer application
+limitation
+biodiversity
+landscape
+diversity
+nitrogen
+productivity
+management
+soil},
+   ISSN = {14338319},
+   DOI = {10.1016/j.ppees.2011.07.001},
+   year = {2011},
+   type = {Journal Article}
+}
+
+@article{Kleyer2012,
+   author = {Kleyer, Michael and Dray, Stéphane and Bello, Francescode and Lepš, Jan and Pakeman, Robin J. and Strauss, Barbara and Thuiller, Wilfried and Lavorel, Sandra and Wildi, Otto},
+   title = {Assessing species and community functional responses to environmental gradients: which multivariate methods?},
+   journal = {Journal of Vegetation Science},
+   volume = {23},
+   number = {5},
+   pages = {805-821},
+   ISSN = {11009233},
+   DOI = {10.1111/j.1654-1103.2012.01402.x},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@article{Klingenberg1992,
+   author = {Klingenberg, C. P.},
+   title = {Multivariate morphimetrics of geographic-variation of Gerris costae (Heteroptera, Gerridae) in Europe},
+   journal = {Revue Suisse De Zoologie},
+   volume = {99},
+   number = {1},
+   pages = {11-30},
+   abstract = {The waterstrider species Gerris costae (Herrich-Schaeffer) has a large and disjunct distribution in the southern part of the palearctic region. Multivariate morphometric techniques were used to assess the geographic variation in the European part of its range, where three subspecies are currently recognized: G. c. costae (Herrich-Schaeffer), G. c. fieberi Stichel, and G. c. poissoni Wagner and Zimmermann. Twelve variables were selected from a larger set (56 or 57 variables for males and females, respectively) by stepwise discriminant analysis, and were found to represent the main patterns of morphometric variation in the full character set. Principal component analysis revealed that both 'size' and 'shape' contribute to geographic differentiation. Canonical variate analysis with two different criteria for the definition of a priori groups showed that the subspecies are coherent units separate from each other, and that the segregation into the three subspecies indeed reflects the main pattern of geographic variation in Europe. Comparisons of field samples with offspring reared in the laboratory under standardized conditions demonstrated that geographic differentiation is genetically determined for the most part. The study therefore supports the segregation of Gerris costae into three subsepcies in the area considered. Linear discriminant functions are given to allocate additional material to the subspecies.},
+   keywords = {DIFFERENTIATION
+POPULATIONS
+ADAPTATION
+JACKKNIFE
+HOMOPTERA},
+   ISSN = {0035-418X},
+   year = {1992},
+   type = {Journal Article}
+}
+
+@book{Koch1989,
+   author = {Koch, K.},
+   title = {Ökologie. - Die Käfer Mitteleuropas},
+   address = {Krefeld},
+   volume = {E1-E8},
+   year = {1989-1996},
+   type = {Book}
+}
+
+@article{Lambeets2008,
+   author = {Lambeets, K. and Vandegehuchte, M. L. and Maelfait, J. P. and Bonte, D.},
+   title = {Understanding the impact of flooding on trait-displacements and shifts in assemblage structure of predatory arthropods on river banks},
+   journal = {Journal of Animal Ecology},
+   volume = {77},
+   number = {6},
+   pages = {1162-1174},
+   abstract = {1. Species assemblages of naturally disturbed habitats are governed by the prevailing disturbance regime. Consequently, stochastic flood events affect river banks and the inhabiting biota. Predatory arthropods occupy predominantly river banks in relation to specific habitat conditions. Therefore, species sorting and stochastic processes as induced by flooding are supposed to play important roles in structuring riparian arthropod assemblages in relation to their habitat preference and dispersal ability. 2. To ascertain whether assemblages of spiders and carabid beetles from disturbed river banks are structured by stochastic or sorting mechanisms, diversity patterns and assemblage-wide trait-displacements were assessed based on pitfall sampling data. We tested if flooding disturbance within a lowland river reach affects diversity patterns and trait distribution in both groups. 3. Whereas the number of riparian spider species decreased considerably with increased flooding, carabid beetle diversity benefited from intermediate degrees of flooding. Moreover, regression analyses revealed trait-displacements, reflecting sorting mechanisms particularly for spiders. Increased flooding disturbance was associated with assemblage-wide increases of niche breadth, shading and hygrophilic preference and ballooning propensity for spider (sub)families. Trait patterns were comparable for Bembidiini carabids, but were less univocal for Pterostichini species. Body size decreased for lycosid spiders and Bembidiini carabids with increased flooding, but increased in linyphiid spiders and Pterostichini carabids. 4. Our results indicate that mainly riparian species are disfavoured by either too high or too low degrees of disturbance, whereas eurytopic species benefit from increased flooding. Anthropogenic alterations of flooding disturbance constrain the distribution of common hygrophilous species and/or species with high dispersal ability, inducing shifts towards less specialized arthropod assemblages. River banks with divergent degrees of flooding impact should be maintained throughout dynamic lowland river reaches in order to preserve typical riparian arthropod assemblages.},
+   keywords = {Animals
+Beetles/*physiology
+Ecosystem
+*Floods
+Population Dynamics
+*Predatory Behavior
+*Rivers
+Spiders/*physiology},
+   ISSN = {1365-2656 (Electronic)
+0021-8790 (Linking)},
+   DOI = {10.1111/j.1365-2656.2008.01443.x},
+   year = {2008},
+   type = {Journal Article}
+}
+
+@article{Laughlin2012,
+   author = {Laughlin, D. C. and Joshi, C. and van Bodegom, P. M. and Bastow, Z. A. and Fule, P. Z.},
+   title = {A predictive model of community assembly that incorporates intraspecific trait variation},
+   journal = {Ecology Letters},
+   volume = {15},
+   number = {11},
+   pages = {1291-1299},
+   abstract = {Community assembly involves two antagonistic processes that select functional traits in opposite directions. Environmental filtering tends to increase the functional similarity of species within communities leading to trait convergence, whereas competition tends to limit the functional similarity of species within communities leading to trait divergence. Here, we introduce a new hierarchical Bayesian model that incorporates intraspecific trait variation into a predictive framework to unify classic coexistence theory and evolutionary biology with recent trait-based approaches. Model predictions exhibited a significant positive correlation (r = 0.66) with observed relative abundances along a 10 degrees C gradient in mean annual temperature. The model predicted the correct dominant species in half of the plots, and accurately reproduced species' temperature optimums. The framework is generalizable to any ecosystem as it can accommodate any species pool, any set of functional traits and multiple environmental gradients, and it eliminates some of the criticisms associated with recent trait-based community assembly models.},
+   keywords = {Bayes Theorem
+*Biological Evolution
+Ecosystem
+Environment
+Forecasting
+Genetic Variation
+*Models, Theoretical
+Temperature},
+   ISSN = {1461-0248 (Electronic)
+1461-023X (Linking)},
+   DOI = {10.1111/j.1461-0248.2012.01852.x},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@article{Lavorel2002,
+   author = {Lavorel, S. and Garnier, E.},
+   title = {Predicting changes in community composition and ecosystem functioning from plant traits: revisiting the Holy Grail},
+   journal = {Functional Ecology},
+   volume = {16},
+   number = {5},
+   pages = {545-556},
+   abstract = {1. The concept of plant functional type proposes that species can be grouped according to common responses to the environment and/or common effects on ecosystem processes. However, the knowledge of relationships between traits associated with the response of plants to environmental factors such as resources and disturbances (response traits), and traits that determine effects of plants on ecosystem functions (effect traits), such as biogeochemical cycling or propensity to disturbance, remains rudimentary. 2. We present a framework using concepts and results from community ecology, ecosystem ecology and evolutionary biology to provide this linkage. Ecosystem functioning is the end result of the operation of multiple environmental filters in a hierarchy of scales which, by selecting individuals with appropriate responses, result in assemblages with varying trait composition. Functional linkages and trade-offs among traits, each of which relates to one or several processes, determine whether or not filtering by different factors gives a match, and whether ecosystem effects can be easily deduced from the knowledge of the filters. 3. To illustrate this framework we analyse a set of key environmental factors and ecosystem processes. While traits associated with response to nutrient gradients strongly overlapped with those determining net primary production, little direct overlap was found between response to fire and flammability. 4. We hypothesize that these patterns reflect general trends. Responses to resource availability would be determined by traits that are also involved in biogeochemical cycling, because both these responses and effects are driven by the trade-off between acquisition and conservation. On the other hand, regeneration and demographic traits associated with response to disturbance, which are known to have little connection with adult traits involved in plant ecophysiology, would be of little relevance to ecosystem processes. 5. This framework is likely to be broadly applicable, although caution must be exercised to use trait linkages and trade-offs appropriate to the scale, environmental conditions and evolutionary context. It may direct the selection of plant functional types for vegetation models at a range of scales, and help with the design of experimental studies of relationships between plant diversity and ecosystem properties.},
+   keywords = {biogeochemical cycles
+disturbance
+effect traits
+fire
+resource
+gradient
+response traits
+scaling-up
+trade-offs
+net primary production
+seed size
+life-forms
+nitrogen mineralization
+vegetation dynamics
+leaf structure
+global change
+wild plants
+ecology
+soil
+Environmental Sciences & Ecology},
+   ISSN = {0269-8463},
+   DOI = {10.1046/j.1365-2435.2002.00664.x},
+   year = {2002},
+   type = {Journal Article}
+}
+
+@article{Lind2015,
+   author = {Lind, E. M. and Vincent, John B. and Weiblen, Georg D. and Cavender-Bares, Jeannine and Borer, E. T.},
+   title = {Trophic phylogenetics: evolutionary influences on body size, feeding, and species associations in grassland arthropods},
+   journal = {Ecology},
+   volume = {in press},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{Mahecha2007,
+   author = {Mahecha, M. D. and Martinez, A. and Lischeid, G. and Beck, E.},
+   title = {Nonlinear dimensionality reduction: Alternative ordination approaches for extracting and visualizing biodiversity patterns in tropical montane forest vegetation data},
+   journal = {Ecological Informatics},
+   volume = {2},
+   number = {2},
+   pages = {138-149},
+   abstract = {Ecological patterns are difficult to extract directly from vegetation data. The respective surveys provide a high number of interrelated species occurrence variables. Since often only a limited number of ecological gradients determine species distributions, the data might be represented by much fewer but effectively independent variables. This can be achieved by reducing the dimensionality of the data. Conventional methods are either limited to linear feature extraction (e.g., principal component analysis, and Classical Multidimensional Scaling, CMDS) or require a priori assumptions on the intrinsic data dimensionality (e.g., Nonmetric Multidimensional Scaling, NMDS, and self organized maps, SOM). In this study we explored the potential of Isometric Feature Mapping (Isomap). This new method of dimensionality reduction is a nonlinear generalization of CMDS. Isomap is based on a nonlinear geodesic inter-point distance matrix. Estimating geodesic distances requires one free threshold parameter, which defines linear geometry to be preserved in the global nonlinear distance structure. We compared Isomap to its linear (CMDS) and nonmetric NMDS) equivalents. Furthermore, the use of geodesic distances allowed also extending NMDS to a version that we called NMDS-G. In addition we investigated a supervised Isomap valiant (S-Isomap) and showed that all these techniques are interpretable within a single methodical framework. As an example we investigated seven plots (subdivided in 456 subplots) in different secondary tropical montane forests with 773 species of vascular plants. A key problem for the study of tropical vegetation data is the heterogeneous small scale variability implying large ranges of beta-diversity. The CMDS and NMDS methods did not reduce the data dimensionality reasonably. On the contrary, Isomap, explained 95% of the data variance in the first five dimensions and provided ecologically interpretable visualizations; NMDS-G yielded similar results. The main shortcoming of the latter was the high computational cost and the requirement to predefine the dimension of the embedding space. The S-Isomap learning scheme did not improve the Isomap variant for an optimal threshold parameter but substantially improved the nonoptimal solutions. We conclude that Isomap as a new ordination method allows effective representations of high dimensional vegetation data sets. The method is promising since it does not require a priori assumptions, and is computationally highly effective.},
+   keywords = {vegetation data
+ordination
+Isometric Feature Mapping (Isomap)
+multidimensional scaling (MDS)
+nonlinear dimensionality reduction
+geodesic distances
+secondary mountain tropical rain
+forests
+ecuador
+RAIN-FOREST
+EIGENMAPS
+ECUADOR},
+   ISSN = {1574-9541},
+   DOI = {10.1016/j.ecoinf.2007.05.002},
+   year = {2007},
+   type = {Journal Article}
+}
+
+@inbook{Malten2001,
+   author = {Malten, A.},
+   title = {Araneae (Spinnen)},
+   booktitle = {Naturwaldreservate in Hessen 6/2.1. Schönbuche. Zoologische Untersuchungen. 1990–1992.},
+   editor = {Dorow, W. H. O. and Flechtner, G. and Kopelke, J.-P.},
+   publisher = {Hessen-Forst – FIV Ergebnis- und Forschungsbericht},
+   volume = {34},
+   pages = {35-132},
+   year = {2001},
+   type = {Book Section}
+}
+
+@inbook{Malten2007,
+   author = {Malten, A. and Blick, T.},
+   title = {Araneae (Spinnen)},
+   booktitle = {Naturwaldreservate in Hessen. Band 7/2.2. Hohestein. Zoologische Untersuchungen 1994-1996, Teil 2 },
+   editor = {Dorow, W. H. O. and Kopelke, J.-P.},
+   publisher = {Mitteilungen der Hessischen Landesforstverwaltung},
+   address = {Wiesbaden},
+   volume = {42},
+   pages = {7-93},
+   year = {2007},
+   type = {Book Section}
+}
+
+@article{Marquet1995,
+   author = {Marquet, P. A. and Navarrete, S. A. and Castilla, J. C.},
+   title = {Body-Size, Population-Density, and the Energetic Equivalence Rule},
+   journal = {Journal of Animal Ecology},
+   volume = {64},
+   number = {3},
+   pages = {325-332},
+   abstract = {1. We critically evaluated the Energetic Equivalence Rule (EER) with regard to its underlying theoretical framework, its dependence of a particular relationship between population density and body size, and the way it is calculated.
+2. We found it to be theoretically incorrect, not supported by empirical data on maximum population density and body size relationships, and that its calculation is misleading, In particular, we found a general pattern underlying the allometry of maximum population density, which stresses the correspondence between the documented linear patterns and triangular relationships between both variables.
+3. Two independent data sets, one for mammals and another for intertidal invertebrates, showed that medium-size species attain higher population densities, and that population density decreases towards larger and smaller sizes.
+4. A more direct calculation of population energy use for mammalian primary consumers, based on measured metabolic rates, showed that populations' energy use fluctuates widely among species and that its upper limit is not independent of body size but peaks at a body size of about 100 g, and decreases toward both smaller and larger body sizes.
+5. Diet also has a strong effect on this relationship. Omnivores show a positive relationship between population energy use and body size, while this is negative for carnivores and insectivores.},
+   keywords = {allometry
+body size
+density
+energy use
+intertidal
+natural animal assemblages
+species divide resources
+copes rule
+abundance
+mammals
+communities
+evolution
+birds
+space
+allometry},
+   ISSN = {0021-8790},
+   DOI = {Doi 10.2307/5894},
+   year = {1995},
+   type = {Journal Article}
+}
+
+@article{Mayfield2006,
+   author = {Mayfield, Margaret M. and Ackerly, David and Daily, Gretchen C.},
+   title = {The diversity and conservation of plant reproductive and dispersal functional traits in human-dominated tropical landscapes},
+   journal = {Journal of Ecology},
+   volume = {94},
+   number = {3},
+   pages = {522-536},
+   ISSN = {00220477
+13652745},
+   DOI = {10.1111/j.1365-2745.2006.01108.x},
+   year = {2006},
+   type = {Journal Article}
+}
+
+@article{McGill2006,
+   author = {McGill, B. J. and Enquist, B. J. and Weiher, E. and Westoby, M.},
+   title = {Rebuilding community ecology from functional traits},
+   journal = {Trends in Ecology & Evolution},
+   volume = {21},
+   number = {4},
+   pages = {178-185},
+   abstract = {There is considerable debate about whether community ecology will ever produce general principles. We suggest here that this can be achieved but that community ecology has lost its way by focusing on pairwise species interactions independent of the environment. We assert that community ecology should return to an emphasis on four themes that are tied together by a two-step process: how the fundamental niche is governed by functional traits within the context of abiotic environmental gradients; and how the interaction between traits and fundamental niches maps onto the realized niche in the context of a biotic interaction milieu. We suggest this approach can create a more quantitative and predictive science that can more readily address issues of global change.},
+   keywords = {Animals
+*Ecology
+Plants
+Species Specificity},
+   ISSN = {0169-5347 (Print)
+0169-5347 (Linking)},
+   DOI = {10.1016/j.tree.2006.02.002},
+   year = {2006},
+   type = {Journal Article}
+}
+
+@article{Menezes2010,
+   author = {Menezes, Salomé and Baird, Donald J. and Soares, Amadeu M. V. M.},
+   title = {Beyond taxonomy: a review of macroinvertebrate trait-based community descriptors as tools for freshwater biomonitoring},
+   journal = {Journal of Applied Ecology},
+   volume = {47},
+   number = {4},
+   pages = {711-719},
+   ISSN = {00218901
+13652664},
+   DOI = {10.1111/j.1365-2664.2010.01819.x},
+   year = {2010},
+   type = {Journal Article}
+}
+
+@article{Messier2010,
+   author = {Messier, J. and McGill, B. J. and Lechowicz, M. J.},
+   title = {How do traits vary across ecological scales? A case for trait-based ecology},
+   journal = {Ecology Letters},
+   volume = {13},
+   number = {7},
+   pages = {838-848},
+   abstract = {Despite the increasing importance of functional traits for the study of plant ecology, we do not know how variation in a given trait changes across ecological scales, which prevents us from assessing potential scale-dependent aspects of trait variation. To address this deficiency, we partitioned the variance in two key functional traits (leaf mass area and leaf dry matter content) across six nested ecological scales (site, plot, species, tree, strata and leaf) in lowland tropical rainforests. In both traits, the plot level shows virtually no variance despite high species turnover among plots and the size of within-species variation (leaf + strata + tree) is comparable with that of species level variation. The lack of variance at the plot level brings substantial support to the idea that trait-based environmental filtering plays a central role in plant community assembly. These results and the finding that the amount of within-species variation is comparable with interspecific variation support a shift of focus from species-based to trait-based ecology.},
+   keywords = {*Ecology
+Plant Leaves
+Species Specificity
+Trees
+Tropical Climate},
+   ISSN = {1461-0248 (Electronic)
+1461-023X (Linking)},
+   DOI = {10.1111/j.1461-0248.2010.01476.x},
+   year = {2010},
+   type = {Journal Article}
+}
+
+@article{Mlambo2014,
+   author = {Mlambo, Musa C.},
+   title = {Not all traits are ‘functional’: insights from taxonomy and biodiversity-ecosystem functioning research},
+   journal = {Biodiversity and Conservation},
+   volume = {23},
+   number = {3},
+   pages = {781-790},
+   ISSN = {0960-3115
+1572-9710},
+   DOI = {10.1007/s10531-014-0618-5},
+   year = {2014},
+   type = {Journal Article}
+}
+
+@article{Moretti2013,
+   author = {Moretti, Marco and de Bello, Francesco and Ibanez, Sébastien and Fontana, Simone and Pezzatti, Gianni B. and Dziock, Frank and Rixen, Christian and Lavorel, Sandra},
+   title = {Linking traits between plants and invertebrate herbivores to track functional effects of land-use changes},
+   journal = {Journal of Vegetation Science},
+   volume = {24},
+   number = {5},
+   pages = {949-962},
+   abstract = {Questions: Ecosystem functions and underlying services are strongly influenced by multitrophic relationships, with functional traits playing a central role in structuring them. Which traits and functional metrics mediate the impact of different types of land use on ecosystem function within and across trophic levels? \
+Methods: We studied the functional relationships between plants and grasshoppers in sub-alpine grasslands under different management regimes in the Central French Alps. We applied the theoretical multitrophic response-effect framework described by (Journal of Vegetation Science, 24, this issue) to identify key traits linking plants and grasshoppers to biomass production. The linkages between selected plant and grasshopper traits were analysed using community-weighted mean traits (CWM) and functional diversity (FD; Rao's quadratic diversity).
+Results: Uni-and multivariate models provided evidence about the relative importance of trait linkages within and across trophic levels. We showed that management affected both plant and grasshopper traits and that the interaction between themwas linked to biomass production. While a number ofCWMtraits and FD were involved in the interaction, CWM of leaf dry matter content (LDMC) and grasshopper dry bodymass (GMass) chieflymediated the impact of management change on biomass production.
+Conclusions: Our study suggests that both trait values of the most abundant species and functional trait variation within and across trophic levels in combination may best explain the impact of land-use changes on ecosystem function. To improve ourmechanistic understanding across trophic levels, a better knowledge of response and effect traits remains a major goal, especially for animal ecologists, while a strong collaboration among disciplines is needed to bridge the existing gaps.},
+   keywords = {CWM
+Ecosystem functioning
+Ecosystem services
+Functional dissimilarity FD
+Functional traits
+Herbivory
+Multitrophic trait cascade
+Plant–herbivore interaction},
+   ISSN = {1654-1103},
+   DOI = {10.1111/jvs.12022},
+   year = {2013},
+   type = {Journal Article}
+}
+
+@article{Moretti2010,
+   author = {Moretti, Marco and De Cáceres, Miquel and Pradella, Cinzia and Obrist, Martin K. and Wermelinger, Beat and Legendre, Pierre and Duelli, Peter},
+   title = {Fire-induced taxonomic and functional changes in saproxylic beetle communities in fire sensitive regions},
+   journal = {Ecography},
+   volume = {33},
+   number = {4},
+   pages = {760-771},
+   abstract = {It is often suggested that fire acts as an environmental filter that selects species and functional traits, and reduces trait variability within communities, affecting ecosystem function and underlying services. This may be particularly important in fire-sensitive ecosystems, such as the central European Alps, where fires are scarce. According to climate and land use change scenarios in Europe, fire risk will increase during the next decades, raising important questions about the maintenance of ecological and functional resilience in these regions. We used two families of saproxylic beetles (i.e. Cerambycidae and Buprestidae) as model group to test the combined effect of fire and altitude on species and trait composition in the central Alps of Switzerland. Trait response was based on weighted means and variation of 15 traits over the communities. Our results showed an overall positive effect of fire on taxonomic and functional diversity, while indicator species and community analyses revealed that the response to fire was also modulated by altitude. The positive effect of fire and the presence of large populations of pyrophilous species suggest co-evolution with fire and adaptation to disturbance in the Alps. Biodiversity in the central Alps might thus be more resilient to fire than expected. In the light of climatic and land use changes, forest management and species conservation in the central Alps have to consider fire one of the major disruptive factors that have shaped and will shape species composition and ecosystem services.},
+   keywords = {4th-corner problem
+swiss alps
+diversity
+forest
+plant
+landscape
+responses
+biodiversity
+management
+wildfires},
+   ISSN = {09067590},
+   DOI = {10.1111/j.1600-0587.2009.06172.x},
+   year = {2010},
+   type = {Journal Article}
+}
+
+@article{Moretti2009,
+   author = {Moretti, M. and Legg, C.},
+   title = {Combining plant and animal traits to assess community functional responses to disturbance},
+   journal = {Ecography},
+   volume = {32},
+   number = {2},
+   pages = {299-309},
+   abstract = {There is a general consensus that functional traits are reliable indicators of adaptation of organisms to particular environmental characteristics. In this study we relate the combined distributions of species traits of plants and animals to disturbance regimes in chestnut forests of southern Switzerland affected by regular winter fires. We used co-inertia analysis for combining the trait response of 471 invertebrate species (117 001 individuals) and 81 plant species at 23 sites with different fire and cutting histories. Trait response was assessed by calculating the variation in weighted mean traits averaged over the communities and by using mean traits in multivariate analyses. The analysis showed a strong association between plant and animal traits under fire constraints (Monte-Carlo test, p=0.0045). Plants and animal distributions show parallel trends in responses to fire which selects traits relating to persistence (ability to survive), resilience (ability to recover) and mobility. Warmth-demanding insects, herbivores, flying carnivores and pollinators were associated with recent fires, as were annual, ruderal and light-demanding plant species with long flowering duration. Small arthropods feeding on dead wood and those with narrow habitat requirements were associated with low fire frequency and unburnt sites, as were competitive plants with large seeds favoring moist sites. The spatial association between plant and animal traits reflected adaptations that promote survival in the disturbance regime, while the disturbance acts as an environmental filter on the distribution and assemblage of the trait values within communities. This combined analysis of plant and invertebrate traits distributions illustrates how community and ecosystem responses can be monitored and the results generalized across localities and disturbance types. Analyses of traits that cross trophic levels provide powerful and promising tools for validating management procedures and controlling ecosystem functions.},
+   keywords = {co-inertia analysis
+species traits
+land-use
+biodiversity
+ecosystem
+fire
+forests
+gradients
+assemblages
+divergence},
+   ISSN = {0906-7590},
+   DOI = {10.1111/j.1600-0587.2008.05524.x},
+   year = {2009},
+   type = {Journal Article}
+}
+
+@article{Naeem2003,
+   author = {Naeem, Shahid and Wright, Justin P.},
+   title = {Disentangling biodiversity effects on ecosystem functioning: deriving solutions to a seemingly insurmountable problem},
+   journal = {Ecology Letters},
+   volume = {6},
+   number = {6},
+   pages = {567-579},
+   abstract = {Experimental investigations of the relationship between biodiversity and ecosystem functioning (BEF) directly manipulate diversity then monitor ecosystem response to the manipulation. While these studies have generally confirmed the importance of biodiversity to the functioning of ecosystems, their broader significance has been difficult to interpret. The main reasons for this difficulty concern the small scales of the experiment, a bias towards plants and grasslands, and most importantly a general lack of clarity in terms of what attributes of functional diversity (FD) were actually manipulated. We review how functional traits, functional groups, and the relationship between functional and taxonomic diversity have been used in current BEF research. Several points emerged from our review. First, it is critical to distinguish between response and effect functional traits when quantifying or manipulating FD. Second, although it is widely done, using trophic position as a functional group designator does not fit the effect-response trait division needed in BEF research. Third, determining a general relationship between taxonomic and FD is neither necessary nor desirable in BEF research. Fourth, fundamental principles in community and biogeographical ecology that have been largely ignored in BEF research could serve to dramatically improve the scope and predictive capabilities of BEF research. We suggest that distinguishing between functional response traits and functional effect traits both in combinatorial manipulations of biodiversity and in descriptive studies of BEF could markedly improve the power of such studies. We construct a possible framework for predictive, broad-scale BEF research that requires integrating functional, community, biogeographical, and ecosystem ecology with taxonomy.},
+   keywords = {biodiversity
+biogeography
+ecosystem functioning
+functional groups
+research framework
+minimal community structure
+species richness
+statistical inevitability
+biological diversity
+plant diversity
+national-park
+global change
+food webs
+productivity
+redundancy},
+   ISSN = {1461-023X
+1461-0248},
+   DOI = {10.1046/j.1461-0248.2003.00471.x},
+   year = {2003},
+   type = {Journal Article}
+}
+
+@article{Newbold2013,
+   author = {Newbold, T. and Scharlemann, J. P. and Butchart, S. H. and Sekercioglu, C. H. and Alkemade, R. and Booth, H. and Purves, D. W.},
+   title = {Ecological traits affect the response of tropical forest bird species to land-use intensity},
+   journal = {Proceedings of the Royal Society B-Biological Sciences},
+   volume = {280},
+   number = {1750},
+   pages = {20122131},
+   abstract = {Land-use change is one of the main drivers of current and likely future biodiversity loss. Therefore, understanding how species are affected by it is crucial to guide conservation decisions. Species respond differently to land-use change, possibly related to their traits. Using pan-tropical data on bird occurrence and abundance across a human land-use intensity gradient, we tested the effects of seven traits on observed responses. A likelihood-based approach allowed us to quantify uncertainty in modelled responses, essential for applying the model to project future change. Compared with undisturbed habitats, the average probability of occurrence of bird species was 7.8 per cent and 31.4 per cent lower, and abundance declined by 3.7 per cent and 19.2 per cent in habitats with low and high human land-use intensity, respectively. Five of the seven traits tested affected the observed responses significantly: long-lived, large, non-migratory, primarily frugivorous or insectivorous forest specialists were both less likely to occur and less abundant in more intensively used habitats than short-lived, small, migratory, non-frugivorous/insectivorous habitat generalists. The finding that species responses to land use depend on their traits is important for understanding ecosystem functioning, because species' traits determine their contribution to ecosystem processes. Furthermore, the loss of species with particular traits might have implications for the delivery of ecosystem services.},
+   keywords = {Animals
+*Biodiversity
+Birds/*physiology
+*Environment
+Human Activities
+Humans
+Likelihood Functions
+Models, Biological
+Tropical Climate},
+   ISSN = {1471-2954 (Electronic)
+0962-8452 (Linking)},
+   DOI = {10.1098/rspb.2012.2131},
+   year = {2013},
+   type = {Journal Article}
+}
+
+@article{Pavoine2009,
+   author = {Pavoine, Sandrine and Vallet, Jeanne and Dufour, Anne-Béatrice and Gachet, Sophie and Daniel, Hervé},
+   title = {On the challenge of treating various types of variables: application for improving the measurement of functional diversity},
+   journal = {Oikos},
+   volume = {118},
+   number = {3},
+   pages = {391-402},
+   ISSN = {00301299
+16000706},
+   DOI = {10.1111/j.1600-0706.2009.16668.x},
+   year = {2009},
+   type = {Journal Article}
+}
+
+@article{Perovic2015,
+   author = {Perović, David and Gámez-Virués, Sagrario and Börschig, Carmen and Klein, Alexandra-Maria and Krauss, Jochen and Steckel, Juliane and Rothenwöhrer, Christoph and Erasmi, Stefan and Tscharntke, Teja and Westphal, Catrin and Kleijn, David},
+   title = {Configurational landscape heterogeneity shapes functional community composition of grassland butterflies},
+   journal = {Journal of Applied Ecology},
+   volume = {52},
+   number = {2},
+   pages = {505-513},
+   ISSN = {00218901},
+   DOI = {10.1111/1365-2664.12394},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{Rader2014,
+   author = {Rader, Romina and Bartomeus, Ignasi and Tylianakis, Jason M. and Laliberté, Etienne and van Kleunen, Mark},
+   title = {The winners and losers of land use intensification: pollinator community disassembly is non-random and alters functional diversity},
+   journal = {Diversity and Distributions},
+   volume = {20},
+   number = {8},
+   pages = {908-917},
+   abstract = {Aim Pollination services are at risk from land use change and intensification, but responses of individual pollinator species are often variable, making it difficult to detect and understand community-level impacts on pollination. We investigated changes in community composition and functional diversity of insect pollinator communities under land use change in a highly modified landscape. Location Canterbury region, South Island, New Zealand. Methods We trapped insect pollinators every month for 1 year at 24 sites across four land use types of increasing intensity in New Zealand: gardens with native vegetation, blackcurrant orchards, dairy farms, and rotational cropping farms. We investigated changes in pollinator species and functional richness and differences in species and functional composition. Results Under increasing land use intensity, both species and functional richness declined markedly. Changes in functional richness, however, were overall not significantly different than expected based on the observed declines in species richness. Nevertheless, there was a significant trend towards greater than expected functional richness within less-intensive land use types and lower than expected functional richness within intensive land use types. The order of species loss under increasing land use intensity was non-random, as pollinators with a narrow diet breadth, large body size, solitary behaviour and a preference for non-floral larval food resources were lost first. Main conclusions Our study shows that pollinator species bearing particular trait attributes are susceptible to differences in land use. Our study suggests that pollination services may be more vulnerable to environmental changes and disturbances in more intensive land use types as a result of lower pollinator functional richness.},
+   keywords = {Agriculture
+agro-ecosystem
+bees
+biodiversity
+crop
+ecosystem
+function
+functional richness
+functional traits
+land use change
+pollination
+nestedness analysis
+body-size
+response diversity
+plant-communities
+current knowledge
+new-zealand
+biodiversity
+bees
+traits
+systems
+Biodiversity & Conservation
+Environmental Sciences & Ecology},
+   ISSN = {1366-9516},
+   DOI = {10.1111/ddi.12221},
+   year = {2014},
+   type = {Journal Article}
+}
+
+@article{Reich2003,
+   author = {Reich, P. B. and Wright, I. J. and Cavender-Bares, J. and Craine, J. M. and Oleksyn, J. and Westoby, M. and Walters, M. B.},
+   title = {The evolution of plant functional variation: Traits, spectra, and strategies},
+   journal = {International Journal of Plant Sciences},
+   volume = {164},
+   number = {3},
+   pages = {S143-S164},
+   abstract = {Variation in plant functional traits results from evolutionary and environmental drivers that operate at a variety of different scales, which makes it a challenge to differentiate among them. In this article we describe patterns of functional trait variation and trait correlations within and among habitats in relation to several environmental and trade-off axes. We then ask whether such patterns reflect natural selection and can be considered plant strategies. In so doing we highlight evidence that demonstrates that (1) patterns of trait variation across resource and environmental gradients (light, water, nutrients, and temperature) probably reflect adaptation, (2) plant trait variation typically involves multiple-correlated traits that arise because of inevitable trade-offs among traits and across levels of whole-plant integration and that must be understood from a whole-plant perspective, and (3) such adaptation may be globally generalizable for like conditions; i. e., the set of traits (collections of traits in syndromes) of taxa can be considered as "plant strategies."},
+   keywords = {plant traits
+adaptation
+fitness
+functional groups
+selection
+carbon-isotope discrimination
+leaf life-span
+pinus-sylvestris populations
+relative growth-rate
+shade tolerance
+rain-forest
+scots pine
+low-light
+photosynthetic capacity
+common-garden},
+   ISSN = {1058-5893},
+   DOI = {Doi 10.1086/374368},
+   year = {2003},
+   type = {Journal Article}
+}
+
+@book{Reitter1908,
+   author = {Reitter, Edmund},
+   title = {Die Käfer des Deutschen Reiches},
+   publisher = {K. G. Lutz Verlag},
+   address = {Stuttgart},
+   volume = {Band 1-5},
+   year = {1908-1911},
+   type = {Book}
+}
+
+@article{Ribera2001,
+   author = {Ribera, Ignacio and Dolédec, Sylvain  and Downie, Iain S. and Foster, Garth N.},
+   title = {Effect of land disturbance and stress on species traits of ground beetle assemblages},
+   journal = {Ecology},
+   volume = {82},
+   number = {4},
+   pages = {1112-1129},
+   abstract = {In this paper we test whether the morphology and life traits of species (in our case ground beetles of the family Carabidae) can be related to the main underlying axes of environmental variability of their habitats. Sites were selected a priori to maximize two gradients: land use as a general measure of disturbance characterized by an index of land management, and habitat adversity or stress as characterized by elevation and vegetation structure. The underlying environmental axes and the relationships of the morphology and life traits of the species with them were investigated using RLQ analysis, a multivariate ordination method able to relate a species trait table to a site characteristics table by way of a species abundance table. The first environmental axis was highly statistically significant and explained most of the variability. It was strongly negatively related to the intensity of land management, and positively related to increasing elevation and a set of variables reflecting vegetation stress. Two predictions were tested and found to be valid in the studied system: in highly managed lowland sites species were smaller, and the frequency of macropterous species (with better dispersal abilities) was higher. Other traits also showed significant relationships with the main environmental axis: in the intensively managed lowland sites species had broader bodies, longer trochanters, and wider femora (characters associated with plant eaters), were paler in color, overwintered only as adults, bred in spring or autumn, and were active in summer. We conclude that the ground beetle assemblages of the studied sites respond in a similar way to the same underlying environmental factors. This allows the precise definition of functional groups, which can be used to characterize functional diversity and its relationships with changes in land management.},
+   keywords = {agricultural systems
+body size
+carabid beetles
+disturbance
+functional groups
+habitat templet
+land management
+life traits
+multivariate analysis
+stress
+three-table analysis
+carabid beetles
+pterostichus-melanarius
+terrestrial arthropods
+management-practices
+agricultural land
+habitat templet
+coleoptera
+dispersal
+ecology
+strategies},
+   ISSN = {0012-9658},
+   year = {2001},
+   type = {Journal Article}
+}
+
+@article{Roff1977,
+   author = {Roff, D.},
+   title = {Dispersal in Dipterans - Its Costs and Consequences},
+   journal = {Journal of Animal Ecology},
+   volume = {46},
+   number = {2},
+   pages = {443-456},
+   ISSN = {0021-8790},
+   DOI = {Doi 10.2307/3822},
+   year = {1977},
+   type = {Journal Article}
+}
+
+@article{Rudolf2012,
+   author = {Rudolf, V. H.},
+   title = {Seasonal shifts in predator body size diversity and trophic interactions in size-structured predator-prey systems},
+   journal = {Journal of Animal Ecology},
+   volume = {81},
+   number = {3},
+   pages = {524-532},
+   abstract = {1. Theory suggests that the relationship between predator diversity and prey suppression should depend on variation in predator traits such as body size, which strongly influences the type and strength of species interactions. Prey species often face a range of different sized predators, and the composition of body sizes of predators can vary between communities and within communities across seasons. 2. Here, I test how variation in size structure of predator communities influences prey survival using seasonal changes in the size structure of a cannibalistic population as a model system. Laboratory and field experiments showed that although the per-capita consumption rates increased at higher predator-prey size ratios, mortality rates did not consistently increase with average size of cannibalistic predators. Instead, prey mortality peaked at the highest level of predator body size diversity. 3. Furthermore, observed prey mortality was significantly higher than predictions from the null model that assumed no indirect interactions between predator size classes, indicating that different sized predators were not substitutable but had more than additive effects. Higher predator body size diversity therefore increased prey mortality, despite the increased potential for behavioural interference and predation among predators demonstrated in additional laboratory experiments. 4. Thus, seasonal changes in the distribution of predator body sizes altered the strength of prey suppression not only through changes in mean predator size but also through changes in the size distribution of predators. In general, this indicates that variation (i.e. diversity) within a single trait, body size, can influence the strength of trophic interactions and emphasizes the importance of seasonal shifts in size structure of natural food webs for community dynamics.},
+   keywords = {Animals
+Body Size/*physiology
+Cannibalism
+Food Chain
+Insects/*physiology
+Larva/physiology
+Predatory Behavior/*physiology
+*Seasons},
+   ISSN = {1365-2656 (Electronic)
+0021-8790 (Linking)},
+   DOI = {10.1111/j.1365-2656.2011.01935.x},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@article{Rusch2015,
+   author = {Rusch, Adrien and Birkhofer, Klaus and Bommarco, Riccardo and Smith, Henrik G. and Ekbom, Barbara},
+   title = {Predator body sizes and habitat preferences predict predation rates in an agroecosystem},
+   journal = {Basic and Applied Ecology},
+   volume = {16},
+   number = {3},
+   pages = {250-259},
+   ISSN = {14391791},
+   DOI = {10.1016/j.baae.2015.02.003},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{Ruzicka1985,
+   author = {Růžička, V. },
+   title = {The size groups in the spiders (Araneae) and carabids (Col. Carabidae). },
+   journal = {Acta Universitatis Carolinae. Biologica},
+   volume = {1982-1985},
+   pages = {77-107},
+   year = {1985},
+   type = {Journal Article}
+}
+
+@article{Sattler2010,
+   author = {Sattler, T. and Duelli, P. and Obrist, M. K. and Arlettaz, R. and Moretti, M.},
+   title = {Response of arthropod species richness and functional groups to urban habitat structure and management},
+   journal = {Landscape Ecology},
+   volume = {25},
+   number = {6},
+   pages = {941-954},
+   abstract = {Urban areas are a particular landscape matrix characterized by a fine-grained spatial arrangement of very diverse habitats (urban mosaic). We investigated arthropods to analyse biodiversity-habitat associations along five environmental gradients (age, impervious area, management, configuration, composition) in three Swiss cities (96 study sites). We considered total species richness and species richness within different functional groups (zoophagous, phytophagous, pollinator, low mobility, and high mobility species). Information theoretical model selection procedures were applied and predictions were calculated based on weighted models. Urban areas yielded on average 284 arthropod species (range: 169-361), with species richness correlating mostly with heterogeneity indices (configuration and composition). Species richness also increased with age of urban settlement, while enlarged proportions of impervious area and intensified habitat management was negatively correlated. Functional groups showed contrasted, specific responses to environmental variables. Overall, we found surprisingly little variation in species richness along the gradients, which is possibly due to the fine-grained spatial interlinkage of good (heterogeneous) and bad (sealed) habitats. The highly fragmented nature of urban areas may not represent a major obstacle for the arthropods currently existing in cities because they have probably been selected for tolerance to fragmentation and for high colonisation potential. Given that built areas are becoming denser, increasing spatial heterogeneity of the urban green offers potential for counteracting the detrimental effects of densification upon urban biodiversity. By quantifying the expected effects along environmental gradients, this study provides guidance for managers to set priorities when enhancing urban arthropod species richness.},
+   keywords = {Rapid biodiversity assessment
+Morphospecies
+Insects
+Spiders
+Resilience
+Switzerland
+agricultural landscapes
+biodiversity evaluation
+forest edges
+diversity
+conservation
+ecology
+scale
+urbanization
+ecosystems
+abundance},
+   ISSN = {0921-2973},
+   DOI = {10.1007/s10980-010-9473-2},
+   year = {2010},
+   type = {Journal Article}
+}
+
+@article{Schirmel2016,
+   author = {Schirmel, Jens and Thiele, Jan and Entling, Martin H. and Buchholz, Sascha},
+   title = {Trait composition and functional diversity of spiders and carabids in linear landscape elements},
+   journal = {Agriculture, Ecosystems & Environment},
+   volume = {235},
+   pages = {318-328},
+   ISSN = {01678809},
+   DOI = {10.1016/j.agee.2016.10.028},
+   year = {2016},
+   type = {Journal Article}
+}
+
+@book{Schmidt2011,
+   author = {Schmidt, M. and Kriebitsch, W.-U. and Ewald, J. (Red.)},
+   title = {Waldartenlisten der Farn- und Blütenpflanzen, Moose und Flechten Deutschlands},
+   volume = {299},
+   series = {BfN-Skripten},
+   year = {2011},
+   type = {Book}
+}
+
+@article{Schmitz2004,
+   author = {Schmitz, O. J. and Krivan, V. and Ovadia, O.},
+   title = {Trophic cascades: the primacy of trait-mediated indirect interactions},
+   journal = {Ecology Letters},
+   volume = {7},
+   number = {2},
+   pages = {153-163},
+   abstract = {Trophic cascades are textbook examples of predator indirect effects on ecological systems. Yet there is considerable debate about their nature, strength and overall importance. This debate stems in part from continued uncertainty about the ultimate mechanisms driving cascading effects. We present a synthesis of empirical evidence in support of one possible ultimate mechanism: the foraging-predation risk trade-offs undertaken by intermediary species. We show that simple trade-off behaviour can lead to both positive and negative indirect effects of predators on plant resources and hence can explain considerable contingency on the nature and strength of cascading effects among systems. Thus, predicting the sign and strength of indirect effect simply requires knowledge of habitat and resource use by prey with regard to predators' presence, habitat use and hunting mode. The synthesis allows us to postulate a hypothesis for new conceptualization of trophic cascades which is to be viewed as an ultimate trade-off between intervening species. In this context, different predators apply different rules of engagement based on their hunting mode and habitat use. These different rules then determine whether behavioural effects persist or attenuate at the level of the food chain.},
+   keywords = {adaptive foraging
+anti-predator behaviour
+cascading effects
+density-mediated indirect effects
+food chains
+food web topology
+predation risk-foraging trade-offs
+predator identity
+predator-prey
+interactions
+trait-mediated indirect effects
+predator-prey interactions
+ant-plant mutualism
+food-web
+community
+structure
+habitat use
+ecological communities
+antipredator behavior
+primary productivity
+multiple predators
+temporal variation
+Environmental Sciences & Ecology},
+   ISSN = {1461-023X},
+   DOI = {10.1111/j.1461-0248.2003.00560.x},
+   year = {2004},
+   type = {Journal Article}
+}
+
+@inbook{Smith2014,
+   author = {Smith, Henrik G. and Birkhofer, Klaus and Clough, Yann and Ekroos, Johan and Olsson, Olaf and Rundlöf, Maj},
+   title = {Beyond dispersal: the role of animal movement in modern agricultural landscapes},
+   booktitle = {Animal movement across scales},
+   editor = {Hansson, L.-A.  and Åkesson, S.},
+   publisher = {Oxford University Press},
+   address = {New York},
+   year = {2014},
+   type = {Book Section}
+}
+
+@article{Sonnier2012,
+   author = {Sonnier, Grégory and Navas, Marie-Laure and Fayolle, Adeline and Shipley, Bill},
+   title = {Quantifying trait selection driving community assembly: a test in herbaceous plant communities under contrasted land use regimes},
+   journal = {Oikos},
+   volume = {121},
+   number = {7},
+   pages = {1103-1111},
+   abstract = {Plant traits are particularly important in determining plant community structure. However, how can one identify which traits are the most important in driving community assembly? Here we propose a method 1) to quantify the direction and strength of trait selection during community assembly and 2) to obtain parsimonious lists of traits that can predict species relative abundances in plant communities. We tested our method using floristic data from 32 plots experiencing different treatments (fertilisation and grazing) in southern France. Twelve functional traits were measured on 68 species. We determined the direction and strength of selection on these 12 traits using a metric derived from a maximum entropy model (i.e. lambda). We then determined our parsimonious list of traits using a backward selection of traits based on these lambda values (for all treatments and in each treatment separately). We finally compared our method to two other methods: one based on iterative RLQ and the other based on an entropy-based forward selection of traits. We found major differences in the direction and strength of selection across the 12 traits and treatments. From the 12 traits, plant vegetative and reproductive heights, leaf dry matter content leaf nitrogen content, specific leaf area, and leaf phosphorus content were particularly important for predicting species relative abundances when considering all treatments together. Our method yielded results similar to those produced by the entropy-based approach but differed from those produced by the iterative RLQ, whose selected traits could not significantly predict species relative abundances. Together these results suggest that the assembly of these communities is primarily driven by a small number of key functional traits. We argue that our method provides an objective way of determining a parsimonious list of traits that together accurately predict community structure and which, despite its complementarities with entropy-based method, offers significant advantages.},
+   keywords = {dry-matter content
+functional traits
+grazing response
+leaf traits
+grasslands
+abundance
+ecology
+identification
+predictors
+worldwide},
+   ISSN = {00301299},
+   DOI = {10.1111/j.1600-0706.2011.19871.x},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@article{Stevens2003,
+   author = {Stevens, Richard D. and Cox, Stephen B. and Strauss, Richard E. and Willig, Michael R.},
+   title = {Patterns of functional diversity across an extensive environmental gradient: vertebrate consumers, hidden treatments and latitudinal trends},
+   journal = {Ecology Letters},
+   volume = {6},
+   number = {12},
+   pages = {1099-1108},
+   ISSN = {1461023X
+14610248},
+   DOI = {10.1046/j.1461-0248.2003.00541.x},
+   year = {2003},
+   type = {Journal Article}
+}
+
+@article{Suding2008,
+   author = {Suding, Katharine N. and Lavorel, S. and Chapin, F. S. and Cornelissen, J. H. and Díaz, S and Garnier, Eric and Goldberg, Deborah and Hooper, D. U. and Jackson, S.T. and Navas, Marie-Laure},
+   title = {Scaling environmental change through the community-level: a trait-based response-and-effect framework for plants},
+   journal = {Global Change Biology},
+   volume = {14},
+   ISSN = {1354-1013},
+   DOI = {10.1111/j.1365-2486.2008.01557.x},
+   year = {2008},
+   type = {Journal Article}
+}
+
+@article{Talarico2007,
+   author = {Talarico, F. and Romeo, M. and Massolo, A. and Brandmayr, P. and Zetto, T.},
+   title = {Morphometry and eye morphology in three species of Carabus (Coleoptera : Carabidae) in relation to habitat demands},
+   journal = {Journal of Zoological Systematics and Evolutionary Research},
+   volume = {45},
+   number = {1},
+   pages = {33-38},
+   abstract = {Morphological features of three common European olfactory hunting carabid beetles, Carabus coriaceus mediterraneus Born, 1906, Carabus lefebvrei Dejean, 1826 and Carabus preslii neumeyeri Schaum, 1856, were compared. According to eye measurements, the three species are nocturnal and/or twilight hunters. They differ, however, in relative length of the antennae, relative surface area of the compound eyes, density of ommatidia and relative head width. These differences can be correlated with the species-specific habitat demands (light intensity, open land or shaded places). In particular, the greater lateral eye protrusion in C. lefebvrei corresponds to its tree-climbing habits, while the larger relative eye surface area and ommatidia density in C. coriaceus correspond to its choice of open habitats.},
+   keywords = {compound eyes
+morphometric measurements
+carabus
+ground-beetles coleoptera
+mechanisms
+form},
+   ISSN = {0947-5745},
+   DOI = {10.1111/j.1439-0469.2006.00394.x},
+   year = {2007},
+   type = {Journal Article}
+}
+
+@article{TerBraak2012,
+   author = {Ter Braak, Cajo J. and Cormont, Anouk and Dray, Stéphane},
+   title = {Improved testing of species traits--environment relationships in the fourth-corner problem},
+   journal = {Ecology},
+   volume = {93},
+   number = {7},
+   pages = {1525-1526},
+   abstract = {The fourth-corner problem entails estimation and statistical testing of the relationship between species traits and environmental variables from the analysis of three data tables. In a 2008 paper, S. Dray and P. Legendre proposed and evaluated five permutation methods for statistical significance testing, including a new two-step testing procedure. However, none of these attained the correct type I error in all cases of interest. We solve this problem by showing that a small modification of their two-step procedure controls the type I error in all cases. The modification consists of adjusting the significance level from mean square root of alpha to alpha or, equivalently, of reporting the maximum of the individual P. values as the final one. The test is also applicable to the three-table ordination method RLQ.},
+   ISSN = {0012-9658},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@article{Toju2006,
+   author = {Toju, H. and Sota, T.},
+   title = {Adaptive divergence of scaling relationships mediates the arms race between a weevil and its host plant},
+   journal = {Biology Letters},
+   volume = {2},
+   number = {4},
+   pages = {539-542},
+   abstract = {Coevolution of exaggerated morphologies between insects and plants is a well-known but poorly understood phenomenon in evolutionary biology. In the antagonistic interaction between a seed-predatory insect, the camellia weevil (Curculio camelliae), and its host plant, Japanese camellia (Camellia japonica), we examined the evolutionary trajectory of an exaggerated offensive trait of the weevil (rostrum length) in terms of scaling relationship. Sampling throughout Japan revealed that the ratio of the rostrum length to overall body size was correlated with the ratio of the pericarp thickness to overall fruit size across the localities. We found a geographical interpopulation divergence in a parameter pertaining to the allometric equation of rostrum length (the coefficient a in y=axb, where y and x denote rostrum and body lengths, respectively), and the pattern of geographical differentiation in the allometric coefficient was closely correlated with the variation in the pericarp thickness of Japanese camellia. Our results provide a novel example of a geographically diverged scaling relationship in an insect morphology resulting from a coevolutionary arms race with its host plant.},
+   keywords = {Adaptation, Biological/*physiology
+Analysis of Variance
+Animals
+*Biological Evolution
+Camellia/*physiology
+Ecosystem
+Geography
+Statistics as Topic
+Weevils/*physiology},
+   ISSN = {1744-9561 (Print)
+1744-9561 (Linking)},
+   DOI = {10.1098/rsbl.2006.0514},
+   year = {2006},
+   type = {Journal Article}
+}
+
+@article{Uchida2014,
+   author = {Uchida, K. and Ushimaru, A.},
+   title = {Biodiversity declines due to abandonment and intensification of agricultural lands: patterns and mechanisms},
+   journal = {Ecological Monographs},
+   volume = {84},
+   number = {4},
+   pages = {637-658},
+   abstract = {Declines in plants and herbivorous insects due to land use abandonment and intensification have been studied in agricultural areas worldwide. We tested four hypotheses, which were complementary rather than mutually exclusive, to understand the mechanisms driving biodiversity declines due to abandonment and intensification. These predict that biodiversity decline is caused by a decline in resource diversity, changes in disturbance regime, surrounding landscape conversion, and a decrease in biomass production. We compared plant richness and butterfly and orthopteran richness and diversity among three land use types in seminatural grasslands: abandoned, traditional, and intensified terraces. Then, we examined effects of changes in resource (plant) richness, frequency of disturbance (mowing), and surrounding landscapes on butterfly and orthopteran diversity to understand the mechanisms driving decline after land abandonment and intensification. Plant and herbivore richness and diversity were significantly lower in abandoned and intensified grasslands than in traditional grasslands. This trend was consistent throughout the seasons in both years of the study. Changes in mowing frequency and surrounding landscape explained plant richness declines as a consequence of land abandonment and intensification. Declines in herbivorous insects were explained by plant richness declines and changes in mowing frequency, but not by landscape changes. Plant and herbivore richness were maximized at an intermediate mowing frequency (approximately twice per year), which is typical practice on traditional terraces. This is the first report demonstrating that the intermediate disturbance hypothesis explained well the biodiversity declines in agricultural ecosystems. The richness and diversity responses of herbivore functional groups to plant richness, mowing frequency, and surrounding landscapes were generally inconsistent with predictions. We found significant trends in which butterfly and orthopteran species with low abundance in traditional terraces were lost in abandoned and/or intensive terraces. This may suggest that the number of individuals of most herbivorous species decreased randomly with respect to life-history traits following a decline in plant richness after changes in disturbance frequency. This study demonstrates that declines in herbivorous insects can be explained by multiple factors, and provides a unified explanation for biodiversity declines in both abandoned and intensified use of agricultural lands, which have often been studied separately.},
+   keywords = {butterfly
+diversity
+land use change
+landscape
+orthoptera
+seminatural grassland
+the intermediate disturbance hypothesis
+the more individuals hypothesis
+species richness
+seminatural grasslands
+plant diversity
+individuals hypothesis
+habitat fragmentation
+arthropod diversity
+grazing intensity
+field experiment
+body-size
+communities},
+   ISSN = {0012-9615},
+   DOI = {10.1890/13-2170.1},
+   year = {2014},
+   type = {Journal Article}
+}
+
+@article{Vandewalle2010,
+   author = {Vandewalle, Marie and Bello, Francesco and Berg, Matty P. and Bolger, Thomas and Dolédec, Sylvain and Dubs, Florence and Feld, Christian K. and Harrington, Richard and Harrison, Paula A. and Lavorel, Sandra and Silva, Pedro Martins and Moretti, Marco and Niemelä, Jari and Santos, Paulo and Sattler, Thomas and Sousa, J. Paulo and Sykes, Martin T. and Vanbergen, Adam J. and Woodcock, Ben A.},
+   title = {Functional traits as indicators of biodiversity response to land use changes across ecosystems and organisms},
+   journal = {Biodiversity and Conservation},
+   volume = {19},
+   number = {10},
+   pages = {2921-2947},
+   ISSN = {0960-3115
+1572-9710},
+   DOI = {10.1007/s10531-010-9798-9},
+   year = {2010},
+   type = {Journal Article}
+}
+
+@article{Villeger2008,
+   author = {Villéger, Sébastien and Mason, Norman W. and Mouillot, David},
+   title = {New multidimensional functional diversity indices for a multifaceted framework in functional ecology},
+   journal = {Ecology},
+   volume = {89},
+   number = {8},
+   pages = {2290-2301},
+   abstract = {Functional diversity is increasingly identified as an important driver of ecosystem functioning. Various indices have been proposed to measure the functional diversity of a community, but there is still no consensus on which are most suitable. Indeed, none of the existing indices meets all the criteria required for general use. The main criteria are that they must be designed to deal with several traits, take into account abundances, and measure all the facets of functional diversity. Here we propose three indices to quantify each facet of functional diversity for a community with species distributed in a multidimensional functional space: functional richness (volume of the functional space occupied by the community), functional evenness (regularity of the distribution of abundance in this volume), and functional divergence (divergence in the distribution of abundance in this volume). Functional richness is estimated using the existing convex hull volume index. The new functional evenness index is based on the minimum spanning tree which links all the species in the multidimensional functional space. Then this new index quantifies the regularity with which species abundances are distributed along the spanning tree. Functional divergence is measured using a novel index which quantifies how species diverge in their distances (weighted by their abundance) from the center of gravity in the functional space. We show that none of the indices meets all the criteria required for a functional diversity index, but instead we show that the set of three complementary indices meets these criteria. Through simulations of artificial data sets, we demonstrate that functional divergence and functional evenness are independent of species richness and that the three functional diversity indices are independent of each other. Overall, our study suggests that decomposition of functional diversity into its three primary components provides a meaningful framework for its quantification and for the classification of existing functional diversity indices. This decomposition has the potential to shed light on the role of biodiversity on ecosystem functioning and on the influence of biotic and abiotic filters on the structure of species communities. Finally, we propose a general framework for applying these three functional diversity indices.},
+   ISSN = {0012-9658},
+   year = {2008},
+   type = {Journal Article}
+}
+
+@article{Violle2012,
+   author = {Violle, C. and Enquist, B. J. and McGill, B. J. and Jiang, L. and Albert, C. H. and Hulshof, C. and Jung, V. and Messier, J.},
+   title = {The return of the variance: intraspecific variability in community ecology},
+   journal = {Trends in Ecology & Evolution},
+   volume = {27},
+   number = {4},
+   pages = {244-252},
+   abstract = {Despite being recognized as a promoter of diversity and a condition for local coexistence decades ago, the importance of intraspecific variance has been neglected over time in community ecology. Recently, there has been a new emphasis on intraspecific variability. Indeed, recent developments in trait-based community ecology have underlined the need to integrate variation at both the intraspecific as well as interspecific level. We introduce new T-statistics ('T' for trait), based on the comparison of intraspecific and interspecific variances of functional traits across organizational levels, to operationally incorporate intraspecific variability into community ecology theory. We show that a focus on the distribution of traits at local and regional scales combined with original analytical tools can provide unique insights into the primary forces structuring communities.},
+   keywords = {Animals
+*Biodiversity
+*Ecology},
+   ISSN = {1872-8383 (Electronic)
+0169-5347 (Linking)},
+   DOI = {10.1016/j.tree.2011.11.014},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@article{Violle2007,
+   author = {Violle, Cyrille and Navas, Marie-Laure and Vile, Denis and Kazakou, Elena and Fortunel, Claire and Hummel, Irène and Garnier, Eric},
+   title = {Let the concept of trait be functional!},
+   journal = {Oikos},
+   volume = {116},
+   number = {5},
+   pages = {882-892},
+   ISSN = {00301299
+16000706},
+   DOI = {10.1111/j.0030-1299.2007.15559.x},
+   year = {2007},
+   type = {Journal Article}
+}
+
+@book{Wachmann04_12,
+   author = {Wachmann, E. and Melber, A. and Deckert, J.},
+   title = {Wanzen Band 1-5},
+   publisher = {Goecke & Evers},
+   address = {Keltern},
+   series = {Die Tierwelt Deutschlands},
+   year = {2004-2012},
+   type = {Book}
+}
+
+@article{Wamser2012,
+   author = {Wamser, S. and Diekötter, T. and Boldt, L. and Wolters, V. and Dauber, J.},
+   title = {Trait-specific effects of habitat isolation on carabid species richness and community composition in managed grasslands},
+   journal = {Insect Conservation and Diversity},
+   volume = {5},
+   number = {1},
+   pages = {9-18},
+   abstract = {1. Isolation of natural and semi-natural habitats, a consequence of increasing management intensification, has been identified as a major threat to the diversity of many taxa in agricultural landscapes. Yet, it is increasingly apparent that the effects of habitat isolation vary not only among distantly but also closely related taxa, depending on their respective ecological traits. 2. We studied the effects of habitat isolation on carabid beetles with different dispersal potential in common perennial grasslands. The grasslands belonged to three isolation classes: (i) situated in a continuous belt of grasslands, (ii) in an arable matrix but connected to the continuous belt via corridors or (iii) completely isolated in the arable matrix. 3. Neither total carabid species richness nor richness of carabids with high dispersal potential was affected by habitat isolation. In contrast, richness of carabid species with low dispersal potential was more than two times lower in isolated than in continuous grasslands. Communities of isolated sites were characterised by species with high dispersal potential whereas species with low dispersal potential were associated with continuous or well connected grasslands. 4. Our results revealed trait-specific responses of carabids to habitat isolation and highlight the need for considering these differences when predicting effects of landscape structure on carabid diversity. Grassy corridors seemed to assist the dispersal of carabids with low dispersal potential, thereby allowing these species to persist also in non-continuous but connected habitats. Thus, corridors represent a suitable measure to maintain the diversity of carabids in spatially structured grasslands in agricultural landscapes.},
+   keywords = {Agricultural landscapes
+connectivity
+corridors
+dispersal potential
+in-ground beetles
+agricultural landscapes
+metapopulation dynamics
+metrioptera-roeseli
+movement corridors
+spatial scales
+dispersal
+coleoptera
+connectivity
+colonization},
+   ISSN = {1752-458X},
+   DOI = {10.1111/j.1752-4598.2010.00110.x},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@article{Weiner2011,
+   author = {Weiner, C. N. and Werner, M. and Linsenmair, K. E. and Blüthgen, N.},
+   title = {Land use intensity in grasslands: Changes in biodiversity, species composition and specialisation in flower visitor networks},
+   journal = {Basic and Applied Ecology},
+   volume = {12},
+   number = {4},
+   pages = {292-299},
+   abstract = {The relationship between resource availability and biodiversity of consumers has gained particular attention with the increasing loss of biodiversity. We evaluated resource availability on meadows of low intensity (low/unfertilised, mown once or twice per year) and meadows of high-intensity land use (high fertilisation, mown twice or thrice) before and after the first mowing in relation to network specialisation, species richness and composition of flower visitors. We studied 40 meadows, simultaneously sampling one meadow of low intensity and one meadow of high-intensity land use. Each survey yielded a separate interaction network, comprising all flower visitors found during 6 h in an area of 1000 m(2). In total we recorded 105 plant species and 586 flower visitor species. Species composition of plants and flower visitors differed considerably between the two management regimes, with species overlaps of 43% in plants and 42% in flower visitors. Complementary specialisation of flower visitors differed between taxa: dipterans were significantly less specialised than beetles and butterflies, and bees had the highest degree of specialisation. Earlier in the season (before mowing), meadows of low-intensity land use were significantly richer in flowering plant, bee and butterfly species. They also showed more plant flower visitor interactions, greater flowering areas and higher individual numbers of butterflies than meadows of high-intensity land use. However, later in the season (after mowing) management types differed only in plant species richness, being higher on meadows of low-intensity land use. We conclude that variations in plant species composition resulting from differences in grassland management may alter plant flower visitor interactions. Moreover, an impoverishment of flower diversity has stronger effects on the diversity and species composition of specialised flower visitor groups than on little or unspecialised flower visitors.},
+   keywords = {Fertilisation
+Mowing
+Plant-pollinator networks
+Diversity
+Pollinators
+Insects
+pollinator visitation
+habitat fragmentation
+functional diversity
+fruit-set
+ecosystem
+stability
+declines
+consequences
+conservation
+communities
+Environmental Sciences & Ecology},
+   ISSN = {1439-1791},
+   DOI = {10.1016/j.baae.2010.08.006},
+   year = {2011},
+   type = {Journal Article}
+}
+
+@article{Wellstein2011,
+   author = {Wellstein, Camilla and Schröder, Boris and Reineking, Björn and Zimmermann, Niklaus E.},
+   title = {Understanding species and community response to environmental change – A functional trait perspective},
+   journal = {Agriculture, Ecosystems & Environment},
+   volume = {145},
+   number = {1},
+   pages = {1-4},
+   ISSN = {01678809},
+   DOI = {10.1016/j.agee.2011.06.024},
+   year = {2011},
+   type = {Journal Article}
+}
+
+@article{Winqvist2014,
+   author = {Winqvist, C. and Bengtsson, J. and Öckinger, E. and Aavik, T. and Berendse, F. and Clement, L. W. and Fischer, C. and Flohre, A. and Geiger, F. and Liira, J. and Thies, C. and Tscharntke, T. and Weisser, W. W. and Bommarco, R.},
+   title = {Species' traits influence ground beetle responses to farm and landscape level agricultural intensification in Europe},
+   journal = {Journal of Insect Conservation},
+   volume = {18},
+   number = {5},
+   pages = {837-846},
+   abstract = {Agricultural intensification may result in important shifts in insect community composition and function, but this remains poorly explored. Studying how groups of species with shared traits respond to local and landscape scale land-use management can reveal mechanisms behind such observed impacts. We tested if ground beetles (Coleoptera: Carabidae) divided into trait groups based on body sizes, wing morphologies and dietary preferences respond differently to farming practise (organic and conventional), farming intensity (measured as yield) and landscape complexity (measured as the proportion of arable land within a 1,000 m radius) across Europe. We used data from 143 farms in five regions in northern and central Europe. Organic farms did not differ in abundance or richness of any trait group compared to conventional farms. As farm scale intensity (yield) increased, overall abundance of beetles decreased, but abundances of small and medium sized beetles, as well as that of wingless beetles, were unaffected. Overall species richness was not affected by yield, whereas consideration of traits revealed that phytophagous and omnivorous beetles were less species rich on farms with high yields. Increasing the proportion of arable land in the landscape increased overall beetle abundance. This was driven by an increase in omnivorous beetles. The total species richness was not affected by an increase in the proportion arable land, although the richness of wingless beetles was found to increase. Potential effects on ecosystem functioning need to be taken into account when designing schemes to maintain agricultural biodiversity, because species with different ecological traits respond differently to local management and landscape changes.},
+   keywords = {Body size
+Diet
+Dispersal mode
+Functional biodiversity
+Landscape
+ecology
+Organic farming
+carabid beetle
+habitat fragmentation
+biological-control
+intraguild
+predation
+functional diversity
+spatial scales
+arable crops
+context
+biodiversity
+land
+Biodiversity & Conservation
+Entomology},
+   ISSN = {1366-638X},
+   DOI = {10.1007/s10841-014-9690-0},
+   year = {2014},
+   type = {Journal Article}
+}
+
+@article{Wood2015,
+   author = {Wood, S. A. and Karp, D. S. and DeClerck, F. and Kremen, C. and Naeem, S. and Palm, C. A.},
+   title = {Functional traits in agriculture: agrobiodiversity and ecosystem services},
+   journal = {Trends in Ecology & Evolution},
+   volume = {30},
+   number = {9},
+   pages = {531-539},
+   abstract = {Functional trait research has led to greater understanding of the impacts of biodiversity in ecosystems. Yet, functional trait approaches have not been widely applied to agroecosystems and understanding of the importance of agrobiodiversity remains limited to a few ecosystem processes and services. To improve this understanding, we argue here for a functional trait approach to agroecology that adopts recent advances in trait research for multitrophic and spatially heterogeneous ecosystems. We suggest that trait values should be measured across environmental conditions and agricultural management regimes to predict how ecosystem services vary with farm practices and environment. This knowledge should be used to develop management strategies that can be easily implemented by farmers to manage agriculture to provide multiple ecosystem services.},
+   keywords = {agriculture
+agrobiodiversity
+biodiversity-ecosystem functioning
+ecosystem services
+functional diversity
+functional trait},
+   ISSN = {1872-8383 (Electronic)
+0169-5347 (Linking)},
+   DOI = {10.1016/j.tree.2015.06.013},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{Woodcock2009,
+   author = {Woodcock, B. A. and Potts, S. G. and Tscheulin, T. and Pilgrim, E. and Ramsey, A. J. and Harrison-Cripps, J. and Brown, V. K. and Tallowin, J. R.},
+   title = {Responses of invertebrate trophic level, feeding guild and body size to the management of improved grassland field margins},
+   journal = {Journal of Applied Ecology},
+   volume = {46},
+   number = {4},
+   pages = {920-929},
+   abstract = {P>1. Management of lowland mesotrophic grasslands in north-west Europe often makes use of inorganic fertilizers, high stocking densities and silage-based forage systems to maximize productivity. The impact of these practices has resulted in a simplification of the plant community combined with wide-scale declines in the species richness of grassland invertebrates. We aim to identify how field margin management can be used to promote invertebrate diversity across a suite of functionally diverse taxa (beetles, planthoppers, true bugs, butterflies, bumblebees and spiders).
+2. Using an information theoretic approach we identify the impacts of management (cattle grazing, cutting and inorganic fertilizer) and plant community composition (forb species richness, grass species richness and sward architecture) on invertebrate species richness and body size. As many of these management practices are common to grassland systems throughout the world, understanding invertebrate responses to them is important for the maintenance of biodiversity.
+3. Sward architecture was identified as the primary factor promoting increased species richness of both predatory and phytophagous trophic levels, as well as being positively correlated with mean body size. In all cases phytophagous invertebrate species richness was positively correlated with measures of plant species richness.
+4. The direct effects of management practices appear to be comparatively weak, suggesting that their impacts are indirect and mediated though the continuous measures of plant community structure, such as sward architecture or plant species richness.
+5. Synthesis and applications. By partitioning field margins from the remainder of the field, economically viable intensive grassland management can be combined with extensive management aimed at promoting native biodiversity. The absence of inorganic fertilizer, combined with a reduction in the intensity of both cutting and grazing regimes, promotes floral species richness and sward architectural complexity. By increasing sward architecture the total biomass of invertebrates also increased (by c. 60% across the range of sward architectural measures seen in this study), increasing food available for higher trophic levels, such as birds and mammals.},
+   keywords = {cutting
+npk fertilizer
+phytophagous
+plant species richness
+pollinators
+predatory
+sward architecture
+functional-groups
+plant diversity
+conservation
+communities
+habitat
+biodiversity
+agriculture
+restoration
+insects
+ecology},
+   ISSN = {0021-8901},
+   DOI = {10.1111/j.1365-2664.2009.01675.x},
+   year = {2009},
+   type = {Journal Article}
+}
+

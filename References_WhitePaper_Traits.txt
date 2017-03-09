@@ -1,0 +1,587 @@
+﻿@article{Allan2015,
+   author = {Allan, E. and Manning, P. and Alt, F. and Binkenstein, J. and Blaser, S. and Bluthgen, N. and Bohm, S. and Grassein, F. and Holzel, N. and Klaus, V. H. and Kleinebecker, T. and Morris, E. K. and Oelmann, Y. and Prati, D. and Renner, S. C. and Rillig, M. C. and Schaefer, M. and Schloter, M. and Schmitt, B. and Schoning, I. and Schrumpf, M. and Solly, E. and Sorkau, E. and Steckel, J. and Steffen-Dewenter, I. and Stempfhuber, B. and Tschapka, M. and Weiner, C. N. and Weisser, W. W. and Werner, M. and Westphal, C. and Wilcke, W. and Fischer, M.},
+   title = {Land use intensification alters ecosystem multifunctionality via loss of biodiversity and changes to functional composition},
+   journal = {Ecology Letters},
+   abstract = {Global change, especially land-use intensification, affects human well-being by impacting the delivery of multiple ecosystem services (multifunctionality). However, whether biodiversity loss is a major component of global change effects on multifunctionality in real-world ecosystems, as in experimental ones, remains unclear. Therefore, we assessed biodiversity, functional composition and 14 ecosystem services on 150 agricultural grasslands differing in land-use intensity. We also introduce five multifunctionality measures in which ecosystem services were weighted according to realistic land-use objectives. We found that indirect land-use effects, i.e. those mediated by biodiversity loss and by changes to functional composition, were as strong as direct effects on average. Their strength varied with land-use objectives and regional context. Biodiversity loss explained indirect effects in a region of intermediate productivity and was most damaging when land-use objectives favoured supporting and cultural services. In contrast, functional composition shifts, towards fast-growing plant species, strongly increased provisioning services in more inherently unproductive grasslands.},
+   keywords = {Biodiversity-ecosystem functioning
+ecosystem services
+global change
+land use
+multifunctionality},
+   ISSN = {1461-0248 (Electronic)
+1461-023X (Linking)},
+   DOI = {10.1111/ele.12469},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{Aubin2013,
+   author = {Aubin, Isabelle and Venier, Lisa and Pearce, Jennie and Moretti, Marco},
+   title = {Can a trait-based multi-taxa approach improve our assessment of forest management impact on biodiversity?},
+   journal = {Biodiversity and Conservation},
+   volume = {22},
+   number = {12},
+   pages = {2957-2975},
+   ISSN = {0960-3115
+1572-9710},
+   DOI = {10.1007/s10531-013-0565-6},
+   year = {2013},
+   type = {Journal Article}
+}
+
+@article{Birkhofer2015AGEE,
+   author = {Birkhofer, K. and Diekötter, T. and Meub, C. and Stötzel, K. and Wolters, V.},
+   title = {Optimizing arthropod predator conservation in permanent grasslands by considering diversity components beyond species richness},
+   journal = {Agriculture, Ecosystems & Environment},
+   volume = {211},
+   pages = {65-72},
+   ISSN = {01678809},
+   DOI = {10.1016/j.agee.2015.05.014},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{Birkhofer2017,
+   author = {Birkhofer, K. and Gossner, M. M. and Diekotter, T. and Drees, C. and Ferlian, O. and Maraun, M. and Scheu, S. and Weisser, W. W. and Wolters, V. and Wurst, S. and Zaitsev, A. S. and Smith, H. G.},
+   title = {Land-use type and intensity differentially filter traits in above- and below-ground arthropod communities},
+   journal = {J Anim Ecol},
+   abstract = {Along with the global decline of species richness goes a loss of ecological traits. Associated biotic homogenization of animal communities and narrowing of trait diversity threaten ecosystem functioning and human well-being. High management intensity is regarded as an important ecological filter, eliminating species that lack suitable adaptations. Below-ground arthropods are assumed to be less sensitive to such effects than above-ground arthropods. Here, we compared the impact of management intensity between (grassland vs. forest) and within land-use types (local management intensity) on the trait diversity and composition in below- and above-ground arthropod communities. We used data on 722 arthropod species living above-ground (Auchenorrhyncha and Heteroptera), primarily in soil (Chilopoda and Oribatida) or at the interface (Araneae and Carabidae). Our results show that trait diversity of arthropod communities is not primarily reduced by intense local land use, but is rather affected by differences between land-use types. Communities of Auchenorrhyncha and Chilopoda had significantly lower trait diversity in grassland habitats as compared to forests. Carabidae showed the opposite pattern with higher trait diversity in grasslands. Grasslands had a lower proportion of large Auchenorrhyncha and Carabidae individuals, whereas Chilopoda and Heteroptera individuals were larger in grasslands. Body size decreased with land-use intensity across taxa, but only in grasslands. The proportion of individuals with low mobility declined with land-use intensity in Araneae and Auchenorrhyncha, but increased in Chilopoda and grassland Heteroptera. The proportion of carnivorous individuals increased with land-use intensity in Heteroptera in forests and in Oribatida and Carabidae in grasslands. Our results suggest that gradients in management intensity across land-use types will not generally reduce trait diversity in multiple taxa, but will exert strong trait filtering within individual taxa. The observed patterns for trait filtering in individual taxa are not related to major classifications into above- and below-ground species. Instead, ecologically different taxa resembled each other in their trait diversity and compositional responses to land-use differences. These previously undescribed patterns offer an opportunity to develop management strategies for the conservation of trait diversity across taxonomic groups in permanent grassland and forest habitats.},
+   keywords = {biodiversity exploratories
+biotic homogenization
+ecological filters
+ecosystem functioning
+environmental filtering
+forest
+grassland
+soil animals
+trait composition
+trait diversity},
+   ISSN = {1365-2656 (Electronic)
+0021-8790 (Linking)},
+   DOI = {10.1111/1365-2656.12641},
+   year = {2017},
+   type = {Journal Article}
+}
+
+@article{Birkhofer2015Ecography,
+   author = {Birkhofer, K. and Smith, H. G. and Weisser, W. W. and Wolters, V. and Gossner, M. M.},
+   title = {Land-use effects on the functional distinctness of arthropod communities},
+   journal = {Ecography},
+   volume = {38},
+   number = {9},
+   pages = {889-900},
+   abstract = {Land-use change is a major driver of the global loss of biodiversity, but it is unclear to what extent this also results in a loss of ecological traits. Therefore, a better understanding of how land-use change affects ecological traits is crucial for efforts to sustain functional diversity. To this end we tested whether higher species richness or taxonomic distinctness generally leads to increased functional distinctness and whether intensive land use leads to functionally more narrow arthropod communities. We compiled species composition and trait data for 350 species of terrestrial arthropods (Araneae, Carabidae and Heteroptera) in different land-use types (forests, grasslands and arable fields) of low and high land-use intensity. We calculated the average functional and taxonomic distinctness and the rarified trait richness for each community. These measures reflect the range of traits, taxonomic relatedness and number of traits that are observed in local communities. Average functional distinctness only increased significantly with species richness in Carabidae communities. Functional distinctness increased significantly with taxonomic distinctness in communities of all analyzed taxa suggesting a high functional redundancy of taxonomically closely related species. Araneae and Heteroptera communities had the expected lower functional distinctness at sites with higher land-use intensity. More frequently disturbed land-use types such as managed grasslands or arable fields were characterized by species with smaller body sizes and higher dispersal abilities and communities with lower functional distinctness or trait richness. Simple recommendations about the conservation of functional distinctness of arthropod communities in the face of future land-use intensification and species loss are not possible. Our study shows that these relationships depend on the studied taxa and land-use type. However, for some arthropod groups functional distinctness is threatened by intensification and conversion from less to more frequently disturbed land-uses.},
+   keywords = {phylogenetic diversity
+taxonomic distinctness
+use intensification
+ecosystem services
+biodiversity loss
+current knowledge
+trait diversity
+plant
+responses
+assemblages},
+   ISSN = {09067590},
+   DOI = {10.1111/ecog.01141},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{Borschig2013,
+   author = {Börschig, C. and Klein, A. M. and von Wehrden, H. and Krauss, J.},
+   title = {Traits of butterfly communities change from specialist to generalist characteristics with increasing land-use intensity},
+   journal = {Basic and Applied Ecology},
+   volume = {14},
+   number = {7},
+   pages = {547-554},
+   abstract = {Land-use intensification leads to species loss and shifts in community composition, but only few studies examine how these dynamics affect ecological and life-history traits. We thus investigated whether ecological and life-history traits differ between butterfly communities of grasslands with different land-use intensity. We conducted butterfly transect surveys in 137 grassland sites in three regions of Germany and compiled 10 species-specific ecological and life-history traits from the literature. These traits are associated with food plant specialisation, dispersal, distribution, reproduction and development. We calculated a land-use intensity gradient based on the amount of fertilise mowing frequency and grazing intensity. We analysed differences of traits characteristics between butterfly communities along the land-use intensity gradient in a fourth-corner analysis, thus considering correlations between traits. Six ecological and life-history traits changed from characteristics associated with specialists to such associated with generalists with increasing land-use intensity. These traits characteristics in intensified grasslands were: high dispersal propensity, large distribution range, low population density, more than one generation per year, hibernation in a more advanced developmental stage and a long flight period. The functional homogenisation of the butterfly communities with changes from specialist to generalist trait characteristics with increasing land-use intensity may have severe consequences for ecosystem functioning and services.},
+   keywords = {Development
+Dispersal
+Distribution
+Flight period
+Grassland
+Life-history traits
+Population density
+Reproduction
+Voltinism
+abundance-occupancy relationships
+calcareous grasslands
+european
+butterflies
+dispersal ability
+species responses
+extinction
+scale
+biodiversity
+history
+homogenization
+Environmental Sciences & Ecology},
+   ISSN = {1439-1791},
+   DOI = {10.1016/j.baae.2013.09.002},
+   year = {2013},
+   type = {Journal Article}
+}
+
+@article{Cadotte2011,
+   author = {Cadotte, Marc W. and Carscadden, Kelly and Mirotchnick, Nicholas},
+   title = {Beyond species: functional diversity and the maintenance of ecological processes and services},
+   journal = {Journal of Applied Ecology},
+   volume = {48},
+   number = {5},
+   pages = {1079-1087},
+   abstract = {1. The goal of conservation and restoration activities is to maintain biological diversity and the ecosystem services that this diversity provides. These activities traditionally focus on the measures of species diversity that include only information on the presence and abundance of species. Yet how diversity influences ecosystem function depends on the traits and niches filled by species.
+2. Biological diversity can be quantified in ways that account for functional and phenotypic differences. A number of such measures of functional diversity (FD) have been created, quantifying the distribution of traits in a community or the relative magnitude of species similarities and differences. We review FD measures and why they are intuitively useful for understanding ecological patterns and are important for management.
+3. In order for FD to be meaningful and worth measuring, it must be correlated with ecosystem function, and it should provide information above and beyond what species richness or diversity can explain. We review these two propositions, examining whether the strength of the correlation between FD and species richness varies across differing environmental gradients and whether FD offers greater explanatory power of ecosystem function than species richness.
+4. Previous research shows that the relationship between FD and richness is complex and context dependent. Different functional traits can show individual responses to different gradients, meaning that important changes in diversity can occur with minimal change in richness. Further, FD can explain variation in ecosystem function even when richness does not.
+5. Synthesis and applications. FD measures those aspects of diversity that potentially affect community assembly and function. Given this explanatory power, FD should be incorporated into conservation and restoration decision-making, especially for those efforts attempting to reconstruct or preserve healthy, functioning ecosystems.},
+   keywords = {biodiversity conservation
+community assembly
+ecosystem function
+ecosystem services
+functional diversity
+restoration
+species richness
+ecosystem processes
+plant-communities
+trait diversity
+biodiversity
+richness
+patterns
+framework
+productivity
+environments
+consequences},
+   ISSN = {00218901},
+   DOI = {10.1111/j.1365-2664.2011.02048.x},
+   year = {2011},
+   type = {Journal Article}
+}
+
+@article{Chiste2016,
+   author = {Chisté, Melanie N. and Mody, Karsten and Gossner, Martin M. and Simons, Nadja K. and Köhler, Günter and Weisser, Wolfgang W. and Blüthgen, Nico},
+   title = {Losers, winners, and opportunists: How grassland land-use intensity affects orthopteran communities},
+   journal = {Ecosphere},
+   volume = {7},
+   number = {11},
+   pages = {e01545},
+   ISSN = {21508925},
+   DOI = {10.1002/ecs2.1545},
+   year = {2016},
+   type = {Journal Article}
+}
+
+@article{Chown2010,
+   author = {Chown, S. L. and Gaston, K. J.},
+   title = {Body size variation in insects: a macroecological perspective},
+   journal = {Biol Rev Camb Philos Soc},
+   volume = {85},
+   number = {1},
+   pages = {139-169},
+   abstract = {Body size is a key feature of organisms and varies continuously because of the effects of natural selection on the size-dependency of resource acquisition and mortality rates. This review provides a critical and synthetic overview of body size variation in insects from a predominantly macroecological (large-scale temporal and spatial) perspective. Because of the importance of understanding the proximate determinants of adult size, it commences with a brief summary of the physiological mechanisms underlying adult body size and its variation, based mostly on findings for the model species Drosophila melanogaster and Manduca sexta. Variation in nutrition and temperature have variable effects on critical weight, the interval to cessation of growth (or terminal growth period) and growth rates, so influencing final adult size. Ontogenetic and phylogenetic variation in size, compensatory growth, scaling at the intra- and interspecific levels, sexual size dimorphism, and body size optimisation are then reviewed in light of their influences on individual and species body size frequency distributions. Explicit attention is given to evolutionary trends, including gigantism, Cope's rule and the rates at which size change has taken place, and to temporal ecological trends such as variation in size with succession and size-selectivity during the invasion process. Large-scale spatial variation in size at the intraspecific, interspecific and assemblage levels is considered, with special attention being given to the mechanisms proposed to underlie clinal variation in adult body size. Finally, areas particularly in need of additional research are identified.},
+   keywords = {Animals
+Biological Evolution
+Ecosystem
+Insects/*anatomy & histology/*physiology},
+   ISSN = {1469-185X (Electronic)
+0006-3231 (Linking)},
+   DOI = {10.1111/j.1469-185X.2009.00097.x},
+   year = {2010},
+   type = {Journal Article}
+}
+
+@article{Gamez-Virues2015,
+   author = {Gamez-Virues, S. and Perovic, D. J. and Gossner, M. M. and Borschig, C. and Bluthgen, N. and de Jong, H. and Simons, N. K. and Klein, A. M. and Krauss, J. and Maier, G. and Scherber, C. and Steckel, J. and Rothenwohrer, C. and Steffan-Dewenter, I. and Weiner, C. N. and Weisser, W. and Werner, M. and Tscharntke, T. and Westphal, C.},
+   title = {Landscape simplification filters species traits and drives biotic homogenization},
+   journal = {Nat Commun},
+   volume = {6},
+   pages = {8568},
+   abstract = {Biodiversity loss can affect the viability of ecosystems by decreasing the ability of communities to respond to environmental change and disturbances. Agricultural intensification is a major driver of biodiversity loss and has multiple components operating at different spatial scales: from in-field management intensity to landscape-scale simplification. Here we show that landscape-level effects dominate functional community composition and can even buffer the effects of in-field management intensification on functional homogenization, and that animal communities in real-world managed landscapes show a unified response (across orders and guilds) to both landscape-scale simplification and in-field intensification. Adults and larvae with specialized feeding habits, species with shorter activity periods and relatively small body sizes are selected against in simplified landscapes with intense in-field management. Our results demonstrate that the diversity of land cover types at the landscape scale is critical for maintaining communities, which are functionally diverse, even in landscapes where in-field management intensity is high.},
+   ISSN = {2041-1723 (Electronic)
+2041-1723 (Linking)},
+   DOI = {10.1038/ncomms9568},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{Gossner2016,
+   author = {Gossner, M. M. and Lewinsohn, T. M. and Kahl, T. and Grassein, F. and Boch, S. and Prati, D. and Birkhofer, K. and Renner, S. C. and Sikorski, J. and Wubet, T. and Arndt, H. and Baumgartner, V. and Blaser, S. and Bluthgen, N. and Borschig, C. and Buscot, F. and Diekotter, T. and Jorge, L. R. and Jung, K. and Keyel, A. C. and Klein, A. M. and Klemmer, S. and Krauss, J. and Lange, M. and Muller, J. and Overmann, J. and Pasalic, E. and Penone, C. and Perovic, D. J. and Purschke, O. and Schall, P. and Socher, S. A. and Sonnemann, I. and Tschapka, M. and Tscharntke, T. and Turke, M. and Venter, P. C. and Weiner, C. N. and Werner, M. and Wolters, V. and Wurst, S. and Westphal, C. and Fischer, M. and Weisser, W. W. and Allan, E.},
+   title = {Land-use intensification causes multitrophic homogenization of grassland communities},
+   journal = {Nature},
+   volume = {540},
+   number = {7632},
+   pages = {266-269},
+   abstract = {Land-use intensification is a major driver of biodiversity loss. Alongside reductions in local species diversity, biotic homogenization at larger spatial scales is of great concern for conservation. Biotic homogenization means a decrease in beta-diversity (the compositional dissimilarity between sites). Most studies have investigated losses in local (alpha)-diversity and neglected biodiversity loss at larger spatial scales. Studies addressing beta-diversity have focused on single or a few organism groups (for example, ref. 4), and it is thus unknown whether land-use intensification homogenizes communities at different trophic levels, above- and belowground. Here we show that even moderate increases in local land-use intensity (LUI) cause biotic homogenization across microbial, plant and animal groups, both above- and belowground, and that this is largely independent of changes in alpha-diversity. We analysed a unique grassland biodiversity dataset, with abundances of more than 4,000 species belonging to 12 trophic groups. LUI, and, in particular, high mowing intensity, had consistent effects on beta-diversity across groups, causing a homogenization of soil microbial, fungal pathogen, plant and arthropod communities. These effects were nonlinear and the strongest declines in beta-diversity occurred in the transition from extensively managed to intermediate intensity grassland. LUI tended to reduce local alpha-diversity in aboveground groups, whereas the alpha-diversity increased in belowground groups. Correlations between the beta-diversity of different groups, particularly between plants and their consumers, became weaker at high LUI. This suggests a loss of specialist species and is further evidence for biotic homogenization. The consistently negative effects of LUI on landscape-scale biodiversity underscore the high value of extensively managed grasslands for conserving multitrophic biodiversity and ecosystem service provision. Indeed, biotic homogenization rather than local diversity loss could prove to be the most substantial consequence of land-use intensification.},
+   ISSN = {1476-4687 (Electronic)
+0028-0836 (Linking)},
+   DOI = {10.1038/nature20575},
+   year = {2016},
+   type = {Journal Article}
+}
+
+@article{Gossner2015Traits,
+   author = {Gossner, Martin M. and Simons, Nadja K. and Achtziger, Roland and Blick, Theo and Dorow, Wolfgang H. O. and Dziock, Frank and Köhler, Frank and Rabitsch, Wolfgang and Weisser, Wolfgang W.},
+   title = {A summary of eight traits of Coleoptera, Hemiptera, Orthoptera and Araneae, occurring in grasslands in Germany},
+   journal = {Scientific Data},
+   volume = {2},
+   pages = {150013},
+   abstract = {Analyses of species traits have increased our understanding of how environmental drivers such as disturbances affect the composition of arthropod communities and related processes. There are, however, few studies on which traits in the arthropod community are affected by environmental changes and which traits affect ecosystem functioning. The assembly of arthropod traits of several taxa is difficult because of the large number of species, limited availability of trait databases and differences in available traits. We sampled arthropod species data from a total of 150 managed grassland plots in three regions of Germany. These plots represent the spectrum from extensively used pastures to mown pastures to intensively managed and fertilized meadows. In this paper, we summarize information on body size, dispersal ability, feeding guild and specialization (within herbivores), feeding mode, feeding tissue (within herbivorous suckers), plant part (within herbivorous chewers), endophagous lifestyle (within herbivores), and vertical stratum use for 1,230 species of Coleoptera, Hemiptera (Heteroptera, Auchenorrhyncha), Orthoptera (Saltatoria: Ensifera, Caelifera), and Araneae, sampled by sweep-netting between 2008 and 2012. We compiled traits from various literature sources and complemented data from reliable internet sources and the authors' experience.},
+   keywords = {Animals
+*Beetles/anatomy & histology/physiology
+Ecosystem
+Feeding Behavior
+Germany
+Grassland
+*Hemiptera/anatomy & histology/physiology
+*Orthoptera/anatomy & histology/physiology
+*Spiders/anatomy & histology/physiology},
+   ISSN = {2052-4463},
+   DOI = {10.1038/sdata.2015.13},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{Gossner2015Morph,
+   author = {Gossner, M. M. and Simons, N. K. and Höck, L. and Weisser, W. W.},
+   title = {Morphometric measures of Heteroptera sampled in grasslands across three regions of Germany},
+   journal = {Ecology},
+   volume = {96},
+   number = {4},
+   pages = {1154},
+   DOI = {10.1890/14-2159.1},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{Kühsel2015,
+   author = {Kühsel, S. and Blüthgen, N.},
+   title = {High diversity stabilizes the thermal resilience of pollinator communities in intensively managed grasslands},
+   journal = {Nat Commun},
+   volume = {6},
+   pages = {7989},
+   abstract = {The resilience of ecosystems depends on the diversity of species and their specific responses to environmental variation. Here we show that the diversity of climatic responses across species contributes to a higher projected resilience of species-rich pollinator communities in real-world ecosystems despite land-use intensification. We determined the thermal niche of 511 pollinator species (flies, bees, beetles and butterflies) in 40 grasslands. Species in intensively used grasslands have broader thermal niches and are also more complementary in their thermal optima. The observed increase in thermal resilience with land-use intensification is mainly driven by the dominant flies that prefer cooler temperatures and compensate for losses of other taxa. Temperature explained 84% of the variation in pollinator activity across species and sites. Given the key role of temperature, quantifying the diversity of thermal responses within functional groups is a promising approach to assess the vulnerability of ecosystems to land-use intensification and climate change.},
+   keywords = {Animals
+*Biodiversity
+Body Weight/physiology
+Climate Change
+*Grassland
+Human Activities
+Insects/classification/*physiology
+Pollination/*physiology
+Temperature},
+   ISSN = {2041-1723 (Electronic)
+2041-1723 (Linking)},
+   DOI = {10.1038/ncomms8989},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{Kühsel2016,
+   author = {Kühsel, S. and Brückner, A. and Schmelzle, S. and Heethoff, M. and Blüthgen, N.},
+   title = {Surface area-volume ratios in insects},
+   journal = {Insect Sci},
+   abstract = {Body mass, volume and surface area are important for many aspects of the physiology and performance of species. Whereas body mass scaling received a lot of attention in the literature, surface areas of animals have not been measured explicitly in this context. We quantified surface area-volume (SA/V) ratios for the first time using 3D surface models based on a structured light scanning method for 126 species of pollinating insects from 4 orders (Diptera, Hymenoptera, Lepidoptera, and Coleoptera). Water loss of 67 species was measured gravimetrically at very dry conditions for 2 h at 15 and 30 degrees C to demonstrate the applicability of the new 3D surface measurements and relevance for predicting the performance of insects. Quantified SA/V ratios significantly explained the variation in water loss across species, both directly or after accounting for isometric scaling (residuals of the SA/V approximately mass2/3 relationship). Small insects with a proportionally larger surface area had the highest water loss rates. Surface scans of insects to quantify allometric SA/V ratios thus provide a promising method to predict physiological responses, improving the potential of body mass isometry alone that assume geometric similarity.},
+   keywords = {3D surface imaging
+body shape
+body size
+sphericity
+structured light
+water loss},
+   ISSN = {1744-7917 (Electronic)
+1672-9609 (Linking)},
+   DOI = {10.1111/1744-7917.12362},
+   year = {2016},
+   type = {Journal Article}
+}
+
+@article{Lavorel2002,
+   author = {Lavorel, S. and Garnier, E.},
+   title = {Predicting changes in community composition and ecosystem functioning from plant traits: revisiting the Holy Grail},
+   journal = {Functional Ecology},
+   volume = {16},
+   number = {5},
+   pages = {545-556},
+   abstract = {1. The concept of plant functional type proposes that species can be grouped according to common responses to the environment and/or common effects on ecosystem processes. However, the knowledge of relationships between traits associated with the response of plants to environmental factors such as resources and disturbances (response traits), and traits that determine effects of plants on ecosystem functions (effect traits), such as biogeochemical cycling or propensity to disturbance, remains rudimentary. 2. We present a framework using concepts and results from community ecology, ecosystem ecology and evolutionary biology to provide this linkage. Ecosystem functioning is the end result of the operation of multiple environmental filters in a hierarchy of scales which, by selecting individuals with appropriate responses, result in assemblages with varying trait composition. Functional linkages and trade-offs among traits, each of which relates to one or several processes, determine whether or not filtering by different factors gives a match, and whether ecosystem effects can be easily deduced from the knowledge of the filters. 3. To illustrate this framework we analyse a set of key environmental factors and ecosystem processes. While traits associated with response to nutrient gradients strongly overlapped with those determining net primary production, little direct overlap was found between response to fire and flammability. 4. We hypothesize that these patterns reflect general trends. Responses to resource availability would be determined by traits that are also involved in biogeochemical cycling, because both these responses and effects are driven by the trade-off between acquisition and conservation. On the other hand, regeneration and demographic traits associated with response to disturbance, which are known to have little connection with adult traits involved in plant ecophysiology, would be of little relevance to ecosystem processes. 5. This framework is likely to be broadly applicable, although caution must be exercised to use trait linkages and trade-offs appropriate to the scale, environmental conditions and evolutionary context. It may direct the selection of plant functional types for vegetation models at a range of scales, and help with the design of experimental studies of relationships between plant diversity and ecosystem properties.},
+   keywords = {biogeochemical cycles
+disturbance
+effect traits
+fire
+resource
+gradient
+response traits
+scaling-up
+trade-offs
+net primary production
+seed size
+life-forms
+nitrogen mineralization
+vegetation dynamics
+leaf structure
+global change
+wild plants
+ecology
+soil
+Environmental Sciences & Ecology},
+   ISSN = {0269-8463},
+   DOI = {10.1046/j.1365-2435.2002.00664.x},
+   year = {2002},
+   type = {Journal Article}
+}
+
+@article{McGill2006,
+   author = {McGill, B. J. and Enquist, B. J. and Weiher, E. and Westoby, M.},
+   title = {Rebuilding community ecology from functional traits},
+   journal = {Trends in Ecology & Evolution},
+   volume = {21},
+   number = {4},
+   pages = {178-185},
+   abstract = {There is considerable debate about whether community ecology will ever produce general principles. We suggest here that this can be achieved but that community ecology has lost its way by focusing on pairwise species interactions independent of the environment. We assert that community ecology should return to an emphasis on four themes that are tied together by a two-step process: how the fundamental niche is governed by functional traits within the context of abiotic environmental gradients; and how the interaction between traits and fundamental niches maps onto the realized niche in the context of a biotic interaction milieu. We suggest this approach can create a more quantitative and predictive science that can more readily address issues of global change.},
+   keywords = {Animals
+*Ecology
+Plants
+Species Specificity},
+   ISSN = {0169-5347 (Print)
+0169-5347 (Linking)},
+   DOI = {10.1016/j.tree.2006.02.002},
+   year = {2006},
+   type = {Journal Article}
+}
+
+@article{Messier2010,
+   author = {Messier, J. and McGill, B. J. and Lechowicz, M. J.},
+   title = {How do traits vary across ecological scales? A case for trait-based ecology},
+   journal = {Ecology Letters},
+   volume = {13},
+   number = {7},
+   pages = {838-848},
+   abstract = {Despite the increasing importance of functional traits for the study of plant ecology, we do not know how variation in a given trait changes across ecological scales, which prevents us from assessing potential scale-dependent aspects of trait variation. To address this deficiency, we partitioned the variance in two key functional traits (leaf mass area and leaf dry matter content) across six nested ecological scales (site, plot, species, tree, strata and leaf) in lowland tropical rainforests. In both traits, the plot level shows virtually no variance despite high species turnover among plots and the size of within-species variation (leaf + strata + tree) is comparable with that of species level variation. The lack of variance at the plot level brings substantial support to the idea that trait-based environmental filtering plays a central role in plant community assembly. These results and the finding that the amount of within-species variation is comparable with interspecific variation support a shift of focus from species-based to trait-based ecology.},
+   keywords = {*Ecology
+Plant Leaves
+Species Specificity
+Trees
+Tropical Climate},
+   ISSN = {1461-0248 (Electronic)
+1461-023X (Linking)},
+   DOI = {10.1111/j.1461-0248.2010.01476.x},
+   year = {2010},
+   type = {Journal Article}
+}
+
+@article{Mlambo2014,
+   author = {Mlambo, Musa C.},
+   title = {Not all traits are ‘functional’: insights from taxonomy and biodiversity-ecosystem functioning research},
+   journal = {Biodiversity and Conservation},
+   volume = {23},
+   number = {3},
+   pages = {781-790},
+   ISSN = {0960-3115
+1572-9710},
+   DOI = {10.1007/s10531-014-0618-5},
+   year = {2014},
+   type = {Journal Article}
+}
+
+@article{Moretti2009,
+   author = {Moretti, M. and Legg, C.},
+   title = {Combining plant and animal traits to assess community functional responses to disturbance},
+   journal = {Ecography},
+   volume = {32},
+   number = {2},
+   pages = {299-309},
+   abstract = {There is a general consensus that functional traits are reliable indicators of adaptation of organisms to particular environmental characteristics. In this study we relate the combined distributions of species traits of plants and animals to disturbance regimes in chestnut forests of southern Switzerland affected by regular winter fires. We used co-inertia analysis for combining the trait response of 471 invertebrate species (117 001 individuals) and 81 plant species at 23 sites with different fire and cutting histories. Trait response was assessed by calculating the variation in weighted mean traits averaged over the communities and by using mean traits in multivariate analyses. The analysis showed a strong association between plant and animal traits under fire constraints (Monte-Carlo test, p=0.0045). Plants and animal distributions show parallel trends in responses to fire which selects traits relating to persistence (ability to survive), resilience (ability to recover) and mobility. Warmth-demanding insects, herbivores, flying carnivores and pollinators were associated with recent fires, as were annual, ruderal and light-demanding plant species with long flowering duration. Small arthropods feeding on dead wood and those with narrow habitat requirements were associated with low fire frequency and unburnt sites, as were competitive plants with large seeds favoring moist sites. The spatial association between plant and animal traits reflected adaptations that promote survival in the disturbance regime, while the disturbance acts as an environmental filter on the distribution and assemblage of the trait values within communities. This combined analysis of plant and invertebrate traits distributions illustrates how community and ecosystem responses can be monitored and the results generalized across localities and disturbance types. Analyses of traits that cross trophic levels provide powerful and promising tools for validating management procedures and controlling ecosystem functions.},
+   keywords = {co-inertia analysis
+species traits
+land-use
+biodiversity
+ecosystem
+fire
+forests
+gradients
+assemblages
+divergence},
+   ISSN = {0906-7590},
+   DOI = {10.1111/j.1600-0587.2008.05524.x},
+   year = {2009},
+   type = {Journal Article}
+}
+
+@article{Naeem2003,
+   author = {Naeem, Shahid and Wright, Justin P.},
+   title = {Disentangling biodiversity effects on ecosystem functioning: deriving solutions to a seemingly insurmountable problem},
+   journal = {Ecology Letters},
+   volume = {6},
+   number = {6},
+   pages = {567-579},
+   abstract = {Experimental investigations of the relationship between biodiversity and ecosystem functioning (BEF) directly manipulate diversity then monitor ecosystem response to the manipulation. While these studies have generally confirmed the importance of biodiversity to the functioning of ecosystems, their broader significance has been difficult to interpret. The main reasons for this difficulty concern the small scales of the experiment, a bias towards plants and grasslands, and most importantly a general lack of clarity in terms of what attributes of functional diversity (FD) were actually manipulated. We review how functional traits, functional groups, and the relationship between functional and taxonomic diversity have been used in current BEF research. Several points emerged from our review. First, it is critical to distinguish between response and effect functional traits when quantifying or manipulating FD. Second, although it is widely done, using trophic position as a functional group designator does not fit the effect-response trait division needed in BEF research. Third, determining a general relationship between taxonomic and FD is neither necessary nor desirable in BEF research. Fourth, fundamental principles in community and biogeographical ecology that have been largely ignored in BEF research could serve to dramatically improve the scope and predictive capabilities of BEF research. We suggest that distinguishing between functional response traits and functional effect traits both in combinatorial manipulations of biodiversity and in descriptive studies of BEF could markedly improve the power of such studies. We construct a possible framework for predictive, broad-scale BEF research that requires integrating functional, community, biogeographical, and ecosystem ecology with taxonomy.},
+   keywords = {biodiversity
+biogeography
+ecosystem functioning
+functional groups
+research framework
+minimal community structure
+species richness
+statistical inevitability
+biological diversity
+plant diversity
+national-park
+global change
+food webs
+productivity
+redundancy},
+   ISSN = {1461-023X
+1461-0248},
+   DOI = {10.1046/j.1461-0248.2003.00471.x},
+   year = {2003},
+   type = {Journal Article}
+}
+
+@article{Renner2014,
+   author = {Renner, S.C. and Gossner, M.M. and Kahl, T. and Kalko, E.K. and Weisser, W.W. and Fischer, M. and Allan, Eric},
+   title = {Temporal changes in randomness of bird communities across Central Europe},
+   journal = {PLoS One},
+   volume = {9},
+   number = {11},
+   pages = {e112347},
+   abstract = {Many studies have examined whether communities are structured by random or deterministic processes, and both are likely to play a role, but relatively few studies have attempted to quantify the degree of randomness in species composition. We quantified, for the first time, the degree of randomness in forest bird communities based on an analysis of spatial autocorrelation in three regions of Germany. The compositional dissimilarity between pairs of forest patches was regressed against the distance between them. We then calculated the y-intercept of the curve, i.e. the 'nugget', which represents the compositional dissimilarity at zero spatial distance. We therefore assume, following similar work on plant communities, that this represents the degree of randomness in species composition. We then analysed how the degree of randomness in community composition varied over time and with forest management intensity, which we expected to reduce the importance of random processes by increasing the strength of environmental drivers. We found that a high portion of the bird community composition could be explained by chance (overall mean of 0.63), implying that most of the variation in local bird community composition is driven by stochastic processes. Forest management intensity did not consistently affect the mean degree of randomness in community composition, perhaps because the bird communities were relatively insensitive to management intensity. We found a high temporal variation in the degree of randomness, which may indicate temporal variation in assembly processes and in the importance of key environmental drivers. We conclude that the degree of randomness in community composition should be considered in bird community studies, and the high values we find may indicate that bird community composition is relatively hard to predict at the regional scale.},
+   keywords = {Animals
+*Biodiversity
+*Birds
+*Ecosystem
+Europe
+*Forests
+Population Dynamics
+Trees},
+   ISSN = {1932-6203 (Electronic)
+1932-6203 (Linking)},
+   DOI = {10.1371/journal.pone.0112347},
+   year = {2014},
+   type = {Journal Article}
+}
+
+@article{Simons2014,
+   author = {Simons, N. K. and Gossner, M. M. and Lewinsohn, T. M. and Boch, S. and Lange, M. and Muller, J. and Pasalic, E. and Socher, S. A. and Turke, M. and Fischer, M. and Weisser, W. W.},
+   title = {Resource-mediated indirect effects of grassland management on arthropod diversity},
+   journal = {PLoS One},
+   volume = {9},
+   number = {9},
+   pages = {e107033},
+   abstract = {Intensive land use is a driving force for biodiversity decline in many ecosystems. In semi-natural grasslands, land-use activities such as mowing, grazing and fertilization affect the diversity of plants and arthropods, but the combined effects of different drivers and the chain of effects are largely unknown. In this study we used structural equation modelling to analyse how the arthropod communities in managed grasslands respond to land use and whether these responses are mediated through changes in resource diversity or resource quantity (biomass). Plants were considered resources for herbivores which themselves were considered resources for predators. Plant and arthropod (herbivores and predators) communities were sampled on 141 meadows, pastures and mown pastures within three regions in Germany in 2008 and 2009. Increasing land-use intensity generally increased plant biomass and decreased plant diversity, mainly through increasing fertilization. Herbivore diversity decreased together with plant diversity but showed no response to changes in plant biomass. Hence, land-use effects on herbivore diversity were mediated through resource diversity rather than quantity. Land-use effects on predator diversity were mediated by both herbivore diversity (resource diversity) and herbivore quantity (herbivore biomass), but indirect effects through resource quantity were stronger. Our findings highlight the importance of assessing both direct and indirect effects of land-use intensity and mode on different trophic levels. In addition to the overall effects, there were subtle differences between the different regions, pointing to the importance of regional land-use specificities. Our study underlines the commonly observed strong effect of grassland land use on biodiversity. It also highlights that mechanistic approaches help us to understand how different land-use modes affect biodiversity.},
+   keywords = {Agriculture/*methods
+Animals
+Arthropods/*classification/physiology
+Biodiversity
+Biomass
+Carnivory/physiology
+*Food Chain
+Germany
+*Grassland
+Herbivory/physiology
+Humans
+*Models, Statistical
+Poaceae/physiology},
+   ISSN = {1932-6203 (Electronic)
+1932-6203 (Linking)},
+   DOI = {10.1371/journal.pone.0107033},
+   year = {2014},
+   type = {Journal Article}
+}
+
+@article{Simons2015_Traits,
+   author = {Simons, Nadja K. and Weisser, Wolfgang W. and Gossner, Martin Maximilian},
+   title = {Multi-taxa approach shows consistent shifts in arthropod functional traits along grassland land-use intensity gradient},
+   journal = {Ecology},
+   volume = {97},
+   number = {3},
+   pages = {754-764},
+   ISSN = {0012-9658},
+   DOI = {10.1890/15-0616.1},
+   year = {2016},
+   type = {Journal Article}
+}
+
+@article{Villeger2008,
+   author = {Villéger, Sébastien and Mason, Norman W. and Mouillot, David},
+   title = {New multidimensional functional diversity indices for a multifaceted framework in functional ecology},
+   journal = {Ecology},
+   volume = {89},
+   number = {8},
+   pages = {2290-2301},
+   abstract = {Functional diversity is increasingly identified as an important driver of ecosystem functioning. Various indices have been proposed to measure the functional diversity of a community, but there is still no consensus on which are most suitable. Indeed, none of the existing indices meets all the criteria required for general use. The main criteria are that they must be designed to deal with several traits, take into account abundances, and measure all the facets of functional diversity. Here we propose three indices to quantify each facet of functional diversity for a community with species distributed in a multidimensional functional space: functional richness (volume of the functional space occupied by the community), functional evenness (regularity of the distribution of abundance in this volume), and functional divergence (divergence in the distribution of abundance in this volume). Functional richness is estimated using the existing convex hull volume index. The new functional evenness index is based on the minimum spanning tree which links all the species in the multidimensional functional space. Then this new index quantifies the regularity with which species abundances are distributed along the spanning tree. Functional divergence is measured using a novel index which quantifies how species diverge in their distances (weighted by their abundance) from the center of gravity in the functional space. We show that none of the indices meets all the criteria required for a functional diversity index, but instead we show that the set of three complementary indices meets these criteria. Through simulations of artificial data sets, we demonstrate that functional divergence and functional evenness are independent of species richness and that the three functional diversity indices are independent of each other. Overall, our study suggests that decomposition of functional diversity into its three primary components provides a meaningful framework for its quantification and for the classification of existing functional diversity indices. This decomposition has the potential to shed light on the role of biodiversity on ecosystem functioning and on the influence of biotic and abiotic filters on the structure of species communities. Finally, we propose a general framework for applying these three functional diversity indices.},
+   ISSN = {0012-9658},
+   year = {2008},
+   type = {Journal Article}
+}
+
+@article{Violle2012,
+   author = {Violle, C. and Enquist, B. J. and McGill, B. J. and Jiang, L. and Albert, C. H. and Hulshof, C. and Jung, V. and Messier, J.},
+   title = {The return of the variance: intraspecific variability in community ecology},
+   journal = {Trends in Ecology & Evolution},
+   volume = {27},
+   number = {4},
+   pages = {244-252},
+   abstract = {Despite being recognized as a promoter of diversity and a condition for local coexistence decades ago, the importance of intraspecific variance has been neglected over time in community ecology. Recently, there has been a new emphasis on intraspecific variability. Indeed, recent developments in trait-based community ecology have underlined the need to integrate variation at both the intraspecific as well as interspecific level. We introduce new T-statistics ('T' for trait), based on the comparison of intraspecific and interspecific variances of functional traits across organizational levels, to operationally incorporate intraspecific variability into community ecology theory. We show that a focus on the distribution of traits at local and regional scales combined with original analytical tools can provide unique insights into the primary forces structuring communities.},
+   keywords = {Animals
+*Biodiversity
+*Ecology},
+   ISSN = {1872-8383 (Electronic)
+0169-5347 (Linking)},
+   DOI = {10.1016/j.tree.2011.11.014},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@article{Violle2007,
+   author = {Violle, Cyrille and Navas, Marie-Laure and Vile, Denis and Kazakou, Elena and Fortunel, Claire and Hummel, Irène and Garnier, Eric},
+   title = {Let the concept of trait be functional!},
+   journal = {Oikos},
+   volume = {116},
+   number = {5},
+   pages = {882-892},
+   ISSN = {00301299
+16000706},
+   DOI = {10.1111/j.0030-1299.2007.15559.x},
+   year = {2007},
+   type = {Journal Article}
+}
+
+@article{Weiner2014,
+   author = {Weiner, C. N. and Werner, M. and Linsenmair, K. E. and Bluthgen, N.},
+   title = {Land-use impacts on plant-pollinator networks: interaction strength and specialization predict pollinator declines},
+   journal = {Ecology},
+   volume = {95},
+   number = {2},
+   pages = {466-474},
+   abstract = {Land use is known to reduce the diversity of species and complexity of biotic interactions. In theory, interaction networks can be used to predict the sensitivity of species against co-extinction, but this has rarely been applied to real ecosystems facing variable land-use impacts. We investigated plant-pollinator networks on 119 grasslands that varied quantitatively in management regime, yielding 25401 visits by 741 pollinator species on 166 plant species. Species-specific plant and pollinator responses to land use were significantly predicted by the weighted average land-use response of each species' partners. Moreover, more specialized pollinators were more vulnerable than generalists. Both predictions are based on the relative interaction strengths provided by the observed interaction network. Losses in flower and pollinator diversity were linked, and mutual dependence between plants and pollinators accelerates the observed parallel declines in response to land-use intensification. Our findings confirm that ecological networks help to predict natural community responses to disturbance and possible secondary extinctions.},
+   keywords = {Animals
+*Biodiversity
+Flowers
+Insects/*physiology
+Plants/*classification
+Pollination/*physiology
+Species Specificity},
+   ISSN = {0012-9658 (Print)
+0012-9658 (Linking)},
+   year = {2014},
+   type = {Journal Article}
+}
+
+@article{Wood2015,
+   author = {Wood, S. A. and Karp, D. S. and DeClerck, F. and Kremen, C. and Naeem, S. and Palm, C. A.},
+   title = {Functional traits in agriculture: agrobiodiversity and ecosystem services},
+   journal = {Trends in Ecology & Evolution},
+   volume = {30},
+   number = {9},
+   pages = {531-539},
+   abstract = {Functional trait research has led to greater understanding of the impacts of biodiversity in ecosystems. Yet, functional trait approaches have not been widely applied to agroecosystems and understanding of the importance of agrobiodiversity remains limited to a few ecosystem processes and services. To improve this understanding, we argue here for a functional trait approach to agroecology that adopts recent advances in trait research for multitrophic and spatially heterogeneous ecosystems. We suggest that trait values should be measured across environmental conditions and agricultural management regimes to predict how ecosystem services vary with farm practices and environment. This knowledge should be used to develop management strategies that can be easily implemented by farmers to manage agriculture to provide multiple ecosystem services.},
+   keywords = {agriculture
+agrobiodiversity
+biodiversity-ecosystem functioning
+ecosystem services
+functional diversity
+functional trait},
+   ISSN = {1872-8383 (Electronic)
+0169-5347 (Linking)},
+   DOI = {10.1016/j.tree.2015.06.013},
+   year = {2015},
+   type = {Journal Article}
+}
+
