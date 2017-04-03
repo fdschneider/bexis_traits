@@ -1,8 +1,1 @@
-UniqueID,AcceptedSpeciesID,OriginalSpeciesID,TraitID,Value,NrIndividuals,Variance,MinValue,MaxValue,TypeofSource,SourceDescription,Sex,LifeStage,Morphotype,SampleOrigin,ExploPlotID,Author_Lastname,Author_firstname,Date,ExploRegion,ExploLandscape,Date,DatasetID,DataQuality
-,,,Body_length,0.5,1,NA,NA,NA,Measurement,Measurement with Leica,male,Larvae,Winged,Exploratories,AEW01,Doe,John,01.01.2017,Alp,Forest,01.01.2017,Dataset_01,High
-,,,,,,,,,,,female,Puppae,Unwinged,Museum,NA,,,,NA,NA,,,Low
-,,,,,,,,,,,hermaphrodite,Subadult,,Greenhouse,,,,,,,,,Unknown
-,,,,,,,,,,,unknown,Adult,,other location,,,,,,,,,
-,,,,,,,,,,,,Instar_1,,literature,,,,,,,,,
-,,,,,,,,,,,,Instar_2,,expert knowledge,,,,,,,,,
-,,,,,,,,,,,,Instar_3,,,,,,,,,,,
+scientificName,scientificName_user,traitID,traitName,traitName_user,measurementValue,measurementUnit,measurementValue_user,measurementUnit_user,NrIndividuals,variance,measurementValue_min,measurementValue_max,measurementMethod,sourceType,sourceDescription,bibliographicCitation,identifier,specimenID,sex,lifeStage,age,morphotype,specimenSource,eventID,ExploPlotID,ExploRegion,ExploLandscape,decimalLongitude,decimalLatitude,ElevationInMeters,geodeticDatum,verbatimLocality,year,month,day,eventDate,author_lastname,author_firstname,dataQuality,measurementID
