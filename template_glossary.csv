@@ -1,42 +1,54 @@
 columnName,mandatory,defaultValue,validLevels,valueType,description
 scientificName,TRUE,,[species list],categorical,name of the species or subspecies (or higher taxon) for which this value was collected. Each entry must be precisely matched with the species reference list. No synonyms allowed.
-scientificName_user,FALSE,,,character,original character string provided as species name by the data owner (kept for reference only)
+scientificNameID,TRUE,,[species list],categorical,
+scientificName_user,FALSE,NA,,character,original character string provided as species name by the data owner (kept for reference only)
 traitID,TRUE,,[trait list],categorical,the unique identifier of the trait following the thesaurus of traits available on BExIS
 traitName,TRUE,,[trait list],categorical,the name of the trait following the thesaurus of traits available on BExIS
-traitName_user,FALSE,,,character,the name of the trait as used by the data provider (kept for compatibility on provider side)
+traitName_user,FALSE,NA,,character,the name of the trait as used by the data provider (kept for compatibility on provider side)
 measurementValue,TRUE,,[trait list],character,the measured raw value or factor level for this species trait. Numerical values must use the correct unit. Factor levels  must be compliant with the thesaurus of traits. 
 measurementUnit,TRUE,,[trait list],character,the unit as defined in the thesaurus of traits. 
-measurementValue_user,FALSE,,,character,the measured raw value or factor level for this species trait as measured and provided by the author. 
-measurementUnit_user,FALSE,,,character,
-NrIndividuals,FALSE,1,,numerical,
-variance,FALSE,0,,numerical,
-measurementValue_min,FALSE,,,numerical,
-measurementValue_max,FALSE,,,numerical,
-measurementMethod,FALSE,,,character,
-sourceType,FALSE,,"literature, measured, expert",categorical,
-sourceDescription,FALSE,,,character,
+measurementValue_user,FALSE,NA,,character,the measured raw value or factor level for this species trait as measured and provided by the author. 
+measurementUnit_user,FALSE,NA,,character,"Reports the unit that the author's raw data were measured in, if applicable (only for numeric values)."
+NrIndividuals,FALSE,1,,numerical,"If replicate contains an aggregate measure of multiple individuals, report number of specimens as count, i.e. integer number. Defaults to 1"
+measurementAccuracy,FALSE,0,,numerical,"If multiple specimen measurement were aggregated, report the variance for the value is to be reported here. Defaults to 0."
+measurementValue_min,FALSE,NA,,numerical,"Instead of or in addition to variance, the range of values should be reported for aggregate measures."
+measurementValue_max,FALSE,NA,,numerical,"Instead of or in addition to variance, the range of values should be reported for aggregate measures."
+measurementMethod,FALSE,NA,,character,"The method used to measure this trait value. A description of or reference to (publication, URI) the method or protocol used to determine the measurement, fact, characteristic, or assertion."
+statisticalMethod,FALSE,NA,,character,
+taxonRank,FALSE,species,"domain, kingdom, subkingdom, superhpylum, phylum, subphylum, superclass, class, subclass, supercohort, cohort, subcohort, superorder, order, subordern, infraorder, superfamily, family, subfamily, tribe, subtribe, genus, subgenus, section, subsection, series, subseries, speciesAggregate, species, subspecificAggregate, subspecies, variety, cultivar, strain",categorical,The taxonomic rank of the most specific name in the scientificName. 
+sourceType,FALSE,,"literature, measured, expert",categorical,"The type of data reported here, i.e. originating from own measurements, collated data from literature, or obtaine from expert knowledge."
+sourceDescription,FALSE,,,character,"This should contain additional detail on the source. If literature, this should report the type of book or online archive. If museum this should report the name of the collection. If expert knowledge, this should name the authority."
+specimenID,FALSE,NA,,character,A character string of the author code or museum ID refering to the individual specimen from which the data were measured
+specimenSource,FALSE,NA,,character,
+eventID,FALSE,NA,,character,
+sex,FALSE,NA,"male, female, subadult, unknown, hermaphrodite",categorical,"Defining the sex of the measured specimen, to capture dimorphisms."
+lifeStage,FALSE,NA,,character,"The life stage of the measured specimen. Recommended entries are: adult, egg/seed, seedling, sapling, larval_instar_1, larval_instar_2, larval_instar_3, ... , pupae"
+age,FALSE,NA,,numerical,The age of the specimen in years.
+morphotype,FALSE,NA,,character,
+basisOfRecord,TRUE,,"literature, measured, expert",,
+associatedReference,FALSE,NA,,,"This should contain additional detail on the source. If literature, this should report the type of book or online archive. If museum this should report the name of the collection. If expert knowledge, this should name the authority. "
+specimenID,FALSE,NA,,,
+eventID,FALSE,NA,,,
+locationID,FALSE,NA,[plot list],categorical,
+Exploratory,FALSE,NA,"H,S,A",categorical,
+habitat,FALSE,NA,"forest, grassland",categorical,
+decimalLongitude,FALSE,NA,[plot list],numerical,
+decimalLatitude,FALSE,NA,[plot list],numerical,
+ElevationInMeters,FALSE,NA,[plot list],numerical,
+geodeticDatum,FALSE,NA,[plot list],categorical,
+verbatimLocality,FALSE,NA,,character,
+country,FALSE,NA,,,
+countryCode,FALSE,NA,,,
+year,FALSE,NA,,integer,
+month,FALSE,NA,,integer,
+day,FALSE,NA,,integer,
+eventDate,FALSE,NA,,character,
+measurementID,TRUE,,autogenerated,character,
+author_lastname,TRUE,,,character,
+author_firstname,TRUE,,,character,
+authorEmail,TRUE,,,,
 bibliographicCitation,FALSE,,,character,
 identifier,FALSE,,,character,
-specimenID,FALSE,,,character,
-sex,FALSE,,,categorical,
-lifeStage,FALSE,,,character,
-age,FALSE,,,numerical,
-morphotype,FALSE,,,character,
-specimenSource,FALSE,,,character,
-eventID,FALSE,,,character,
-ExploPlotID,FALSE,,[plot list],categorical,
-ExploRegion,FALSE,,[plot list],categorical,
-ExploLandscape,FALSE,,[plot list],categorical,
-decimalLongitude,FALSE,,[plot list],numerical,
-decimalLatitude,FALSE,,[plot list],numerical,
-ElevationInMeters,FALSE,,[plot list],numerical,
-geodeticDatum,FALSE,,[plot list],categorical,
-verbatimLocality,FALSE,,,character,
-year,FALSE,,,integer,
-month,FALSE,,,integer,
-day,FALSE,,,integer,
-eventDate,FALSE,,,character,
-author_lastname,FALSE,,,character,
-author_firstname,FALSE,,,character,
+rights,TRUE,BExIS,,,A license or terms of use.
+notify,TRUE,,,,
 dataQuality,FALSE,,,character,
-measurementID,FALSE,,autogenerated,character,
