@@ -1,12 +1,12 @@
 columnName,mandatory,defaultValue,validLevels,valueType,description
 scientificName,TRUE,,[species list],categorical,name of the species or subspecies (or higher taxon) for which this value was collected. Each entry must be precisely matched with the species reference list. No synonyms allowed.
 scientificName_user,FALSE,,,character,original character string provided as species name by the data owner (kept for reference only)
-traitID,TRUE,,[trait list],categorical,
-traitName,TRUE,,[trait list],categorical,
-traitName_user,FALSE,,,character,
-measurementValue,TRUE,,[trait list],character,
-measurementUnit,TRUE,,[trait list],character,
-measurementValue_user,FALSE,,,character,
+traitID,TRUE,,[trait list],categorical,the unique identifier of the trait following the thesaurus of traits available on BExIS
+traitName,TRUE,,[trait list],categorical,the name of the trait following the thesaurus of traits available on BExIS
+traitName_user,FALSE,,,character,the name of the trait as used by the data provider (kept for compatibility on provider side)
+measurementValue,TRUE,,[trait list],character,the measured raw value or factor level for this species trait. Numerical values must use the correct unit. Factor levels  must be compliant with the thesaurus of traits. 
+measurementUnit,TRUE,,[trait list],character,the unit as defined in the thesaurus of traits. 
+measurementValue_user,FALSE,,,character,the measured raw value or factor level for this species trait as measured and provided by the author. 
 measurementUnit_user,FALSE,,,character,
 NrIndividuals,FALSE,1,,numerical,
 variance,FALSE,0,,numerical,
