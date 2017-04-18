@@ -1,0 +1,30 @@
+Category,Trait,Type,Attributes,Description
+,Sexual dimorphism,categorical,0 = absent; 1 = present,"Difference in ornamentation (coloration) or in size (length of tail, size of head or body size) between sexes. In amphibians, females are generally bigger than males. This difference may be caused by natural selection of a large female size due to a fecundity advantage. This phenotypic difference in size is often explained by sexual selection."
+Body mass,Body mass,numeric,g,"Body mass in males, females or both when sex specific data were not available."
+Body mass,Adult_body mass,numeric,g,Body mass in adults without distinction between males and females in grams. This data was recorded when no sex specific data on body mass were available in the literature.
+Body mass,Body mass in juveniles,numeric,g,Body mass in juveniles in grams. No distinction between sexes was available.
+Body length,Snout-to-vent length in males,numeric,mm,Measurement between the snout and the vent in males (in millimeters)
+Body length,Snout-to-vent length in females,numeric,mm,Measurement between the snout and the vent in females (in millimeters).
+Body length,Adult snout-to-vent length,numeric,mm,"Measurement between the snout and the vent in adults, when no sex specific data were available (in millimeters)."
+Body length,Total length,numeric,mm,"In Anura, this measure was similar to the snout-to-vent length. In Urodela,  this measurement takes into account the tail length."
+Body length,Total length in males,numeric,mm,Measure of the total body length in males
+Body length,Total length in females,numeric,mm,Measure of the total body length in females
+Body length,Adult total length,numeric,mm,Measure of the total body length in adults when no sex specific data were available
+Head and body length proportion,Head length < Body length,categorical,,0: Head length is not lower than body length.1: Head length is lower than body length
+Head and body length proportion,Head length = Body length,categorical,,0: Head length is not similar to body length.1: Head length is similar to body length
+Head and body length proportion,Head length > Body length,categorical,,0: Head length is not longer than body length.1: Head length is longer than body length.
+Limb length,Foot length,numeric,mm,"Measurements of limb (foot, tibia and hind limb) in males,  in females or both when data were not sex specific available."
+Limb length,Hind limb length,numeric,mm,
+Limb length,Tibia length,numeric,mm,
+Fore and hind limb proportion,Fore limb length < Hind limb length,categorical,,0: Fore limb length is not lower than hind limb length.1: Fore limb length is lower than hind limb length.
+Fore and hind limb proportion,Fore limb length = Hind limb length,categorical,,0: Fore limb length is not similar to hind limb length.1: Fore limb length is similar to hind limb length.
+Fore and hind limb proportion,Fore limb length > Hind limb length,categorical,,0: Fore limb length is not longer than hind limb length.1: Fore limb length is longer than hind limb length.
+Fingers and webbing,Presence of discs,categorical,,0: Absence of adhesive discs. 1: Presence of adhesive discs on fingers and/or on toes.
+Fingers and webbing,Presence of webbing,categorical,,0: Absence of webbing.1: Presence of webbing on toes and/or fingers
+Fingers and webbing,Presence of webbing on toes only,categorical,,0: Absence of webbing on toes only.1: Presence of webbing on toes only.
+Fingers and webbing,Presence of webbing on toes and fingers,categorical,,"0: Absence of webbing on toes and fingers.1: Presence of webbing on toes and fingers."""
+Number of toes/fingers,Reduction on fingers only,categorical,,0: Individuals have less than 5 toes and 4 fingers.1: Individuals have 5 toes and 4 fingers.
+Number of toes/fingers,Reduction on fingers and toes,categorical,,0: Individuals have 5 toes and 4 fingers.1: Individuals have less than 5 toes and 4 fingers.
+,Presence of metatarsal tubercle,categorical,0: absent; 1: present,"Some species have a metatarsal tubercle on hind limb. A prominent inner metatarsal tubercle used for burrowing with the hind limbs. When available,  the length of the tubercle is given."
+Coloration,Dorsoseparation,categorical,,0: Dorsoseparation weak1: Dorsoseparation sharp
+Coloration,Webbing colour contras,categorical,,0: Absence of webbing colour contrast1: Presence of webbing colour contrast
