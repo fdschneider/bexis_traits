@@ -1,0 +1,38 @@
+Trait,Attribute,unit
+Activity,nocturnal,
+Activity,diurnal,
+Activity,activity switch,
+Activity,no circadian rhytm,
+Energy accumulation,Autumn,
+Energy accumulation,Late summer,
+Energy accumulation,Spring,
+Energy accumulation,Spring and autumn,
+Energy accumulation,Summer,
+Energy accumulation,Summer and autumn,
+Energy accumulation,whole previous year,
+Locomotion,climber,
+Locomotion,crawler,
+Locomotion,swimmer,
+Locomotion,walker,
+Locomotion,climber and crawler,
+Locomotion,runner,
+Locomotion,runner and climber,
+Locomotion,swimmer and crawler,
+Locomotion,walker and crawler,
+Locomotion,walker and swimmer,
+Phenology type,Aestivation_Start,month
+Phenology type,First breeding season_Start,month
+Phenology type,Hibernation_Start,month
+Phenology type,Second breeding season_Start,month
+Phenology type,Aestivation_End,
+Phenology type,First breeding season_End,
+Phenology type,Hibernation_End,
+Phenology type,Second breeding season_End,
+Dimensions,length,mm
+Dimensions,body_mass,g
+Dimensions,relative mass female mass exclusive,
+Dimensions,relative mass female mass inclusive,%
+Dimensions,size,
+Dimensions,snout-vent-length at sexual maturity,mm
+Dimensions,snout-vent-length,mm
+Dimensions,width,mm
