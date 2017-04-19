@@ -1,0 +1,35 @@
+Variable Name,Description,Unit
+"Bill height (mean ± SD, minimum, maximum)",Bill height measured at proximal end of operculum,mm
+"Bill length (mean ± SD, minimum, maximum)",Bill length measured from tip to proximal end of operculum,mm
+Bill length max,Maximum length of bill from tip to front of cranium,mm
+Bill length min,Minimum length of bill from tip to front of cranium,mm
+"Bill width (mean ± SD, minimum, maximum)",Bill width measured at proximal end of operculum,mm
+Body length max,Maximum body length of live bird from bill tip to longest tail feather,cm
+Body length min,Minimum body length of live bird from bill tip to longest tail feather,cm
+"Body mass (mean ± SD, minimum, maximum)",Live body mass of bird as measured in the field,g
+Body mass max,Maximum body mass as from literature,g
+Body mass min,Minimum body mass as from literature,g
+Clutch size max,Maximum number of eggs in clutch,number
+Clutch size min,Minimum number of eggs in clutch,number
+Fat (mean score),"Abdominal fat scores following Svensson [28] and Eck, Fiebig, Fiedler, Heynen, Nicolai, Töpfer,Winkler andWoog [32]",score
+Diet,Major feeding group of species during breeding (roughly April to June),class
+Incubation time max,Maximum number of days from egg laying to hatching,days
+Incubation time min,Minimum number of days from egg laying to hatching,days
+Maximum age EURING,"Minimum/Maximum age observed of banded birds (in years, rounded to the next year, if any month was specified)",number
+Maximum broods per year,Minimum/Maximum number of broods observed per species so far,number
+Muscle (mean score),Abdominal muscle scores following Svensson [28],score
+Nestling stage max,"Maximum number of days a nestling is on the nest, typically from hatching to flying",days
+Nestling stage min,"Minimum number of days a nestling is on the nest, typically from hatching to flying",days
+"P3 (mean ± SD, minimum, maximum)",Mean value of primary 3 length measured on right and left body side of individual,mm
+Tail length max,"Maximum length of tail, measured after Svensson [28]",mm
+Tail length min,"Minimum length of tail, measured after Svensson [28]",mm
+"Tarsus (mean ± SD, minimum, maximum)",Mean value of tarsus length measured on right and left body side of individual,mm
+Tarsus length max,Maximum length of tarsus (‘Lauf’ in von Blotzheim and Bauer [26]),mm
+Tarsus length min,Minimum length of tarsus (‘Lauf’ in von Blotzheim and Bauer [26]),mm
+"Wing (mean ± SD, minimum, maximum)",Mean value of wing length measured on right and left body side of individual,mm
+wing area,Area of the wing covered if stretched fully,m2
+Wing length max,"Maximum wing length, measured from bow to tip (typically flattened)",mm
+Wing length min,"Minimum wing length, measured from bow to tip (typically flattened)",mm
+Wing span max,Maximum wingspan of flattened and stretched wings from one wing tip to the other,mm
+Wing span min,Minimum wingspan of flattened and stretched wings from one wing tip to the other,mm
+Wingbeat frequency,Wingbeats per second,Hz
