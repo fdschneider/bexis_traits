@@ -5,9 +5,9 @@
 
 ### The concept of functional traits in biodiversity research
 
-define functional traits 
+Functional traits are phenotypic characteristics that are related to the fitness and performance of an organism. A focus on functional traits allows to describe the role of a species in an ecosystem or its ability to persist under certain environmental conditions. The applications of functional traits to date are widespread across all disciplines of ecological research and range from the description of functional diversity of communities 
 
-traits help bridging individual level interactions into processes at ecosystem scale, functional ecology
+Traits help in bridging individual level behaviour and physiology into processes at the ecosystem scale.
 
 traits help to identify economic strategies of organisms, beyond taxonomy
 
