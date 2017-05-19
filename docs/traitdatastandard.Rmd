@@ -5,22 +5,23 @@ date: "12 Mai 2017"
 output: 
   html_document: 
     keep_md: yes
+    toc: yes
 ---
 
 
 **This is the documentation of the Ecological Traitdata Standard (ETS), version 0.2** 
-
 This defined vocabulary aims at providing all essential columns for raw data of functional trait measurements for ecological research. 
 
 The column names are partly aligning with names from Darwin Core Standard and Extensions (Names compliant with DWC are referenced thus; the full Darwin Core can be found here: http://rs.tdwg.org/dwc/terms/index.htm)
 
-The template is ordered into five different sections for column names, as well as a vocabulary for metadata information of particular importance for trait data. 
+The template is ordered into six different sections, as well as a vocabulary for metadata information of particular importance for trait data. 
 
 1. Trait measurement data
-2. Resolution of data / information on specimen
-3. Data source / information on measurement
-4. Measurement 
-5. Location 
+2. Information about the Measurement or Fact
+3. Resolution of data / information on specimen
+4. Columns referring to sampling event or origin of record
+5. Columns for aggregate measures 
+6. Location information 
 
 Except for the first section, all columns are optional. Only the mandatory fields are required to produce valid trait-datasets. Some mandatory fields will be assisted by the R-Script. The columns labelled 'highly recommended' serve a better comparability of data across datasets. 
 
@@ -32,7 +33,6 @@ This list will also be available as
 ```{r, results = 'asis', echo = FALSE}
 library(data.table)
 library(knitr)
-library(pander)
 glossary <- read.csv("../template_glossary.csv")
 
 columnNames <- glossary$columnName
@@ -56,8 +56,9 @@ Generally, for the essential primary data (species name, trait name, trait value
 j <- sectionNames[1]
 
  for(i in columnNames[sections == j]) {
-     dd <- as.data.frame(t(glossary[[j]][[as.character(i)]]))
+     dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
      colnames(dd) <- i
+     cat("## `", i, "`  ", sep = "")
      print(kable(dd, format = "markdown"))
  }
 
@@ -74,9 +75,10 @@ This section provides additional information about the specimen, which are not c
 j <- sectionNames[2]
 
  for(i in columnNames[sections == j]) {
-     dd <- as.data.frame(t(glossary[[j]][[as.character(i)]]))
+   dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
      colnames(dd) <- i
-     print(kable(dd, format = "markdown"))
+     cat("## `", i, "`  ", sep = "")
+   print(kable(dd, format = "markdown"))
  }
 
 ```
@@ -91,9 +93,10 @@ this section of columns aims for identifying the methodology and primary source 
 j <- sectionNames[3]
 
  for(i in columnNames[sections == j]) {
-     dd <- as.data.frame(t(glossary[[j]][[i]]))
+    dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
      colnames(dd) <- i
-     print(kable(dd, format = "markdown"))
+     cat("## `", i, "`  ", sep = "")
+ print(kable(dd, format = "markdown"))
  }
 
 ```
@@ -108,9 +111,10 @@ this section of columns aims for identifying the methodology and primary source 
 j <- sectionNames[4]
 
  for(i in columnNames[sections == j]) {
-     dd <- as.data.frame(t(glossary[[j]][[i]]))
+      dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
      colnames(dd) <- i
-     print(kable(dd, format = "markdown"))
+     cat("## `", i, "`  ", sep = "")
+    print(kable(dd, format = "markdown"))
  }
 
 ```
@@ -125,8 +129,9 @@ Some data may not refer to a single specimen or measurement, but aggregate repea
 j <- sectionNames[5]
 
  for(i in columnNames[sections == j]) {
-     dd <- as.data.frame(t(glossary[[j]][[i]]))
+ dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
      colnames(dd) <- i
+     cat("## `", i, "`  ", sep = "")
      print(kable(dd, format = "markdown"))
  }
 
@@ -145,8 +150,9 @@ This section records location in the context of the exploratories. From `Explora
 j <- sectionNames[7]
 
  for(i in columnNames[sections == j]) {
-     dd <- as.data.frame(t(glossary[[j]][[i]]))
+      dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
      colnames(dd) <- i
+     cat("## `", i, "`  ", sep = "")
      print(kable(dd, format = "markdown"))
  }
 
@@ -159,8 +165,9 @@ j <- sectionNames[7]
 j <- sectionNames[6]
 
  for(i in columnNames[sections == j]) {
-     dd <- as.data.frame(t(glossary[[j]][[i]]))
+      dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
      colnames(dd) <- i
+     cat("## `", i, "`  ", sep = "")
      print(kable(dd, format = "markdown"))
  }
 
