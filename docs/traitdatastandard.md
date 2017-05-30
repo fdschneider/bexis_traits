@@ -121,37 +121,37 @@ Generally, for the essential primary data (species name, trait name, trait value
 |Comment      |                                                                                                           |
 ## `measurementValue_user`  
 
-|             |measurementValue_user                                                                             |
-|:------------|:-------------------------------------------------------------------------------------------------|
-|mandatory    |TRUE                                                                                              |
-|defaultValue |NA                                                                                                |
-|validLevels  |                                                                                                  |
-|valueType    |character                                                                                         |
-|Identifier   |                                                                                                  |
-|Definition   |Measured raw value or factor level for this species trait as measured and provided by the author. |
-|Comment      |                                                                                                  |
+|             |measurementValue_user                                                                                                                                                                        |
+|:------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|mandatory    |TRUE                                                                                                                                                                                         |
+|defaultValue |NA                                                                                                                                                                                           |
+|validLevels  |                                                                                                                                                                                             |
+|valueType    |character                                                                                                                                                                                    |
+|Identifier   |                                                                                                                                                                                             |
+|Definition   |Measured raw value or factor level for this species trait as measured and provided by the author.                                                                                            |
+|Comment      |Must respect the unit given in 'measurementUnit_user' for numerical traits. For categorical traits, the factor levels should be harmonized across the dataset and explained in the metadata. |
 ## `measurementUnit_user`  
 
-|             |measurementUnit_user                                                                                   |
-|:------------|:------------------------------------------------------------------------------------------------------|
-|mandatory    |TRUE                                                                                                   |
-|defaultValue |NA                                                                                                     |
-|validLevels  |                                                                                                       |
-|valueType    |character                                                                                              |
-|Identifier   |                                                                                                       |
-|Definition   |Reports the unit that the author's raw data were measured in, if applicable (only for numeric values). |
-|Comment      |                                                                                                       |
+|             |measurementUnit_user                                                                                                                                                          |
+|:------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|mandatory    |TRUE                                                                                                                                                                          |
+|defaultValue |NA                                                                                                                                                                            |
+|validLevels  |                                                                                                                                                                              |
+|valueType    |character                                                                                                                                                                     |
+|Identifier   |                                                                                                                                                                              |
+|Definition   |Reports the unit that the author's raw data were measured in, if applicable (only for numeric values).                                                                        |
+|Comment      |For numerical values report unit in format for lengths "mm", for volumes "mm3" / "mm^3", areas "mm2" / "mm^2", for movement "m/s", or for volume to surface ratios: "mm3/mm2" |
 ## `measurementValue`  
 
-|             |measurementValue                                                                                                                                                               |
-|:------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|mandatory    |TRUE                                                                                                                                                                           |
-|defaultValue |NA                                                                                                                                                                             |
-|validLevels  |                                                                                                                                                                               |
-|valueType    |character                                                                                                                                                                      |
-|Identifier   |http://rs.tdwg.org/dwc/terms/measurementValue                                                                                                                                  |
-|Definition   |Standardised measured value or factor level for this species trait. Numerical values must use the correct unit. Factor levels  must be compliant with the thesaurus of traits. |
-|Comment      |                                                                                                                                                                               |
+|             |measurementValue                                                                                                                                                                                      |
+|:------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|mandatory    |TRUE                                                                                                                                                                                                  |
+|defaultValue |NA                                                                                                                                                                                                    |
+|validLevels  |                                                                                                                                                                                                      |
+|valueType    |character                                                                                                                                                                                             |
+|Identifier   |http://rs.tdwg.org/dwc/terms/measurementValue                                                                                                                                                         |
+|Definition   |Standardised measured value or factor level for this species trait. Numerical values must use the correct unit. Factor levels  must be compliant with the thesaurus of traits.                        |
+|Comment      |Using "." as a decimal separator! The standardized data values or factor levels must correspond to the expected units and factor levels of the trait thesaurus, e.g. "32.423", "female", "apter", "3" |
 ## `measurementUnit`  
 
 |             |measurementUnit                                                                                                                                                                 |
@@ -196,6 +196,17 @@ Generally, for the essential primary data (species name, trait name, trait value
 |Identifier   |http://rs.tdwg.org/dwc/terms/measurementID                                                                                                                                                                                                                                |
 |Definition   |An auto-generated unique identifier for each entry of data compiled as a MD5 hash from the following columns 'specimenID', 'measurementValue_user', 'scientificName_user', 'traitName_user', 'basisOfRecord', as well as the fields from class 'specimen' and 'location'. |
 |Comment      |This allows a row-wise comparison of data from different versions and sources and an elimination of duplicates.                                                                                                                                                           |
+## `measurementID_user`  
+
+|             |measurementID_user                                                                                                                                                                                                                                                                                                                                                         |
+|:------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|mandatory    |FALSE                                                                                                                                                                                                                                                                                                                                                                      |
+|defaultValue |NA                                                                                                                                                                                                                                                                                                                                                                         |
+|validLevels  |                                                                                                                                                                                                                                                                                                                                                                           |
+|valueType    |character                                                                                                                                                                                                                                                                                                                                                                  |
+|Identifier   |                                                                                                                                                                                                                                                                                                                                                                           |
+|Definition   |A unique, dataset-specific identifier. Links multi-value trait measurements, e.g. x-y-z coordinates of a morphometric landmark, biochemical compound quantities for different chainlengths. In this case, the trait names must specifiy the sub-measurement, e.g. "landmark32_x", and must be specified in a reference trait list, given in the field "measurementMethod". |
+|Comment      |                                                                                                                                                                                                                                                                                                                                                                           |
 ## `warnings`  
 
 |             |warnings                                                                                                                                                                                                                                                                                                              |
