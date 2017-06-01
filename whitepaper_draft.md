@@ -5,7 +5,21 @@
 
 ### The concept of functional traits in biodiversity research
 
-Functional traits are phenotypic characteristics that are related to the fitness and performance of an organism. A focus on functional traits allows to describe the role of a species in an ecosystem or its ability to persist under certain environmental conditions. The applications of functional traits to date are widespread across all disciplines of ecological research and range from the description of functional diversity of communities 
+Functional traits are phenotypic characteristics that are related to the fitness and performance of an organism. 
+
+Traits can be measurements of morphology of animals or plants, life-history traits such as reproductive strategies, physiological traits including metabolism and photosynthetic activity, feeding traits, biochemical and isotopic compounds, as well as environmental traits. 
+
+Source of trait data: measurements, literature values, expert knowledge. 
+
+Some studies propose a differentiation of effect traits and response traits (or  performace and fitness traits), which may be depending on the research question. 
+
+Given this range of measures, traits are assessed with multiple questions in mind. 
+
+at individual scale: evolution of adaptive traits, intraspecific variation, at species scale: Morphology and phylogeny, ecological function and trophic role, biotic interactions. 
+at ecosystem scale: functional composition of communities, community weighted means and variance, ecosystem service provisioning. 
+at global spatial and temporal scale: global spectrum of form and function, biogeography, palaeoecology
+
+A focus on functional traits allows to describe the role of a species in an ecosystem or its ability to persist under certain environmental conditions. 
 
 Traits help in bridging individual level behaviour and physiology into processes at the ecosystem scale.
 
@@ -31,7 +45,39 @@ Trait matching integrates function across trophic levels, influence of land use 
 
 ## Unifying trait data
 
-We propose a unified framework for trait data. It is composed of three elements: a reference list of species names found within the exploratories, a standardised list of species functional traits, and a template form for saving and uploading trait data into BExIS. 
+Traitdata have been standardised into databases. e.g. plant traits have a head start and were drawn from different ressources into the TRY database. For animals, a variety of traitdata bases exist. 
+
+All databases come with their own strucutre, which reflects the research questions of the initiatives and organismal focus. 
+In sum, a variety of information may be stored along with trait data: 
+
+In the case of measured data, the method of measurement and methods of sampling or preservation of the specimen, as well as the person measuring, would be recorded to assess any methodological bias. In case of data from other sources, literature would be referenced or an expert name reported. For museum specimens, the unique identifier of the museum collection would link the measurement to a real physical object. 
+
+Data resolution differs and researchers might report aggregated species averages or replicates of individual measurements. A universally applicable framework needs to fall back to the smallest unit, i,e. the single measurement (Kattge  et al 2011), and allow multiple measurements of a single trait for a single species at a single site (i.e. one observation). Indeed this resolution is necessary for assessing intra-specific trait variation, or even variation of traits of a single specimen (e.g. size of leaves of a single tree).  In case of aggregated measurements, however, researchers might record the average and the dispersal, and also keep information about the statistical method of a average record and the dispersal metric (e.g. variance or range) as well as the number of individuals aggregated. Having this information available, would allow compiling weighted averages of species traits by combining data of  different resolution.
+
+Some traits are recorded as species or population level averages, such as functional guild assignment or average longevity. In that case, the taxon rank to which the measurement applies needs to be documented. 
+Similarly, measurements might resolve to lower than species level, to subspecies, or even sub-groups of a single species, like a sex, cast, or morphotype. 
+
+Trait data may be recorded from specimens which developed in a particular spatial and climatic context. The measurement will be taken under certain natural or artificial environmental conditions, that might also be recorded along with the trait data. 
+
+This also exemplifies the range of data types that fall within datasets of functional traits: numerical values represent measurements of length, volumes, ratios, rates or timespans. integer values may apply to count data (e.g. eggs per clutch). binary data (encoded as 0 or 1) or logical data (coded as TRUE or FALSE) may apply to qualitative traits such as ... . Many traits are categorical and allow for a constrained set of factor levels, such as ... () or unconstrained entries such as color. Some traits take character strings of descriptions. Finally there are specific formats of multivariate trait values (e.g. x.y.z coordinates of a landmark measured in 3D space or relative abundance of chain-lengths in biochemical compounds).   
+
+In this paper, we propose a universal scheme of defined column names that captures the different degrees of resolution and measurement detail. 
+
+For standardisation and comparability of traitdata across datasets, conventions on trait definitions and taxon names are inevitable. We consider the fact that authors have their own local schemes for standardisation and may contribute to different communities. 
+
+_user substring: 
+
+
+
+The traitdataset may be linked to supporting information on the metadata level or in external databases
+
+ID columns: linking measurements to location, collections, literature
+
+
+
+### taxonomic standardisation 
+
+researchers need to refer each measurement  a standardised taxonomic terminology of species names. 
 
 ### A reference list of species names 
 
