@@ -139,20 +139,17 @@ For standardisation and comparability of traitdata across datasets, conventions 
 
 The trait-dataset may be linked to supporting information (e.g. on the occurence, the methodology, the original source, the sampling event or location) on the metadata level or in attached data tables, e.g. in the form of a Darwin Core Archive, or into external databases via URIs. For this interlinkage with other datasets, columns are reserved for unique identifiers (e.g. linking measurements to location, collections, literature) that refer to a dataset specific or globally defined ID. 
 
-In the subsequent sections we propose a set of columns that compose a traitdataset, starting with the ones required for our minimal definition of trait-datasets proposed above and continuing with columns that add information on the level of the occurence, the measurement or fact, and the entire record.  The column names are, wherever possible, based on the terms of the Darwin Core Standard (DWC). See table 2 for a full description of the column names and the reference URI. 
+In the subsequent sections we propose a set of columns that compose a traitdataset, starting with the ones required for our minimal definition of trait-datasets proposed above and continuing with columns that add information on the level of the occurence, the measurement or fact, and the entire record. We build upon the structure proposed by Parr et al for the TraitBank database, which uses field definitions of the Darwin Core standard (DWC). We expand the definitions of these fields for the use case of trait data and add further field definitions, to cover the special demands of traitbased research. See table 2 for a full description of the column names and the reference URI. 
 
 #### minimal content of a trait-dataset
 
 For the minimal definition of trait-datasets, the central content of a row is the reported measurement or fact for a single observation, which is composed of a value (`measurementValue`) and -- for numeric values -- a standard unit (`measurementUnit`).
-
-The key identifier columns are relating the measurement or fact to a taxon via globally accepted identifiers. To provide an unambiguous reference which is easy to read for researchers and for software, this identifier is provided in the form of an unambiguous taxon name (`scientificName` plus the optional `taxonRank` and `kingdom`) as well as a machine readable ID (`taxonID`). 
-
 To link the measurement or fact to a clear trait definition, a unique identifier  links each row to a trait name defined by a given lookup-table (`measurementType`) and a machine readable trait ID (`traitID`). 
 
 A unique identifier links the row to a single specimen or occurence (`occurenceID`), which can be described with further detail in a separate data table or the same table using the columns provided in the occurence extension detailled below. This identifier is usually dataset-specific and can be defined by the author. Some data-types may use global identifiers for occurence data, e.g. a GBIF URI or a museum collection code that is publicly available. 
+The core data are also keeping a record of the scientific taxon for which the measurement or fact was obtained via globally accepted identifiers. To provide an unambiguous reference which is easy to read for researchers and for software, this identifier is provided in the form of an unambiguous taxon name (`scientificName` plus the optional `taxonRank` and `kingdom`) as well as a machine readable ID (`taxonID`). 
 
-Similarly, each single measurement (i.e. each row of the dataset, except for multivariate traitdata; see below) is labelled by a unique identifier (`measurementID`) and receives further detail in a linked dataset or in the same dataset using the columns provided by the measurement or fact Extension. 
-
+Similarly, each single measurement (i.e. each row of the dataset, except for multivariate traitdata; see below) is labelled by a unique identifier (`measurementID`) and receives further detail in a linked dataset or in the same dataset using the columns provided by the measurement or fact extension. 
 To ensure compatibility at the side of the data provider and for quality checking the data table ought to keep the original names and values as used by the data provider in columns appending the suffix `_original` (i.e. `scientificName`, `measurementType`, `measurementValue`, `measurementUnit`,  `measurementID`, `occurenceID`). 
 
 Additionally, metadata  should contain information about the authorship and ownership of the data and the terms of use. 
@@ -173,7 +170,7 @@ The entries provided in the fields `scientificName` and `taxonID` are supposed t
 #### towards globally unique identifiers for traits
 
 More difficult than the taxonomic reference is the standardised reference to defined functional traits, due to a lack of URIs or APIs (see above). Eventually, the field  `measurementTypeID` should refer to globally unique identifiers for a well defined measurement methodology. However, many measurements that qualify as traits following the definition above are motivated by the particular research question and demand a specific measurement methodology. Some trait data are drawn from a wide literature body with different approaches of reporting for instance body lengths or ecological information. 
-Therefore, if no published trait list is available that can be referrenced via globally unique URIs or DOIs, traitdatasets should be accompanied by a dataset-specific glossary of traits. This should at minimum provide a human readable trait name and a unique (alphanumeric) identifier as well as a verbal definition and the accepted factor levels (for categorical data) and expected units (for numerical data). 
+Therefore, if no published trait list is available that can be referrenced via globally unique URIs or DOIs, traitdatasets should be accompanied by a dataset-specific glossary of traits. This should at minimum provide a human readable trait name and a unique (alphanumeric) identifier as well as an unambiguous verbal definition, the accepted factor levels (for categorical data) and expected units (for numerical data). 
 
 <!-- ### Exploratories 
 
@@ -189,8 +186,6 @@ Trait list is maintained by BExIS team and curators for taxonomic groups, as wel
 
 #### Extension on measurement or fact
 
-As a high-level discrimination of the source of the measurement or fact, the column `basisOfRecord` takes an entry about the type of trait data recorded: Were they taken by own measurement (distinguish "LivingSpecimen", "PreservedSpecimen", "FossilSpecimen") or taken from literature ("literatureData"), from an existing trait database ("traitDatabase"), or is it expert knowledge ("expertKnowledge"). It is highly recommended to provide further detail about the source in the column `basisOfRecordDetails`. 
-
 For data not obtained from own measurement, the field `reference` provides a precise reference to the source of data. This should quote the key, book, or  database for literature data. For museum specimens, this should report the name of the collection (potentially provide an URI). If expert knowledge, this should name the authority. If trait database, provide reference to the original publication, DOI or URL of the trait-database.
 
 To record potential sources of noise or bias, the methods and procedures of fixation and preservation of the specimen (column `preparations`), method of measurement (`measurementMethod`), the person conducting the measurement (`measurementDeterminedBy`), the date at which the measurement was obtained (`measurementDeterminedDate`) are recorded. 
@@ -201,16 +196,20 @@ For some measured values, authors would report aggregate data of repeated measur
 
 #### Extension on observation context (occurence)
 
-This category of columns contains further information about the individual specimen or occurence that has been observed and measured. Most of these information only apply to measured data, not literature or other derived trait data. 
+This category of columns contains further information about the individual specimen or occurence that has been observed and measured. 
 
-sex, lifeStage, age, morphotype, location, event data, sampling method, 
+As a high-level discrimination of the source of the measurement or fact, the column `basisOfRecord` takes an entry about the type of trait data recorded: Were they taken by own measurement (distinguish "LivingSpecimen", "PreservedSpecimen", "FossilSpecimen") or taken from literature ("literatureData"), from an existing trait database ("traitDatabase"), or is it expert knowledge ("expertKnowledge"). It is highly recommended to provide further detail about the source in the column `basisOfRecordDetails`. 
 
-The Darwin Core 
+For both literature and measured data, trait values may be recorded for different sub-categories of individuals of a taxon to capture polymorphisms, for instance differentiated by sex or life stage. The template provides the fields `sex`, `lifeStage`, `age`, and `morphotype` for this distinction.
+
+Seasonal variation of traits may be recored by assigning a date and time of sampling to the occurcence, using the fields `year`,	`month` and	`day`, depending on resolution. The field definitions of the Darwin Core Standard can be applied instead, to refer to a geological stratum, for instance. 
+Sampling may be further specified using a unique identifier for the sampling event `eventID`	which references to an external dataset. The record of a `samplingProtocol` may capture bias in samling methods. 
+
+To capture geographic variation of traits, a set of fields for georeferencing can put the observation into spatial and ecological context (`habitat`, 	`decimalLongitude`,	`decimalLatitude`, `elevation`,	`geodeticDatum`, `verbatimLocality`, `country`, `countryCode`). The field `locationID` may be used to reference the occurence to a dataset-specific or global identifier. This allows the trait data to double as observation data, e.g. for upload to the GBIF database. 
 
 #### metadata columns
 
 rights, bibliographicCitation, license, datasetID, datasetName, authorLastname, authorFirstname
-
 
 ### The Biodiversity Exploratories Extensions and template 
 
