@@ -12,7 +12,7 @@ geometry: margin=1.6in
 
 Functional traits are phenotypic characteristics that are related to the fitness and performance of an organism. 
 
-Traits can be measurements of morphology of animals or plants, life-history traits such as reproductive strategies, physiological traits including metabolism and photosynthetic activity, feeding traits, biochemical and isotopic compounds, as well as environmental traits. 
+Traits can be measurements of morphology of organisms, life-history traits such as reproductive strategies, physiological traits including metabolism and photosynthetic activity, feeding traits, biochemical and isotopic compounds, behavioural traits, as well as environmental traits. 
 
 The source of trait data can be single or repeated direct measurements and derivatives thereof, more or less specific literature values or estimations from designated experts. 
 
@@ -20,23 +20,23 @@ Some studies propose a differentiation of effect traits and response traits (or 
 
 Reflecting this wide range of measures and approaches, traits are assessed with multiple questions in mind. 
 
-at individual scale: evolution of adaptive traits, intraspecific variation, at species scale: Morphology and phylogeny, ecological function and trophic role, biotic interactions. 
+at individual scale: evolution of adaptive traits (#Cat: this could also be at the population/species scale), intraspecific variation, at species scale: Morphology and phylogeny, ecological function and trophic role, biotic interactions. 
 at ecosystem scale: functional composition of communities, community weighted means and variance, ecosystem service provisioning. 
-at global spatial and temporal scale: global spectrum of form and function, biogeography, palaeoecology
+at global spatial and temporal scale: global spectrum of form and function, biogeography, paleoecology
 
-A focus on functional traits allows to describe the role of a species in an ecosystem or its ability to persist under certain environmental conditions. 
+A focus on functional traits allows us to describe the role of a species in an ecosystem or its ability to persist under certain environmental conditions. (#Cat: I would put this earlier since it is a more general statement)
 
 Traits help in bridging individual level behaviour and physiology into processes at the ecosystem scale.
 
 traits help to identify economic strategies of organisms, beyond taxonomy
 
-Refer to Katke et al 2011, Violle et al 2007, Diaz et al 2007, McGill et al., 2006, ...
+Refer to Katge et al 2011, Violle et al 2007, Diaz et al 2007, McGill et al., 2006, ...
 
 ## trait-based research within the Biodiversity Exploratories
 
 Refer to successfully published papers on arthropod traits, multi-trophic trait variation etc. 
 
-Allen et al 2015
+Allan et al 2015
 Boerschig et al 2013
 Gossner et al 2015 & 2016
 Simons et al 2014 & 2016
@@ -48,12 +48,19 @@ Need to unify for multi-trophic integration
 
 Trait matching integrates function across trophic levels, influence of land use and environmental filtering on trait composition, Exploratories are ideal framework for testing
 
+#Cat: here I would organize a bit differently to link better to the previous section:
+Traits can bridge biodiversity and functioning and that they allow comparision across trophic levels. Furthermore trait composition is influenced by land use and environmental filtering on trait composition. 
+Exploratories are ideal framework for testing these questions because they are framed to study interactions between LUI, biodiversity and functions. 
+However, multi-trophic integration is difficult because of different standards, methods, focus..
+--> needs unification in order to advance research and make data use possible for future generations
+
 ## Common structure of trait datasets
 
 Traitdata have been standardised into databases. Most prominently, plant traits from many different sources have been collated into the quickly growing TRY databse. TRY combines traitdata from other published databases and individually owned datasets and provides an extended access management and data query services. Other more specialised databases for plant traits exist, for instance for root measurements. 
 
 In the animal kingdom, a wealth of traitdatabases has been created that covers different organism groups or interaction types or ecosystems. 
 (table of existing databases? name, url, focus, number of records, openness of data, maintained by)
+#I like this table idea but should we limit it to plants and arthropods or also other organisms? Europe or whole world? I would opt for plants and arthropods in Europe but in case this becomes a publication open a collaborative file where anybody in the world can add the information for any organism in any part of the world.
 
 All databases come with their own structure, which reflects the research questions of the research initiatives and their organismal focus. 
 
@@ -62,7 +69,7 @@ Today, several biodiversity data intitiatives are striving for a global integrat
 ### minimal definition of trait-datasets 
 
 As a minimum consensus, trait datasets may be defined as follows: 
-A trait-dataset contains measurements or facts (i.e. measurement values) about phenotypic characteristics of fitness or performance (i.e. measurement types, or traits) assigned to an entity of a biological taxon (i.e. a species or higher taxon). The entity or observation (i.e. the occurence) to which the reported measurement or fact apllies may differ in resolution -- depending on the scientific question -- and could be a subsample or bodypart, an individual specimen, an entire species or higher-level taxon. 
+A trait-dataset contains measurements or facts (i.e. measurement values) (#Cat: the difference is not totally clear to me - is it the difference between field vs literature gathered data?) about phenotypic characteristics of fitness, behaviour or performance (i.e. measurement types, or traits) of individuals (or part of it) assigned to an entity of a biological taxon (i.e. a species or higher taxon). The entity or observation (i.e. the occurence) to which the reported measurement or fact applies may differ in resolution -- depending on the scientific question -- and could be a subsample or bodypart, an individual specimen, an entire species or higher-level taxon. 
 
 ### standardised reference to taxon and trait definitions 
 
@@ -72,7 +79,7 @@ Relevant for all domains of biodiversity data, authors and data managers must pr
 
 Similarly motivated, traits for target organism groups and ecosystems have been categorized and defined in thesauri  (e.g., Plant Trait Ontology [20] or Vertebrate Trait Ontology [28]) or ontologies (morphometrics?), which also provide unique identifiers for referencing along with more or less precise definitions of the body measures, morphometric landmarks, categorical traits or environmental conditions, for instance. Ideally, these thesauri also define a target measurement unit or constrain factor levels. Multiple approaches have spawned around the initialisation of trait databases, most advanced certainly for plant traits in the TRY database and its reference Thesaurus of Plant characteristics (TOP).  
 
-Traits must not only be defined in terms of their interpretation, but ideally also be standardised in terms of numerical units and, evene more important, the use of factor levels. This is challenging given the range of data types that fall within datasets of functional traits: numerical values represent measurements of length, volumes, ratios, rates or timespans. integer values may apply to count data (e.g. eggs per clutch). binary data (encoded as 0 or 1) or logical data (coded as TRUE or FALSE) may apply to qualitative traits such as ... . Many traits are categorical and allow for a constrained set of factor levels, such as ... () or unconstrained entries such as color. Some traits take character strings of descriptions. Finally there are specific formats of multivariate trait values (e.g. x.y.z coordinates of a landmark measured in 3D space or relative abundance of chain-lengths in biochemical compounds).
+Traits must not only be defined in terms of their interpretation, but ideally also be standardised in terms of numerical units and, even more important, the use of factor levels. This is challenging given the range of data types that fall within datasets of functional traits: numerical values represent measurements of length, volumes, ratios, rates or timespans. Integer values may apply to count data (e.g. eggs per clutch). Binary data (encoded as 0 or 1) or logical data (coded as TRUE or FALSE) may apply to qualitative traits such as ...(e.g. specialisation to a given habitat) . Many traits are categorical and allow for a constrained set of factor levels, such as ... () or unconstrained entries such as color. Some traits take character strings of descriptions. Finally there are specific formats of multivariate trait values (e.g. x.y.z coordinates of a landmark measured in 3D space or relative abundance of chain-lengths in biochemical compounds).
 To achieve comparability of traits across taxonomic groups, some trait standards suggest a hierarchical classification or a relational tree of functional traits (e.g. TOP or T-SITA). This links traits of similar meaning and allow cross-taxon comparative studies.  
 Thus, a trait thesaurus should assign trait names with A) a unique definition and B) an expected format of measured values or reported facts, and might additionally provide C) a hierarchical or tree-based classification of traits. 
 
@@ -91,9 +98,11 @@ The latter format is therefore providing the highest resolution and ideal for st
 
 <!-- additional information -->
 
-In addition to the minimal definition above, trait-datasets may come with a variety of additional information. The long-table format is ideal for storing this metadata-information on the measurement level. Additional information on the occurence (i.e. the specimen where the trait was measured), the measurement method or accuracy, could be referenced in other sheets of a databse and linked via IDs. The matrix or table format would have to keep this information referenced in metadata or linked datasets. 
+In addition to the minimal definition above, trait-datasets may come with a variety of additional information. The long-table format is ideal for storing this metadata-information on the measurement level. Additional information on the occurence (i.e. the specimen where the trait was measured), the measurement method or accuracy, could be referenced in other sheets of a database and linked via IDs. The matrix or table format would have to keep this information referenced in metadata or linked datasets. 
 
 (We conceptualize trait-datasets to  not include information about a species' interaction partners/associations of an organism, since they are -- to our understanding -- not within the scope of functional traits. However, such network data may be of interest to be combined with trait data. )
+
+#Cat: here I guess that a figure showing few rows of a species x trait matrix and a long-format one with links to other information (metadata,..) woud help quite a lot. By experience some users are not be familiar with the interest of using the long-table format.
 
 ### additional detail on measurement or fact
 
