@@ -1,0 +1,5 @@
+TO DO:
+
+* List of morphometric traits (see issue #6)
+* Add different types of trait definitions (see issue #5)
+* Two-level trait names (see issue #7)
