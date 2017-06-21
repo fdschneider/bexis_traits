@@ -20,20 +20,20 @@ Some studies propose a differentiation of effect traits and response traits (or 
 
 Reflecting this wide range of measures and approaches, traits are assessed with multiple questions in mind. 
 
-at individual scale: evolution of adaptive traits (#Cat: this could also be at the population/species scale), intraspecific variation
-at species scale: Morphology and phylogeny, ecological function and trophic role, biotic interactions, intraspecific variation. 
-at ecosystem scale: functional composition of communities, community weighted means and variance, ecosystem service provisioning. 
-at global spatial and temporal scale: global spectrum of form and function, biogeography, paleoecology.
+at individual scale: evolution of adaptive traits (#Cat: this could also be at the population/species scale) (@Entling2007), intraspecific variation
+at species scale: Morphology and phylogeny, ecological function and trophic role, biotic interactions (@Duarte2011, @Fontaine2006), intraspecific variation (@deBello2011). 
+at ecosystem scale: functional composition of communities (@Garnier2001), community weighted means and variance, ecosystem service provisioning (@Wood2015). 
+at global spatial and temporal scale: global spectrum of form and function (@Forister2015), biogeography, paleoecology.
 
 A focus on functional traits allows us to describe the role of a species in an ecosystem or its ability to persist under certain environmental conditions. (#Cat: I would put this earlier since it is a more general statement)
 
-Traits help in bridging individual level behaviour and physiology into processes at the ecosystem scale.
+Traits help in bridging individual level behaviour and physiology into processes at the ecosystem scale (@Diaz2013).
 
-Traits help to identify economic strategies of organisms, beyond taxonomy.
+Traits help to identify economic strategies of organisms, beyond taxonomy (@Menezes2010).
 
-Traits helpt to understand mechanisms behind changes in community composition or loss of biodiversity following global changes or local anthropogenic drivers.
+Traits helpt to understand mechanisms behind changes in community composition or loss of biodiversity following global changes or local anthropogenic drivers (@Hopfenmuller2014, @Jennings2009, @Moretti2013).
 
-Refer to Katge et al 2011, Violle et al 2007, Diaz et al 2007, McGill et al. 2006, ...
+Refer to Katge et al 2011, Violle et al 2007, Diaz et al 2007, McGill et al. 2006, Aubin et al. 2013, Lavorel et al. 2002...
 
 ## trait-based research within the Biodiversity Exploratories
 
@@ -44,6 +44,9 @@ Boerschig et al 2013
 Gossner et al 2015 & 2016
 Simons et al 2014 & 2016
 Kühsel et al 2015 & 2016
+Birkhofer et al 2015
+Chisté et al 2016
+Gamez-Virues et al 2015
 
 Summarize different questions, currently proposed in above- and below ground work within the Exploratories, focus on plant traits, arthropod traits, microbial traits.
 
@@ -205,9 +208,9 @@ For data not obtained from own measurement, the field `reference` provides a pre
 
 To record potential sources of noise or bias, the methods and procedures of fixation and preservation of the specimen (column `preparations`), method of measurement (`measurementMethod`), the person conducting the measurement (`measurementDeterminedBy`), the date at which the measurement was obtained (`measurementDeterminedDate`) are recorded. 
 
-One issue of transparency of data is that the degree of taxonomic resolution at the time of observation of the specimen might be unclear. For instance, for literature data, the  data source might report trait values on the family or genus level, but the data author infers and reports the trait data at species level (e.g. if the entire genus reportedly shares the same trait value).
+One issue of transparency of data is that the degree of taxonomic resolution at the time of observation of the specimen might be unclear. For instance, for literature data, the  data source might report trait values on the family or genus level, but the data author infers and reports the trait data at species level (e.g. if the entire genus reportedly shares the same trait value). Those cases are documented in the column `measurementResolution`
 
-For some measured values, authors would report aggregate data of repeated measurements or pooled measurements, e.g. by weighing a multiple individuals simultaneously and calculating an average. In these cases, recording the number of individuals (`individualCount`) along with a dispersion measure (e.g. variance or standard deviation, `dispersion`) or range of values (e.g. min and max of values observed in the field `measurementValueMin`, `measurementValueMax`) is adviced. The field `statisticalMethod` names the method for data aggregation (e.g. mean or median) or averaging as well as the variation or range.
+For some measured values, authors would report aggregate data of repeated measurements or pooled measurements, e.g. by weighing multiple individuals simultaneously and calculating an average. In these cases, recording the number of individuals (`individualCount`) along with a dispersion measure (e.g. variance or standard deviation, `dispersion`) or range of values (e.g. min and max of values observed in the field `measurementValueMin`, `measurementValueMax`) is adviced. The field `statisticalMethod` names the method for data aggregation (e.g. mean or median) or averaging as well as the variation or range.
 
 #### Extension on observation context (occurence)
 
@@ -224,16 +227,17 @@ To capture geographic variation of traits, a set of fields for georeferencing ca
 
 #### metadata columns
 
-rights, bibliographicCitation, license, datasetID, datasetName, authorLastname, authorFirstname
+Individual measurements and facts will likely already belong to a larger set of traits or a separate traitdatabase before they are added to a combined traitdatabase. To retain the rights of the original data contributor, the field `rightsHolder` states the person or organization who owns or manages the rights to the data; `bibliographicCitation` states a bibliographic reference which should be cited when the data is used; and `license` specifies under which terms and conditions the data can be used, re-used and/or published. 
+This information always applies to one single fact or measurement, further information on the larger dataset which originall contained this entry can be stored in `datasetID`, `datasetName`,`authorLastname` and `authorFirstname`. These columns should hence give credit to the person who compiled the original dataset and signs responsible for the correct identification and reporting of the rights holder.
 
 ### The Biodiversity Exploratories Extensions and template 
 
-Data will be uploaded to bexis using the template to join data to the trait dataset while keeping full data authority: author information and ownership, access right management, as provided by BExIS. 
+Data will be uploaded to BExIS using the template to join data to the trait dataset while keeping full data authority: author information and ownership, access right management, as provided by BExIS. 
 
-if applicable, trait values can be assigned to plot IDs or regions. 
+If applicable, trait values can be assigned to regions, plot IDs or sampling events which will then allow users to combine trait data with abundance, other observational data or the management regime on the sampled plots.
 
 Metadata:
-contain additional information on data origin, method, authors and owners (in redundancy with primary data, see above) and possibly more detailled definition of the traits recorded. 
+Each traitdataset uploaded to BExIS and added to the traitdatabase will be accompanied with a metadata file containing additional information on data origin, method, authors and owners (in redundancy with primary data, see above) and possibly more detailed definition of the traits recorded. 
 
 ### A tool for producing compliant data
 
@@ -283,19 +287,115 @@ report issues with R tool, file pull-requests on GitHub, Maintainer of R package
 
 # References 
 
-Gámez-Virués S., Perović D. J., Gossner M. M., Börschig C., Blüthgen N., de Jong H., Simons N., Klein A.-M., Krauss J., Maier G., Scherber C., Steckel J., Rothenwöhrer C., Steffan-Dewenter I., Weiner C. N., Weisser W. W., Werner M., Tscharntke T., Westphal C. (2014): Landscape simplification filters species traits and drives biotic homogenization. Nature Communications 6: 8568. doi: 10.1038/ncomms9568  
-Gossner M. M., Simons N. K., Achtziger R., Blick T., Dorow W. H. O., Dziock F., Köhler F., Weisser W. W. (2015): A summary of eight traits of Coleoptera, Hemiptera, Orthoptera and Araneae, occurring in grasslands in Germany. Scientific Data 2:150013. doi: 10.1038/sdata.2015.13  
-Gossner M. M., Simons N. K., Höck L., Weisser W. W. (2015): Morphometric measures of Heteroptera sampled in grasslands across three regions of Germany. Ecology 96 (4), 1154–1154. doi: 10.1890/14-2159.1   
-Gossner, M. M., Lewinsohn, T. M., Kahl, T., Grassein, F., Boch, S., Prati, D., ... & Allan, E. (2016). Land-use intensification causes multitrophic homogenization of grassland communities. Nature, 540(7632), 266-269.  
-Simons N. K., Weisser W. W., Gossner M. M. (2016): Multi-taxa approach shows consistent shifts in arthropod functional traits along grassland land-use intensity gradient. Ecology 97 (3), 754–764. doi: 10.1890/15-0616.1   
-Simons N. K., Gossner M. M., Lewinsohn T. M., Boch S., Lange M., Müller J., Pasalic E., Socher S. A., Türke M., Fischer M., Weisser W. W. (2014): Resource-Mediated Indirect Effects of Grassland Management on Arthropod Diversity. PLoS ONE 9 (9): e107033. doi:10.1371/journal.pone.0107033   
-Chisté, M. N., Mody, K., Gossner, M. M., Simons, N. K., Köhler, G., Weisser, W. W., & Blüthgen, N. (2016). Losers, winners, and opportunists: How grassland land-use intensity affects orthopteran communities. Ecosphere, 7(11).  
-Birkhofer K., Smith H. G., Weisser W. W., Wolters V., Gossner M. M. (2015): Land-use effects on the functional distinctness of arthropod communities. Ecography 38 (9), 889–900. doi: 10.1111/ecog.01141   
-Birkhofer K., Diekötter T., Meub C., Stötzel K., Wolters V. (2015): Optimizing arthropod predator conservation in permanent grasslands by considering diversity components beyond species richness. Agriculture, Ecosystem and Environments 211, 65–72. doi: 10.1016/j.agee.2015.05.014   
-Weiner C. N., Werner M., Linsenmair K. E., Blüthgen N. (2014): Land-use impacts on plant–pollinator networks: interaction strength and specialization predict pollinator declines. Ecology 95 (2), 466–474. doi: 10.1890/13-0436.1  
-Börschig, C., Klein, A. M., von Wehrden, H., & Krauss, J. (2013). Traits of butterfly communities change from specialist to generalist characteristics with increasing land-use intensity. Basic and Applied Ecology, 14(7), 547-554.  
-Kühsel S., Blüthgen N. (2015): High diversity stabilizes the thermal resilience of pollinator communities in intensively managed grasslands. Nature Communications 6:7989. doi: 10.1038/ncomms8989   
-Kühsel S., Brückner A. K., Schmelzle S., Heethoff M., Blüthgen N. (2016): Surface area–volume ratios in insects. Insect Science, in press. doi: 10.1111/1744-7917.12362   
-Renner S. C., Gossner M. M., Fischer M., Kahl T., Kalko E. K. V., Weisser W. W., Allan E. (2014): Temporal changes in randomness of bird communities. PLoS ONE 9(11): e112347. doi:10.1371/journal.pone.0112347   
-Allan E., Manning P., Alt F., Binkenstein J., Blaser S., Blüthgen N., Böhm S., Grassein F.,  Hölzel N., Klaus V., Kleinebecker T., Morris K. E., Oelmann Y., Prati D., Renner S. C., Rillig M. C., Schäfer M., Schloter M., Schmitt B., Schöning I., Schrumpf M., Solly E., Sorkau E., Steckel J., Steffen-Dewenter I., Stempfhuber B., Tschapka M., Weiner C. N., Weisser W. W., Werner M., Westphal C., Wilcke W., Fischer M. (2015): Land use intensification alters ecosystem multifunctionality via loss of biodiversity and changes to functional composition. Ecology Letters 18 (8), 834–843. doi: 10.1111/ele.12469  
+Allan, E., Manning, P., Alt, F., Binkenstein, J., Blaser, S., Bluthgen, N., Bohm, S., Grassein, F., Holzel, N., Klaus, V.H.,
+Kleinebecker, T., Morris, E.K., Oelmann, Y., Prati, D., Renner, S.C., Rillig, M.C., Schaefer, M., Schloter, M., Schmitt, B.,
+Schoning, I., Schrumpf, M., Solly, E., Sorkau, E., Steckel, J., Steffen-Dewenter, I., Stempfhuber, B., Tschapka, M.,
+Weiner, C.N., Weisser, W.W., Werner, M., Westphal, C., Wilcke, W., Fischer, M., 2015. Land use intensification alters
+ecosystem multifunctionality via loss of biodiversity and changes to functional composition. Ecol Lett. doi:
+10.1111/ele.12469
 
+Aubin, I., Venier, L., Pearce, J., Moretti, M., 2013. Can a trait-based multi-taxa approach improve our assessment of
+forest management impact on biodiversity? 22, 2957-2975. doi: 10.1007/s10531-013-0565-6
+
+Birkhofer, K., Diekötter, T., Meub, C., Stötzel, K., Wolters, V., 2015. Optimizing arthropod predator conservation in
+permanent grasslands by considering diversity components beyond species richness. 211, 65-72. doi: 10.1016/j.agee.2015.05.014
+
+Birkhofer, K., Smith, H.G., Weisser, W.W., Wolters, V., Gossner, M.M., 2015. Land-use effects on the functional
+distinctness of arthropod communities. Ecography 38, 889-900. doi: 10.1111/ecog.01141
+
+Börschig, C., Klein, A.M., von Wehrden, H., Krauss, J., 2013. Traits of butterfly communities change from specialist
+to generalist characteristics with increasing land-use intensity. Basic Appl Ecol 14, 547-554. doi: 10.1016/j.baae.2013.09.002
+
+Cadotte, M.W., Carscadden, K., Mirotchnick, N., 2011. Beyond species: functional diversity and the maintenance of
+ecological processes and services. J. Appl. Ecol. 48, 1079-1087. doi: 10.1111/j.1365-2664.2011.02048.x
+
+Chisté, M.N., Mody, K., Gossner, M.M., Simons, N.K., Köhler, G., Weisser, W.W., Blüthgen, N., 2016. Losers, winners,
+and opportunists: How grassland land-use intensity affects orthopteran communities. 7, e01545. doi: 10.1002/ecs2.1545
+
+de Bello, F., Lavorel, S., Albert, C.H., Thuiller, W., Grigulis, K., Dolezal, J., Janecek, S., Leps, J., 2011. Quantifying the
+relevance of intraspecific trait variability for functional diversity. Methods Ecol. Evol. 2, 163-174. doi: 10.1111/j.2041-210X.2010.00071.x
+
+Díaz, S., Purvis, A., Cornelissen, J.H.C., Mace, G.M., Donoghue, M.J., Ewers, R.M., Jordano, P., Pearse, W.D., 2013.
+Functional traits, the phylogeny of function, and ecosystem service vulnerability. Ecology and evolution 3,
+2958-2975. doi: 10.1002/ece3.601
+
+Duarte, L.D.S., Carlucci, M.B., Fontana, C.S., Hartz, S.M., Pillar, V.D., 2011. Plant diaspore traits as indicators of
+mutualistic interactions in woody vegetation patches developing into a grassland-forest mosaic. Community Ecol
+12, 126-134. doi: 10.1556/ComEc.12.2011.1.15
+
+Entling, W., Schmidt, M.H., Bacher, S., Brandl, R., Nentwig, W., 2007. Niche properties of Central European spiders:
+shading, moisture and the evolution of the habitat niche. Global Ecol Biogeogr 16, 440-448. doi: 10.1111/j.1466-8238.2006.00305.x
+
+Fontaine, C., Dajoz, I., Meriguet, J., Loreau, M., 2006. Functional diversity of plant-pollinator interaction webs
+enhances the persistence of plant communities. PLoS biology 4, e1. doi: 10.1371/journal.pbio.0040001.g004
+
+Forister, M.L., Novotny, V., Panorska, A.K., Baje, L., Basset, Y., Butterill, P.T., Cizek, L., Coley, P.D., Dem, F., Diniz, I.R.,
+Drozd, P., Fox, M., Glassmire, A.E., Hazen, R., Hrcek, J., Jahner, J.P., Kaman, O., Kozubowski, T.J., Kursar, T.A., Lewis,
+O.T., Lill, J., Marquis, R.J., Miller, S.E., Morais, H.C., Murakami, M., Nickel, H., Pardikes, N.A., Ricklefs, R.E., Singer,
+M.S., Smilanich, A.M., Stireman, J.O., Villamarin-Cortez, S., Vodka, S., Volf, M., Wagner, D.L., Walla, T., Weiblen,
+G.D., Dyer, L.A., 2015. The global distribution of diet breadth in insect herbivores. Proceedings of the National
+Academy of Sciences of the United States of America 112, 442-447. doi: 10.1073/pnas.1423042112
+
+Gamez-Virues, S., Perovic, D.J., Gossner, M.M., Borschig, C., Bluthgen, N., de Jong, H., Simons, N.K., Klein, A.M.,
+Krauss, J., Maier, G., Scherber, C., Steckel, J., Rothenwohrer, C., Steffan-Dewenter, I., Weiner, C.N., Weisser, W.,
+Werner, M., Tscharntke, T., Westphal, C., 2015. Landscape simplification filters species traits and drives biotic
+homogenization. 6, 8568. doi: 10.1038/ncomms9568
+
+Garnier, E., Laurent, G., Bellmann, A., Debain, S., Berthelier, P., Ducout, B., Roumet, C., Navas, M.L., 2001.
+Consistency of species ranking based on functional leaf traits. 152, 69-83. doi: 10.1046/j.0028-646x.2001.00239.x
+
+Gossner, M.M., Lewinsohn, T.M., Kahl, T., Grassein, F., Boch, S., Prati, D., Birkhofer, K., Renner, S.C., Sikorski, J.,
+Wubet, T., Arndt, H., Baumgartner, V., Blaser, S., Bluthgen, N., Borschig, C., Buscot, F., Diekotter, T., Jorge, L.R.,
+Jung, K., Keyel, A.C., Klein, A.M., Klemmer, S., Krauss, J., Lange, M., Muller, J., Overmann, J., Pasalic, E., Penone, C.,
+Perovic, D.J., Purschke, O., Schall, P., Socher, S.A., Sonnemann, I., Tschapka, M., Tscharntke, T., Turke, M., Venter,
+P.C., Weiner, C.N., Werner, M., Wolters, V., Wurst, S., Westphal, C., Fischer, M., Weisser, W.W., Allan, E., 2016.
+Land-use intensification causes multitrophic homogenization of grassland communities. 540, 266-269. doi:
+10.1038/nature20575
+
+Gossner, M.M., Simons, N.K., Achtziger, R., Blick, T., Dorow, W.H.O., Dziock, F., Köhler, F., Rabitsch, W., Weisser,
+W.W., 2015. A summary of eight traits of Coleoptera, Hemiptera, Orthoptera and Araneae, occurring in grasslands
+in Germany. Scientific Data 2, 150013. doi: 10.1038/sdata.2015.13
+
+Gossner, M.M., Simons, N.K., Höck, L., Weisser, W.W., 2015. Morphometric measures of Heteroptera sampled in
+grasslands across three regions of Germany. 96, 1154. doi: 10.1890/14-2159.1
+
+Hopfenmuller, S., Steffan-Dewenter, I., Holzschuh, A., 2014. Trait-specific responses of wild bee communities to
+landscape composition, configuration and local factors. PloS one 9, e104439. doi: 10.1371/journal.pone.0104439
+
+Jennings, N., Pocock, M.J.O., 2009. Relationships between Sensitivity to Agricultural Intensification and Ecological
+Traits of Insectivorous Mammals and Arthropods. 23, 1195-1203. doi: 10.1111/j.1523-1739.2009.01208.x
+
+Kühsel, S., Blüthgen, N., 2015. High diversity stabilizes the thermal resilience of pollinator communities in
+intensively managed grasslands. 6, 7989. doi: 10.1038/ncomms8989
+
+Kühsel, S., Brückner, A., Schmelzle, S., Heethoff, M., Blüthgen, N., 2016. Surface area-volume ratios in insects. doi:
+10.1111/1744-7917.12362
+
+Lavorel, S., Garnier, E., 2002. Predicting changes in community composition and ecosystem functioning from plant
+traits: revisiting the Holy Grail. 16, 545-556. doi: 10.1046/j.1365-2435.2002.00664.x
+
+Menezes, S., Baird, D.J., Soares, A.M.V.M., 2010. Beyond taxonomy: a review of macroinvertebrate trait-based
+community descriptors as tools for freshwater biomonitoring. 47, 711-719. doi: 10.1111/j.1365-2664.2010.01819.x
+
+Moretti, M., de Bello, F., Ibanez, S., Fontana, S., Pezzatti, G.B., Dziock, F., Rixen, C., Lavorel, S., 2013. Linking traits
+between plants and invertebrate herbivores to track functional effects of land-use changes. J Veg Sci 24, 949-962.
+doi: 10.1111/jvs.12022
+
+Renner, S.C., Gossner, M.M., Kahl, T., Kalko, E.K., Weisser, W.W., Fischer, M., Allan, E., 2014. Temporal changes in
+randomness of bird communities across Central Europe. Plos One 9, e112347. doi: 10.1371/journal.pone.0112347
+
+Simons, N.K., Gossner, M.M., Lewinsohn, T.M., Boch, S., Lange, M., Muller, J., Pasalic, E., Socher, S.A., Turke, M.,
+Fischer, M., Weisser, W.W., 2014. Resource-mediated indirect effects of grassland management on arthropod
+diversity. PLoS One 9, e107033. doi: 10.1371/journal.pone.0107033
+
+Simons, N.K., Weisser, W.W., Gossner, M.M., 2016. Multi-taxa approach shows consistent shifts in arthropod functional traits along grassland land-use intensity gradient. Ecology 97, 754-764. doi: 10.1890/15-0616.1
+
+Violle, C., Navas, M.-L., Vile, D., Kazakou, E., Fortunel, C., Hummel, I., Garnier, E., 2007. Let the concept of trait be
+functional! 116, 882-892. doi: 10.1111/j.0030-1299.2007.15559.x
+
+Weiner, C.N., Werner, M., Linsenmair, K.E., Bluthgen, N., 2014. Land-use impacts on plant-pollinator networks:
+interaction strength and specialization predict pollinator declines. Ecology 95, 466-474.
+
+Weiner, C.N., Werner, M., Linsenmair, K.E., Blüthgen, N., 2011. Land use intensity in grasslands: Changes in
+biodiversity, species composition and specialisation in flower visitor networks. 12, 292-299. doi: 10.1016
+j.baae.2010.08.006
