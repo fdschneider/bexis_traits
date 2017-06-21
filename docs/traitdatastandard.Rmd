@@ -1,0 +1,178 @@
+---
+title: "Ecological Traitdata Standard"
+author: "Florian D. Schneider, Nadja Simons, Caterina Penone, Andreas Ostrowski"
+date: "12 Mai 2017"
+output: 
+  html_document: 
+    keep_md: yes
+    toc: yes
+---
+
+
+**This is the documentation of the Ecological Traitdata Standard (ETS), version 0.2** 
+This defined vocabulary aims at providing all essential columns for raw data of functional trait measurements for ecological research. 
+
+The column names are partly aligning with names from Darwin Core Standard and Extensions (Names compliant with DWC are referenced thus; the full Darwin Core can be found here: http://rs.tdwg.org/dwc/terms/index.htm)
+
+The template is ordered into six different sections, as well as a vocabulary for metadata information of particular importance for trait data. 
+
+1. Trait measurement data
+2. Information about the Measurement or Fact
+3. Resolution of data / information on specimen
+4. Columns referring to sampling event or origin of record
+5. Columns for aggregate measures 
+6. Location information 
+
+Except for the first section, all columns are optional. Only the mandatory fields are required to produce valid trait-datasets. Some mandatory fields will be assisted by the R-Script. The columns labelled 'highly recommended' serve a better comparability of data across datasets. 
+
+This list will also be available as 
+
+- a csv/txt/xlsx table file which will be provided for download on BExIS including full documentation in the metadata (for manual use, this may be uploaded to BExIs as soon it's ready), and
+- a machine readable template glossary (xml file or csv with additional flags and markers) which serves as input reference for software tools. (can we provide a simple API?) 
+
+```{r, results = 'asis', echo = FALSE}
+library(data.table)
+library(knitr)
+glossary <- read.csv("../template_glossary.csv")
+
+columnNames <- glossary$columnName
+sections <- glossary$section
+sectionNames <- levels(glossary$section)
+
+glossary <- as.data.table(glossary)
+glossary <- setNames(split(glossary[,-c(1), with = FALSE], f = as.integer(glossary$section)), sectionNames)
+
+glossary <- lapply(glossary, function(x) setNames(split(x, f = seq_along(x$columnName)), x$columnName))
+
+```
+
+# Core traitdata columns
+
+Generally, for the essential primary data (species name, trait name, trait value), the trait standard recommends to keep the original naming and value of the data provider to ensure compatibility on the provider's side and to check for inconsistencies and misspellings. The original data provider's information is indexed by appending `_user` to the column name. The R script helps in transferring those entries into the accepted names and factor levels provided by the lookup tables. 
+
+
+```{r, results = 'asis', echo = FALSE}
+
+j <- sectionNames[1]
+
+ for(i in columnNames[sections == j]) {
+     dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
+     colnames(dd) <- i
+     cat("## `", i, "`  ", sep = "")
+     print(kable(dd, format = "markdown"))
+ }
+
+```
+
+
+# Columns referring to Measurement or Fact
+
+This section provides additional information about the specimen, which are not captured by the taxon information above.  
+
+
+```{r, results = 'asis', echo = FALSE}
+
+j <- sectionNames[2]
+
+ for(i in columnNames[sections == j]) {
+   dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
+     colnames(dd) <- i
+     cat("## `", i, "`  ", sep = "")
+   print(kable(dd, format = "markdown"))
+ }
+
+```
+
+
+# Columns referring to specimen 
+
+this section of columns aims for identifying the methodology and primary source of the data and keep the reference to the actual specimen (e.g. for museum collections or related data analysis). 
+
+```{r, results = 'asis', echo = FALSE}
+
+j <- sectionNames[3]
+
+ for(i in columnNames[sections == j]) {
+    dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
+     colnames(dd) <- i
+     cat("## `", i, "`  ", sep = "")
+ print(kable(dd, format = "markdown"))
+ }
+
+```
+
+
+# Columns referring to sampling event or origin of record
+
+this section of columns aims for identifying the methodology and primary source of the record and keep the reference to the actual specimen (e.g. for museum collections or related data analysis). It also provides columns for georeferencing the specimen. 
+
+```{r, results = 'asis', echo = FALSE}
+
+j <- sectionNames[4]
+
+ for(i in columnNames[sections == j]) {
+      dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
+     colnames(dd) <- i
+     cat("## `", i, "`  ", sep = "")
+    print(kable(dd, format = "markdown"))
+ }
+
+```
+
+
+# Columns for aggregate measures 
+
+Some data may not refer to a single specimen or measurement, but aggregate repeated measurements into an average. 
+
+```{r, results = 'asis', echo = FALSE}
+
+j <- sectionNames[5]
+
+ for(i in columnNames[sections == j]) {
+ dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
+     colnames(dd) <- i
+     cat("## `", i, "`  ", sep = "")
+     print(kable(dd, format = "markdown"))
+ }
+
+```
+
+
+
+# Additional columns for use in Biodiversity Exploratories
+
+
+
+This section records location in the context of the exploratories. From `ExploratotriesPlotID` a detailled georeference can be inferred. Additional spatial resolution, e.g. on subplots, may be provided in `locationID` of section sampling event. 
+
+```{r, results = 'asis', echo = FALSE}
+
+j <- sectionNames[7]
+
+ for(i in columnNames[sections == j]) {
+      dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
+     colnames(dd) <- i
+     cat("## `", i, "`  ", sep = "")
+     print(kable(dd, format = "markdown"))
+ }
+
+``` 
+
+# Metadata vocabulary
+
+```{r, results = 'asis', echo = FALSE}
+
+j <- sectionNames[6]
+
+ for(i in columnNames[sections == j]) {
+      dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
+     colnames(dd) <- i
+     cat("## `", i, "`  ", sep = "")
+     print(kable(dd, format = "markdown"))
+ }
+
+```
+
+----
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Ecological Traitdata Standard </span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Florian D. Schneider, Nadja Simons, Caterina Penone, Andreas Ostrowski</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
