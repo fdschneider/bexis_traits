@@ -83,7 +83,7 @@ j <- "MeasurementOrFact"
 ```
 
 
-# Columns referring to occurence 
+# Extension: Occurence 
 
 this section of columns aims for identifying the methodology and primary source of the data and keep the reference to the actual specimen (e.g. for museum collections or related data analysis). 
 
@@ -100,7 +100,7 @@ j <- "Occurence"
 
 ```
 
-# Additional columns for use in Biodiversity Exploratories
+# Extension: Biodiversity Exploratories
 
 This section records location in the context of the exploratories. From `ExploratotriesPlotID` a detailled georeference can be inferred. Additional spatial resolution, e.g. on subplots, may be provided in `locationID` of section sampling event. 
 

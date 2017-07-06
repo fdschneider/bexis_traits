@@ -4,18 +4,19 @@ Florian D. Schneider, Nadja Simons, Caterina Penone, Andreas Ostrowski
 
 
 **This is the documentation of the Ecological Traitdata Standard (ETS), version 0.3** 
+
 This defined vocabulary aims at providing all essential columns for raw data of functional trait measurements for ecological research. 
 
-The column names are partly aligning with names from Darwin Core Standard and Extensions (Names compliant with DWC are referenced thus in field 'Refines'; the full Darwin Core can be found here: http://rs.tdwg.org/dwc/terms/index.htm)
+Most terms relate to terms from the Darwin Core Standard and Extensions (Names compliant with DWC are referenced thus in field 'Refines'; the full Darwin Core can be found here: http://rs.tdwg.org/dwc/terms/index.htm)
 
-The data standard is ordered into a core section with essential columns for trait data, two extensions which are allowing to provide additional layers of information, as well as a vocabulary for metadata information of particular importance for trait data. 
+The data standard is ordered into a **core section** with essential columns for trait data, extensions which are allowing to provide additional layers of information, as well as a vocabulary for metadata information of particular importance for trait data. A final section provides defined terms for lists of trait definitions, also termed a Trait Thesaurus. 
 
-The extensions are:
+Extensions:
 
-- Extension Measurement or Fact
-3. Extension for further detail on the occurence 
+- the `Occurence` extension contains information on the level of individual specimens, such as date and location and method of sampling and preservation, or physiological specifications of the phenotype, such as sex, life stage or age. 
+- the `MeasurementOrFact` extension takes information at the level of single measurements or reported values, such as the original literature from where the value is cited, the method of measurement or statistical method of aggregation. 
+- The extension `BiodiversityExploratories` provides columns for localisation for trait data from the Biodiversity Exploratories sites (ww.biodiversity-exploratories.de). 
 
-Except for the first section, all columns are optional. Only the mandatory fields are required to produce valid trait-datasets. Some mandatory fields will be assisted by the R-Script. The columns labelled 'highly recommended' serve a better comparability of data across datasets. 
 
 This list will also be available as 
 
@@ -29,8 +30,8 @@ This list will also be available as
 
 # Core traitdata columns
 
-Generally, for the essential primary data (species name, trait name, trait value), the trait standard recommends to keep the original naming and value of the data provider to ensure compatibility on the provider's side and to check for inconsistencies and misspellings. The original data provider's information is indexed by appending `_user` to the column name. The R script helps in transferring those entries into the accepted names and factor levels provided by the lookup tables. 
-
+Generally, for the essential primary data (taxon assignment, trait name, trait value), the trait data standard recommends to keep the original naming and value of the data provider to ensure compatibility on the provider's side and to check for inconsistencies and misspellings. To ensure compatibility with other datasets, the original data provider's information should be transferred into a standardized columns indexed by appending `Std` to the column name. 
+The R package 'traitdataform' helps in transferring those entries into the accepted taxon names and trait definitions provided by public ontologies. 
 
 ## `occurenceID`  
 
@@ -306,7 +307,7 @@ Generally, for the essential primary data (species name, trait name, trait value
 |Comment      |                                                                                                                                                                                                                                                                                                                      |
 
 
-# Columns referring to Measurement or Fact
+# Extension: Measurement or Fact 
 
 This section provides additional information about the specimen, which are not captured by the taxon information above.  
 
@@ -537,7 +538,7 @@ This section provides additional information about the specimen, which are not c
 |Comment      |E.g. 'mean and standard deviation', 'median and 95% confidence interval', 'mean and variance', 'mean and range of values', 'median and 95% interquantile range' |
 
 
-# Columns referring to occurence 
+# Extension: Occurence 
 
 this section of columns aims for identifying the methodology and primary source of the data and keep the reference to the actual specimen (e.g. for museum collections or related data analysis). 
 
@@ -878,93 +879,7 @@ this section of columns aims for identifying the methodology and primary source 
 |Definition   |The standard code for the country in which the Location occurs. Recommended best practice is to use ISO 3166-1-alpha-2 country codes.                                                                                                  |
 |Comment      |Examples:"DE" for Germany, "AR" for Argentina, "SV" for El Salvador. For discussion see http://terms.tdwg.org/wiki/dwc:countryCode; This should be added if a more precise location is unavailable, to enable data to be used by GBif. |
 
-
-# Columns referring to sampling event or origin of record
-
-this section of columns aims for identifying the methodology and primary source of the record and keep the reference to the actual specimen (e.g. for museum collections or related data analysis). It also provides columns for georeferencing the specimen. 
-
-## `rightsHolder`  
-
-|             |rightsHolder                                                                             |
-|:------------|:----------------------------------------------------------------------------------------|
-|mandatory    |NA                                                                                       |
-|defaultValue |NA                                                                                       |
-|vocabulary   |                                                                                         |
-|valueType    |character                                                                                |
-|Identifier   |NA                                                                                       |
-|Refines      |http://purl.org/dc/terms/rightsHolder                                                    |
-|Replaces     |NA                                                                                       |
-|Version      |NA                                                                                       |
-|DateIssued   |NA                                                                                       |
-|DateModified |NA                                                                                       |
-|Definition   |A person or organization owning or managing rights over the resource, i.e. this dataset. |
-|Comment      |A list of author names (separated by &#124;) or name of a consortium, or institution     |
-## `bibliographicCitation`  
-
-|             |bibliographicCitation                                                                                                                                                                                                                                                                                            |
-|:------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|mandatory    |NA                                                                                                                                                                                                                                                                                                               |
-|defaultValue |NA                                                                                                                                                                                                                                                                                                               |
-|vocabulary   |                                                                                                                                                                                                                                                                                                                 |
-|valueType    |character                                                                                                                                                                                                                                                                                                        |
-|Identifier   |NA                                                                                                                                                                                                                                                                                                               |
-|Refines      |http://purl.org/dc/terms/bibliographicCitation                                                                                                                                                                                                                                                                   |
-|Replaces     |NA                                                                                                                                                                                                                                                                                                               |
-|Version      |NA                                                                                                                                                                                                                                                                                                               |
-|DateIssued   |NA                                                                                                                                                                                                                                                                                                               |
-|DateModified |NA                                                                                                                                                                                                                                                                                                               |
-|Definition   |A bibliographic reference for the resource as a statement indicating how this record should be cited (attributed) when used. Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible.                                                           |
-|Comment      |e.g. "Gossner, M.M., Simons, N.K., Achtziger, R., Blick, T., Dorow, W.H.., Dziock, F., et al. (2015). A summary of eight traits of Coleoptera, Hemiptera, Orthoptera and Araneae, occurring in grasslands in Germany. Sci Data, 2, 150013, doi:10.1038/sdata.2015.13" If dataset has been published, include DOI |
-## `license`  
-
-|             |license                                                                                                                                                                                   |
-|:------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|mandatory    |NA                                                                                                                                                                                        |
-|defaultValue |NA                                                                                                                                                                                        |
-|vocabulary   |                                                                                                                                                                                          |
-|valueType    |character                                                                                                                                                                                 |
-|Identifier   |NA                                                                                                                                                                                        |
-|Refines      |http://purl.org/dc/terms/license                                                                                                                                                          |
-|Replaces     |NA                                                                                                                                                                                        |
-|Version      |NA                                                                                                                                                                                        |
-|DateIssued   |NA                                                                                                                                                                                        |
-|DateModified |NA                                                                                                                                                                                        |
-|Definition   |A legal document giving official permission to do something with the resource.                                                                                                            |
-|Comment      |Examples: "http://creativecommons.org/publicdomain/zero/1.0/legalcode", "http://creativecommons.org/licenses/by/4.0/legalcode". For discussion see http://terms.tdwg.org/wiki/dwc:license |
-## `datasetID`  
-
-|             |datasetID                                                                                                                      |
-|:------------|:------------------------------------------------------------------------------------------------------------------------------|
-|mandatory    |NA                                                                                                                             |
-|defaultValue |NA                                                                                                                             |
-|vocabulary   |                                                                                                                               |
-|valueType    |character                                                                                                                      |
-|Identifier   |NA                                                                                                                             |
-|Refines      |http://rs.tdwg.org/dwc/terms/datasetID                                                                                         |
-|Replaces     |NA                                                                                                                             |
-|Version      |NA                                                                                                                             |
-|DateIssued   |NA                                                                                                                             |
-|DateModified |NA                                                                                                                             |
-|Definition   |An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution. |
-|Comment      |e.g. BExIS ID, or  a DOI referring to the published dataset                                                                    |
-## `datasetName`  
-
-|             |datasetName                                                          |
-|:------------|:--------------------------------------------------------------------|
-|mandatory    |NA                                                                   |
-|defaultValue |NA                                                                   |
-|vocabulary   |                                                                     |
-|valueType    |character                                                            |
-|Identifier   |NA                                                                   |
-|Refines      |http://rs.tdwg.org/dwc/terms/datasetName                             |
-|Replaces     |NA                                                                   |
-|Version      |NA                                                                   |
-|DateIssued   |NA                                                                   |
-|DateModified |NA                                                                   |
-|Definition   |The name identifying the data set from which the record was derived. |
-|Comment      |e.g. a BExIS dataset name, a unique name for the traitdataset        |
-
-# Additional columns for use in Biodiversity Exploratories
+# Extension: Biodiversity Exploratories
 
 This section records location in the context of the exploratories. From `ExploratotriesPlotID` a detailled georeference can be inferred. Additional spatial resolution, e.g. on subplots, may be provided in `locationID` of section sampling event. 
 

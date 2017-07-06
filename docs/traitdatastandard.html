@@ -143,7 +143,7 @@ $(document).ready(function () {
 <li><a href="#measurementid_original"><code>measurementID_original</code></a></li>
 <li><a href="#warnings"><code>warnings</code></a></li>
 </ul></li>
-<li><a href="#columns-referring-to-measurement-or-fact">Columns referring to Measurement or Fact</a><ul>
+<li><a href="#extension-measurement-or-fact">Extension: Measurement or Fact</a><ul>
 <li><a href="#references"><code>references</code></a></li>
 <li><a href="#measurementresolution"><code>measurementResolution</code></a></li>
 <li><a href="#preparations"><code>preparations</code></a></li>
@@ -159,7 +159,7 @@ $(document).ready(function () {
 <li><a href="#measurementaccuracy"><code>measurementAccuracy</code></a></li>
 <li><a href="#statisticalmethod"><code>statisticalMethod</code></a></li>
 </ul></li>
-<li><a href="#columns-referring-to-occurence">Columns referring to occurence</a><ul>
+<li><a href="#extension-occurence">Extension: Occurence</a><ul>
 <li><a href="#basisofrecord"><code>basisOfRecord</code></a></li>
 <li><a href="#basisofrecorddescription"><code>basisOfRecordDescription</code></a></li>
 <li><a href="#sex"><code>sex</code></a></li>
@@ -182,25 +182,18 @@ $(document).ready(function () {
 <li><a href="#country"><code>country</code></a></li>
 <li><a href="#countrycode"><code>countryCode</code></a></li>
 </ul></li>
-<li><a href="#columns-referring-to-sampling-event-or-origin-of-record">Columns referring to sampling event or origin of record</a><ul>
-<li><a href="#rightsholder"><code>rightsHolder</code></a></li>
-<li><a href="#bibliographiccitation"><code>bibliographicCitation</code></a></li>
-<li><a href="#license"><code>license</code></a></li>
-<li><a href="#datasetid"><code>datasetID</code></a></li>
-<li><a href="#datasetname"><code>datasetName</code></a></li>
-</ul></li>
-<li><a href="#additional-columns-for-use-in-biodiversity-exploratories">Additional columns for use in Biodiversity Exploratories</a><ul>
+<li><a href="#extension-biodiversity-exploratories">Extension: Biodiversity Exploratories</a><ul>
 <li><a href="#originexploratories"><code>OriginExploratories</code></a></li>
 <li><a href="#exploratoriesplotid"><code>ExploratoriesPlotID</code></a></li>
 <li><a href="#exploratory"><code>Exploratory</code></a></li>
 <li><a href="#explotype"><code>ExploType</code></a></li>
 </ul></li>
 <li><a href="#metadata-vocabulary">Metadata vocabulary</a><ul>
-<li><a href="#rightsholder-1"><code>rightsHolder</code></a></li>
-<li><a href="#bibliographiccitation-1"><code>bibliographicCitation</code></a></li>
-<li><a href="#license-1"><code>license</code></a></li>
-<li><a href="#datasetid-1"><code>datasetID</code></a></li>
-<li><a href="#datasetname-1"><code>datasetName</code></a></li>
+<li><a href="#rightsholder"><code>rightsHolder</code></a></li>
+<li><a href="#bibliographiccitation"><code>bibliographicCitation</code></a></li>
+<li><a href="#license"><code>license</code></a></li>
+<li><a href="#datasetid"><code>datasetID</code></a></li>
+<li><a href="#datasetname"><code>datasetName</code></a></li>
 </ul></li>
 <li><a href="#terms-for-traitlists-trait-thesaurus">Terms for Traitlists / Trait Thesaurus</a><ul>
 <li><a href="#valuetype"><code>valueType</code></a></li>
@@ -213,17 +206,16 @@ $(document).ready(function () {
 </ul>
 </div>
 
-<p><strong>This is the documentation of the Ecological Traitdata Standard (ETS), version 0.3</strong> This defined vocabulary aims at providing all essential columns for raw data of functional trait measurements for ecological research.</p>
-<p>The column names are partly aligning with names from Darwin Core Standard and Extensions (Names compliant with DWC are referenced thus in field ‘Refines’; the full Darwin Core can be found here: <a href="http://rs.tdwg.org/dwc/terms/index.htm" class="uri">http://rs.tdwg.org/dwc/terms/index.htm</a>)</p>
-<p>The data standard is ordered into a core section with essential columns for trait data, two extensions which are allowing to provide additional layers of information, as well as a vocabulary for metadata information of particular importance for trait data.</p>
-<p>The extensions are:</p>
+<p><strong>This is the documentation of the Ecological Traitdata Standard (ETS), version 0.3</strong></p>
+<p>This defined vocabulary aims at providing all essential columns for raw data of functional trait measurements for ecological research.</p>
+<p>Most terms relate to terms from the Darwin Core Standard and Extensions (Names compliant with DWC are referenced thus in field ‘Refines’; the full Darwin Core can be found here: <a href="http://rs.tdwg.org/dwc/terms/index.htm" class="uri">http://rs.tdwg.org/dwc/terms/index.htm</a>)</p>
+<p>The data standard is ordered into a <strong>core section</strong> with essential columns for trait data, extensions which are allowing to provide additional layers of information, as well as a vocabulary for metadata information of particular importance for trait data. A final section provides defined terms for lists of trait definitions, also termed a Trait Thesaurus.</p>
+<p>Extensions:</p>
 <ul>
-<li>Extension Measurement or Fact</li>
+<li>the <code>Occurence</code> extension contains information on the level of individual specimens, such as date and location and method of sampling and preservation, or physiological specifications of the phenotype, such as sex, life stage or age.</li>
+<li>the <code>MeasurementOrFact</code> extension takes information at the level of single measurements or reported values, such as the original literature from where the value is cited, the method of measurement or statistical method of aggregation.</li>
+<li>The extension <code>BiodiversityExploratories</code> provides columns for localisation for trait data from the Biodiversity Exploratories sites (ww.biodiversity-exploratories.de).</li>
 </ul>
-<ol start="3" style="list-style-type: decimal">
-<li>Extension for further detail on the occurence</li>
-</ol>
-<p>Except for the first section, all columns are optional. Only the mandatory fields are required to produce valid trait-datasets. Some mandatory fields will be assisted by the R-Script. The columns labelled ‘highly recommended’ serve a better comparability of data across datasets.</p>
 <p>This list will also be available as</p>
 <ul>
 <li>a csv/txt/xlsx table file which will be provided for download on BExIS including full documentation in the metadata (for manual use, this may be uploaded to BExIs as soon it’s ready), and</li>
@@ -232,7 +224,7 @@ $(document).ready(function () {
 <pre><code>## Warning: package 'knitr' was built under R version 3.2.5</code></pre>
 <div id="core-traitdata-columns" class="section level1">
 <h1>Core traitdata columns</h1>
-<p>Generally, for the essential primary data (species name, trait name, trait value), the trait standard recommends to keep the original naming and value of the data provider to ensure compatibility on the provider’s side and to check for inconsistencies and misspellings. The original data provider’s information is indexed by appending <code>_user</code> to the column name. The R script helps in transferring those entries into the accepted names and factor levels provided by the lookup tables.</p>
+<p>Generally, for the essential primary data (taxon assignment, trait name, trait value), the trait data standard recommends to keep the original naming and value of the data provider to ensure compatibility on the provider’s side and to check for inconsistencies and misspellings. To ensure compatibility with other datasets, the original data provider’s information should be transferred into a standardized columns indexed by appending <code>Std</code> to the column name. The R package ‘traitdataform’ helps in transferring those entries into the accepted taxon names and trait definitions provided by public ontologies.</p>
 <div id="occurenceid" class="section level2">
 <h2><code>occurenceID</code></h2>
 <table>
@@ -1339,8 +1331,8 @@ $(document).ready(function () {
 </table>
 </div>
 </div>
-<div id="columns-referring-to-measurement-or-fact" class="section level1">
-<h1>Columns referring to Measurement or Fact</h1>
+<div id="extension-measurement-or-fact" class="section level1">
+<h1>Extension: Measurement or Fact</h1>
 <p>This section provides additional information about the specimen, which are not captured by the taxon information above.</p>
 <div id="references" class="section level2">
 <h2><code>references</code></h2>
@@ -2253,8 +2245,8 @@ $(document).ready(function () {
 </table>
 </div>
 </div>
-<div id="columns-referring-to-occurence" class="section level1">
-<h1>Columns referring to occurence</h1>
+<div id="extension-occurence" class="section level1">
+<h1>Extension: Occurence</h1>
 <p>this section of columns aims for identifying the methodology and primary source of the data and keep the reference to the actual specimen (e.g. for museum collections or related data analysis).</p>
 <div id="basisofrecord" class="section level2">
 <h2><code>basisOfRecord</code></h2>
@@ -3618,337 +3610,8 @@ $(document).ready(function () {
 </table>
 </div>
 </div>
-<div id="columns-referring-to-sampling-event-or-origin-of-record" class="section level1">
-<h1>Columns referring to sampling event or origin of record</h1>
-<p>this section of columns aims for identifying the methodology and primary source of the record and keep the reference to the actual specimen (e.g. for museum collections or related data analysis). It also provides columns for georeferencing the specimen.</p>
-<div id="rightsholder" class="section level2">
-<h2><code>rightsHolder</code></h2>
-<table>
-<colgroup>
-<col width="13%"></col>
-<col width="86%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">rightsHolder</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Refines</td>
-<td align="left"><a href="http://purl.org/dc/terms/rightsHolder" class="uri">http://purl.org/dc/terms/rightsHolder</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Replaces</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Version</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">DateIssued</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">DateModified</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">Definition</td>
-<td align="left">A person or organization owning or managing rights over the resource, i.e. this dataset.</td>
-</tr>
-<tr class="even">
-<td align="left">Comment</td>
-<td align="left">A list of author names (separated by |) or name of a consortium, or institution</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="bibliographiccitation" class="section level2">
-<h2><code>bibliographicCitation</code></h2>
-<table style="width:100%;">
-<colgroup>
-<col width="4%"></col>
-<col width="95%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">bibliographicCitation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Refines</td>
-<td align="left"><a href="http://purl.org/dc/terms/bibliographicCitation" class="uri">http://purl.org/dc/terms/bibliographicCitation</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Replaces</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Version</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">DateIssued</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">DateModified</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">Definition</td>
-<td align="left">A bibliographic reference for the resource as a statement indicating how this record should be cited (attributed) when used. Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible.</td>
-</tr>
-<tr class="even">
-<td align="left">Comment</td>
-<td align="left">e.g. “Gossner, M.M., Simons, N.K., Achtziger, R., Blick, T., Dorow, W.H.., Dziock, F., et al. (2015). A summary of eight traits of Coleoptera, Hemiptera, Orthoptera and Araneae, occurring in grasslands in Germany. Sci Data, 2, 150013, <a href="doi:10.1038/sdata.2015.13" class="uri">doi:10.1038/sdata.2015.13</a>” If dataset has been published, include DOI</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="license" class="section level2">
-<h2><code>license</code></h2>
-<table>
-<colgroup>
-<col width="6%"></col>
-<col width="93%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">license</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Refines</td>
-<td align="left"><a href="http://purl.org/dc/terms/license" class="uri">http://purl.org/dc/terms/license</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Replaces</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Version</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">DateIssued</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">DateModified</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">Definition</td>
-<td align="left">A legal document giving official permission to do something with the resource.</td>
-</tr>
-<tr class="even">
-<td align="left">Comment</td>
-<td align="left">Examples: “<a href="http://creativecommons.org/publicdomain/zero/1.0/legalcode" class="uri">http://creativecommons.org/publicdomain/zero/1.0/legalcode</a>”, “<a href="http://creativecommons.org/licenses/by/4.0/legalcode" class="uri">http://creativecommons.org/licenses/by/4.0/legalcode</a>”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:license" class="uri">http://terms.tdwg.org/wiki/dwc:license</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="datasetid" class="section level2">
-<h2><code>datasetID</code></h2>
-<table>
-<colgroup>
-<col width="9%"></col>
-<col width="90%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">datasetID</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Refines</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/datasetID" class="uri">http://rs.tdwg.org/dwc/terms/datasetID</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Replaces</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Version</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">DateIssued</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">DateModified</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">Definition</td>
-<td align="left">An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution.</td>
-</tr>
-<tr class="even">
-<td align="left">Comment</td>
-<td align="left">e.g. BExIS ID, or a DOI referring to the published dataset</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="datasetname" class="section level2">
-<h2><code>datasetName</code></h2>
-<table style="width:100%;">
-<colgroup>
-<col width="16%"></col>
-<col width="83%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">datasetName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Refines</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/datasetName" class="uri">http://rs.tdwg.org/dwc/terms/datasetName</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Replaces</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Version</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">DateIssued</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">DateModified</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">Definition</td>
-<td align="left">The name identifying the data set from which the record was derived.</td>
-</tr>
-<tr class="even">
-<td align="left">Comment</td>
-<td align="left">e.g. a BExIS dataset name, a unique name for the traitdataset</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="additional-columns-for-use-in-biodiversity-exploratories" class="section level1">
-<h1>Additional columns for use in Biodiversity Exploratories</h1>
+<div id="extension-biodiversity-exploratories" class="section level1">
+<h1>Extension: Biodiversity Exploratories</h1>
 <p>This section records location in the context of the exploratories. From <code>ExploratotriesPlotID</code> a detailled georeference can be inferred. Additional spatial resolution, e.g. on subplots, may be provided in <code>locationID</code> of section sampling event.</p>
 <div id="originexploratories" class="section level2">
 <h2><code>OriginExploratories</code></h2>
@@ -4213,7 +3876,7 @@ $(document).ready(function () {
 </div>
 <div id="metadata-vocabulary" class="section level1">
 <h1>Metadata vocabulary</h1>
-<div id="rightsholder-1" class="section level2">
+<div id="rightsholder" class="section level2">
 <h2><code>rightsHolder</code></h2>
 <table>
 <colgroup>
@@ -4278,7 +3941,7 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
-<div id="bibliographiccitation-1" class="section level2">
+<div id="bibliographiccitation" class="section level2">
 <h2><code>bibliographicCitation</code></h2>
 <table style="width:100%;">
 <colgroup>
@@ -4343,7 +4006,7 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
-<div id="license-1" class="section level2">
+<div id="license" class="section level2">
 <h2><code>license</code></h2>
 <table>
 <colgroup>
@@ -4408,7 +4071,7 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
-<div id="datasetid-1" class="section level2">
+<div id="datasetid" class="section level2">
 <h2><code>datasetID</code></h2>
 <table>
 <colgroup>
@@ -4473,7 +4136,7 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
-<div id="datasetname-1" class="section level2">
+<div id="datasetname" class="section level2">
 <h2><code>datasetName</code></h2>
 <table style="width:100%;">
 <colgroup>
