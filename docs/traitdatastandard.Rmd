@@ -9,21 +9,20 @@ output:
 ---
 
 
-**This is the documentation of the Ecological Traitdata Standard (ETS), version 0.2** 
+**This is the documentation of the Ecological Traitdata Standard (ETS), version 0.3** 
+
 This defined vocabulary aims at providing all essential columns for raw data of functional trait measurements for ecological research. 
 
-The column names are partly aligning with names from Darwin Core Standard and Extensions (Names compliant with DWC are referenced thus; the full Darwin Core can be found here: http://rs.tdwg.org/dwc/terms/index.htm)
+Most terms relate to terms from the Darwin Core Standard and Extensions (Names compliant with DWC are referenced thus in field 'Refines'; the full Darwin Core can be found here: http://rs.tdwg.org/dwc/terms/index.htm)
 
-The template is ordered into six different sections, as well as a vocabulary for metadata information of particular importance for trait data. 
+The data standard is ordered into a **core section** with essential columns for trait data, extensions which are allowing to provide additional layers of information, as well as a vocabulary for metadata information of particular importance for trait data. A final section provides defined terms for lists of trait definitions, also termed a Trait Thesaurus. 
 
-1. Trait measurement data
-2. Information about the Measurement or Fact
-3. Resolution of data / information on specimen
-4. Columns referring to sampling event or origin of record
-5. Columns for aggregate measures 
-6. Location information 
+Extensions:
 
-Except for the first section, all columns are optional. Only the mandatory fields are required to produce valid trait-datasets. Some mandatory fields will be assisted by the R-Script. The columns labelled 'highly recommended' serve a better comparability of data across datasets. 
+- the `Occurence` extension contains information on the level of individual specimens, such as date and location and method of sampling and preservation, or physiological specifications of the phenotype, such as sex, life stage or age. 
+- the `MeasurementOrFact` extension takes information at the level of single measurements or reported values, such as the original literature from where the value is cited, the method of measurement or statistical method of aggregation. 
+- The extension `BiodiversityExploratories` provides columns for localisation for trait data from the Biodiversity Exploratories sites (ww.biodiversity-exploratories.de). 
+
 
 This list will also be available as 
 
@@ -36,11 +35,11 @@ library(knitr)
 glossary <- read.csv("../template_glossary.csv")
 
 columnNames <- glossary$columnName
-sections <- glossary$section
-sectionNames <- levels(glossary$section)
+sections <- glossary$Namespace
+sectionNames <- levels(glossary$Namespace)
 
 glossary <- as.data.table(glossary)
-glossary <- setNames(split(glossary[,-c(1), with = FALSE], f = as.integer(glossary$section)), sectionNames)
+glossary <- setNames(split(glossary[,-c(1), with = FALSE], f = as.integer(glossary$Namespace)), sectionNames)
 
 glossary <- lapply(glossary, function(x) setNames(split(x, f = seq_along(x$columnName)), x$columnName))
 
@@ -48,12 +47,12 @@ glossary <- lapply(glossary, function(x) setNames(split(x, f = seq_along(x$colum
 
 # Core traitdata columns
 
-Generally, for the essential primary data (species name, trait name, trait value), the trait standard recommends to keep the original naming and value of the data provider to ensure compatibility on the provider's side and to check for inconsistencies and misspellings. The original data provider's information is indexed by appending `_user` to the column name. The R script helps in transferring those entries into the accepted names and factor levels provided by the lookup tables. 
-
+Generally, for the essential primary data (taxon assignment, trait name, trait value), the trait data standard recommends to keep the original naming and value of the data provider to ensure compatibility on the provider's side and to check for inconsistencies and misspellings. To ensure compatibility with other datasets, the original data provider's information should be transferred into a standardized columns indexed by appending `Std` to the column name. 
+The R package 'traitdataform' helps in transferring those entries into the accepted taxon names and trait definitions provided by public ontologies. 
 
 ```{r, results = 'asis', echo = FALSE}
 
-j <- sectionNames[1]
+j <- "Traitdata"
 
  for(i in columnNames[sections == j]) {
      dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
@@ -65,14 +64,14 @@ j <- sectionNames[1]
 ```
 
 
-# Columns referring to Measurement or Fact
+# Extension: Measurement or Fact 
 
 This section provides additional information about the specimen, which are not captured by the taxon information above.  
 
 
 ```{r, results = 'asis', echo = FALSE}
 
-j <- sectionNames[2]
+j <- "MeasurementOrFact"
 
  for(i in columnNames[sections == j]) {
    dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
@@ -84,13 +83,13 @@ j <- sectionNames[2]
 ```
 
 
-# Columns referring to specimen 
+# Columns referring to occurence 
 
 this section of columns aims for identifying the methodology and primary source of the data and keep the reference to the actual specimen (e.g. for museum collections or related data analysis). 
 
 ```{r, results = 'asis', echo = FALSE}
 
-j <- sectionNames[3]
+j <- "Occurence"
 
  for(i in columnNames[sections == j]) {
     dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
@@ -101,53 +100,13 @@ j <- sectionNames[3]
 
 ```
 
-
-# Columns referring to sampling event or origin of record
-
-this section of columns aims for identifying the methodology and primary source of the record and keep the reference to the actual specimen (e.g. for museum collections or related data analysis). It also provides columns for georeferencing the specimen. 
-
-```{r, results = 'asis', echo = FALSE}
-
-j <- sectionNames[4]
-
- for(i in columnNames[sections == j]) {
-      dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
-     colnames(dd) <- i
-     cat("## `", i, "`  ", sep = "")
-    print(kable(dd, format = "markdown"))
- }
-
-```
-
-
-# Columns for aggregate measures 
-
-Some data may not refer to a single specimen or measurement, but aggregate repeated measurements into an average. 
-
-```{r, results = 'asis', echo = FALSE}
-
-j <- sectionNames[5]
-
- for(i in columnNames[sections == j]) {
- dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
-     colnames(dd) <- i
-     cat("## `", i, "`  ", sep = "")
-     print(kable(dd, format = "markdown"))
- }
-
-```
-
-
-
 # Additional columns for use in Biodiversity Exploratories
-
-
 
 This section records location in the context of the exploratories. From `ExploratotriesPlotID` a detailled georeference can be inferred. Additional spatial resolution, e.g. on subplots, may be provided in `locationID` of section sampling event. 
 
 ```{r, results = 'asis', echo = FALSE}
 
-j <- sectionNames[7]
+j <- "BiodiversityExploratories"
 
  for(i in columnNames[sections == j]) {
       dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
@@ -162,7 +121,22 @@ j <- sectionNames[7]
 
 ```{r, results = 'asis', echo = FALSE}
 
-j <- sectionNames[6]
+j <- "Metadata"
+
+ for(i in columnNames[sections == j]) {
+      dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
+     colnames(dd) <- i
+     cat("## `", i, "`  ", sep = "")
+     print(kable(dd, format = "markdown"))
+ }
+
+```
+
+# Terms for Traitlists / Trait Thesaurus
+
+```{r, results = 'asis', echo = FALSE}
+
+j <- "Traitlist"
 
  for(i in columnNames[sections == j]) {
       dd <- as.data.frame(t(glossary[[j]][[as.character(i)]][,-1, with=FALSE]))
