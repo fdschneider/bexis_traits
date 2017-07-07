@@ -125,28 +125,27 @@ $(document).ready(function () {
 <div id="TOC">
 <ul>
 <li><a href="#core-traitdata-columns">Core traitdata columns</a><ul>
-<li><a href="#occurenceid"><code>occurenceID</code></a></li>
-<li><a href="#occurenceid_original"><code>occurenceID_original</code></a></li>
 <li><a href="#scientificname"><code>scientificName</code></a></li>
-<li><a href="#scientificname_original"><code>scientificName_original</code></a></li>
 <li><a href="#taxonid"><code>taxonID</code></a></li>
 <li><a href="#taxonrank"><code>taxonRank</code></a></li>
 <li><a href="#kingdom"><code>kingdom</code></a></li>
-<li><a href="#traitname_original"><code>traitName_original</code></a></li>
 <li><a href="#traitname"><code>traitName</code></a></li>
 <li><a href="#traitid"><code>traitID</code></a></li>
-<li><a href="#traitvalue_original"><code>traitValue_original</code></a></li>
-<li><a href="#traitunit_original"><code>traitUnit_original</code></a></li>
 <li><a href="#traitvalue"><code>traitValue</code></a></li>
 <li><a href="#traitunit"><code>traitUnit</code></a></li>
+<li><a href="#scientificnamestd"><code>scientificNameStd</code></a></li>
+<li><a href="#traitnamestd"><code>traitNameStd</code></a></li>
+<li><a href="#traitvaluestd"><code>traitValueStd</code></a></li>
+<li><a href="#traitunitstd"><code>traitUnitStd</code></a></li>
 <li><a href="#measurementid"><code>measurementID</code></a></li>
-<li><a href="#measurementid_original"><code>measurementID_original</code></a></li>
+<li><a href="#occurenceid"><code>occurenceID</code></a></li>
 <li><a href="#warnings"><code>warnings</code></a></li>
 </ul></li>
 <li><a href="#extension-measurement-or-fact">Extension: Measurement or Fact</a><ul>
+<li><a href="#basisofrecord"><code>basisOfRecord</code></a></li>
+<li><a href="#basisofrecorddescription"><code>basisOfRecordDescription</code></a></li>
 <li><a href="#references"><code>references</code></a></li>
 <li><a href="#measurementresolution"><code>measurementResolution</code></a></li>
-<li><a href="#preparations"><code>preparations</code></a></li>
 <li><a href="#measurementmethod"><code>measurementMethod</code></a></li>
 <li><a href="#measurementdeterminedby"><code>measurementDeterminedBy</code></a></li>
 <li><a href="#measurementdetermineddate"><code>measurementDeterminedDate</code></a></li>
@@ -160,13 +159,12 @@ $(document).ready(function () {
 <li><a href="#statisticalmethod"><code>statisticalMethod</code></a></li>
 </ul></li>
 <li><a href="#extension-occurence">Extension: Occurence</a><ul>
-<li><a href="#basisofrecord"><code>basisOfRecord</code></a></li>
-<li><a href="#basisofrecorddescription"><code>basisOfRecordDescription</code></a></li>
 <li><a href="#sex"><code>sex</code></a></li>
 <li><a href="#lifestage"><code>lifeStage</code></a></li>
 <li><a href="#age"><code>age</code></a></li>
 <li><a href="#morphotype"><code>morphotype</code></a></li>
 <li><a href="#eventid"><code>eventID</code></a></li>
+<li><a href="#preparations"><code>preparations</code></a></li>
 <li><a href="#samplingprotocol"><code>samplingProtocol</code></a></li>
 <li><a href="#year"><code>year</code></a></li>
 <li><a href="#month"><code>month</code></a></li>
@@ -181,6 +179,7 @@ $(document).ready(function () {
 <li><a href="#verbatimlocality"><code>verbatimLocality</code></a></li>
 <li><a href="#country"><code>country</code></a></li>
 <li><a href="#countrycode"><code>countryCode</code></a></li>
+<li><a href="#occurenceremarks"><code>occurenceRemarks</code></a></li>
 </ul></li>
 <li><a href="#extension-biodiversity-exploratories">Extension: Biodiversity Exploratories</a><ul>
 <li><a href="#originexploratories"><code>OriginExploratories</code></a></li>
@@ -195,7 +194,7 @@ $(document).ready(function () {
 <li><a href="#datasetid"><code>datasetID</code></a></li>
 <li><a href="#datasetname"><code>datasetName</code></a></li>
 </ul></li>
-<li><a href="#terms-for-traitlists-trait-thesaurus">Terms for Traitlists / Trait Thesaurus</a><ul>
+<li><a href="#terms-for-traitlists-a-trait-thesaurus">Terms for Traitlists (a ‘Trait Thesaurus’)</a><ul>
 <li><a href="#valuetype"><code>valueType</code></a></li>
 <li><a href="#factorlevels"><code>FactorLevels</code></a></li>
 <li><a href="#maxallowedvalue"><code>MaxAllowedValue</code></a></li>
@@ -207,160 +206,40 @@ $(document).ready(function () {
 </div>
 
 <p><strong>This is the documentation of the Ecological Traitdata Standard (ETS), version 0.3</strong></p>
-<p>This defined vocabulary aims at providing all essential columns for raw data of functional trait measurements for ecological research.</p>
-<p>Most terms relate to terms from the Darwin Core Standard and Extensions (Names compliant with DWC are referenced thus in field ‘Refines’; the full Darwin Core can be found here: <a href="http://rs.tdwg.org/dwc/terms/index.htm" class="uri">http://rs.tdwg.org/dwc/terms/index.htm</a>)</p>
-<p>The data standard is ordered into a <strong>core section</strong> with essential columns for trait data, extensions which are allowing to provide additional layers of information, as well as a vocabulary for metadata information of particular importance for trait data. A final section provides defined terms for lists of trait definitions, also termed a Trait Thesaurus.</p>
-<p>Extensions:</p>
+<p>This defined vocabulary aims at providing all essential columns for raw data of functional trait measurements for ecological research. Most terms relate to terms from the Darwin Core Standard and it’s Extensions (terms of DWC are referenced thus in field ‘Refines’; the full Darwin Core Standard can be found here: <a href="http://rs.tdwg.org/dwc/terms/index.htm" class="uri">http://rs.tdwg.org/dwc/terms/index.htm</a>)</p>
+<p>The glossary of terms is ordered into a <strong>core section</strong> with essential columns for trait data, extensions which are allowing to provide additional layers of information, as well as a vocabulary for metadata information of particular importance for trait data. A final section provides defined terms for lists of trait definitions, also termed a Trait Thesaurus.</p>
+<p><strong>Extensions:</strong></p>
 <ul>
 <li>the <code>Occurence</code> extension contains information on the level of individual specimens, such as date and location and method of sampling and preservation, or physiological specifications of the phenotype, such as sex, life stage or age.</li>
 <li>the <code>MeasurementOrFact</code> extension takes information at the level of single measurements or reported values, such as the original literature from where the value is cited, the method of measurement or statistical method of aggregation.</li>
 <li>The extension <code>BiodiversityExploratories</code> provides columns for localisation for trait data from the Biodiversity Exploratories sites (ww.biodiversity-exploratories.de).</li>
 </ul>
-<p>This list will also be available as</p>
+<p>**Structure of trait <a href="data:**" class="uri">data:**</a></p>
+<p>The traitdata standard requires data to be stored in a long table format containing one measurement per row described by the column terms provided in the core section. (see Whitepaper for further considerations)</p>
+<p>There are two ways of integrating the extensions:</p>
+<ul>
+<li><strong>within the same data file</strong>: additional columns are provided to describe the properties concerning the measurement or the occurence of the specimen. The output file may be stored as a csv or txt table or an excel spreadsheet.<br />
+</li>
+<li><strong>in separate data files</strong>: the main file refers to additional data files in the fields <code>measurementID</code> or <code>occurenceID</code>. This is usually the case if the occurences are externally documented, for instance as specimens from a museum. This also applies if the data are stored as an Excel spreadsheet or as a Darwin Core Archive (as proposed for TraitBank).</li>
+</ul>
+<p>This list of terms will also be available as</p>
 <ul>
 <li>a csv/txt/xlsx table file which will be provided for download on BExIS including full documentation in the metadata (for manual use, this may be uploaded to BExIs as soon it’s ready), and</li>
 <li>a machine readable template glossary (xml file or csv with additional flags and markers) which serves as input reference for software tools. (can we provide a simple API?)</li>
 </ul>
-<pre><code>## Warning: package 'knitr' was built under R version 3.2.5</code></pre>
 <div id="core-traitdata-columns" class="section level1">
 <h1>Core traitdata columns</h1>
-<p>Generally, for the essential primary data (taxon assignment, trait name, trait value), the trait data standard recommends to keep the original naming and value of the data provider to ensure compatibility on the provider’s side and to check for inconsistencies and misspellings. To ensure compatibility with other datasets, the original data provider’s information should be transferred into a standardized columns indexed by appending <code>Std</code> to the column name. The R package ‘traitdataform’ helps in transferring those entries into the accepted taxon names and trait definitions provided by public ontologies.</p>
-<div id="occurenceid" class="section level2">
-<h2><code>occurenceID</code></h2>
-<table>
-<colgroup>
-<col width="2%"></col>
-<col width="97%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">occurenceID</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Refines</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/occurrenceID" class="uri">http://rs.tdwg.org/dwc/terms/occurrenceID</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Replaces</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Version</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">DateIssued</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">DateModified</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">Definition</td>
-<td align="left">A character string user defined by the data author; a museum ID referring to the individual specimen from which the data were measured; usually does not apply for literature data.</td>
-</tr>
-<tr class="even">
-<td align="left">Comment</td>
-<td align="left">This is important for the analysis of co-variation of morphometric data or intraspecific variation. It may also couples multiple measurements on a single specimen, which also could be a leaf or a single bone without an assignment to an individual organism. If available, upload related dataset to describe specimens more precisely, e.g. environmental parameters or identity related information. May map to DWC OccurenceID (<a href="http://rs.tdwg.org/dwc/terms/occurrenceID" class="uri">http://rs.tdwg.org/dwc/terms/occurrenceID</a>)</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="occurenceid_original" class="section level2">
-<h2><code>occurenceID_original</code></h2>
-<table>
-<colgroup>
-<col width="17%"></col>
-<col width="82%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">occurenceID_original</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">TRUE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Refines</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/occurrenceID" class="uri">http://rs.tdwg.org/dwc/terms/occurrenceID</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Replaces</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Version</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">DateIssued</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">DateModified</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">Definition</td>
-<td align="left">Original user-defined identifier of the individual or specimen.</td>
-</tr>
-<tr class="even">
-<td align="left">Comment</td>
-<td align="left">Can be of any format.</td>
-</tr>
-</tbody>
-</table>
-</div>
+<p>For the essential primary data (trait value, taxon assignment, trait name), the trait data standard recommends to report the original naming and value scheme as used by the data provider. However, to ensure compatibility with other datasets, the original data provider’s information should be doubled into standardized columns indexed by appending <code>Std</code> to the column name. This ensures compatibility on the provider’s side and transparency for data users on the reported measurements and facts, and enables checking for inconsistencies and misspellings in the complete dataset provided by the author. If provided, the standardized fields allow merging heterogeneous data sources into a single table to perform further analyses. This practice of double bookkeeping of trait data has successfully established for the TRY database on plant traits, for instance (Kattge ..).</p>
+<p>The R package ‘traitdataform’ (<a href="https://fdschneider.github.com/traitdataform" class="uri">https://fdschneider.github.com/traitdataform</a>) provides tools to transfer heterogeneous datasets into a longtable format and to create standardized taxa and trait columns, based on public ontologies.</p>
+<p>By linking to (public) ontologies via the field <code>taxonID</code>, further taxonomic information can be extracted for analysis. Alternatively, <code>taxonID</code> may also link to an accompanying datasheet that contains information on the taxonomic resolution or specification of the observation.</p>
+<p>Similarly, linking to trait terminologies (a ‘Thesaurus’) via the field <code>traitID</code> allows an unambiguous interpretation of the trait measurement. If no online ontology is available, an accompanying dataset should specify the trait definition. For setting up such a Thesaurus, we propose the use of terms provided in section ‘Traitlist’ below.</p>
 <div id="scientificname" class="section level2">
 <h2><code>scientificName</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#scientificname">direct link</a></p>
 <table>
 <colgroup>
-<col width="2%"></col>
-<col width="97%"></col>
+<col width="10%"></col>
+<col width="89%"></col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -370,24 +249,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#scientificname" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#scientificname</a></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -399,76 +270,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">DateModified</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">Definition</td>
-<td align="left">Full scientific name (with authorship and date information if known). It should be an accepted taxon name according to a published taxonomy (provided in taxonID).</td>
-</tr>
-<tr class="even">
-<td align="left">Comment</td>
-<td align="left">Provide reference taxonomy in metadata of the dataset. Examples: “Coleoptera” (order), “Vespertilionidae” (family), “Manis” (genus), “Ctenomys sociabilis” (genus + specificEpithet), “Ambystoma tigrinum diaboli” (genus + specificEpithet + infraspecificEpithet), “Roptrocerus typographi (Györfi, 1952)” (genus + specificEpithet + scientificNameAuthorship), “Quercus agrifolia var. oxyadenia (Torr.) J.T. Howell” (genus + specificEpithet + taxonRank + infraspecificEpithet + scientificNameAuthorship). For discussion see <a href="http://terms.tdwg.org/wiki/dwc:scientificName" class="uri">http://terms.tdwg.org/wiki/dwc:scientificName</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="scientificname_original" class="section level2">
-<h2><code>scientificName_original</code></h2>
-<table>
-<colgroup>
-<col width="10%"></col>
-<col width="89%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">scientificName_original</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Refines</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/scientificName" class="uri">http://rs.tdwg.org/dwc/terms/scientificName</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Replaces</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Version</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -487,6 +293,7 @@ $(document).ready(function () {
 </div>
 <div id="taxonid" class="section level2">
 <h2><code>taxonID</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonid">direct link</a></p>
 <table>
 <colgroup>
 <col width="5%"></col>
@@ -500,24 +307,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonid" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonid</a></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -529,11 +328,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -552,6 +351,7 @@ $(document).ready(function () {
 </div>
 <div id="taxonrank" class="section level2">
 <h2><code>taxonRank</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonrank">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="3%"></col>
@@ -565,24 +365,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left">domain; kingdom; subkingdom; superhpylum; phylum; subphylum; superclass; class; subclass; supercohort; cohort; subcohort; superorder; order; subordern; infraorder; superfamily; family; subfamily; tribe; subtribe; genus; subgenus; section; subsection; series; subseries; speciesAggregate; species; subspecificAggregate; subspecies; variety; cultivar; strain</td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left">domain; kingdom; subkingdom; superhpylum; phylum; subphylum; superclass; class; subclass; supercohort; cohort; subcohort; superorder; order; subordern; infraorder; superfamily; family; subfamily; tribe; subtribe; genus; subgenus; section; subsection; series; subseries; speciesAggregate; species; subspecificAggregate; subspecies; variety; cultivar; strain</td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonrank" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonrank</a></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -594,11 +386,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -617,6 +409,7 @@ $(document).ready(function () {
 </div>
 <div id="kingdom" class="section level2">
 <h2><code>kingdom</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#kingdom">direct link</a></p>
 <table>
 <colgroup>
 <col width="13%"></col>
@@ -630,24 +423,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#kingdom" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#kingdom</a></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -659,11 +444,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -680,8 +465,9 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
-<div id="traitname_original" class="section level2">
-<h2><code>traitName_original</code></h2>
+<div id="traitname" class="section level2">
+<h2><code>traitName</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitname">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="8%"></col>
@@ -690,29 +476,21 @@ $(document).ready(function () {
 <thead>
 <tr class="header">
 <th align="left"></th>
-<th align="left">traitName_original</th>
+<th align="left">traitName</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">TRUE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitname" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#traitname</a></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -724,11 +502,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -745,73 +523,9 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
-<div id="traitname" class="section level2">
-<h2><code>traitName</code></h2>
-<table>
-<colgroup>
-<col width="7%"></col>
-<col width="92%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">traitName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">factor</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Refines</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementType" class="uri">http://rs.tdwg.org/dwc/terms/measurementType</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Replaces</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Version</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">DateIssued</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">DateModified</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">Definition</td>
-<td align="left">Descriptive Name of the trait reported. This should follow the controlled vocabulary of a thesaurus of traits available online or published along with the dataset.</td>
-</tr>
-<tr class="even">
-<td align="left">Comment</td>
-<td align="left">Accompanying this, the traitID should provide an unambiguous link to the trait definition in the thesaurus or supplementary dataset.</td>
-</tr>
-</tbody>
-</table>
-</div>
 <div id="traitid" class="section level2">
 <h2><code>traitID</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitid">direct link</a></p>
 <table>
 <colgroup>
 <col width="14%"></col>
@@ -825,24 +539,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left">see traitlist</td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left">see traitlist</td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitid" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#traitid</a></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -854,11 +560,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -875,8 +581,9 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
-<div id="traitvalue_original" class="section level2">
-<h2><code>traitValue_original</code></h2>
+<div id="traitvalue" class="section level2">
+<h2><code>traitValue</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitvalue">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="6%"></col>
@@ -885,29 +592,21 @@ $(document).ready(function () {
 <thead>
 <tr class="header">
 <th align="left"></th>
-<th align="left">traitValue_original</th>
+<th align="left">traitValue</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">TRUE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitvalue" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#traitvalue</a></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -919,11 +618,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -940,8 +639,9 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
-<div id="traitunit_original" class="section level2">
-<h2><code>traitUnit_original</code></h2>
+<div id="traitunit" class="section level2">
+<h2><code>traitUnit</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitunit">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="7%"></col>
@@ -950,29 +650,21 @@ $(document).ready(function () {
 <thead>
 <tr class="header">
 <th align="left"></th>
-<th align="left">traitUnit_original</th>
+<th align="left">traitUnit</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">TRUE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitunit" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#traitunit</a></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -984,11 +676,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -1005,8 +697,125 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
-<div id="traitvalue" class="section level2">
-<h2><code>traitValue</code></h2>
+<div id="scientificnamestd" class="section level2">
+<h2><code>scientificNameStd</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#scientificnamestd">direct link</a></p>
+<table>
+<colgroup>
+<col width="2%"></col>
+<col width="97%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">scientificNameStd</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#scientificnamestd" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#scientificnamestd</a></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/scientificName" class="uri">http://rs.tdwg.org/dwc/terms/scientificName</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Full scientific name (with authorship and date information if known). It should be an accepted taxon name according to a published taxonomy (provided in taxonID).</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Provide reference taxonomy in metadata of the dataset. Examples: “Coleoptera” (order), “Vespertilionidae” (family), “Manis” (genus), “Ctenomys sociabilis” (genus + specificEpithet), “Ambystoma tigrinum diaboli” (genus + specificEpithet + infraspecificEpithet), “Roptrocerus typographi (Györfi, 1952)” (genus + specificEpithet + scientificNameAuthorship), “Quercus agrifolia var. oxyadenia (Torr.) J.T. Howell” (genus + specificEpithet + taxonRank + infraspecificEpithet + scientificNameAuthorship). For discussion see <a href="http://terms.tdwg.org/wiki/dwc:scientificName" class="uri">http://terms.tdwg.org/wiki/dwc:scientificName</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="traitnamestd" class="section level2">
+<h2><code>traitNameStd</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitnamestd">direct link</a></p>
+<table>
+<colgroup>
+<col width="7%"></col>
+<col width="92%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">traitNameStd</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">factor</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitnamestd" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#traitnamestd</a></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementType" class="uri">http://rs.tdwg.org/dwc/terms/measurementType</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Descriptive Name of the trait reported. This should follow the controlled vocabulary of a thesaurus of traits available online or published along with the dataset.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Accompanying this, the traitID should provide an unambiguous link to the trait definition in the thesaurus or supplementary dataset.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="traitvaluestd" class="section level2">
+<h2><code>traitValueStd</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitvaluestd">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="6%"></col>
@@ -1015,29 +824,21 @@ $(document).ready(function () {
 <thead>
 <tr class="header">
 <th align="left"></th>
-<th align="left">traitValue</th>
+<th align="left">traitValueStd</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">TRUE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitvaluestd" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#traitvaluestd</a></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -1049,11 +850,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -1070,8 +871,9 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
-<div id="traitunit" class="section level2">
-<h2><code>traitUnit</code></h2>
+<div id="traitunitstd" class="section level2">
+<h2><code>traitUnitStd</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitunitstd">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="7%"></col>
@@ -1080,29 +882,21 @@ $(document).ready(function () {
 <thead>
 <tr class="header">
 <th align="left"></th>
-<th align="left">traitUnit</th>
+<th align="left">traitUnitStd</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitunitstd" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#traitunitstd</a></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -1114,11 +908,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -1137,10 +931,11 @@ $(document).ready(function () {
 </div>
 <div id="measurementid" class="section level2">
 <h2><code>measurementID</code></h2>
-<table style="width:100%;">
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementid">direct link</a></p>
+<table>
 <colgroup>
-<col width="4%"></col>
-<col width="95%"></col>
+<col width="3%"></col>
+<col width="96%"></col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -1150,24 +945,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementid" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementid</a></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -1179,76 +966,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">DateModified</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">Definition</td>
-<td align="left">An auto-generated unique identifier for each entry of data compiled as a MD5 hash from the following columns ‘specimenID’, ‘measurementValue_user’, ‘scientificName_user’, ‘traitName_user’, ‘basisOfRecord’, as well as the fields from class ‘specimen’ and ‘location’.</td>
-</tr>
-<tr class="even">
-<td align="left">Comment</td>
-<td align="left">This allows a row-wise comparison of data from different versions and sources and an elimination of duplicates.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="measurementid_original" class="section level2">
-<h2><code>measurementID_original</code></h2>
-<table>
-<colgroup>
-<col width="3%"></col>
-<col width="96%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">measurementID_original</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Refines</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Replaces</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Version</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -1265,8 +987,67 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
+<div id="occurenceid" class="section level2">
+<h2><code>occurenceID</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#occurenceid">direct link</a></p>
+<table>
+<colgroup>
+<col width="3%"></col>
+<col width="96%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">occurenceID</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#occurenceid" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#occurenceid</a></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/occurrenceID" class="uri">http://rs.tdwg.org/dwc/terms/occurrenceID</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">A character string user defined by the data author. It is recommended best practice to use a globally unique identifier, if available, e.g. a museum ID referring to the individual specimen from which the data were measured. usually does not apply for literature data.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">This is important for the analysis of co-variation of morphometric data or intraspecific variation. It may also couples multiple measurements on a single specimen, which also could be a leaf or a single bone without an assignment to an individual organism. If available, upload related dataset to describe specimens more precisely, e.g. environmental parameters or identity related information.</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="warnings" class="section level2">
 <h2><code>warnings</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#warnings">direct link</a></p>
 <table>
 <colgroup>
 <col width="4%"></col>
@@ -1280,24 +1061,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -1309,11 +1082,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -1333,9 +1106,127 @@ $(document).ready(function () {
 </div>
 <div id="extension-measurement-or-fact" class="section level1">
 <h1>Extension: Measurement or Fact</h1>
-<p>This section provides additional information about the specimen, which are not captured by the taxon information above.</p>
+<p>This section provides additional information about a reported measurement or fact and in most cases can easily be included as extra columns to the core dataset. The columns would contain detail on the methodology of measuring and reporting of aggregated data.</p>
+<p>In case of facts reported from literature or from expert knowledge, or cited from other databases, please include bibliographic citation of the original data source in field ‘references’.</p>
+<div id="basisofrecord" class="section level2">
+<h2><code>basisOfRecord</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#basisofrecord">direct link</a></p>
+<table style="width:100%;">
+<colgroup>
+<col width="5%"></col>
+<col width="94%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">basisOfRecord</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">factor</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left">LivingSpecimen; PreservedSpecimen; FossilSpecimen; literatureData; traitDatabase; expertKnowledge</td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/basisOfRecord" class="uri">http://rs.tdwg.org/dwc/terms/basisOfRecord</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">How and from which kind of specimen were the data obtained? Use of the controlled vocabulary is recommended.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Options are: Taken by own measurement (distinguish LivingSpecimen, PreservedSpecimen, FossilSpecimen) or taken from literature (literatureData), from an existing trait database (traitDatabase), or expert knowledge (expertKnowledge).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="basisofrecorddescription" class="section level2">
+<h2><code>basisOfRecordDescription</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#basisofrecorddescription">direct link</a></p>
+<table>
+<colgroup>
+<col width="4%"></col>
+<col width="95%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">basisOfRecordDescription</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Adding more detail to the basisOfRecord.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">If life specimens were sampled, where did they come from? Have they been reared in cultivation? If literature data or online database, provide type of literature, e.g. textbook, website, URL, etc. If preserved specimens were used, which method of preservation? In case of expert knowledge, give the name of the authority.</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="references" class="section level2">
 <h2><code>references</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#references">direct link</a></p>
 <table>
 <colgroup>
 <col width="4%"></col>
@@ -1349,24 +1240,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -1378,11 +1261,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -1401,6 +1284,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementresolution" class="section level2">
 <h2><code>measurementResolution</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementresolution">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="5%"></col>
@@ -1414,24 +1298,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -1443,11 +1319,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -1464,73 +1340,9 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
-<div id="preparations" class="section level2">
-<h2><code>preparations</code></h2>
-<table>
-<colgroup>
-<col width="4%"></col>
-<col width="95%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">preparations</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Refines</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/preparations" class="uri">http://rs.tdwg.org/dwc/terms/preparations</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Replaces</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Version</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">DateIssued</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">DateModified</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">Definition</td>
-<td align="left">For preserved specimens, a list (concatenated and separated) of preparations and preservation methods for a specimen.</td>
-</tr>
-<tr class="even">
-<td align="left">Comment</td>
-<td align="left">The recommended best practice is to separate the values with a vertical bar (‘|’). Examples: “fossil”, “cast”, “photograph”, “DNA extract”, “skin |”skull | skeleton“,”whole animal (ETOH) | tissue (EDTA)“. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:preparations" class="uri">http://terms.tdwg.org/wiki/dwc:preparations</a></td>
-</tr>
-</tbody>
-</table>
-</div>
 <div id="measurementmethod" class="section level2">
 <h2><code>measurementMethod</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementmethod">direct link</a></p>
 <table>
 <colgroup>
 <col width="2%"></col>
@@ -1544,24 +1356,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -1573,11 +1377,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -1596,6 +1400,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementdeterminedby" class="section level2">
 <h2><code>measurementDeterminedBy</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementdeterminedby">direct link</a></p>
 <table>
 <colgroup>
 <col width="5%"></col>
@@ -1609,24 +1414,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -1638,11 +1435,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -1661,6 +1458,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementdetermineddate" class="section level2">
 <h2><code>measurementDeterminedDate</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementdetermineddate">direct link</a></p>
 <table>
 <colgroup>
 <col width="2%"></col>
@@ -1674,24 +1472,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">Date</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -1703,11 +1493,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -1726,6 +1516,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementremarks" class="section level2">
 <h2><code>measurementRemarks</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementremarks">direct link</a></p>
 <table>
 <colgroup>
 <col width="9%"></col>
@@ -1739,24 +1530,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -1768,11 +1551,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -1791,6 +1574,7 @@ $(document).ready(function () {
 </div>
 <div id="aggregatemeasure" class="section level2">
 <h2><code>aggregateMeasure</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#aggregatemeasure">direct link</a></p>
 <table>
 <colgroup>
 <col width="4%"></col>
@@ -1804,24 +1588,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">logical</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -1833,11 +1609,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -1845,7 +1621,7 @@ $(document).ready(function () {
 </tr>
 <tr class="odd">
 <td align="left">Definition</td>
-<td align="left">Is measurementValue reporting an individual measurement or an aggregate Measure? TRUE or FALSE, defaults to FALSE.</td>
+<td align="left">Is measurementValue reporting an individual measurement or an aggregate Measure? Takes a binary entry: TRUE or FALSE</td>
 </tr>
 <tr class="even">
 <td align="left">Comment</td>
@@ -1856,6 +1632,7 @@ $(document).ready(function () {
 </div>
 <div id="individualcount" class="section level2">
 <h2><code>individualCount</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#individualcount">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="8%"></col>
@@ -1869,24 +1646,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">1</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">integer</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -1898,11 +1667,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -1921,6 +1690,7 @@ $(document).ready(function () {
 </div>
 <div id="dispersion" class="section level2">
 <h2><code>dispersion</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#dispersion">direct link</a></p>
 <table>
 <colgroup>
 <col width="4%"></col>
@@ -1934,24 +1704,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">0</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">numeric</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -1963,11 +1725,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -1986,6 +1748,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementvalue_min" class="section level2">
 <h2><code>measurementValue_min</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementvalue_min">direct link</a></p>
 <table>
 <colgroup>
 <col width="13%"></col>
@@ -1999,24 +1762,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">numeric</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -2028,11 +1783,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -2051,6 +1806,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementvalue_max" class="section level2">
 <h2><code>measurementValue_max</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementvalue_max">direct link</a></p>
 <table>
 <colgroup>
 <col width="13%"></col>
@@ -2064,24 +1820,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">numeric</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -2093,11 +1841,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -2116,6 +1864,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementaccuracy" class="section level2">
 <h2><code>measurementAccuracy</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementaccuracy">direct link</a></p>
 <table>
 <colgroup>
 <col width="9%"></col>
@@ -2129,24 +1878,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -2158,11 +1899,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -2181,6 +1922,7 @@ $(document).ready(function () {
 </div>
 <div id="statisticalmethod" class="section level2">
 <h2><code>statisticalMethod</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#statisticalmethod">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="7%"></col>
@@ -2194,24 +1936,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -2223,11 +1957,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -2247,139 +1981,11 @@ $(document).ready(function () {
 </div>
 <div id="extension-occurence" class="section level1">
 <h1>Extension: Occurence</h1>
-<p>this section of columns aims for identifying the methodology and primary source of the data and keep the reference to the actual specimen (e.g. for museum collections or related data analysis).</p>
-<div id="basisofrecord" class="section level2">
-<h2><code>basisOfRecord</code></h2>
-<table>
-<colgroup>
-<col width="4%"></col>
-<col width="95%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">basisOfRecord</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">TRUE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left">LivingSpecimen; PreservedSpecimen; FossilSpecimen; literatureData; traitDatabase; expertKnowledge</td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">factor</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Refines</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/basisOfRecord" class="uri">http://rs.tdwg.org/dwc/terms/basisOfRecord</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Replaces</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Version</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">DateIssued</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">DateModified</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">Definition</td>
-<td align="left">How and from which kind of speciment were the data obtained? Options are: Taken by own measurement (distinguish LivingSpecimen, PreservedSpecimen, FossilSpecimen) or taken from literature (literatureData), from an existing trait database (traitDatabase), or expert knowledge (expertKnowledge).</td>
-</tr>
-<tr class="even">
-<td align="left">Comment</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="basisofrecorddescription" class="section level2">
-<h2><code>basisOfRecordDescription</code></h2>
-<table>
-<colgroup>
-<col width="4%"></col>
-<col width="95%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">basisOfRecordDescription</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Refines</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Replaces</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Version</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">DateIssued</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">DateModified</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">Definition</td>
-<td align="left">Adding more detail to the basisOfRecord. If life specimens were sampled, where did they come from? Have they been reared in cultivation? If literature data, provide type of literature, e.g. textbook, website, database, etc. If preserved specimens were used, which method of pre</td>
-</tr>
-<tr class="even">
-<td align="left">Comment</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-</div>
+<p>this section of columns aims for identifying the methodology and primary source of the data and keep the reference to the actual specimen (e.g. for museum collections or related data analysis). It also may add detail on the condition of the observed specimen, its sex, morphotype or developmental stage. Especially for analyses of intra-specific trait variation, this composes valuable data.</p>
+<p>For trait data compiled from literature or expert knowledge, the level of information on an ‘occurence’ would not apply, since no specific individual has been observed. In this case, the field ‘occurenceID’ should be left blank in the core data.</p>
 <div id="sex" class="section level2">
 <h2><code>sex</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#sex">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="8%"></col>
@@ -2393,24 +1999,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left">male; female; subadult; unknown; hermaphrodite</td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left">male; female; subadult; unknown; hermaphrodite</td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -2422,11 +2020,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -2445,6 +2043,7 @@ $(document).ready(function () {
 </div>
 <div id="lifestage" class="section level2">
 <h2><code>lifeStage</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#lifestage">direct link</a></p>
 <table>
 <colgroup>
 <col width="5%"></col>
@@ -2458,24 +2057,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -2487,11 +2078,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -2510,6 +2101,7 @@ $(document).ready(function () {
 </div>
 <div id="age" class="section level2">
 <h2><code>age</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#age">direct link</a></p>
 <table>
 <thead>
 <tr class="header">
@@ -2519,24 +2111,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">numeric</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -2548,11 +2132,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -2571,6 +2155,7 @@ $(document).ready(function () {
 </div>
 <div id="morphotype" class="section level2">
 <h2><code>morphotype</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#morphotype">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="8%"></col>
@@ -2584,24 +2169,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -2613,11 +2190,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -2636,6 +2213,7 @@ $(document).ready(function () {
 </div>
 <div id="eventid" class="section level2">
 <h2><code>eventID</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#eventid">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="5%"></col>
@@ -2649,28 +2227,20 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
-<td align="left"></td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/eventID" class="uri">http://rs.tdwg.org/dwc/terms/eventID</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Replaces</td>
@@ -2678,11 +2248,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -2699,8 +2269,67 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
+<div id="preparations" class="section level2">
+<h2><code>preparations</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#preparations">direct link</a></p>
+<table>
+<colgroup>
+<col width="4%"></col>
+<col width="95%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">preparations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/preparations" class="uri">http://rs.tdwg.org/dwc/terms/preparations</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">For preserved specimens, a list (concatenated and separated) of preparations and preservation methods for a specimen.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">The recommended best practice is to separate the values with a vertical bar (‘|’). Examples: “fossil”, “cast”, “photograph”, “DNA extract”, “skin |”skull | skeleton“,”whole animal (ETOH) | tissue (EDTA)“. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:preparations" class="uri">http://terms.tdwg.org/wiki/dwc:preparations</a></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="samplingprotocol" class="section level2">
 <h2><code>samplingProtocol</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#samplingprotocol">direct link</a></p>
 <table>
 <colgroup>
 <col width="2%"></col>
@@ -2714,24 +2343,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -2743,11 +2364,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -2766,6 +2387,7 @@ $(document).ready(function () {
 </div>
 <div id="year" class="section level2">
 <h2><code>year</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#year">direct link</a></p>
 <table>
 <colgroup>
 <col width="16%"></col>
@@ -2779,24 +2401,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">integer</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -2808,11 +2422,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -2831,6 +2445,7 @@ $(document).ready(function () {
 </div>
 <div id="month" class="section level2">
 <h2><code>month</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#month">direct link</a></p>
 <table>
 <colgroup>
 <col width="12%"></col>
@@ -2844,24 +2459,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">integer</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -2873,11 +2480,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -2896,6 +2503,7 @@ $(document).ready(function () {
 </div>
 <div id="day" class="section level2">
 <h2><code>day</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#day">direct link</a></p>
 <table>
 <colgroup>
 <col width="14%"></col>
@@ -2909,24 +2517,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">integer</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -2938,11 +2538,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -2961,6 +2561,7 @@ $(document).ready(function () {
 </div>
 <div id="eventdate" class="section level2">
 <h2><code>eventDate</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#eventdate">direct link</a></p>
 <table>
 <colgroup>
 <col width="4%"></col>
@@ -2974,24 +2575,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">Date</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3003,11 +2596,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3026,6 +2619,7 @@ $(document).ready(function () {
 </div>
 <div id="locationid" class="section level2">
 <h2><code>locationID</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#locationid">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="5%"></col>
@@ -3039,24 +2633,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3068,11 +2654,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3091,6 +2677,7 @@ $(document).ready(function () {
 </div>
 <div id="habitat" class="section level2">
 <h2><code>habitat</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#habitat">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="8%"></col>
@@ -3104,24 +2691,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3133,11 +2712,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3156,6 +2735,7 @@ $(document).ready(function () {
 </div>
 <div id="decimallongitude" class="section level2">
 <h2><code>decimalLongitude</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#decimallongitude">direct link</a></p>
 <table>
 <colgroup>
 <col width="5%"></col>
@@ -3169,24 +2749,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">numeric</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3198,11 +2770,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3221,6 +2793,7 @@ $(document).ready(function () {
 </div>
 <div id="decimallatitude" class="section level2">
 <h2><code>decimalLatitude</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#decimallatitude">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="6%"></col>
@@ -3234,24 +2807,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">numeric</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3263,11 +2828,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3286,6 +2851,7 @@ $(document).ready(function () {
 </div>
 <div id="elevation" class="section level2">
 <h2><code>elevation</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#elevation">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="3%"></col>
@@ -3299,28 +2865,20 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">numeric</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
-<td align="left"></td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/verbatimElevation" class="uri">http://rs.tdwg.org/dwc/terms/verbatimElevation</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Replaces</td>
@@ -3328,11 +2886,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3351,6 +2909,7 @@ $(document).ready(function () {
 </div>
 <div id="geodeticdatum" class="section level2">
 <h2><code>geodeticDatum</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#geodeticdatum">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="3%"></col>
@@ -3364,24 +2923,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3393,11 +2944,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3416,6 +2967,7 @@ $(document).ready(function () {
 </div>
 <div id="verbatimlocality" class="section level2">
 <h2><code>verbatimLocality</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#verbatimlocality">direct link</a></p>
 <table>
 <colgroup>
 <col width="3%"></col>
@@ -3429,24 +2981,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3458,11 +3002,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3481,6 +3025,7 @@ $(document).ready(function () {
 </div>
 <div id="country" class="section level2">
 <h2><code>country</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#country">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="6%"></col>
@@ -3494,24 +3039,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3523,11 +3060,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3546,6 +3083,7 @@ $(document).ready(function () {
 </div>
 <div id="countrycode" class="section level2">
 <h2><code>countryCode</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#countrycode">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="5%"></col>
@@ -3559,24 +3097,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3588,11 +3118,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3609,12 +3139,71 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
+<div id="occurenceremarks" class="section level2">
+<h2><code>occurenceRemarks</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#occurenceremarks">direct link</a></p>
+<table>
+<colgroup>
+<col width="12%"></col>
+<col width="87%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">occurenceRemarks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/occurrenceRemarks" class="uri">http://rs.tdwg.org/dwc/terms/occurrenceRemarks</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Comments or notes about the Occurrence.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Example: “found dead on road”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:occurrenceRemarks" class="uri">http://terms.tdwg.org/wiki/dwc:occurrenceRemarks</a></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div id="extension-biodiversity-exploratories" class="section level1">
 <h1>Extension: Biodiversity Exploratories</h1>
 <p>This section records location in the context of the exploratories. From <code>ExploratotriesPlotID</code> a detailled georeference can be inferred. Additional spatial resolution, e.g. on subplots, may be provided in <code>locationID</code> of section sampling event.</p>
 <div id="originexploratories" class="section level2">
 <h2><code>OriginExploratories</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#originexploratories">direct link</a></p>
 <table>
 <colgroup>
 <col width="13%"></col>
@@ -3628,24 +3217,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left">TRUE;FALSE</td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">logical</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left">TRUE;FALSE</td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3657,11 +3238,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3680,6 +3261,7 @@ $(document).ready(function () {
 </div>
 <div id="exploratoriesplotid" class="section level2">
 <h2><code>ExploratoriesPlotID</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#exploratoriesplotid">direct link</a></p>
 <table>
 <colgroup>
 <col width="3%"></col>
@@ -3693,24 +3275,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3722,11 +3296,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3745,7 +3319,8 @@ $(document).ready(function () {
 </div>
 <div id="exploratory" class="section level2">
 <h2><code>Exploratory</code></h2>
-<table>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#exploratory">direct link</a></p>
+<table style="width:100%;">
 <colgroup>
 <col width="7%"></col>
 <col width="92%"></col>
@@ -3758,24 +3333,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left">H;S;A</td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left">HAI; SCH; ALB</td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3787,11 +3354,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3799,7 +3366,7 @@ $(document).ready(function () {
 </tr>
 <tr class="odd">
 <td align="left">Definition</td>
-<td align="left">Exploratories Region (Hainich, Schorfheide, Alb) for sorting purpose and readability, or if exact Plot ID is not available. Report the Region in format: A, H, S.</td>
+<td align="left">Exploratories Region (Hainich, Schorfheide, Alb) for sorting purpose and readability, or if exact Plot ID is not available. Report the Region in format: HAI; SCH; ALB</td>
 </tr>
 <tr class="even">
 <td align="left">Comment</td>
@@ -3810,11 +3377,8 @@ $(document).ready(function () {
 </div>
 <div id="explotype" class="section level2">
 <h2><code>ExploType</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#explotype">direct link</a></p>
 <table>
-<colgroup>
-<col width="10%"></col>
-<col width="89%"></col>
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -3823,24 +3387,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left">W; G</td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left">W; G</td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3852,11 +3408,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3864,7 +3420,7 @@ $(document).ready(function () {
 </tr>
 <tr class="odd">
 <td align="left">Definition</td>
-<td align="left">W for forest or G for grassland plot. This is automaticall extracted by the R script from ExploratoriesPlotID, if provided.</td>
+<td align="left">W for forest or G for grassland plot.</td>
 </tr>
 <tr class="even">
 <td align="left">Comment</td>
@@ -3876,8 +3432,10 @@ $(document).ready(function () {
 </div>
 <div id="metadata-vocabulary" class="section level1">
 <h1>Metadata vocabulary</h1>
+<p>These data are required when combining datasets from different sources. We suggest integrating a <code>datasetID</code> referencing to an external data sheet or adding columns to the dataset to keep important information about authorship and terms of use at the measurement level.</p>
 <div id="rightsholder" class="section level2">
 <h2><code>rightsHolder</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#rightsholder">direct link</a></p>
 <table>
 <colgroup>
 <col width="13%"></col>
@@ -3891,24 +3449,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3920,11 +3470,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -3943,6 +3493,7 @@ $(document).ready(function () {
 </div>
 <div id="bibliographiccitation" class="section level2">
 <h2><code>bibliographicCitation</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#bibliographiccitation">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="4%"></col>
@@ -3956,24 +3507,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -3985,11 +3528,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -4008,6 +3551,7 @@ $(document).ready(function () {
 </div>
 <div id="license" class="section level2">
 <h2><code>license</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#license">direct link</a></p>
 <table>
 <colgroup>
 <col width="6%"></col>
@@ -4021,24 +3565,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -4050,11 +3586,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -4073,6 +3609,7 @@ $(document).ready(function () {
 </div>
 <div id="datasetid" class="section level2">
 <h2><code>datasetID</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#datasetid">direct link</a></p>
 <table>
 <colgroup>
 <col width="9%"></col>
@@ -4086,24 +3623,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -4115,11 +3644,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -4138,6 +3667,7 @@ $(document).ready(function () {
 </div>
 <div id="datasetname" class="section level2">
 <h2><code>datasetName</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#datasetname">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="16%"></col>
@@ -4151,24 +3681,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -4180,11 +3702,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -4202,10 +3724,15 @@ $(document).ready(function () {
 </table>
 </div>
 </div>
-<div id="terms-for-traitlists-trait-thesaurus" class="section level1">
-<h1>Terms for Traitlists / Trait Thesaurus</h1>
+<div id="terms-for-traitlists-a-trait-thesaurus" class="section level1">
+<h1>Terms for Traitlists (a ‘Trait Thesaurus’)</h1>
+<p>Ontologies for functional traits are beeing developed for different organism groups, mostly centered around certain research questions or subjects of study. To date, the TRY database takes the most inclusive approach on functional traits for vascular plants (Kattge) and describes XX traits and put them into the hierarchical structure of an ontology.</p>
+<p>For some animal groups, similar approaches do exist, but few are available as an online ontology.</p>
+<p>As a starting point for creating an ontology for functional traits, we propose the following terms for trait lists (also termed ‘lookup tables’ of traits, or trait ‘Thesaurus’), to describe functional traits that are in the focus of a single research project. Those trait lists would be uploaded along with the trait dataset.</p>
+<p>Using this standardized terminology will allow merging trait definitions from multiple sources. We encourage providing these lookup tables as an open ressource on public ontology and terminology servers, to enable a global referencing.</p>
 <div id="valuetype" class="section level2">
 <h2><code>valueType</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#valuetype">direct link</a></p>
 <table>
 <thead>
 <tr class="header">
@@ -4215,24 +3742,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -4244,11 +3763,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -4267,6 +3786,7 @@ $(document).ready(function () {
 </div>
 <div id="factorlevels" class="section level2">
 <h2><code>FactorLevels</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#factorlevels">direct link</a></p>
 <table>
 <thead>
 <tr class="header">
@@ -4276,24 +3796,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -4305,11 +3817,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -4328,6 +3840,7 @@ $(document).ready(function () {
 </div>
 <div id="maxallowedvalue" class="section level2">
 <h2><code>MaxAllowedValue</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#maxallowedvalue">direct link</a></p>
 <table>
 <thead>
 <tr class="header">
@@ -4337,24 +3850,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -4366,11 +3871,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -4389,6 +3894,7 @@ $(document).ready(function () {
 </div>
 <div id="minallowedvalue" class="section level2">
 <h2><code>MinAllowedValue</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#minallowedvalue">direct link</a></p>
 <table>
 <thead>
 <tr class="header">
@@ -4398,24 +3904,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -4427,11 +3925,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -4450,6 +3948,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementtypedescription" class="section level2">
 <h2><code>MeasurementTypeDescription</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementtypedescription">direct link</a></p>
 <table>
 <thead>
 <tr class="header">
@@ -4459,24 +3958,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -4488,11 +3979,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
@@ -4511,6 +4002,7 @@ $(document).ready(function () {
 </div>
 <div id="comments" class="section level2">
 <h2><code>Comments</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#comments">direct link</a></p>
 <table>
 <thead>
 <tr class="header">
@@ -4520,24 +4012,16 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">vocabulary</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Refines</td>
@@ -4549,11 +4033,11 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left">NA</td>
+<td align="left">v0.3</td>
 </tr>
 <tr class="odd">
 <td align="left">DateIssued</td>
-<td align="left">NA</td>
+<td align="left">07.07.2017</td>
 </tr>
 <tr class="even">
 <td align="left">DateModified</td>
