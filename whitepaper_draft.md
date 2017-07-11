@@ -23,18 +23,21 @@ Intro:
 Common structure of trait datasets
 - definition of a trait dataset
 - possible formats: matrix, occurence table, long table
-- additional information on measurement or occurence, co-variate analysis, environmental filters, spatial distribution
+- species--trait matrix is common for sharing taxon-level averages or facts, common for publishing species-level data and literature data. but not raw-data. The means of obtaining the average are intransparent and may be biased by local conditions. 
+- occurence table is common for empirical replicated measurements of traits, raw data. Ideal for correlation analysis of traits. Not ideal for merging data from multiple sources. 
+- measurement table, longtable: ideal for raw data. Machine readable, simple to standardize and for sharing data, merging and combining data.  
+- additional information may apply to different layers: on measurement or occurence, co-variate analysis, environmental filters, spatial distribution. 
 
 Towards a traitdata standard
 - definition of structure: longtable format is most feasible to carry information at measurement level, link to external datasets via globally unique identifiers (or dataset specific)
-- apply taxon name standardization
 - add occurence level information (e.g. location, sex) and measurement level (e.g. aggregated data, statistics) information
-- provide trait definitions, trait lists (thesaurus) globally unique identifiers, semantic network
+- apply taxon name standardization
+- apply trait standardization, link to definitions (trait lists, thesaurus) via globally unique identifiers, semantic network; apply unit and factor level harmonization
 - We provide: Glossary of terms for trait data
 
 Tools for producing compliant data
 - R package traitdataformat
-- standardize trait data for publication
+- standardize and harmonize trait data for publication
 - merge, split, apply trait data of different sources 
 
 Discussion
