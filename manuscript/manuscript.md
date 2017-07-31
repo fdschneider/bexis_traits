@@ -263,17 +263,17 @@ In the subsequent sections we propose a set of columns that compose a trait data
 ## minimal requirement of a trait-dataset
 
 For the minimal definition of trait-datasets, the central content of a row is the reported measurement or fact for a single observation, which is composed of a value (`traitValue`) and -- for numeric values -- a standard unit (`traitUnit`).
-To link the measurement or fact to a clear trait definition, a unique identifier links each row to a trait name defined by a given lookup-table (`traitType`) and a globally unique identifier of the measurement type, a trait ID (`traitID`). 
+To associate the measurement or fact to a clear trait definition, a unique identifier links each row to a trait name defined by a given lookup-table (`traitType`) and a globally unique identifier of the measurement type, a trait ID (`traitID`). 
  
 The core data are also keeping a record of the scientific taxon for which the measurement or fact was obtained via globally accepted identifiers. To provide an unambiguous reference which is easy to read for researchers and for software, this identifier is provided in the form of an unambiguous taxon name (`scientificName`) as well as a machine readable ID (`taxonID`). 
 
 
-Further unique identifiers link the row to a single specimen or occurence (`occurenceID`), which can be described with further detail in a separate data table or the same table using the columns provided in the occurence extension detailed below. This identifier is usually dataset-specific and can be defined by the author. Some data-types may use global identifiers for occurence data, e.g. a GBIF URI or a museum collection code that is publicly available.
+Further unique identifiers link the row to a single specimen or occurence (`occurenceID`) <!-- Malte: Just relized, this needs to be changed to occurrence (double r) throughout the trait standard etc. -->, which can be described with further detail in a separate data table or the same table using the columns provided in the occurrence extension detailed below. This identifier is usually dataset-specific and can be defined by the author. Some data-types may use global identifiers for occurrence data, e.g. a GBIF URI or a museum collection code that is publicly available.
 
-Similarly, each single measurement (i.e. each row of the dataset, except for multivariate traitdata; see below) is labelled by a unique identifier (`measurementID`) and receives further detail in a linked dataset or in the same dataset using the columns provided by the measurement or fact extension. 
+Similarly, each single measurement (i.e. each row of the dataset, except for multivariate traitdata; see below) is labelled by a unique identifier (`measurementID`) and receives further detail in a linked dataset or in the same dataset using the columns provided by the measurement or fact extension. <!-- Malte: For readers not that familiar with trait data, the differences between measurement, occurrence and trait ID might not be that clear. It might be worth adding either a sentence explaining in an example what is what OR a tiny figure that shows how a specimen is sampled, processed, traits are measured etc. -->
 
-To enable compatibility of the dataset with other datasets, we propose to add a second set of columns that contain standardized entries of the taxon name (`scientificNameStd`) that maps synonyms to an accepted species name according to a published taxonomic ontology (e.g. GBIF Backbone Terminology) and links to it using a globally unique identifier (`taxonID`). Similarly, the trait dataset should map trait names (`traitNameStd`) and harmonize reported values (`traitValueStd` and `traitUnitStd`) according to a published trait list (a thesaurus). 
-This dupliation of data enables continuity on the authors side and quality checking and comparability on the data users side. 
+To enable compatibility across datasets, we propose to add a second set of columns that contain standardized entries of the taxon name (`scientificNameStd`) that maps synonyms to an accepted species name according to a published taxonomic ontology (e.g. GBIF Backbone Terminology) and links to it using a globally unique identifier (`taxonID`). Similarly, the trait dataset should map trait names (`traitNameStd`) and harmonize reported values (`traitValueStd` and `traitUnitStd`) according to a published trait list (a thesaurus). 
+This dupliation of data enables continuity on the author and data owner side and quality checking and comparability on the data user side. 
 
 Additionally, metadata should contain information about the authorship and ownership of the data and the terms of use. These information may be kept in the metadata of the dataset, but if datasets from different sources are merged, those should be referred to by a unique identifier (`datasetID`) or be reported as additional columns in the merged dataset (`author`, `license`, ...; see Dublin Core Metadata standards, Ref). 
 
@@ -284,16 +284,16 @@ In the following paragraphs, we provide a suite of extended column definitions t
 
 <!-- ## globally unique identifier of a measurement
 
-To ensure compatibility of datasets of different origin, we propose to use a cryptographic hash function for the generation of a globally unique identifier of each measurement (`measurementID`). Cryptographic hash functions compile strings of variable content length into a bit string of fixed size. This string can be used to compare data and check for duplicates across multiple datasets. The method we propose is to collate a comma separated string of all original (i.e. user provided, labelled with  `_original`) data columns and parse them using the SHA1 algorithm. The rationale of using the user-specific columns only is that those data are not changing even if a measurement has been reformatted for a different context.  We provide a script to create the measurementID as well as a automated workflow in the R package described below. -->
+To ensure compatibility of datasets of different origin, we propose to use a cryptographic hash function for the generation of a globally unique identifier of each measurement (`measurementID`). Cryptographic hash functions compile strings of variable content length into a bit string of fixed size. This string can be used to compare data and check for duplicates across multiple datasets. The method we propose is to collate a comma separated string of all original (i.e. user provided, labelled with  `_original`) data columns and parse them using the SHA1 algorithm. The rationale of using the user-specific columns only is that those data are not changing even if a measurement has been reformatted for a different context. We provide a script to create the measurementID as well as a automated workflow in the R package described below. -->
 
 *< global taxonomy standards >*
 
-The entries provided in the fields `scientificName` and `taxonID` are supposed to refer to an accepted and published taxonomic ontology. Any synonyms should be mapped to the accepted scientific names. The most complete taxonomic terminology service that is reachable through an API and software tools is the GBIF backbone taxonomy. The function `getGbifTaxonomy()` provided within the R package helps extracting the acceptes species names and taxon IDs for a given vector of user provided species names. The function also extracts a  record of the kingdom (in column `kingdom`) to avoid misinterpretation of taxonomic homonyms. It also keeps a record of the taxon rank (in column `taxonRank`) for filtering purposes for traits recorded at the family or genus level. This information can be used for trait inferrence of higher taxonomic resolution using hierarchical probabilistic matrix factorization (Shan et al 2012, Schrodt et al 2015).
+The entries provided in the fields `scientificName` and `taxonID` are supposed to refer to an accepted and published taxonomic ontology. Any synonyms should be mapped to the accepted scientific names. The most complete taxonomic terminology service that is reachable through an API and software tools is the GBIF backbone taxonomy. The function `getGbifTaxonomy()` provided within the R package helps extracting the accepted species names and taxon IDs for a given vector of user provided species names. The function also extracts a record of the kingdom (in column `kingdom`) to avoid misinterpretation of taxonomic homonyms. It also keeps a record of the taxon rank (in column `taxonRank`) for filtering purposes for traits recorded at the family or genus level. This information can be used for trait inference of higher taxonomic resolution using hierarchical probabilistic matrix factorization (Shan et al 2012, Schrodt et al 2015).
 
 *< towards globally unique identifiers for traits >*
 
 More difficult than the taxonomic reference is the standardised reference to defined functional traits, due to a lack of URIs or APIs (see above). Eventually, the field  `measurementTypeID` should refer to globally unique identifiers for a well defined measurement methodology. However, many measurements that qualify as traits following the definition above are motivated by the particular research question and demand a specific measurement methodology. Some trait data are drawn from a wide literature body with different approaches of reporting for instance body lengths or ecological information. 
-Therefore, if no published trait list is available that can be referrenced via globally unique URIs or DOIs, traitdatasets should be accompanied by a dataset-specific glossary of traits. This should at minimum provide a human readable trait name and a unique (alphanumeric) identifier as well as an unambiguous verbal definition, the accepted factor levels (for categorical data) and expected units (for numerical data). 
+Therefore, if no published trait list is available that can be referenced via globally unique URIs or DOIs, traitdatasets should be accompanied by a dataset-specific glossary of traits. This should at minimum provide a human readable trait name and a unique (alphanumeric) identifier as well as an unambiguous verbal definition, the accepted factor levels (for categorical data) and expected units (for numerical data). 
 
 <!-- ### Exploratories 
 
@@ -301,7 +301,7 @@ A first list of traits was compiled in a community effort, online questionaire. 
  
 specifics of some important groups traits. 
 - life-history traits
-- Morphometric traits
+- morphometric traits
 - phenological traits
 - ... 
 
@@ -311,53 +311,53 @@ Trait list is maintained by BExIS team and curators for taxonomic groups, as wel
 
 *< measurement or fact >*
 
-For data not obtained from own measurement, the field `reference` provides a precise reference to the source of data. This should quote the key, book, or  database for literature data. For museum specimens, this should report the name of the collection (potentially provide an URI). If expert knowledge, this should name the authority. If trait database, provide reference to the original publication, DOI or URL of the trait-database.
+For data not obtained from own measurement, the field `reference` provides a precise reference to the source of data. This should quote the key, book, or  database for literature data. For museum specimens, this should report the name of the collection (potentially provide an URI). If expert knowledge, this should name the authority. If trait database, this should provide reference to the original publication, DOI or URL of the trait-database.
 
-To record potential sources of noise or bias, the methods and procedures of fixation and preservation of the specimen (column `preparations`), method of measurement (`measurementMethod`), the person conducting the measurement (`measurementDeterminedBy`), the date at which the measurement was obtained (`measurementDeterminedDate`) are recorded. 
+To record potential sources of noise or bias, the methods and procedures of fixation and preservation of the specimen (column `preparations`), method of measurement (`measurementMethod`), the person conducting the measurement (`measurementDeterminedBy`), and the date at which the measurement was obtained (`measurementDeterminedDate`) are recorded. 
 
 One issue of transparency of data is that the degree of taxonomic resolution at the time of observation of the specimen might be unclear. For instance, for literature data, the  data source might report trait values on the family or genus level, but the data author infers and reports the trait data at species level (e.g. if the entire genus reportedly shares the same trait value). Those cases are documented in the column `measurementResolution`
 
 For some measured values, authors would report aggregate data of repeated measurements or pooled measurements, e.g. by weighing multiple individuals simultaneously and calculating an average. In these cases, recording the number of individuals (`individualCount`) along with a dispersion measure (e.g. variance or standard deviation, `dispersion`) or range of values (e.g. min and max of values observed in the field `measurementValueMin`, `measurementValueMax`) is adviced. The field `statisticalMethod` names the method for data aggregation (e.g. mean or median) or averaging as well as the variation or range.
 
-*< observation context (occurence) >*
+*< observation context (occurrence) >*
 
-This category of columns contains further information about the individual specimen or occurence that has been observed and measured. 
+This category of columns contains further information about the individual specimen or occurrence that has been observed and measured. 
 
 As a high-level discrimination of the source of the measurement or fact, the column `basisOfRecord` takes an entry about the type of trait data recorded: Were they taken by own measurement (distinguish "LivingSpecimen", "PreservedSpecimen", "FossilSpecimen") or taken from literature ("literatureData"), from an existing trait database ("traitDatabase"), or is it expert knowledge ("expertKnowledge"). It is highly recommended to provide further detail about the source in the column `basisOfRecordDetails`. 
 
 For both literature and measured data, trait values may be recorded for different sub-categories of individuals of a taxon to capture polymorphisms, for instance differentiated by sex or life stage. The template provides the fields `sex`, `lifeStage`, `age`, and `morphotype` for this distinction.
 
-Seasonal variation of traits may be recored by assigning a date and time of sampling to the occurcence, using the fields `year`,	`month` and	`day`, depending on resolution. The field definitions of the Darwin Core Standard can be applied instead, to refer to a geological stratum, for instance. 
+Seasonal variation of traits may be recored by assigning a date and time of sampling to the occurrence, using the fields `year`,	`month` and	`day`, depending on resolution. The field definitions of the Darwin Core Standard can be applied instead, to refer to a geological stratum, for instance. 
 Sampling may be further specified using a unique identifier for the sampling event `eventID`	which references to an external dataset. The record of a `samplingProtocol` may capture bias in samling methods. 
 
-To capture geographic variation of traits, a set of fields for georeferencing can put the observation into spatial and ecological context (`habitat`, 	`decimalLongitude`,	`decimalLatitude`, `elevation`,	`geodeticDatum`, `verbatimLocality`, `country`, `countryCode`). The field `locationID` may be used to reference the occurence to a dataset-specific or global identifier. This allows the trait data to double as observation data, e.g. for upload to the GBIF database. 
+To capture geographic variation of traits, a set of fields for georeferencing can put the observation into spatial and ecological context (`habitat`, 	`decimalLongitude`,	`decimalLatitude`, `elevation`,	`geodeticDatum`, `verbatimLocality`, `country`, `countryCode`). The field `locationID` may be used to reference the occurrence to a dataset-specific or global identifier. This allows the trait data to double as observation data, e.g. for upload to the GBIF database. 
 
 <!-- ## The Biodiversity Exploratories Extensions and template 
 
 Data will be uploaded to BExIS using the template to join data to the trait dataset while keeping full data authority: author information and ownership, access right management, as provided by BExIS. 
 
-If applicable, trait values can be assigned to regions, plot IDs or sampling events which will then allow users to combine trait data with abundance, other observational data or the management regime on the sampled plots.
+If applicable, trait values can be assigned to regions, plot IDs or sampling events which will then allow users to combine trait data with abundance biodiversity, ecosystem functioning, other observational data or the management regime on the sampled plots.
 
 Metadata:
-Each traitdataset uploaded to BExIS and added to the traitdatabase will be accompanied with a metadata file containing additional information on data origin, method, authors and owners (in redundancy with primary data, see above) and possibly more detailed definition of the traits recorded. 
+Each trait dataset uploaded to BExIS and added to the trait database will be accompanied with a metadata file containing additional information on data origin, method, authors and owners (in redundancy with primary data, see above) and possibly more detailed definition of the traits recorded. 
 --> 
 
 ## Metadata 
 
-Individual measurements and facts will likely already belong to a larger set of traits or a separate traitdatabase before they are added to a combined traitdatabase. To retain the rights of the original data contributor, the field `rightsHolder` states the person or organization who owns or manages the rights to the data; `bibliographicCitation` states a bibliographic reference which should be cited when the data is used; and `license` specifies under which terms and conditions the data can be used, re-used and/or published. 
-This information always applies to one single fact or measurement, further information on the larger dataset which originall contained this entry can be stored in `datasetID`, `datasetName`,`authorLastname` and `authorFirstname`. These columns should hence give credit to the person who compiled the original dataset and signs responsible for the correct identification and reporting of the rights holder.
+Individual measurements and facts will likely already belong to a larger set of traits or a separate trait database before they are added to a combined trait database. To retain the rights of the original data contributor, the field `rightsHolder` states the person or organization who owns or manages the rights to the data; `bibliographicCitation` states a bibliographic reference which should be cited when the data is used; and `license` specifies under which terms and conditions the data can be used, re-used and/or published. 
+This information always applies to one single fact or measurement, further information on the larger dataset which originally contained this entry can be stored in `datasetID`, `datasetName`,`authorLastname` and `authorFirstname`. These columns should hence give credit to the person who compiled the original dataset and signs responsible for the correct identification and reporting of the rights holder.
 
 
 ## Computational tools for producing compliant data
 
-We provide an R package to assist producing data compliant with the trait data standard proposed above. The package is being developed as an open source project on GitHub (https://github.com/fdschneider/traitdataform).
+We provide an R package to assist in producing data compliant with the trait data standard proposed above. The package is being developed as an open source project on GitHub (https://github.com/fdschneider/traitdataform).
 
 There are two major use cases for the package:
 
 - preparation of own trait datasets for upload into public data bases, and
-- harmonizing trait datasets from different sources by moulding them into a unified format.
+- harmonizing trait datasets from different sources by moulding them into a unified format. <!-- Malte: to me, it seems as if the second point is more important (switch?) -->
 
-The key function of the package is `as.traitdata()` which moulds a species-trait-matrix or occurence table data into a measurement longtable format. It also maps maps column names into terms provided in the trait data standard. 
+The key function of the package is `as.traitdata()` which moulds a species-trait-matrix or occurrence table data into a measurement longtable format. It also maps column names into terms provided in the trait data standard. 
 
 Scientific taxon names are matched automatically to the GBIF Backbone Taxonomy (taxonomic ontology server) by calling the function `standardize.taxonomy()`
 
@@ -374,13 +374,13 @@ traitdataset1 <- standardize(read.csv("path/to/data.csv"),
             taxa = "name_correct", units = "mm")
 ```
 
-For a detailled description on how to use the package see the package vignette (). The package is under continuous open source development and invites participation in development, comments or bug reports via the Github Issue page (). 
+For a detailed description on how to use the package see the package vignette (). The package is under continuous open source development and invites participation in development, comments or bug reports via the Github Issue page (). 
 
 (figure 2 process chart from original file to standardized output)
 
 # Discussion
 
-- With these tools, traitdata will be easier to harmonize 
+- With these tools, traitdata will be easier to harmonize <!-- Malte:  ... with the following benefits...-->
 
 - decentralised structures, not limited by infrastructural projects
 
@@ -409,7 +409,7 @@ Comparability of traits across taxa
 
 Gap analysis
 
-specificity of BE trait-data is local context of exploratories, if trait data are assessed on the site, trait variation can be related to land-use intensity. In this spatial extend this would be a novelty.
+specificity of BE trait-data is local context of exploratories, if trait data are assessed on the site, trait variation can be related to land-use intensity. In this spatial extent, this would be a novelty.
 
 # Acknowledgements
 
