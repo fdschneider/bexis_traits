@@ -76,7 +76,7 @@ The aim of the methods paper is to
 
 Functional traits are phenotypic characteristics that are related to the fitness and performance of an organism. [@Mcguill06; @Violle07]
 
-Traits can be measurements of morphology of organisms, life-history characteristics such as reproductive strategies, physiological traits including metabolism and photosynthetic activity, feeding traits, biochemical and isotopic compounds, behavioural traits, as well as environmental traits. 
+Traits can be measurements of organism morphology, life-history characteristics such as reproductive strategies, physiological traits including metabolism and photosynthetic activity, feeding traits, biochemical and isotopic compounds, behavioural traits, as well as environmental traits. 
 
 A focus on functional traits allows ecologists to describe the role of a species in an ecosystem or its ability to persist under certain environmental conditions. 
 Some studies differentiate effect traits and response traits (or performace and fitness traits), depending on the research question. 
