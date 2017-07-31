@@ -79,22 +79,24 @@ Functional traits are phenotypic characteristics that are related to the fitness
 Traits can be measurements of organism morphology, life-history characteristics such as reproductive strategies, physiological traits including metabolism and photosynthetic activity, feeding traits, biochemical and isotopic compounds, behavioural traits, as well as environmental traits. 
 
 A focus on functional traits allows ecologists to describe the role of a species in an ecosystem or its ability to persist under certain environmental conditions. 
+<!-- Malte: Correct, but given the extensive list of what traits are useful / used for that is given in the next paragraph, this sentence suggests a too narrow scope of what traits are useful for. I would probably delete it and move the response / effect traits sentence further down. -->
 Some studies differentiate effect traits and response traits (or performace and fitness traits), depending on the research question. 
 
 Reflecting this wide range of measures and approaches, traits are assessed with a variety of research questions in mind. 
 
-Traits help in bridging individual level behaviour and physiology into processes at the ecosystem scale (@Diaz2013). The analysis of correlations between traits and intraspecific variation inform about the physiological and evolutionary trade-offs and helps to identify economic strategies of organisms beyond taxonomy (@Menezes2010)  (@Forister2015). 
+Traits help in bridging individual level behaviour and physiology into processes at the ecosystem scale (@Diaz2013). The analysis of correlations between traits and intraspecific variation informs about the physiological and evolutionary trade-offs and helps to identify economic strategies of organisms beyond taxonomy (@Menezes2010)  (@Forister2015). 
 Inferring the unknown trophic role and ecological function of individuals from their apparent features (@Duarte2011, @Fontaine2006) is a promising venue to bypass taxonomic impediment, the fact that a majority of species are yet undescribed and have not been observed in the ecosystem. 
 Looking at community weighted means and variance of functional traits, researchers aim to understand changes in functional composition or the loss of functional diversity and ecosystem services (@Wood2015) in consequence to global change or local anthropogenic land use (environmental filtering; @Hopfenmuller2014, @Jennings2009, @Moretti2013). (@deBello2011) (Gossner et al, other Explo papers) 
 
 Traits  allow comparision across trophic levels. However, a multi-trophic integration is difficult because of different standards, methods, and functional focus. A harmonization of trait data standards across functional groups would be of huge benefit for a multi-trophic understanding of ecosystems. 
+<!-- Malte: Why is a multitrophic perspective beneficial / necessary? This point needs to be clearly made here. -->
 
 Functional ecology has grown into a major field in ecological research!
 A global synthesis of traits brings major insights in ecosystem processes and ecosystem services, enables projections in future climate and land use scenarios. Traits link ecological research to evolution, and management (functions and services) for biodiversity conservation (land use intensification), climate research (environmental filters). It is thus an interdisciplinary/cross-topic field with great potential. 
 
 <!-- 
 
-Refer to Katge et al 2011, Violle et al 2007, Diaz et al 2007, McGill et al. 2006, Aubin et al. 2013, Lavorel et al. 2002...
+Refer to Kattge et al 2011, Violle et al 2007, Diaz et al 2007, McGill et al. 2006, Aubin et al. 2013, Lavorel et al. 2002...
 ## trait-based research within the Biodiversity Exploratories
 
 Refer to successfully published papers on arthropod traits, multi-trophic trait variation etc. 
@@ -122,12 +124,14 @@ However, multi-trophic integration is difficult because of different standards, 
 
 <!-- Nadja: I like Caterinas suggestion --> 
 <!-- Flo: Yes, makes sense. -->
+<!-- Malte: I agree, Caterina's suggestion makes it easier to follow for the reader. -->
 
 
 *< Overview of existing database initiatives. Offering access management and harmonization >*
 
-For many organism groups and research questions, traitdata have been standardised into databases. Most prominently, plant traits from many different sources have been collated into the quickly growing TRY databse. TRY combines traitdata from other published databases and individually owned datasets and provides an extended access management and data query services. Other more specialised databases for plant traits exist, for instance for root measurements (refs and URLs). 
+For many organism groups and research questions, trait data have been standardised into databases. Most prominently, plant traits from many different sources have been collated into the quickly growing TRY databse. TRY combines trait data from other published databases with individually owned datasets and provides an extended access management and data query services. Other more specialised databases for plant traits exist, for instance for root measurements (refs and URLs). 
 In the animal kingdom, a wealth of trait-databases has been created that covers different organism groups or interaction types or ecosystems. 
+<!-- Malte: ... or ecosystems. However, a unified framework to standardize these approaches is still lacking. (needs something like this, otherwise it introduces plant traits and TRY , but for animals stops at: there are many data sets here, too.) -->
 Besides these harmonized databases, an unknown plethora of single datasets has been published along with article publications over the past decades. As an attempt to track these unstandardized datasets, we initiated a living spreadsheet registry which invites submissions of any open data (Google Spreadsheet link, table 1).
 
 (table of existing databases? name, url, focus, number of records, openness of data, maintained by)
@@ -144,19 +148,21 @@ Flo: I like this idea of starting a collaborative list on trait datasets. This
 It becomes apparent, that all databases come with their own structure, reflecting the research questions of the initiatives behind them and their organismal focus. A harmonization of traits can be achieved by services like TRY, which take a huge effort to attract data submissions and map them into a common scheme. 
 
 Furthermore, these databases provide access management services and tracking of data usage in studies and secondary publications. Mandatory Open Access publication still seems to prevent some data providers from uploading their data, why many databases encourage a permissive data policy but do not enforce it. 
+<!-- Malte: I think this definitely needs to be backed up with a reference. -->
 
-Centralised databases like TRY experience rapid growth but are at some point reaching a resource limit in personell and funding.
+Centralised databases like TRY experience rapid growth but are at some point reaching a resource limit in personnel and funding.
 
 Public research funding agencies increasinly demand the publication of data without access restrictions [@swan12; @allison15], but not all scientific databases for functional traits are enabled to comply with this standard. The training on compliance with open data standards within the community of environmental sciences can still be much improved [@schmidt15]. 
 
 Data brokering services such as the German Federation on Biological Data (gfbio.org) are aiming to ease data publications and standardization for researchers, for instance by providing terminologies and ontologies for environmental data. 
 Such ontologies are being developed for plant traits, for instance in the TOP Thesaurus of plant traits that is used for the TRY database. On the side of animal traits, few initiatives published comprehensive trait standards and method catalogues, like for instance [@moretti16, betsi]. 
-
+<!-- Malte: What about Moretti et al 2017 Funct Ecol: Handbook of protocols for standardized measurement
+of terrestrial invertebrate functional traits? -->
 Today, several biodiversity data intitiatives are striving for a global integration of ecological and biological information and develop universal data frameworks for trait data. The EOL TraitBank for instance is the most general framework to date (Parr et al 2015) and suggests wrapping trait data into structured Darwin Core Archives.
 
-However, the publications in low-threshold data repositories such as figshare, datadryad, researchgate or zenodo are gaining importance and foster a decentralised data hosting with low expectations on data standardization and documentation. With this prospect, there will be no lack of data, but a lack of data standardization. 
+However, the publications in low-threshold data repositories such as figshare, datadryad, researchgate or zenodo are gaining importance and foster a decentralised data hosting with low expectations regarding data standardization and documentation. Given this prospect, there will be no lack of data, but a lack of data standardization. 
 
-With this paper, we propose a roadmap towards a comprehensive trait data standard, based upon the considerations by Parr et al. with the combined perspectives of empirical biodiversity researchers (data providers) , biodiversity synthesis researchers (data users), and biodiversity informatics researchers (data managers).   
+With this paper, we propose a roadmap towards a comprehensive trait data standard, based upon the considerations by Parr et al. with the combined perspectives of empirical biodiversity researchers (data providers), biodiversity synthesis researchers (data users), and biodiversity informatics researchers (data managers).   
 
 ## Common structure of trait datasets
 
