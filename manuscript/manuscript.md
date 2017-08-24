@@ -154,7 +154,7 @@ Centralised databases like TRY experience rapid growth but are approaching a res
 On the other hand, public research funding agencies increasinly demand the publication of data without access restrictions [@swan12; @allison15], but not all scientific databases for functional traits are enabled to comply with this standard. The training on compliance with open data standards within the community of environmental sciences can still be much improved [@schmidt15]. 
 
 Data brokering services such as the German Federation on Biological Data (gfbio.org) are aiming to ease data publications and standardization for researchers, for instance by providing terminologies and ontologies for environmental data. 
-Such ontologies are being developed for plant traits, for instance in the TOP Thesaurus of plant traits that is used for the TRY database. On the side of animal traits, few initiatives published comprehensive trait standards and method catalogues, like for instance [@moretti16, betsi]. 
+Such ontologies are being developed for plant traits, for instance in the TOP Thesaurus of plant traits that is used for the TRY database [@garnier17] and the Planteome database and ontology [@planteome17; http://www.planteome.org]. On the side of animal traits, few initiatives published comprehensive trait standards and method catalogues, like for instance [@moretti16, betsi]. 
 
 Today, several biodiversity data intitiatives are striving for a global integration of ecological and biological information. Only few so far developed universal data frameworks for trait data, such as the EOL TraitBank, which is the most general framework to date (Parr et al 2015). TraitBank invites data submissions to the EOL database in a structured Darwin Core Archive.
 
@@ -167,7 +167,8 @@ With this paper, we propose a roadmap towards a comprehensive trait data standar
 ## Common structure of trait datasets
 
 As a minimum consensus, trait datasets may be defined as follows: 
-A trait-dataset contains quantitative measurements or qualitative facts (i.e. trait values) <!-- Cat: the difference is not totally clear to me - is it the difference between field vs literature gathered data?  Flo: I see measurements as quantitative and facts as qualitative traits, which mostly aligns with field vs. literature, but not entirely.  -->  about physical phenotypic characteristics of fitness, behaviour or performance (i.e. traits) of individuals (or parts of an individual) assigned to an entity of a biological taxon (i.e. a species or higher taxon). The entity or observation (i.e. the occurence) to which the reported measurement or fact applies may differ in resolution -- depending on the scientific question -- and could be a subsample or bodypart, an individual specimen, an entire species or higher-level taxon. 
+A trait-dataset contains quantitative measurements or qualitative facts (i.e. trait values) <!-- Cat: the difference is not totally clear to me - is it the difference between field vs literature gathered data?  Flo: I see measurements as quantitative and facts as qualitative traits, which mostly aligns with field vs. literature, but not entirely. A differentiation that has rarely been specified in the trait-litereature it seems. Garnier et al 2017 just speak of "quality", which is assigned to an "entity", without specifiying it further. -->  about physical phenotypic characteristics of fitness, behaviour or performance (i.e. traits) observed on an of individual or parts of an individual (i.e. an entity) that can be assigned to a biological taxon (i.e. a species or higher taxon). The entity or observation (i.e. the occurence) to which the reported measurement or fact applies may differ in resolution -- depending on the scientific question -- and could be a subsample or bodypart, an individual specimen, an entire species or higher-level taxon. 
+This definition refines the entity-quality model (EQ) as described by @garnier17, where a trait observation is phrased as 'an entity having a quality'. 
 
 *< standardised reference to taxon names >*
 
@@ -177,23 +178,30 @@ In order to allow for a maximized knowledge gain and scientific benefit of obtai
 
 *< standardized reference to trait definitions >*
 
-Similarly motivated, traits for target organism groups and ecosystems have been categorized and defined in thesauri (e.g., TOP Plant Trait Ontology or Vertebrate Trait Ontology [28]) or ontologies (morphometrics?), which also provide unique identifiers for referencing along with more or less precise definitions of the body measures, morphometric landmarks, categorical traits or environmental conditions, for instance. 
-Multiple approaches have spawned around the initialisation of trait databases, most advanced certainly for plant traits in the TRY database and its reference Thesaurus of Plant characteristics (TOP).  
+Similarly motivated, traits for target organism groups and ecosystems have been categorized and defined in thesauri (e.g., TOP Plant Trait Ontology [@garnier17] or Vertebrate Trait Ontology [28]) or ontologies (morphometrics?). A Thesaurus is a "controlled vocabulary designed to clarify the definition and structuring of key terms and associated concepts in a specific discipline" [@laporte12]. An ontology is going one step further by providing an explicit specification of a conceptualizaation including a formal model of the conceptual objects and relationships, or entities and qualities [@garnier17, @gruber95]. 
 
-Traits are not only defined in terms of their interpretation, but are ideally also standardised in terms of numerical units and, even more important, the use of factor levels. This is challenging given the range of data types that fall within datasets of functional traits. 
+Handling this multitude of value types in heterogeneous databases is challenging and first of all requires an unambiguous trait definition. Initiatives to standardise traits into consensus terminology are usually formed around a specific research question, methodology, or organism group and therefore vary in the traits that they consider important.
+Traits are not only defined in terms of their interpretation, but are ideally also standardised in terms of numerical units and, even more important, the use of factor levels. This is challenging, given the range of data types that fall within datasets of functional traits. 
 Numerical values represent measurements of length, volumes, ratios, rates or timespans. Integer values may apply to count data (e.g. eggs per clutch). 
 Binary data (encoded as 0 or 1) or logical data (coded as TRUE or FALSE) may apply to qualitative traits such as specific behaviour during mating (e.g. are territories defended) or specialisation to a given habitat (e.g. species restricted to relicts of primeval forests). Many traits are categorical and allow for a constrained set of factor levels, such as sex differences in wing morphology (both sexes winged, both sexes unwinged, only males winged, only females winged) or unconstrained entries such as color. Categorical traits often are ordinal, i.e. they have a logical sequence as in the case of life stages or hibernation stages, or habitat preference traits such as horizontal stratum use. 
-Finally there are specific formats of multivariate trait values, e.g. x.y.z coordinates of a landmark measured in 3D space or relative abundance of chain-lengths in biochemical compounds.
-Handling this multitude of value types in heterogeneous databases is challenging and requires an unambiguous trait definition. 
+Finally there are specific formats of multivariate trait values, e.g. x-y-z coordinates of a landmark measured in a standardized 3D space [ref] or relative abundance of chain-lengths in biochemical compounds [].
+To achieve this, definitions should refer to other well-defined terms of other ontologies that describe standard units, morphological body parts, protein characteristics (Protein Ontology) or chemical terms (e.g. the ChEBI, http://www.obofoundry.org/ontology/chebi.html).
 
-To achieve comparability of traits across taxonomic groups, some trait standards suggest a hierarchical classification or a relational tree of functional traits (e.g. TOP or T-SITA). Each trait definition may link to a broader or narrower term. For instance, the definition of 'femur length of first leg, left side' is narrower than 'femur length' which is narrower than 'leg trait' which is narrower than 'locomotion trait'. (Ref semantic database methods)
-This links traits of similar functional meaning and allows cross-taxon comparative studies at the level of broader terms. 
-Thus, a trait thesaurus would assign trait names with A) a unique definition and B) an expected format of measured values or reported facts, and might additionally provide C) a hierarchical or tree-based classification of traits. 
+Multiple approaches have spawned around the initialisation of trait databases. Such reference definitions are currently being published in methodological handbooks (Moretti et al , ) or lists of accepted traits (databases), or an online ontology or thesaurus (TOP, T-Sita, ), most advanced certainly for plant traits compiled in the Thesaurus of Plant characteristics (TOP, @garnier17).
 
-Initiatives to standardise traits into consensus terminology are usually formed around a specific research question, methodology, or organism group and therefore vary in the traits that they consider important. To make trait measurements truly comparable, it requires precise definitions of traits, including the expected numerical or categorical resolution and measurement units. These reference definitions are currently being published in methodological handbooks (Moretti et al , ) or lists of accepted traits (databases), or an online ontology or thesaurus (TOP, T-Sita, ). The latter is the only option that enables direct linking to a term via a URI.
-Some trait glossaries extend into (machine readable) ontologies by providing a hierarchical or tree-based classification of traits (TOP, Moretti et al) . These systematic approaches to traits will be very useful for comparing similar traits measured in different taxa at higher hierarchical levels. The benefit of such classifications will increase if API services provide a systematic way to extract the higher-level trait hierarchies. 
+Some trait thesauri extend into (machine readable) semantic web resources by providing a hierarchical classification of traits (TOP) or a relational tree of functional traits (e.g. TOP or T-SITA). . 
+Each trait definition may link to a broader or narrower term. For instance, the definition of 'femur length of first leg, left side' is narrower than 'femur length' which is narrower than 'leg trait' which is narrower than 'locomotion trait'. (Ref semantic database methods)
+This links traits of similar functional meaning and allows cross-taxon comparative studies at the level of broader terms. These systematic approaches to traits will be very useful for comparing similar traits measured in different taxa at higher hierarchical levels.
+Furthermore, trait definitions may refer to related terms that describe a similar feature but with other means, or synonyms defined in other trait ontologies. By providing this semantic interlinkage of trait ontologies, a web of definitions is spun across the internet which allows researchers and search engines to relate independent trait measurements with each other.  
 
-To our knowledge, none of the trait initiatives today provides a fully open API that would allow extracting machine readable definitions and terms via software tools. To harmonize trait data across databases, future trait standard initiatives should provide this functionality.  
+The benefit of such classifications will increase if open Application Programming Interfaces (APIs) provide a way to extract the definitions and higher-level trait hierarchies programmatically via software tools. To harmonize trait data across databases, future trait standard initiatives should provide this functionality. 
+Online ontologies hosted with accredited ontology servers have the advantage of providing a persistent and direct link of the term on the internet (a *Uniform Resource Identifier*, URI).
+Terminology portals or registries, such as the GFBio Terminology Service or ontobee, may provide a central host for trait ontologies. 
+
+Thus, a trait thesaurus or ontology would assign trait names with A) an unambiguous definition of the trait and B) an expected format of measured values or reported facts, and might additionally provide C) semantic relationships for deriving a hierarchical or tree-based classification of traits. It additionally might relate to a more specific method of measurement.
+
+The biggest challenge in community efforts of standardization of traits may be the investment in consensus building which leads to an acceptance and establishment of the standards. This effort is time consuming and lengthy, but is returns synergies and great scientific benefit by enabling a global synthesis, as the example of a global plant trait database TRY shows intricately [@diaz16]. 
+
 
 
 *< data structure >*
@@ -420,6 +428,21 @@ specificity of BE trait-data is local context of exploratories, if trait data ar
 
 # Acknowledgements
 
+Thanks to all respondents to an internal online survey on trait data for the Biodiversity Exploratories project. 
+
+We thank the managers of the three Exploratories, Kirsten Reichel-Jung, Juliane Vogt, Miriam Teuscher, and all former managers for their work in maintaining the plot and project
+infrastructure; Christiane Fischer and Jule Mangels for giving
+support through the central office, Michael Owonibi for
+managing the central data base, and Markus Fischer, Eduard Linsenmair,
+Dominik Hessenmöller, Daniel Prati, Ingo Schöning, François Buscot,
+Ernst-Detlef Schulze, Wolfgang W.Weisser and the late Elisabeth Kalko
+for their role in setting up the Biodiversity Exploratories project. 
+
+The work has been partly funded by the DFG Priority Program
+1374 "Infrastructure-Biodiversity-Exploratories" (DFG-Refno.). Field work
+permits were issued by the responsible state environmental offices of
+Baden-Württemberg, Thüringen, and Brandenburg (according to § 72
+BbgNatSchG).
 
 # Authors' contributions
 
