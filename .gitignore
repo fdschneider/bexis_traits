@@ -11,3 +11,6 @@
 *.mdb
 
 .Rproj.user/*
+*.Rhistory
+*.docx
+manuscript/manuscript.md
