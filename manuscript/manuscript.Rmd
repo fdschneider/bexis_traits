@@ -18,7 +18,7 @@ bibliography: div05.bib
 
 *< importance of trait based ecology, current research questions, current applications of traits. >*
 
-Functional traits are phenotypic characteristics that are related to the fitness and performance of an organism [@mcgill06; @violle07]<!--^[Some frameworks differentiate effect traits and response traits (or performace and fitness traits), depending on the research question [refs, @violle07]]-->.
+Functional traits are phenotypic characteristics that are related to the fitness and performance of an organism [@mcgill06; @violle07]<!--^[Some frameworks differentiate effect traits and response traits (or performance and fitness traits), depending on the research question [refs, @violle07]]-->.
 
 Early trait-based approaches have therefore been used to describe the role of a species in an ecosystem or its ability to persist under certain environmental conditions (refs). 
 
@@ -36,7 +36,7 @@ A global synthesis of traits brings major insights in ecosystem processes and ec
 It is thus an interdisciplinary/cross-topic field with great potential. 
 
 In recent years, functional ecology has thus grown into a major field in ecological research!
-However, a integration across trophic levels, taxa and organisational scales remains difficult because of different organismal, methodological, and functional focus. 
+However, an integration across trophic levels, taxa and organisational scales remains difficult because of different organismal, methodological, and functional focus. 
 A harmonization of trait data standards would be of huge benefit for our understanding of ecosystems. 
 
 <!-- 
@@ -134,7 +134,7 @@ The latter format thus provides the highest resolution and ideal for storing raw
 
 # Proposing an ecological traitdata standard 
 
-In this paper, we propose a universal scheme of defined column names and data structure that captures the different degrees of resolution and measurement detail for multiple use cases of trait data. We also provide computational tools in an R package to help users to transfer their original data into the proposed scheme.
+In this paper, we propose a universal scheme of defined column names and data structure that captures the different degrees of resolution and measurement detail for multiple use cases of trait data. We also provide computational tools in an R package to help users transfer their original data into the proposed scheme.
 
 While existing initiatives for standardising data are focused on a constrained organism group, ecosystem type or region and constitute centralised infrastructures, we want to facilitate the use of a standard format of trait data by suggessting a flexible formatting scheme that can be applied in multiple contexts, for instance for building an own taxon-specific database or in user-side compilations of trait data from different sources. 
 In the subsequent sections we propose a set of terms that describe the columns composing a trait dataset, starting with the ones required for our minimal definition of trait-datasets proposed above.
@@ -154,14 +154,14 @@ The core data are also keeping a record of the scientific taxon for which the me
 
 *< global taxonomy standards >*
 
-To enable compatibility across datasets, conventions on trait definitions and taxon names are inevitable. We consider the fact that most authors have their own schemes for standardisation and may contribute to different communities by allowing for a double record of both user-specific and standardised entries (as practiced in TRY, -@kattge11 ). This dupliation of data enables continuity on the author and data owner side and quality checking and comparability on the data user side. Taxonomic standardisation, with respect to ongoing renamings and refinemenets, is a challenging issue in its own right. We propose to add a second set of columns that contain standardized entries of the taxon name (`scientificNameStd`) that maps synonyms to an accepted species name according to a published taxonomic ontology (e.g. GBIF Backbone Terminology) and links to it using a globally unique identifier (`taxonID`). The field `taxonID` therefore should contain to a globally accessible URI that maps to the precise taxon definition at the time of the description or measurement (e.g. for *Bellis perennis*, the taxonID would be  'https://www.gbif.org/species/3117424') . 
-Keeping an additional reference to a kingdom and class (using field `kingdom` or `class` as described by Darwin Core Standard) will avoid ambigueities with taxonomic homonyms. 
-Additionally, it is best practice to keep a record of the reported taxon rank (in column `taxonRank`) for filtering purposes for traits recorded at the family or genus level. This information can be used for trait inference of higher taxonomic resolution using hierarchical probabilistic matrix factorization (Shan et al 2012, Schrodt et al 2015).
+To enable compatibility across datasets, conventions on trait definitions and taxon names are inevitable. We consider the fact that most authors have their own schemes for standardisation and may contribute to different communities by allowing for a double record of both user-specific and standardised entries (as practiced in TRY, -@kattge11 ). This dupliation of data enables continuity on the author and data owner side and quality checking and comparability on the data user side. Taxonomic standardisation, with respect to ongoing renamings and refinemenets, is a challenging issue in its own right. We propose to add a second set of columns that contain standardized entries of the taxon name (`scientificNameStd`) that maps synonyms to an accepted species name according to a published taxonomic ontology (e.g. GBIF Backbone Terminology) and links to it using a globally unique identifier (`taxonID`). The field `taxonID` therefore should contain a globally accessible URI that maps to the precise taxon definition at the time of the description or measurement (e.g. for *Bellis perennis*, the taxonID would be  'https://www.gbif.org/species/3117424') . 
+Keeping an additional reference to a kingdom and class (using field `kingdom` or `class` as described by Darwin Core Standard) will avoid ambiguities with taxonomic homonyms. 
+Additionally, it is best practice to keep a record of the reported taxon rank (in column `taxonRank`) for filtering purposes for traits recorded at the family or genus level. This information can be used for trait inference of higher taxonomic resolution using hierarchical probabilistic matrix factorization [@schrodt15](Shan et al 2012, Schrodt et al 2015).
 
 *< relating data to trait definitions >*
 
 A similar approach to standardised trait names (`traitNameStd`) and harmonized reported values (`traitValueStd` and `traitUnitStd`) in compliance with published ontologies is advised. 
-Similar as for taxonID, the field  `traitID` should refer to globally unique identifiers (URI or DOI) of trait definitionsor a measurement methodology. 
+Similar as for taxonID, the field  `traitID` should refer to globally unique identifiers (URI or DOI) of trait definitions or a measurement methodology. 
 
 <!-- The initiatives to standardise traits into consensus terminology are usually formed around a specific research question, methodology, or organism group and therefore vary in the traits that they consider important.  -->
 Resources for semantic ontologies exist for plant traits (e.g., TOP Plant Trait Ontology [@garnier17]), soil invertebrates (T-Sita, @ref), or biomedical traits of vertebrates (Vertebrate Trait Ontology [@park13]). However, for most organism groups and research contexts we attest a deficit of public ontologies with openly accessible URIs. 
@@ -313,7 +313,7 @@ For a detailed description on how to use the package see the package vignette (h
 In this paper, we propose a universal scheme for ecological trait data. 
 We also provide a toolbox in R to transfer data into this scheme. 
 
-We further encourage the development of trait definitions in semantic ontologies. The biggest challenge in community efforts of standardization of traits may be the investment in consensus building which leads to an acceptance and establishment of the standards. This effort is time consuming and lengthy, but is returns synergies and great scientific benefit by enabling a global synthesis, as the example of a global plant trait database TRY shows intricately [@diaz16]. 
+We further encourage the development of trait definitions in semantic ontologies. The biggest challenge in community efforts of standardization of traits may be the investment in consensus building which leads to an acceptance and establishment of the standards. This effort is time consuming and lengthy, but it returns synergies and great scientific benefit by enabling a global synthesis, as the example of a global plant trait database TRY shows intricately [@diaz16]. 
 
 These tools help to standardize trait datasets before upload to central as well as distributed data repositories and to harmonize and combine raw data from heterogeneous sources. We hope this aids research on the response of traits to environmental and anthropogenic drivers, synthesis on trait patterns on all ecological scales [@messier10], as well as multi-trophic trait analysis [@ref]. 
 
