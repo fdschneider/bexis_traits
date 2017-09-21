@@ -125,41 +125,46 @@ $(document).ready(function () {
 <div id="TOC">
 <ul>
 <li><a href="#core-traitdata-columns">Core traitdata columns</a><ul>
-<li><a href="#specimenid"><code>specimenID</code></a></li>
-<li><a href="#scientificname_user"><code>scientificName_user</code></a></li>
 <li><a href="#scientificname"><code>scientificName</code></a></li>
 <li><a href="#taxonid"><code>taxonID</code></a></li>
 <li><a href="#taxonrank"><code>taxonRank</code></a></li>
-<li><a href="#traitname_user"><code>traitName_user</code></a></li>
+<li><a href="#kingdom"><code>kingdom</code></a></li>
 <li><a href="#traitname"><code>traitName</code></a></li>
 <li><a href="#traitid"><code>traitID</code></a></li>
-<li><a href="#measurementvalue_user"><code>measurementValue_user</code></a></li>
-<li><a href="#measurementunit_user"><code>measurementUnit_user</code></a></li>
-<li><a href="#measurementvalue"><code>measurementValue</code></a></li>
-<li><a href="#measurementunit"><code>measurementUnit</code></a></li>
-<li><a href="#basisofrecord"><code>basisOfRecord</code></a></li>
-<li><a href="#basisofrecorddescription"><code>basisOfRecordDescription</code></a></li>
+<li><a href="#traitvalue"><code>traitValue</code></a></li>
+<li><a href="#traitunit"><code>traitUnit</code></a></li>
+<li><a href="#scientificnamestd"><code>scientificNameStd</code></a></li>
+<li><a href="#traitnamestd"><code>traitNameStd</code></a></li>
+<li><a href="#traitvaluestd"><code>traitValueStd</code></a></li>
+<li><a href="#traitunitstd"><code>traitUnitStd</code></a></li>
 <li><a href="#measurementid"><code>measurementID</code></a></li>
-<li><a href="#measurementid_user"><code>measurementID_user</code></a></li>
+<li><a href="#occurenceid"><code>occurenceID</code></a></li>
 <li><a href="#warnings"><code>warnings</code></a></li>
 </ul></li>
-<li><a href="#columns-referring-to-measurement-or-fact">Columns referring to Measurement or Fact</a><ul>
+<li><a href="#extension-measurement-or-fact">Extension: Measurement or Fact</a><ul>
+<li><a href="#basisofrecord"><code>basisOfRecord</code></a></li>
+<li><a href="#basisofrecorddescription"><code>basisOfRecordDescription</code></a></li>
 <li><a href="#references"><code>references</code></a></li>
 <li><a href="#measurementresolution"><code>measurementResolution</code></a></li>
-<li><a href="#preparations"><code>preparations</code></a></li>
 <li><a href="#measurementmethod"><code>measurementMethod</code></a></li>
 <li><a href="#measurementdeterminedby"><code>measurementDeterminedBy</code></a></li>
 <li><a href="#measurementdetermineddate"><code>measurementDeterminedDate</code></a></li>
 <li><a href="#measurementremarks"><code>measurementRemarks</code></a></li>
+<li><a href="#aggregatemeasure"><code>aggregateMeasure</code></a></li>
+<li><a href="#individualcount"><code>individualCount</code></a></li>
+<li><a href="#dispersion"><code>dispersion</code></a></li>
+<li><a href="#measurementvalue_min"><code>measurementValue_min</code></a></li>
+<li><a href="#measurementvalue_max"><code>measurementValue_max</code></a></li>
+<li><a href="#measurementaccuracy"><code>measurementAccuracy</code></a></li>
+<li><a href="#statisticalmethod"><code>statisticalMethod</code></a></li>
 </ul></li>
-<li><a href="#columns-referring-to-specimen">Columns referring to specimen</a><ul>
+<li><a href="#extension-occurence">Extension: Occurence</a><ul>
 <li><a href="#sex"><code>sex</code></a></li>
 <li><a href="#lifestage"><code>lifeStage</code></a></li>
 <li><a href="#age"><code>age</code></a></li>
 <li><a href="#morphotype"><code>morphotype</code></a></li>
-</ul></li>
-<li><a href="#columns-referring-to-sampling-event-or-origin-of-record">Columns referring to sampling event or origin of record</a><ul>
 <li><a href="#eventid"><code>eventID</code></a></li>
+<li><a href="#preparations"><code>preparations</code></a></li>
 <li><a href="#samplingprotocol"><code>samplingProtocol</code></a></li>
 <li><a href="#year"><code>year</code></a></li>
 <li><a href="#month"><code>month</code></a></li>
@@ -174,17 +179,9 @@ $(document).ready(function () {
 <li><a href="#verbatimlocality"><code>verbatimLocality</code></a></li>
 <li><a href="#country"><code>country</code></a></li>
 <li><a href="#countrycode"><code>countryCode</code></a></li>
+<li><a href="#occurenceremarks"><code>occurenceRemarks</code></a></li>
 </ul></li>
-<li><a href="#columns-for-aggregate-measures">Columns for aggregate measures</a><ul>
-<li><a href="#aggregatemeasure"><code>aggregateMeasure</code></a></li>
-<li><a href="#individualcount"><code>individualCount</code></a></li>
-<li><a href="#dispersion"><code>dispersion</code></a></li>
-<li><a href="#measurementvalue_min"><code>measurementValue_min</code></a></li>
-<li><a href="#measurementvalue_max"><code>measurementValue_max</code></a></li>
-<li><a href="#measurementaccuracy"><code>measurementAccuracy</code></a></li>
-<li><a href="#statisticalmethod"><code>statisticalMethod</code></a></li>
-</ul></li>
-<li><a href="#additional-columns-for-use-in-biodiversity-exploratories">Additional columns for use in Biodiversity Exploratories</a><ul>
+<li><a href="#extension-biodiversity-exploratories">Extension: Biodiversity Exploratories</a><ul>
 <li><a href="#originexploratories"><code>OriginExploratories</code></a></li>
 <li><a href="#exploratoriesplotid"><code>ExploratoriesPlotID</code></a></li>
 <li><a href="#exploratory"><code>Exploratory</code></a></li>
@@ -197,126 +194,52 @@ $(document).ready(function () {
 <li><a href="#datasetid"><code>datasetID</code></a></li>
 <li><a href="#datasetname"><code>datasetName</code></a></li>
 </ul></li>
+<li><a href="#terms-for-traitlists-a-trait-thesaurus">Terms for Traitlists (a ‘Trait Thesaurus’)</a><ul>
+<li><a href="#valuetype"><code>valueType</code></a></li>
+<li><a href="#factorlevels"><code>FactorLevels</code></a></li>
+<li><a href="#maxallowedvalue"><code>MaxAllowedValue</code></a></li>
+<li><a href="#minallowedvalue"><code>MinAllowedValue</code></a></li>
+<li><a href="#measurementtypedescription"><code>MeasurementTypeDescription</code></a></li>
+<li><a href="#comments"><code>Comments</code></a></li>
+</ul></li>
 </ul>
 </div>
 
-<p><strong>This is the documentation of the Ecological Traitdata Standard (ETS), version 0.2</strong> This defined vocabulary aims at providing all essential columns for raw data of functional trait measurements for ecological research.</p>
-<p>The column names are partly aligning with names from Darwin Core Standard and Extensions (Names compliant with DWC are referenced thus; the full Darwin Core can be found here: <a href="http://rs.tdwg.org/dwc/terms/index.htm" class="uri">http://rs.tdwg.org/dwc/terms/index.htm</a>)</p>
-<p>The template is ordered into six different sections, as well as a vocabulary for metadata information of particular importance for trait data.</p>
-<ol style="list-style-type: decimal">
-<li>Trait measurement data</li>
-<li>Information about the Measurement or Fact</li>
-<li>Resolution of data / information on specimen</li>
-<li>Columns referring to sampling event or origin of record</li>
-<li>Columns for aggregate measures</li>
-<li>Location information</li>
-</ol>
-<p>Except for the first section, all columns are optional. Only the mandatory fields are required to produce valid trait-datasets. Some mandatory fields will be assisted by the R-Script. The columns labelled ‘highly recommended’ serve a better comparability of data across datasets.</p>
-<p>This list will also be available as</p>
+<p><strong>This is the documentation of the Ecological Traitdata Standard (ETS), version 0.3</strong></p>
+<p>This defined vocabulary aims at providing all essential columns for raw data of functional trait measurements for ecological research. Most terms relate to terms from the Darwin Core Standard and it’s Extensions (terms of DWC are referenced thus in field ‘Refines’; the full Darwin Core Standard can be found here: <a href="http://rs.tdwg.org/dwc/terms/index.htm" class="uri">http://rs.tdwg.org/dwc/terms/index.htm</a>)</p>
+<p>The glossary of terms is ordered into a <strong>core section</strong> with essential columns for trait data, extensions which are allowing to provide additional layers of information, as well as a vocabulary for metadata information of particular importance for trait data. A final section provides defined terms for lists of trait definitions, also termed a Trait Thesaurus.</p>
+<p><strong>Extensions:</strong></p>
+<ul>
+<li>the <code>Occurence</code> extension contains information on the level of individual specimens, such as date and location and method of sampling and preservation, or physiological specifications of the phenotype, such as sex, life stage or age.</li>
+<li>the <code>MeasurementOrFact</code> extension takes information at the level of single measurements or reported values, such as the original literature from where the value is cited, the method of measurement or statistical method of aggregation.</li>
+<li>The extension <code>BiodiversityExploratories</code> provides columns for localisation for trait data from the Biodiversity Exploratories sites (ww.biodiversity-exploratories.de).</li>
+</ul>
+<p>**Structure of trait <a href="data:**" class="uri">data:**</a></p>
+<p>The traitdata standard requires data to be stored in a long table format containing one measurement per row described by the column terms provided in the core section. (see Whitepaper for further considerations)</p>
+<p>There are two ways of integrating the extensions:</p>
+<ul>
+<li><strong>within the same data file</strong>: additional columns are provided to describe the properties concerning the measurement or the occurence of the specimen. The output file may be stored as a csv or txt table or an excel spreadsheet.<br />
+</li>
+<li><strong>in separate data files</strong>: the main file refers to additional data files in the fields <code>measurementID</code> or <code>occurenceID</code>. This is usually the case if the occurences are externally documented, for instance as specimens from a museum. This also applies if the data are stored as an Excel spreadsheet or as a Darwin Core Archive (as proposed for TraitBank).</li>
+</ul>
+<p>This list of terms will also be available as</p>
 <ul>
 <li>a csv/txt/xlsx table file which will be provided for download on BExIS including full documentation in the metadata (for manual use, this may be uploaded to BExIs as soon it’s ready), and</li>
 <li>a machine readable template glossary (xml file or csv with additional flags and markers) which serves as input reference for software tools. (can we provide a simple API?)</li>
 </ul>
-<pre><code>## Warning: package 'knitr' was built under R version 3.2.5</code></pre>
 <div id="core-traitdata-columns" class="section level1">
 <h1>Core traitdata columns</h1>
-<p>Generally, for the essential primary data (species name, trait name, trait value), the trait standard recommends to keep the original naming and value of the data provider to ensure compatibility on the provider’s side and to check for inconsistencies and misspellings. The original data provider’s information is indexed by appending <code>_user</code> to the column name. The R script helps in transferring those entries into the accepted names and factor levels provided by the lookup tables.</p>
-<div id="specimenid" class="section level2">
-<h2><code>specimenID</code></h2>
-<table>
-<colgroup>
-<col width="3%"></col>
-<col width="96%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">specimenID</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">A character string of the author code or museum ID referring to the individual specimen from which the data were measured</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">. This is important for the analysis of co-variation of morphometric data. This should couple measurements on a single specimen, which also could be a leaf or a single bone without an assignment to an individual organism. If available, upload related dataset to describe specimens more precisely, e.g. environmental parameters or identity related information. May map to DWC OccurenceID (<a href="http://rs.tdwg.org/dwc/terms/occurrenceID" class="uri">http://rs.tdwg.org/dwc/terms/occurrenceID</a>)</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="scientificname_user" class="section level2">
-<h2><code>scientificName_user</code></h2>
-<table>
-<colgroup>
-<col width="12%"></col>
-<col width="87%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">scientificName_user</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">TRUE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">Original character string provided as species name by the data owner (kept for reference only)</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-</div>
+<p>For the essential primary data (trait value, taxon assignment, trait name), the trait data standard recommends to report the original naming and value scheme as used by the data provider. However, to ensure compatibility with other datasets, the original data provider’s information should be doubled into standardized columns indexed by appending <code>Std</code> to the column name. This ensures compatibility on the provider’s side and transparency for data users on the reported measurements and facts, and enables checking for inconsistencies and misspellings in the complete dataset provided by the author. If provided, the standardized fields allow merging heterogeneous data sources into a single table to perform further analyses. This practice of double bookkeeping of trait data has successfully established for the TRY database on plant traits, for instance (Kattge ..).</p>
+<p>The R package ‘traitdataform’ (<a href="https://fdschneider.github.com/traitdataform" class="uri">https://fdschneider.github.com/traitdataform</a>) provides tools to transfer heterogeneous datasets into a longtable format and to create standardized taxa and trait columns, based on public ontologies.</p>
+<p>By linking to (public) ontologies via the field <code>taxonID</code>, further taxonomic information can be extracted for analysis. Alternatively, <code>taxonID</code> may also link to an accompanying datasheet that contains information on the taxonomic resolution or specification of the observation.</p>
+<p>Similarly, linking to trait terminologies (a ‘Thesaurus’) via the field <code>traitID</code> allows an unambiguous interpretation of the trait measurement. If no online ontology is available, an accompanying dataset should specify the trait definition. For setting up such a Thesaurus, we propose the use of terms provided in section ‘Traitlist’ below.</p>
 <div id="scientificname" class="section level2">
 <h2><code>scientificName</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#scientificname">direct link</a></p>
 <table>
 <colgroup>
-<col width="2%"></col>
-<col width="97%"></col>
+<col width="10%"></col>
+<col width="89%"></col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -326,38 +249,51 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/scientificName" class="uri">http://rs.tdwg.org/dwc/terms/scientificName</a></td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#scientificname" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#scientificname</a></td>
 </tr>
 <tr class="even">
-<td align="left">Definition</td>
-<td align="left">Full scientific name (with authorship and date information if known). It should be an accepted taxon name according to a published taxonomy (provided in taxonID).</td>
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/scientificName" class="uri">http://rs.tdwg.org/dwc/terms/scientificName</a></td>
 </tr>
 <tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Original character string provided as species name by the data owner (kept for reference only)</td>
+</tr>
+<tr class="even">
 <td align="left">Comment</td>
-<td align="left">Provide reference taxonomy in metadata of the dataset. Examples: “Coleoptera” (order), “Vespertilionidae” (family), “Manis” (genus), “Ctenomys sociabilis” (genus + specificEpithet), “Ambystoma tigrinum diaboli” (genus + specificEpithet + infraspecificEpithet), “Roptrocerus typographi (Györfi, 1952)” (genus + specificEpithet + scientificNameAuthorship), “Quercus agrifolia var. oxyadenia (Torr.) J.T. Howell” (genus + specificEpithet + taxonRank + infraspecificEpithet + scientificNameAuthorship). For discussion see <a href="http://terms.tdwg.org/wiki/dwc:scientificName" class="uri">http://terms.tdwg.org/wiki/dwc:scientificName</a></td>
+<td align="left">Can be equal to scientificName. Authors may use abbreviations, or use underscores to separate genus and species name.</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="taxonid" class="section level2">
 <h2><code>taxonID</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonid">direct link</a></p>
 <table>
 <colgroup>
 <col width="5%"></col>
@@ -371,30 +307,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/taxonID" class="uri">http://rs.tdwg.org/dwc/terms/taxonID</a></td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonid" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonid</a></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/taxonID" class="uri">http://rs.tdwg.org/dwc/terms/taxonID</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">Verified name identifier of the species or subspecies (or higher taxon) for which this value was collected. Each entry should linkt to a published reference species list/taxonomy. Avoid synonyms.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">Examples: “GBIF Backbone Taxonomy:497924”, “8fa58e08-08de-4ac1-b69c-1235340b7001”, “32567”, “<a href="http://species.gbif.org/abies_alba_1753" class="uri">http://species.gbif.org/abies_alba_1753</a>”, “<a href="urn:lsid:gbif.org:usages:32567" class="uri">urn:lsid:gbif.org:usages:32567</a>”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:taxonID" class="uri">http://terms.tdwg.org/wiki/dwc:taxonID</a></td>
 </tr>
@@ -403,6 +351,7 @@ $(document).ready(function () {
 </div>
 <div id="taxonrank" class="section level2">
 <h2><code>taxonRank</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonrank">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="3%"></col>
@@ -416,38 +365,51 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left">domain, kingdom, subkingdom, superhpylum, phylum, subphylum, superclass, class, subclass, supercohort, cohort, subcohort, superorder, order, subordern, infraorder, superfamily, family, subfamily, tribe, subtribe, genus, subgenus, section, subsection, series, subseries, speciesAggregate, species, subspecificAggregate, subspecies, variety, cultivar, strain</td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left">domain; kingdom; subkingdom; superhpylum; phylum; subphylum; superclass; class; subclass; supercohort; cohort; subcohort; superorder; order; subordern; infraorder; superfamily; family; subfamily; tribe; subtribe; genus; subgenus; section; subsection; series; subseries; speciesAggregate; species; subspecificAggregate; subspecies; variety; cultivar; strain</td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/taxonRank" class="uri">http://rs.tdwg.org/dwc/terms/taxonRank</a></td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonrank" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonrank</a></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/taxonRank" class="uri">http://rs.tdwg.org/dwc/terms/taxonRank</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">The taxonomic rank of the most specific name in the scientificName. Recommended best practice is to use a controlled vocabulary.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">This is to clarify cases where information is not given on a species level. Examples: “subspecies”, “varietas”, “forma”, “species”, “genus”.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="traitname_user" class="section level2">
-<h2><code>traitName_user</code></h2>
+<div id="kingdom" class="section level2">
+<h2><code>kingdom</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#kingdom">direct link</a></p>
 <table>
 <colgroup>
 <col width="13%"></col>
@@ -456,47 +418,60 @@ $(document).ready(function () {
 <thead>
 <tr class="header">
 <th align="left"></th>
-<th align="left">traitName_user</th>
+<th align="left">kingdom</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">TRUE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
-<td align="left">character</td>
+<td align="left">factor</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"></td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#kingdom" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#kingdom</a></td>
 </tr>
 <tr class="even">
-<td align="left">Definition</td>
-<td align="left">Name of the trait as used by the data provider (kept for compatibility on provider side)</td>
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/kingdom" class="uri">http://rs.tdwg.org/dwc/terms/kingdom</a></td>
 </tr>
 <tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The full scientific name of the kingdom in which the taxon is classified.</td>
+</tr>
+<tr class="even">
 <td align="left">Comment</td>
-<td align="left"></td>
+<td align="left">Examples: “Animalia”, “Plantae”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:kingdom" class="uri">http://terms.tdwg.org/wiki/dwc:kingdom</a></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="traitname" class="section level2">
 <h2><code>traitName</code></h2>
-<table>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitname">direct link</a></p>
+<table style="width:100%;">
 <colgroup>
-<col width="11%"></col>
-<col width="88%"></col>
+<col width="8%"></col>
+<col width="91%"></col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -506,42 +481,55 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
-<td align="left">factor</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"></td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitname" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#traitname</a></td>
 </tr>
 <tr class="even">
-<td align="left">Definition</td>
-<td align="left">Name of the trait following the thesaurus of traits available online or published along with the dataset.</td>
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementType" class="uri">http://rs.tdwg.org/dwc/terms/measurementType</a></td>
 </tr>
 <tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Name of the trait as used by the data provider (kept for compatibility on provider side).</td>
+</tr>
+<tr class="even">
 <td align="left">Comment</td>
-<td align="left">This may map to DWC measurementType (<a href="http://rs.tdwg.org/dwc/terms/measurementType" class="uri">http://rs.tdwg.org/dwc/terms/measurementType</a>).</td>
+<td align="left">This can be a short name or user defined coded trait name. However, it is recommended to provide definition of the user provided trait names in the metadata.</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="traitid" class="section level2">
 <h2><code>traitID</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitid">direct link</a></p>
 <table>
 <colgroup>
-<col width="11%"></col>
-<col width="88%"></col>
+<col width="14%"></col>
+<col width="85%"></col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -551,38 +539,51 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left">see traitlist</td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left">see traitlist</td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"></td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitid" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#traitid</a></td>
 </tr>
 <tr class="even">
-<td align="left">Definition</td>
-<td align="left">Unique identifier of the trait following the thesaurus of traits available on BExIS, An value of format A1</td>
+<td align="left">Refines</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Unique identifier of the trait following the thesaurus of traits available on BExIS</td>
+</tr>
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left"></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="measurementvalue_user" class="section level2">
-<h2><code>measurementValue_user</code></h2>
+<div id="traitvalue" class="section level2">
+<h2><code>traitValue</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitvalue">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="6%"></col>
@@ -591,43 +592,56 @@ $(document).ready(function () {
 <thead>
 <tr class="header">
 <th align="left"></th>
-<th align="left">measurementValue_user</th>
+<th align="left">traitValue</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">TRUE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
-<tr class="odd">
-<td align="left">Identifier</td>
+<tr class="even">
+<td align="left">vocabulary</td>
 <td align="left"></td>
 </tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitvalue" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#traitvalue</a></td>
+</tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementValue" class="uri">http://rs.tdwg.org/dwc/terms/measurementValue</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">Measured raw value or factor level for this species trait as measured and provided by the author.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">Must respect the unit given in ‘measurementUnit_user’ for numerical traits. For categorical traits, the factor levels should be harmonized across the dataset and explained in the metadata.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="measurementunit_user" class="section level2">
-<h2><code>measurementUnit_user</code></h2>
+<div id="traitunit" class="section level2">
+<h2><code>traitUnit</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitunit">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="7%"></col>
@@ -636,43 +650,172 @@ $(document).ready(function () {
 <thead>
 <tr class="header">
 <th align="left"></th>
-<th align="left">measurementUnit_user</th>
+<th align="left">traitUnit</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">TRUE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
-<tr class="odd">
-<td align="left">Identifier</td>
+<tr class="even">
+<td align="left">vocabulary</td>
 <td align="left"></td>
 </tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitunit" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#traitunit</a></td>
+</tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementUnit" class="uri">http://rs.tdwg.org/dwc/terms/measurementUnit</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">Reports the unit that the author’s raw data were measured in, if applicable (only for numeric values).</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">For numerical values report unit in format for lengths “mm”, for volumes “mm3” / “mm^3”, areas “mm2” / “mm^2”, for movement “m/s”, or for volume to surface ratios: “mm3/mm2”</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="measurementvalue" class="section level2">
-<h2><code>measurementValue</code></h2>
+<div id="scientificnamestd" class="section level2">
+<h2><code>scientificNameStd</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#scientificnamestd">direct link</a></p>
+<table>
+<colgroup>
+<col width="2%"></col>
+<col width="97%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">scientificNameStd</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#scientificnamestd" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#scientificnamestd</a></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/scientificName" class="uri">http://rs.tdwg.org/dwc/terms/scientificName</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Full scientific name (with authorship and date information if known). It should be an accepted taxon name according to a published taxonomy (provided in taxonID).</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Provide reference taxonomy in metadata of the dataset. Examples: “Coleoptera” (order), “Vespertilionidae” (family), “Manis” (genus), “Ctenomys sociabilis” (genus + specificEpithet), “Ambystoma tigrinum diaboli” (genus + specificEpithet + infraspecificEpithet), “Roptrocerus typographi (Györfi, 1952)” (genus + specificEpithet + scientificNameAuthorship), “Quercus agrifolia var. oxyadenia (Torr.) J.T. Howell” (genus + specificEpithet + taxonRank + infraspecificEpithet + scientificNameAuthorship). For discussion see <a href="http://terms.tdwg.org/wiki/dwc:scientificName" class="uri">http://terms.tdwg.org/wiki/dwc:scientificName</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="traitnamestd" class="section level2">
+<h2><code>traitNameStd</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitnamestd">direct link</a></p>
+<table>
+<colgroup>
+<col width="7%"></col>
+<col width="92%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">traitNameStd</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">factor</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitnamestd" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#traitnamestd</a></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementType" class="uri">http://rs.tdwg.org/dwc/terms/measurementType</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Descriptive Name of the trait reported. This should follow the controlled vocabulary of a thesaurus of traits available online or published along with the dataset.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Accompanying this, the traitID should provide an unambiguous link to the trait definition in the thesaurus or supplementary dataset.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="traitvaluestd" class="section level2">
+<h2><code>traitValueStd</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitvaluestd">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="6%"></col>
@@ -681,43 +824,56 @@ $(document).ready(function () {
 <thead>
 <tr class="header">
 <th align="left"></th>
-<th align="left">measurementValue</th>
+<th align="left">traitValueStd</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">TRUE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementValue" class="uri">http://rs.tdwg.org/dwc/terms/measurementValue</a></td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitvaluestd" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#traitvaluestd</a></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementValue" class="uri">http://rs.tdwg.org/dwc/terms/measurementValue</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">Standardised measured value or factor level for this species trait. Numerical values must use the correct unit. Factor levels must be compliant with the thesaurus of traits.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">Using “.” as a decimal separator! The standardized data values or factor levels must correspond to the expected units and factor levels of the trait thesaurus, e.g. “32.423”, “female”, “apter”, “3”</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="measurementunit" class="section level2">
-<h2><code>measurementUnit</code></h2>
+<div id="traitunitstd" class="section level2">
+<h2><code>traitUnitStd</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitunitstd">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="7%"></col>
@@ -726,137 +882,60 @@ $(document).ready(function () {
 <thead>
 <tr class="header">
 <th align="left"></th>
-<th align="left">measurementUnit</th>
+<th align="left">traitUnitStd</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementUnit" class="uri">http://rs.tdwg.org/dwc/terms/measurementUnit</a></td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#traitunitstd" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#traitunitstd</a></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementUnit" class="uri">http://rs.tdwg.org/dwc/terms/measurementUnit</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">The units associated with the measurementValue. The expected standard unit for this trait as defined in the traitlist/ thesaurus.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">Recommended best practice is to use the International System of Units (SI). Examples: “mm”, “C”, “km”, “ha”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:measurementUnit" class="uri">http://terms.tdwg.org/wiki/dwc:measurementUnit</a></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="basisofrecord" class="section level2">
-<h2><code>basisOfRecord</code></h2>
-<table>
-<colgroup>
-<col width="4%"></col>
-<col width="95%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">basisOfRecord</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">TRUE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left">LivingSpecimen, PreservedSpecimen, FossilSpecimen, literatureData, traitDatabase, expertKnowledge</td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">factor</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/basisOfRecord" class="uri">http://rs.tdwg.org/dwc/terms/basisOfRecord</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">How and from which kind of speciment were the data obtained? Options are: Taken by own measurement (distinguish LivingSpecimen, PreservedSpecimen, FossilSpecimen) or taken from literature (literatureData), from an existing trait database (traitDatabase), or expert knowledge (expertKnowledge).</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="basisofrecorddescription" class="section level2">
-<h2><code>basisOfRecordDescription</code></h2>
-<table>
-<colgroup>
-<col width="4%"></col>
-<col width="95%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">basisOfRecordDescription</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">Adding more detail to the basisOfRecord. If life specimens were sampled, where did they come from? Have they been reared in cultivation? If literature data, provide type of literature, e.g. textbook, website, database, etc. If preserved specimens were used, which method of pre</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-</div>
 <div id="measurementid" class="section level2">
 <h2><code>measurementID</code></h2>
-<table style="width:100%;">
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementid">direct link</a></p>
+<table>
 <colgroup>
-<col width="4%"></col>
-<col width="95%"></col>
+<col width="3%"></col>
+<col width="96%"></col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -866,38 +945,51 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementID" class="uri">http://rs.tdwg.org/dwc/terms/measurementID</a></td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementid" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementid</a></td>
 </tr>
 <tr class="even">
-<td align="left">Definition</td>
-<td align="left">An auto-generated unique identifier for each entry of data compiled as a MD5 hash from the following columns ‘specimenID’, ‘measurementValue_user’, ‘scientificName_user’, ‘traitName_user’, ‘basisOfRecord’, as well as the fields from class ‘specimen’ and ‘location’.</td>
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementID" class="uri">http://rs.tdwg.org/dwc/terms/measurementID</a></td>
 </tr>
 <tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">A unique, dataset-specific identifier. Links multi-value trait measurements, e.g. x-y-z coordinates of a morphometric landmark, biochemical compound quantities for different chainlengths. In this case, the trait names must specifiy the sub-measurement, e.g. “landmark32_x”, and must be specified in a reference trait list, given in the field “measurementMethod”.</td>
+</tr>
+<tr class="even">
 <td align="left">Comment</td>
-<td align="left">This allows a row-wise comparison of data from different versions and sources and an elimination of duplicates.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="measurementid_user" class="section level2">
-<h2><code>measurementID_user</code></h2>
+<div id="occurenceid" class="section level2">
+<h2><code>occurenceID</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#occurenceid">direct link</a></p>
 <table>
 <colgroup>
 <col width="3%"></col>
@@ -906,43 +998,56 @@ $(document).ready(function () {
 <thead>
 <tr class="header">
 <th align="left"></th>
-<th align="left">measurementID_user</th>
+<th align="left">occurenceID</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"></td>
+<td align="left"><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#occurenceid" class="uri">http://fdschneider.de/bexis_traits/traitdatastandard.html#occurenceid</a></td>
 </tr>
 <tr class="even">
-<td align="left">Definition</td>
-<td align="left">A unique, dataset-specific identifier. Links multi-value trait measurements, e.g. x-y-z coordinates of a morphometric landmark, biochemical compound quantities for different chainlengths. In this case, the trait names must specifiy the sub-measurement, e.g. “landmark32_x”, and must be specified in a reference trait list, given in the field “measurementMethod”.</td>
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/occurrenceID" class="uri">http://rs.tdwg.org/dwc/terms/occurrenceID</a></td>
 </tr>
 <tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">A character string user defined by the data author. It is recommended best practice to use a globally unique identifier, if available, e.g. a museum ID referring to the individual specimen from which the data were measured. usually does not apply for literature data.</td>
+</tr>
+<tr class="even">
 <td align="left">Comment</td>
-<td align="left"></td>
+<td align="left">This is important for the analysis of co-variation of morphometric data or intraspecific variation. It may also couples multiple measurements on a single specimen, which also could be a leaf or a single bone without an assignment to an individual organism. If available, upload related dataset to describe specimens more precisely, e.g. environmental parameters or identity related information.</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="warnings" class="section level2">
 <h2><code>warnings</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#warnings">direct link</a></p>
 <table>
 <colgroup>
 <col width="4%"></col>
@@ -956,30 +1061,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">warnings from the R-script will be stored here, e.g. ragarding a lack of match between the provided taxonID and the ontology, or the trait names or values, a mismatch in the units provided and the unit expected according to the trait table. User defined warnings and flags can be added as well, e.g. ‘NOTUSE’.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left"></td>
 </tr>
@@ -987,11 +1104,129 @@ $(document).ready(function () {
 </table>
 </div>
 </div>
-<div id="columns-referring-to-measurement-or-fact" class="section level1">
-<h1>Columns referring to Measurement or Fact</h1>
-<p>This section provides additional information about the specimen, which are not captured by the taxon information above.</p>
+<div id="extension-measurement-or-fact" class="section level1">
+<h1>Extension: Measurement or Fact</h1>
+<p>This section provides additional information about a reported measurement or fact and in most cases can easily be included as extra columns to the core dataset. The columns would contain detail on the methodology of measuring and reporting of aggregated data.</p>
+<p>In case of facts reported from literature or from expert knowledge, or cited from other databases, please include bibliographic citation of the original data source in field ‘references’.</p>
+<div id="basisofrecord" class="section level2">
+<h2><code>basisOfRecord</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#basisofrecord">direct link</a></p>
+<table style="width:100%;">
+<colgroup>
+<col width="5%"></col>
+<col width="94%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">basisOfRecord</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">factor</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left">LivingSpecimen; PreservedSpecimen; FossilSpecimen; literatureData; traitDatabase; expertKnowledge</td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/basisOfRecord" class="uri">http://rs.tdwg.org/dwc/terms/basisOfRecord</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">How and from which kind of specimen were the data obtained? Use of the controlled vocabulary is recommended.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Options are: Taken by own measurement (distinguish LivingSpecimen, PreservedSpecimen, FossilSpecimen) or taken from literature (literatureData), from an existing trait database (traitDatabase), or expert knowledge (expertKnowledge).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="basisofrecorddescription" class="section level2">
+<h2><code>basisOfRecordDescription</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#basisofrecorddescription">direct link</a></p>
+<table>
+<colgroup>
+<col width="4%"></col>
+<col width="95%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">basisOfRecordDescription</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Adding more detail to the basisOfRecord.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">If life specimens were sampled, where did they come from? Have they been reared in cultivation? If literature data or online database, provide type of literature, e.g. textbook, website, URL, etc. If preserved specimens were used, which method of preservation? In case of expert knowledge, give the name of the authority.</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="references" class="section level2">
 <h2><code>references</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#references">direct link</a></p>
 <table>
 <colgroup>
 <col width="4%"></col>
@@ -1005,30 +1240,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://purl.org/dc/terms/references" class="uri">http://purl.org/dc/terms/references</a></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://purl.org/dc/terms/references" class="uri">http://purl.org/dc/terms/references</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">Precise reference to the source. If literature data, this should quote the book or online database. If museum this should report the name of the collection. If expert knowledge, this should name the authority. If trait database, provide reference to the original publication, DOI or URL of the trait-database.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">Examples: “<a href="http://mvzarctos.berkeley.edu/guid/MVZ:Mamm:165861" class="uri">http://mvzarctos.berkeley.edu/guid/MVZ:Mamm:165861</a>”; “<a href="http://www.catalogueoflife.org/annual-checklist/show_species_details.php?record_id=6197868" class="uri">http://www.catalogueoflife.org/annual-checklist/show_species_details.php?record_id=6197868</a>”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:references" class="uri">http://terms.tdwg.org/wiki/dwc:references</a></td>
 </tr>
@@ -1037,6 +1284,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementresolution" class="section level2">
 <h2><code>measurementResolution</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementresolution">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="5%"></col>
@@ -1050,83 +1298,51 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">If the trait information was originally given on another taxonomic level than species. Applies mainly for literature and expert knowledge data. not applying for measured data. The hierarchical level to which the trait data would refer.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">For example, information given in literature could state ‘most species in this genus are winged’, but the trait data could be given for each species in this genus.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="preparations" class="section level2">
-<h2><code>preparations</code></h2>
-<table>
-<colgroup>
-<col width="4%"></col>
-<col width="95%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">preparations</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/preparations" class="uri">http://rs.tdwg.org/dwc/terms/preparations</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">For preserved specimens, a list (concatenated and separated) of preparations and preservation methods for a specimen.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">The recommended best practice is to separate the values with a vertical bar (‘|’). Examples: “fossil”, “cast”, “photograph”, “DNA extract”, “skin |”skull | skeleton“,”whole animal (ETOH) | tissue (EDTA)“. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:preparations" class="uri">http://terms.tdwg.org/wiki/dwc:preparations</a></td>
-</tr>
-</tbody>
-</table>
-</div>
 <div id="measurementmethod" class="section level2">
 <h2><code>measurementMethod</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementmethod">direct link</a></p>
 <table>
 <colgroup>
 <col width="2%"></col>
@@ -1140,30 +1356,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementMethod" class="uri">http://rs.tdwg.org/dwc/terms/measurementMethod</a></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementMethod" class="uri">http://rs.tdwg.org/dwc/terms/measurementMethod</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">Applies primarily to measured data. The method, tools and scales used to measure a (numerical) trait value. A description of or reference to (publication, URI) the method or protocol used to determine the measurement, fact, characteristic, or assertion.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">Should be a concise and standardised text entry or reference (publication, URI), referring to a particular method (e.g. ‘direct weighing’, ‘length-mass regression’, ‘intertegular span’, ‘length between node X and y’ ) and measurement conditions (e.g. certain temperature or humidity, name of device or scale used for measurement). A more detailed description of the method or protocol used to determine the measurement, fact, characteristic, or assertion should be given in the metadata of the dataset.</td>
 </tr>
@@ -1172,6 +1400,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementdeterminedby" class="section level2">
 <h2><code>measurementDeterminedBy</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementdeterminedby">direct link</a></p>
 <table>
 <colgroup>
 <col width="5%"></col>
@@ -1185,30 +1414,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementDeterminedBy" class="uri">http://rs.tdwg.org/dwc/terms/measurementDeterminedBy</a></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementDeterminedBy" class="uri">http://rs.tdwg.org/dwc/terms/measurementDeterminedBy</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">A list (concatenated and separated) of names of people, groups, or organizations who determined the value of the measurement. Can be encoded by dataset-specific identifiers for reasons of privacy. This is kept as a co-factor for repeated measurements.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">The recommended best practice is to separate the values with a vertical bar (‘|’). Examples: “Rob Guralnick”, “Julie Woodruff | Eileen Lacey”.</td>
 </tr>
@@ -1217,6 +1458,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementdetermineddate" class="section level2">
 <h2><code>measurementDeterminedDate</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementdetermineddate">direct link</a></p>
 <table>
 <colgroup>
 <col width="2%"></col>
@@ -1230,30 +1472,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">Date</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementDeterminedDate" class="uri">http://rs.tdwg.org/dwc/terms/measurementDeterminedDate</a></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementDeterminedDate" class="uri">http://rs.tdwg.org/dwc/terms/measurementDeterminedDate</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">The date of the measurement. Also kept as a co-factor. Use format “YYYY-MM-DD hh:mm TIMEZONE”. Not to confuse with year, month, day columns which are reserved for the date of sampling (may be identical, though).</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">Examples: “1963-03-08T14:07-0600” is 8 Mar 1963 2:07pm in the time zone six hours earlier than UTC, “2009-02-20T08:40Z” is 20 Feb 2009 8:40am UTC, “1809-02-12” is 12 Feb 1809, “1906-06” is Jun 1906, “1971” is just that year, “2007-03-01T13:00:00Z/2008-05-11T15:30:00Z” is the interval between 1 Mar 2007 1pm UTC and 11 May 2008 3:30pm UTC, “2007-11-13/15” is the interval between 13 Nov 2007 and 15 Nov 2007. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:measurementDeterminedDate" class="uri">http://terms.tdwg.org/wiki/dwc:measurementDeterminedDate</a></td>
 </tr>
@@ -1262,6 +1516,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementremarks" class="section level2">
 <h2><code>measurementRemarks</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementremarks">direct link</a></p>
 <table>
 <colgroup>
 <col width="9%"></col>
@@ -1275,901 +1530,51 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementRemarks" class="uri">http://rs.tdwg.org/dwc/terms/measurementRemarks</a></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementRemarks" class="uri">http://rs.tdwg.org/dwc/terms/measurementRemarks</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">Remarks concerning a particular measurement, e.g. additional information on the quality and reliability, reference or acknowledgements.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">Any particularities about the individual measurement or specimen that might affect trait measuremnt, e.g. ‘last antenna segment missing’.</td>
 </tr>
 </tbody>
 </table>
 </div>
-</div>
-<div id="columns-referring-to-specimen" class="section level1">
-<h1>Columns referring to specimen</h1>
-<p>this section of columns aims for identifying the methodology and primary source of the data and keep the reference to the actual specimen (e.g. for museum collections or related data analysis).</p>
-<div id="sex" class="section level2">
-<h2><code>sex</code></h2>
-<table style="width:100%;">
-<colgroup>
-<col width="8%"></col>
-<col width="91%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">sex</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left">male, female, subadult, unknown, hermaphrodite</td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">factor</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/sex" class="uri">http://rs.tdwg.org/dwc/terms/sex</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">Defining the sex of the measured specimen, to capture dimorphisms. Standardised factor levels are: “male”, “female”, “subadult”, “unknown”, “hermaphrodite”</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="lifestage" class="section level2">
-<h2><code>lifeStage</code></h2>
-<table>
-<colgroup>
-<col width="5%"></col>
-<col width="94%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">lifeStage</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/lifeStage" class="uri">http://rs.tdwg.org/dwc/terms/lifeStage</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">The life stage of the measured specimen.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">Recommended factor levels are: seed, seedling, sapling, adult, egg, larval_instar_1, larval_instar_2, larval_instar_3, … , pupa; For very taxon-specific life stages, it is recommended to provide detailled explanation in the metadata of the dataset.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="age" class="section level2">
-<h2><code>age</code></h2>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">age</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">numeric</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">The age of the specimen in years.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">Example: “2”, “0.16”.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="morphotype" class="section level2">
-<h2><code>morphotype</code></h2>
-<table style="width:100%;">
-<colgroup>
-<col width="8%"></col>
-<col width="91%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">morphotype</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">The morphotype of the observed specimen.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">Examples: “worker”, “drone”, “queen”. Since morphotypes can differ between organism groups, provide definition of morphotypes in the metadata of the dataset.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="columns-referring-to-sampling-event-or-origin-of-record" class="section level1">
-<h1>Columns referring to sampling event or origin of record</h1>
-<p>this section of columns aims for identifying the methodology and primary source of the record and keep the reference to the actual specimen (e.g. for museum collections or related data analysis). It also provides columns for georeferencing the specimen.</p>
-<div id="eventid" class="section level2">
-<h2><code>eventID</code></h2>
-<table style="width:100%;">
-<colgroup>
-<col width="5%"></col>
-<col width="94%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">eventID</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">The sampling event or campaign. User specified character string. could link to another table that provides more information, e.g. environmental or temporal parameters, descriptions on methods etc.. should link to official Exploratories sampling campaigns.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="samplingprotocol" class="section level2">
-<h2><code>samplingProtocol</code></h2>
-<table>
-<colgroup>
-<col width="2%"></col>
-<col width="97%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">samplingProtocol</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/samplingProtocol" class="uri">http://rs.tdwg.org/dwc/terms/samplingProtocol</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">The name of, reference to, or description of the method or protocol used for obtaining the specimen.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">Examples: “UV light trap”, “mist net”, “bottom trawl”, “ad hoc observation”, “point count”, “Penguins from space: faecal stains reveal the location of emperor penguin colonies, <a href="http://dx.doi.org/10.1111/j.1466-8238.2009.00467.x" class="uri">http://dx.doi.org/10.1111/j.1466-8238.2009.00467.x</a>”, “Takats et al. 2001. Guidelines for Nocturnal Owl Monitoring in North America. Beaverhill Bird Observatory and Bird Studies Canada, Edmonton, Alberta. 32 pp.”, “<a href="http://www.bsc-eoc.org/download/Owl.pdf" class="uri">http://www.bsc-eoc.org/download/Owl.pdf</a>”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:samplingProtocol" class="uri">http://terms.tdwg.org/wiki/dwc:samplingProtocol</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="year" class="section level2">
-<h2><code>year</code></h2>
-<table>
-<colgroup>
-<col width="16%"></col>
-<col width="83%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">year</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">integer</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/year" class="uri">http://rs.tdwg.org/dwc/terms/year</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">The four-digit year, at which the specimens were extracted or sampled.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">Example: “2008”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:year" class="uri">http://terms.tdwg.org/wiki/dwc:year</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="month" class="section level2">
-<h2><code>month</code></h2>
-<table>
-<colgroup>
-<col width="12%"></col>
-<col width="87%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">month</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">integer</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/month" class="uri">http://rs.tdwg.org/dwc/terms/month</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">The ordinal month, in which the specimens were extracted or sampled.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">Examples: “1” (=January), “10” (=October). For discussion see <a href="http://terms.tdwg.org/wiki/dwc:month" class="uri">http://terms.tdwg.org/wiki/dwc:month</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="day" class="section level2">
-<h2><code>day</code></h2>
-<table>
-<colgroup>
-<col width="14%"></col>
-<col width="85%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">day</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">integer</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/day" class="uri">http://rs.tdwg.org/dwc/terms/day</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">The integer day of the month on which the specimens were extracted or sampled.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">Examples: “9”, “28”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:day" class="uri">http://terms.tdwg.org/wiki/dwc:day</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="eventdate" class="section level2">
-<h2><code>eventDate</code></h2>
-<table>
-<colgroup>
-<col width="4%"></col>
-<col width="95%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">eventDate</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">Date</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/eventDate" class="uri">http://rs.tdwg.org/dwc/terms/eventDate</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">Represents the date, at which the specimens were extracted or sampled. If providing eventDate, then enter format of type: YYYY-MM-DD hh:mm (fall back to 12:00 if no time is available).</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">For lower precision, use year, month and day field instead. Note: this is not to record the date when the specimens were measured (use measurementDeterminedDate for this). If applicable, at least provide a year. This is particularly important if the measurements were taken from specimens from the exploratories or museum specimens.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="locationid" class="section level2">
-<h2><code>locationID</code></h2>
-<table style="width:100%;">
-<colgroup>
-<col width="5%"></col>
-<col width="94%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">locationID</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">factor</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/locationID" class="uri">http://rs.tdwg.org/dwc/terms/locationID</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">A unique, dataset-specific identifier. Could report the subplot within the Exploratories, or the plot or replicate of a separate experimental setting. If further information is available, specify locationIDs in a separate dataset.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="habitat" class="section level2">
-<h2><code>habitat</code></h2>
-<table style="width:100%;">
-<colgroup>
-<col width="8%"></col>
-<col width="91%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">habitat</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left">forest, grassland</td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">factor</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/habitat" class="uri">http://rs.tdwg.org/dwc/terms/habitat</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">A character string reporting habitat type from which the specimen was sampled. E.g. ‘forest’, ‘grassland’, ‘oak savanna’, ‘pre-cordilleran steppe’.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="decimallongitude" class="section level2">
-<h2><code>decimalLongitude</code></h2>
-<table>
-<colgroup>
-<col width="5%"></col>
-<col width="94%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">decimalLongitude</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">numeric</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/decimalLongitude" class="uri">http://rs.tdwg.org/dwc/terms/decimalLongitude</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">The geographic longitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive. Example: “-121.1761111”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:decimalLongitude" class="uri">http://terms.tdwg.org/wiki/dwc:decimalLongitude</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="decimallatitude" class="section level2">
-<h2><code>decimalLatitude</code></h2>
-<table style="width:100%;">
-<colgroup>
-<col width="6%"></col>
-<col width="93%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">decimalLatitude</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">numeric</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/decimalLatitude" class="uri">http://rs.tdwg.org/dwc/terms/decimalLatitude</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">The geographic latitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">Positive values are north of Equator, negative values are south of it. Legal values lie between -180 and 180, inclusive. Example: “-41.0983423”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:decimalLatitude" class="uri">http://terms.tdwg.org/wiki/dwc:decimalLatitude</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="elevation" class="section level2">
-<h2><code>elevation</code></h2>
-<table style="width:100%;">
-<colgroup>
-<col width="3%"></col>
-<col width="96%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">elevation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">numeric</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">The geographic elevation in meters above sea level.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">May map to verbatimElevation (<a href="http://rs.tdwg.org/dwc/terms/verbatimElevation" class="uri">http://rs.tdwg.org/dwc/terms/verbatimElevation</a>) or minimumElevationInMeters (<a href="http://rs.tdwg.org/dwc/terms/minimumElevationInMeters" class="uri">http://rs.tdwg.org/dwc/terms/minimumElevationInMeters</a>) and maximumElevationInMeters (<a href="http://rs.tdwg.org/dwc/terms/maximumElevationInMeters" class="uri">http://rs.tdwg.org/dwc/terms/maximumElevationInMeters</a>); Example: “200”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:maximumElevationInMeters" class="uri">http://terms.tdwg.org/wiki/dwc:maximumElevationInMeters</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="geodeticdatum" class="section level2">
-<h2><code>geodeticDatum</code></h2>
-<table style="width:100%;">
-<colgroup>
-<col width="3%"></col>
-<col width="96%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">geodeticDatum</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">factor</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/geodeticDatum" class="uri">http://rs.tdwg.org/dwc/terms/geodeticDatum</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">The geodeticDatum defines the ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geographic coordinates given in decimalLatitude and decimalLongitude as based. Recommended system is “WGS84”. Use the EPSG code to provide an SRS. Examples: “EPSG:4326”, “WGS84”, “NAD27”, “Campo Inchauspe”, “European 1950”, “Clarke 1866”*</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="verbatimlocality" class="section level2">
-<h2><code>verbatimLocality</code></h2>
-<table>
-<colgroup>
-<col width="3%"></col>
-<col width="96%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">verbatimLocality</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/verbatimLocality" class="uri">http://rs.tdwg.org/dwc/terms/verbatimLocality</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">The specific description of the place. Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="country" class="section level2">
-<h2><code>country</code></h2>
-<table style="width:100%;">
-<colgroup>
-<col width="6%"></col>
-<col width="93%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">country</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">character</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/country" class="uri">http://rs.tdwg.org/dwc/terms/country</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">Examples: “Germany”, “Denmark”, “Colombia”, “España”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:country" class="uri">http://terms.tdwg.org/wiki/dwc:country</a>; This should be added if a more precise location is unavailable, to enable data to be used by GBif.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="countrycode" class="section level2">
-<h2><code>countryCode</code></h2>
-<table style="width:100%;">
-<colgroup>
-<col width="5%"></col>
-<col width="94%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">countryCode</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">valueType</td>
-<td align="left">factor</td>
-</tr>
-<tr class="odd">
-<td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/countryCode" class="uri">http://rs.tdwg.org/dwc/terms/countryCode</a></td>
-</tr>
-<tr class="even">
-<td align="left">Definition</td>
-<td align="left">The standard code for the country in which the Location occurs. Recommended best practice is to use ISO 3166-1-alpha-2 country codes.</td>
-</tr>
-<tr class="odd">
-<td align="left">Comment</td>
-<td align="left">Examples:“DE” for Germany, “AR” for Argentina, “SV” for El Salvador. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:countryCode" class="uri">http://terms.tdwg.org/wiki/dwc:countryCode</a>; This should be added if a more precise location is unavailable, to enable data to be used by GBif.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="columns-for-aggregate-measures" class="section level1">
-<h1>Columns for aggregate measures</h1>
-<p>Some data may not refer to a single specimen or measurement, but aggregate repeated measurements into an average.</p>
 <div id="aggregatemeasure" class="section level2">
 <h2><code>aggregateMeasure</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#aggregatemeasure">direct link</a></p>
 <table>
 <colgroup>
 <col width="4%"></col>
@@ -2183,30 +1588,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">logical</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">Definition</td>
-<td align="left">Is measurementValue reporting an individual measurement or an aggregate Measure? TRUE or FALSE, defaults to FALSE.</td>
+<td align="left">Refines</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Is measurementValue reporting an individual measurement or an aggregate Measure? Takes a binary entry: TRUE or FALSE</td>
+</tr>
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">This is flagging aggregate data in an unambiguous way. Aggregate measures are often reported for repeated measures, e.g. replicate measurements of leaf size from a single plant individual or for grouped measurement, e.g. for weightings of a counted number of specimens (e.g. leaves or small organisms).</td>
 </tr>
@@ -2215,6 +1632,7 @@ $(document).ready(function () {
 </div>
 <div id="individualcount" class="section level2">
 <h2><code>individualCount</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#individualcount">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="8%"></col>
@@ -2228,30 +1646,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">1</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">integer</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/individualCount" class="uri">http://rs.tdwg.org/dwc/terms/individualCount</a></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/individualCount" class="uri">http://rs.tdwg.org/dwc/terms/individualCount</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">If measurement is an aggregate measure of multiple individuals or specimens, report number of specimens as count, i.e. integer number. Defaults to 1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">Examples: “1”, “25”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:individualCount" class="uri">http://terms.tdwg.org/wiki/dwc:individualCount</a></td>
 </tr>
@@ -2260,6 +1690,7 @@ $(document).ready(function () {
 </div>
 <div id="dispersion" class="section level2">
 <h2><code>dispersion</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#dispersion">direct link</a></p>
 <table>
 <colgroup>
 <col width="4%"></col>
@@ -2273,30 +1704,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">0</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">numeric</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">If aggregate measure of multiple individuals or specimens, the numeric value of dispersion (variance or standard deviation) for the mean value reported in measurementValue_user (no unit conversion is provided by the R-package!). Defaults to 0. If a value is provided, report the statistical method in the field statisticalMethod.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left"></td>
 </tr>
@@ -2305,6 +1748,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementvalue_min" class="section level2">
 <h2><code>measurementValue_min</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementvalue_min">direct link</a></p>
 <table>
 <colgroup>
 <col width="13%"></col>
@@ -2318,30 +1762,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">numeric</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">The lower boundary of observed values. Instead of or in addition to dispersion metric.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left"></td>
 </tr>
@@ -2350,6 +1806,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementvalue_max" class="section level2">
 <h2><code>measurementValue_max</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementvalue_max">direct link</a></p>
 <table>
 <colgroup>
 <col width="13%"></col>
@@ -2363,30 +1820,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">numeric</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">The upper boundary of observed values. Instead of or in addition to dispersion metric.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left"></td>
 </tr>
@@ -2395,6 +1864,7 @@ $(document).ready(function () {
 </div>
 <div id="measurementaccuracy" class="section level2">
 <h2><code>measurementAccuracy</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementaccuracy">direct link</a></p>
 <table>
 <colgroup>
 <col width="9%"></col>
@@ -2408,30 +1878,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementAccuracy" class="uri">http://rs.tdwg.org/dwc/terms/measurementAccuracy</a></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/measurementAccuracy" class="uri">http://rs.tdwg.org/dwc/terms/measurementAccuracy</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">The description of the potential error associated with the measurementValue.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">Examples: “0.01”, “normal distribution with variation of 2 m”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:measurementAccuracy" class="uri">http://terms.tdwg.org/wiki/dwc:measurementAccuracy</a></td>
 </tr>
@@ -2440,6 +1922,7 @@ $(document).ready(function () {
 </div>
 <div id="statisticalmethod" class="section level2">
 <h2><code>statisticalMethod</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#statisticalmethod">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="7%"></col>
@@ -2453,30 +1936,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">For aggregated measures, the method for data aggregation or averaging as well as the variation or range.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">E.g. ‘mean and standard deviation’, ‘median and 95% confidence interval’, ‘mean and variance’, ‘mean and range of values’, ‘median and 95% interquantile range’</td>
 </tr>
@@ -2484,11 +1979,1231 @@ $(document).ready(function () {
 </table>
 </div>
 </div>
-<div id="additional-columns-for-use-in-biodiversity-exploratories" class="section level1">
-<h1>Additional columns for use in Biodiversity Exploratories</h1>
+<div id="extension-occurence" class="section level1">
+<h1>Extension: Occurence</h1>
+<p>this section of columns aims for identifying the methodology and primary source of the data and keep the reference to the actual specimen (e.g. for museum collections or related data analysis). It also may add detail on the condition of the observed specimen, its sex, morphotype or developmental stage. Especially for analyses of intra-specific trait variation, this composes valuable data.</p>
+<p>For trait data compiled from literature or expert knowledge, the level of information on an ‘occurence’ would not apply, since no specific individual has been observed. In this case, the field ‘occurenceID’ should be left blank in the core data.</p>
+<div id="sex" class="section level2">
+<h2><code>sex</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#sex">direct link</a></p>
+<table style="width:100%;">
+<colgroup>
+<col width="8%"></col>
+<col width="91%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">sex</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">factor</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left">male; female; subadult; unknown; hermaphrodite</td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/sex" class="uri">http://rs.tdwg.org/dwc/terms/sex</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Defining the sex of the measured specimen, to capture dimorphisms. Standardised factor levels are: “male”, “female”, “subadult”, “unknown”, “hermaphrodite”</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="lifestage" class="section level2">
+<h2><code>lifeStage</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#lifestage">direct link</a></p>
+<table>
+<colgroup>
+<col width="5%"></col>
+<col width="94%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">lifeStage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/lifeStage" class="uri">http://rs.tdwg.org/dwc/terms/lifeStage</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The life stage of the measured specimen.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Recommended factor levels are: seed, seedling, sapling, adult, egg, larval_instar_1, larval_instar_2, larval_instar_3, … , pupa; For very taxon-specific life stages, it is recommended to provide detailled explanation in the metadata of the dataset.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="age" class="section level2">
+<h2><code>age</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#age">direct link</a></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">age</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">numeric</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The age of the specimen in years.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Example: “2”, “0.16”.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="morphotype" class="section level2">
+<h2><code>morphotype</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#morphotype">direct link</a></p>
+<table style="width:100%;">
+<colgroup>
+<col width="8%"></col>
+<col width="91%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">morphotype</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The morphotype of the observed specimen.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Examples: “worker”, “drone”, “queen”. Since morphotypes can differ between organism groups, provide definition of morphotypes in the metadata of the dataset.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="eventid" class="section level2">
+<h2><code>eventID</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#eventid">direct link</a></p>
+<table style="width:100%;">
+<colgroup>
+<col width="5%"></col>
+<col width="94%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">eventID</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/eventID" class="uri">http://rs.tdwg.org/dwc/terms/eventID</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The sampling event or campaign. User specified character string. could link to another table that provides more information, e.g. environmental or temporal parameters, descriptions on methods etc.. should link to official Exploratories sampling campaigns.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="preparations" class="section level2">
+<h2><code>preparations</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#preparations">direct link</a></p>
+<table>
+<colgroup>
+<col width="4%"></col>
+<col width="95%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">preparations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/preparations" class="uri">http://rs.tdwg.org/dwc/terms/preparations</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">For preserved specimens, a list (concatenated and separated) of preparations and preservation methods for a specimen.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">The recommended best practice is to separate the values with a vertical bar (‘|’). Examples: “fossil”, “cast”, “photograph”, “DNA extract”, “skin |”skull | skeleton“,”whole animal (ETOH) | tissue (EDTA)“. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:preparations" class="uri">http://terms.tdwg.org/wiki/dwc:preparations</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="samplingprotocol" class="section level2">
+<h2><code>samplingProtocol</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#samplingprotocol">direct link</a></p>
+<table>
+<colgroup>
+<col width="2%"></col>
+<col width="97%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">samplingProtocol</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/samplingProtocol" class="uri">http://rs.tdwg.org/dwc/terms/samplingProtocol</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The name of, reference to, or description of the method or protocol used for obtaining the specimen.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Examples: “UV light trap”, “mist net”, “bottom trawl”, “ad hoc observation”, “point count”, “Penguins from space: faecal stains reveal the location of emperor penguin colonies, <a href="http://dx.doi.org/10.1111/j.1466-8238.2009.00467.x" class="uri">http://dx.doi.org/10.1111/j.1466-8238.2009.00467.x</a>”, “Takats et al. 2001. Guidelines for Nocturnal Owl Monitoring in North America. Beaverhill Bird Observatory and Bird Studies Canada, Edmonton, Alberta. 32 pp.”, “<a href="http://www.bsc-eoc.org/download/Owl.pdf" class="uri">http://www.bsc-eoc.org/download/Owl.pdf</a>”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:samplingProtocol" class="uri">http://terms.tdwg.org/wiki/dwc:samplingProtocol</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="year" class="section level2">
+<h2><code>year</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#year">direct link</a></p>
+<table>
+<colgroup>
+<col width="16%"></col>
+<col width="83%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">integer</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/year" class="uri">http://rs.tdwg.org/dwc/terms/year</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The four-digit year, at which the specimens were extracted or sampled.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Example: “2008”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:year" class="uri">http://terms.tdwg.org/wiki/dwc:year</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="month" class="section level2">
+<h2><code>month</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#month">direct link</a></p>
+<table>
+<colgroup>
+<col width="12%"></col>
+<col width="87%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">month</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">integer</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/month" class="uri">http://rs.tdwg.org/dwc/terms/month</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The ordinal month, in which the specimens were extracted or sampled.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Examples: “1” (=January), “10” (=October). For discussion see <a href="http://terms.tdwg.org/wiki/dwc:month" class="uri">http://terms.tdwg.org/wiki/dwc:month</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="day" class="section level2">
+<h2><code>day</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#day">direct link</a></p>
+<table>
+<colgroup>
+<col width="14%"></col>
+<col width="85%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">day</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">integer</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/day" class="uri">http://rs.tdwg.org/dwc/terms/day</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The integer day of the month on which the specimens were extracted or sampled.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Examples: “9”, “28”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:day" class="uri">http://terms.tdwg.org/wiki/dwc:day</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="eventdate" class="section level2">
+<h2><code>eventDate</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#eventdate">direct link</a></p>
+<table>
+<colgroup>
+<col width="4%"></col>
+<col width="95%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">eventDate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">Date</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/eventDate" class="uri">http://rs.tdwg.org/dwc/terms/eventDate</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Represents the date, at which the specimens were extracted or sampled. If providing eventDate, then enter format of type: YYYY-MM-DD hh:mm TIMEZONE (fall back to 12:00 if no time is available).</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">For lower precision, use year, month and day field instead. Note: this is not to record the date when the specimens were measured (use measurementDeterminedDate for this). If applicable, at least provide a year. This is particularly important if the measurements were taken from specimens from the exploratories or museum specimens.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="locationid" class="section level2">
+<h2><code>locationID</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#locationid">direct link</a></p>
+<table style="width:100%;">
+<colgroup>
+<col width="5%"></col>
+<col width="94%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">locationID</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">factor</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/locationID" class="uri">http://rs.tdwg.org/dwc/terms/locationID</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">A unique, dataset-specific identifier. Could report the subplot within the Exploratories, or the plot or replicate of a separate experimental setting. If further information is available, specify locationIDs in a separate dataset.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="habitat" class="section level2">
+<h2><code>habitat</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#habitat">direct link</a></p>
+<table style="width:100%;">
+<colgroup>
+<col width="8%"></col>
+<col width="91%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">habitat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">factor</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/habitat" class="uri">http://rs.tdwg.org/dwc/terms/habitat</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">A character string reporting habitat type from which the specimen was sampled. E.g. ‘forest’, ‘grassland’, ‘oak savanna’, ‘pre-cordilleran steppe’.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="decimallongitude" class="section level2">
+<h2><code>decimalLongitude</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#decimallongitude">direct link</a></p>
+<table>
+<colgroup>
+<col width="5%"></col>
+<col width="94%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">decimalLongitude</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">numeric</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/decimalLongitude" class="uri">http://rs.tdwg.org/dwc/terms/decimalLongitude</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The geographic longitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive. Example: “-121.1761111”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:decimalLongitude" class="uri">http://terms.tdwg.org/wiki/dwc:decimalLongitude</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="decimallatitude" class="section level2">
+<h2><code>decimalLatitude</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#decimallatitude">direct link</a></p>
+<table style="width:100%;">
+<colgroup>
+<col width="6%"></col>
+<col width="93%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">decimalLatitude</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">numeric</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/decimalLatitude" class="uri">http://rs.tdwg.org/dwc/terms/decimalLatitude</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The geographic latitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Positive values are north of Equator, negative values are south of it. Legal values lie between -180 and 180, inclusive. Example: “-41.0983423”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:decimalLatitude" class="uri">http://terms.tdwg.org/wiki/dwc:decimalLatitude</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="elevation" class="section level2">
+<h2><code>elevation</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#elevation">direct link</a></p>
+<table style="width:100%;">
+<colgroup>
+<col width="3%"></col>
+<col width="96%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">elevation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">numeric</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/verbatimElevation" class="uri">http://rs.tdwg.org/dwc/terms/verbatimElevation</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The geographic elevation in meters above sea level.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">May map to verbatimElevation (<a href="http://rs.tdwg.org/dwc/terms/verbatimElevation" class="uri">http://rs.tdwg.org/dwc/terms/verbatimElevation</a>) or minimumElevationInMeters (<a href="http://rs.tdwg.org/dwc/terms/minimumElevationInMeters" class="uri">http://rs.tdwg.org/dwc/terms/minimumElevationInMeters</a>) and maximumElevationInMeters (<a href="http://rs.tdwg.org/dwc/terms/maximumElevationInMeters" class="uri">http://rs.tdwg.org/dwc/terms/maximumElevationInMeters</a>); Example: “200”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:maximumElevationInMeters" class="uri">http://terms.tdwg.org/wiki/dwc:maximumElevationInMeters</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="geodeticdatum" class="section level2">
+<h2><code>geodeticDatum</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#geodeticdatum">direct link</a></p>
+<table style="width:100%;">
+<colgroup>
+<col width="3%"></col>
+<col width="96%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">geodeticDatum</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">factor</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/geodeticDatum" class="uri">http://rs.tdwg.org/dwc/terms/geodeticDatum</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The geodeticDatum defines the ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geographic coordinates given in decimalLatitude and decimalLongitude as based. Recommended system is “WGS84”. Use the EPSG code to provide an SRS. Examples: “EPSG:4326”, “WGS84”, “NAD27”, “Campo Inchauspe”, “European 1950”, “Clarke 1866”*</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="verbatimlocality" class="section level2">
+<h2><code>verbatimLocality</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#verbatimlocality">direct link</a></p>
+<table>
+<colgroup>
+<col width="3%"></col>
+<col width="96%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">verbatimLocality</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/verbatimLocality" class="uri">http://rs.tdwg.org/dwc/terms/verbatimLocality</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The specific description of the place. Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="country" class="section level2">
+<h2><code>country</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#country">direct link</a></p>
+<table style="width:100%;">
+<colgroup>
+<col width="6%"></col>
+<col width="93%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">country</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/country" class="uri">http://rs.tdwg.org/dwc/terms/country</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Examples: “Germany”, “Denmark”, “Colombia”, “España”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:country" class="uri">http://terms.tdwg.org/wiki/dwc:country</a>; This should be added if a more precise location is unavailable, to enable data to be used by GBif.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="countrycode" class="section level2">
+<h2><code>countryCode</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#countrycode">direct link</a></p>
+<table style="width:100%;">
+<colgroup>
+<col width="5%"></col>
+<col width="94%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">countryCode</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">factor</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/countryCode" class="uri">http://rs.tdwg.org/dwc/terms/countryCode</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">The standard code for the country in which the Location occurs. Recommended best practice is to use ISO 3166-1-alpha-2 country codes.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Examples:“DE” for Germany, “AR” for Argentina, “SV” for El Salvador. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:countryCode" class="uri">http://terms.tdwg.org/wiki/dwc:countryCode</a>; This should be added if a more precise location is unavailable, to enable data to be used by GBif.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="occurenceremarks" class="section level2">
+<h2><code>occurenceRemarks</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#occurenceremarks">direct link</a></p>
+<table>
+<colgroup>
+<col width="12%"></col>
+<col width="87%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">occurenceRemarks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left">character</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/occurrenceRemarks" class="uri">http://rs.tdwg.org/dwc/terms/occurrenceRemarks</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Comments or notes about the Occurrence.</td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left">Example: “found dead on road”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:occurrenceRemarks" class="uri">http://terms.tdwg.org/wiki/dwc:occurrenceRemarks</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="extension-biodiversity-exploratories" class="section level1">
+<h1>Extension: Biodiversity Exploratories</h1>
 <p>This section records location in the context of the exploratories. From <code>ExploratotriesPlotID</code> a detailled georeference can be inferred. Additional spatial resolution, e.g. on subplots, may be provided in <code>locationID</code> of section sampling event.</p>
 <div id="originexploratories" class="section level2">
 <h2><code>OriginExploratories</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#originexploratories">direct link</a></p>
 <table>
 <colgroup>
 <col width="13%"></col>
@@ -2502,30 +3217,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left">TRUE,FALSE</td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">logical</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left">TRUE;FALSE</td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">Did measured specimens originate from Exploratories Plots? TRUE or FALSE, defaults to FALSE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">As unambiguous flag for data and specimens that are originating from Exploratories sites.</td>
 </tr>
@@ -2534,6 +3261,7 @@ $(document).ready(function () {
 </div>
 <div id="exploratoriesplotid" class="section level2">
 <h2><code>ExploratoriesPlotID</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#exploratoriesplotid">direct link</a></p>
 <table>
 <colgroup>
 <col width="3%"></col>
@@ -2547,30 +3275,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">EP plot ID (or also any valid Gridplot ID or VIP ID) where the measured specimen was extracted. Only for specimen that were extracted from the exploratories directly (or direct offspring, if hatched in the lab). Please also report it, even if this was not part of your research question and provide a Date (a year at last) if available.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left"></td>
 </tr>
@@ -2579,7 +3319,8 @@ $(document).ready(function () {
 </div>
 <div id="exploratory" class="section level2">
 <h2><code>Exploratory</code></h2>
-<table>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#exploratory">direct link</a></p>
+<table style="width:100%;">
 <colgroup>
 <col width="7%"></col>
 <col width="92%"></col>
@@ -2592,30 +3333,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left">H,S,A</td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left">HAI; SCH; ALB</td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">Definition</td>
-<td align="left">Exploratories Region (Hainich, Schorfheide, Alb) for sorting purpose and readability, or if exact Plot ID is not available. Report the Region in format: A, H, S.</td>
+<td align="left">Refines</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">Exploratories Region (Hainich, Schorfheide, Alb) for sorting purpose and readability, or if exact Plot ID is not available. Report the Region in format: HAI; SCH; ALB</td>
+</tr>
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left"></td>
 </tr>
@@ -2624,11 +3377,8 @@ $(document).ready(function () {
 </div>
 <div id="explotype" class="section level2">
 <h2><code>ExploType</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#explotype">direct link</a></p>
 <table>
-<colgroup>
-<col width="10%"></col>
-<col width="89%"></col>
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -2637,30 +3387,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left">W, G</td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">factor</td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left">W; G</td>
 </tr>
 <tr class="odd">
 <td align="left">Identifier</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">Definition</td>
-<td align="left">W for forest or G for grassland plot. This is automaticall extracted by the R script from ExploratoriesPlotID, if provided.</td>
+<td align="left">Refines</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left">W for forest or G for grassland plot.</td>
+</tr>
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left"></td>
 </tr>
@@ -2670,8 +3432,10 @@ $(document).ready(function () {
 </div>
 <div id="metadata-vocabulary" class="section level1">
 <h1>Metadata vocabulary</h1>
+<p>These data are required when combining datasets from different sources. We suggest integrating a <code>datasetID</code> referencing to an external data sheet or adding columns to the dataset to keep important information about authorship and terms of use at the measurement level.</p>
 <div id="rightsholder" class="section level2">
 <h2><code>rightsHolder</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#rightsholder">direct link</a></p>
 <table>
 <colgroup>
 <col width="13%"></col>
@@ -2685,30 +3449,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://purl.org/dc/terms/rightsHolder" class="uri">http://purl.org/dc/terms/rightsHolder</a></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://purl.org/dc/terms/rightsHolder" class="uri">http://purl.org/dc/terms/rightsHolder</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">A person or organization owning or managing rights over the resource, i.e. this dataset.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">A list of author names (separated by |) or name of a consortium, or institution</td>
 </tr>
@@ -2717,6 +3493,7 @@ $(document).ready(function () {
 </div>
 <div id="bibliographiccitation" class="section level2">
 <h2><code>bibliographicCitation</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#bibliographiccitation">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="4%"></col>
@@ -2730,30 +3507,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://purl.org/dc/terms/bibliographicCitation" class="uri">http://purl.org/dc/terms/bibliographicCitation</a></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://purl.org/dc/terms/bibliographicCitation" class="uri">http://purl.org/dc/terms/bibliographicCitation</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">A bibliographic reference for the resource as a statement indicating how this record should be cited (attributed) when used. Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">e.g. “Gossner, M.M., Simons, N.K., Achtziger, R., Blick, T., Dorow, W.H.., Dziock, F., et al. (2015). A summary of eight traits of Coleoptera, Hemiptera, Orthoptera and Araneae, occurring in grasslands in Germany. Sci Data, 2, 150013, <a href="doi:10.1038/sdata.2015.13" class="uri">doi:10.1038/sdata.2015.13</a>” If dataset has been published, include DOI</td>
 </tr>
@@ -2762,6 +3551,7 @@ $(document).ready(function () {
 </div>
 <div id="license" class="section level2">
 <h2><code>license</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#license">direct link</a></p>
 <table>
 <colgroup>
 <col width="6%"></col>
@@ -2775,30 +3565,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://purl.org/dc/terms/license" class="uri">http://purl.org/dc/terms/license</a></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://purl.org/dc/terms/license" class="uri">http://purl.org/dc/terms/license</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">A legal document giving official permission to do something with the resource.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">Examples: “<a href="http://creativecommons.org/publicdomain/zero/1.0/legalcode" class="uri">http://creativecommons.org/publicdomain/zero/1.0/legalcode</a>”, “<a href="http://creativecommons.org/licenses/by/4.0/legalcode" class="uri">http://creativecommons.org/licenses/by/4.0/legalcode</a>”. For discussion see <a href="http://terms.tdwg.org/wiki/dwc:license" class="uri">http://terms.tdwg.org/wiki/dwc:license</a></td>
 </tr>
@@ -2807,6 +3609,7 @@ $(document).ready(function () {
 </div>
 <div id="datasetid" class="section level2">
 <h2><code>datasetID</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#datasetid">direct link</a></p>
 <table>
 <colgroup>
 <col width="9%"></col>
@@ -2820,30 +3623,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/datasetID" class="uri">http://rs.tdwg.org/dwc/terms/datasetID</a></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/datasetID" class="uri">http://rs.tdwg.org/dwc/terms/datasetID</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">e.g. BExIS ID, or a DOI referring to the published dataset</td>
 </tr>
@@ -2852,6 +3667,7 @@ $(document).ready(function () {
 </div>
 <div id="datasetname" class="section level2">
 <h2><code>datasetName</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#datasetname">direct link</a></p>
 <table style="width:100%;">
 <colgroup>
 <col width="16%"></col>
@@ -2865,32 +3681,375 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mandatory</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">defaultValue</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">validLevels</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">valueType</td>
 <td align="left">character</td>
 </tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
 <tr class="odd">
 <td align="left">Identifier</td>
-<td align="left"><a href="http://rs.tdwg.org/dwc/terms/datasetName" class="uri">http://rs.tdwg.org/dwc/terms/datasetName</a></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left">Refines</td>
+<td align="left"><a href="http://rs.tdwg.org/dwc/terms/datasetName" class="uri">http://rs.tdwg.org/dwc/terms/datasetName</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
 <td align="left">Definition</td>
 <td align="left">The name identifying the data set from which the record was derived.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Comment</td>
 <td align="left">e.g. a BExIS dataset name, a unique name for the traitdataset</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="terms-for-traitlists-a-trait-thesaurus" class="section level1">
+<h1>Terms for Traitlists (a ‘Trait Thesaurus’)</h1>
+<p>Ontologies for functional traits are beeing developed for different organism groups, mostly centered around certain research questions or subjects of study. To date, the TRY database takes the most inclusive approach on functional traits for vascular plants (Kattge) and describes XX traits and put them into the hierarchical structure of an ontology.</p>
+<p>For some animal groups, similar approaches do exist, but few are available as an online ontology.</p>
+<p>As a starting point for creating an ontology for functional traits, we propose the following terms for trait lists (also termed ‘lookup tables’ of traits, or trait ‘Thesaurus’), to describe functional traits that are in the focus of a single research project. Those trait lists would be uploaded along with the trait dataset.</p>
+<p>Using this standardized terminology will allow merging trait definitions from multiple sources. We encourage providing these lookup tables as an open ressource on public ontology and terminology servers, to enable a global referencing.</p>
+<div id="valuetype" class="section level2">
+<h2><code>valueType</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#valuetype">direct link</a></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">valueType</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="factorlevels" class="section level2">
+<h2><code>FactorLevels</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#factorlevels">direct link</a></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">FactorLevels</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="maxallowedvalue" class="section level2">
+<h2><code>MaxAllowedValue</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#maxallowedvalue">direct link</a></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">MaxAllowedValue</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="minallowedvalue" class="section level2">
+<h2><code>MinAllowedValue</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#minallowedvalue">direct link</a></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">MinAllowedValue</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="measurementtypedescription" class="section level2">
+<h2><code>MeasurementTypeDescription</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementtypedescription">direct link</a></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">MeasurementTypeDescription</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="comments" class="section level2">
+<h2><code>Comments</code></h2>
+<p><a href="http://fdschneider.de/bexis_traits/traitdatastandard.html">go to top</a> | <a href="http://fdschneider.de/bexis_traits/traitdatastandard.html#comments">direct link</a></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">valueType</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">vocabulary</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Identifier</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Refines</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Replaces</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Version</td>
+<td align="left">v0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">DateIssued</td>
+<td align="left">07.07.2017</td>
+</tr>
+<tr class="even">
+<td align="left">DateModified</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Definition</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Comment</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
