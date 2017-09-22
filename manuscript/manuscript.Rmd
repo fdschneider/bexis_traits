@@ -141,19 +141,19 @@ The latter format thus provides the highest resolution and is ideal for storing 
 
 In this paper, we propose a universal scheme of defined column names and data structure that captures the different degrees of resolution and measurement detail for multiple use cases of trait data. We also provide computational tools in an R package to help users transfer their original data into the proposed scheme.
 
-While existing initiatives for standardising data are focused on a constrained organism group, ecosystem type or region and constitute centralised infrastructures, we want to facilitate the use of a standard format of trait data by suggessting a flexible formatting scheme that can be applied in multiple contexts, for instance for building an own taxon-specific database or in user-side compilations of trait data from different sources. 
+While existing initiatives for standardising data are focused on a constrained organism group, ecosystem type or region and constitute centralised infrastructures, we aim to facilitate the use of a standard format of trait data by suggessting a flexible formatting scheme that can be applied in multiple contexts, for instance for building an own taxon-specific database or in user-side compilations of trait data from different sources. 
 In the subsequent sections we propose a set of terms that describe the columns composing a trait dataset, starting with the ones required for our minimal definition of trait-datasets proposed above (Table 1).
 We furthermore provide extensions to add information on the level of the occurrence, the measurement or fact, and the entire record (i.e. metadata). 
 Another set of terms is intended to facilitate the definition of traits in ontologies or a thesaurus of traits. 
 
-With this framework, we build upon the structure proposed for the Encyclopedia of Life (EOL) TraitBank [@parr16], which uses terms of the Darwin Core standard (DWC). We expand the definitions of these terms for the use case of trait data and add further terms to cover the special demands of trait-based research, while maintaining compatibility. The full list of terms of the traitdata standard including further explanation can be acessed at https://ecologicaltraitdata.github.io/TraitDataStandard/ (will be moved to GFBio Terminology Server before publication). 
+With this framework, we build upon the structure proposed for the Encyclopedia of Life (EOL) TraitBank [@parr16], which uses terms of the Darwin Core standard (DWC). We expand the definitions of these terms for the use case of trait data and add further terms to cover the special demands of trait-based research, while maintaining compatibility. The full list of terms of the traitdata standard including further explanation can be accessed at https://ecologicaltraitdata.github.io/TraitDataStandard/ (will be moved to GFBio Terminology Server before publication). 
 
 Table 1: Minimal set of terms for the traitdata standard. valueType can be of type character, factor, boolean or numerical. vocabulary is only needed for factorial trait data and defines the factor levels which are allowed. The identifier is a unique and globally valid URI. 
 
 | Term | valueType | vocabulary | Identifier | Definition | 
 |------|-----------|------------|------------|------------|
 |scientificName | character | |http://fdschneider.de/bexis_traits/traitdatastandard.html#scientificname |Original character string provided as species name by the data owner (kept for reference only)| 
-|taxonID | factor | | http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonid | Verified name identifier of the species or subspecies (or higher taxon) for which this value was collected. Each entry should linkt to a published reference species list/taxonomy. Avoid synonyms.|
+|taxonID | factor | | http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonid | Verified name identifier of the species or subspecies (or higher taxon) for which this value was collected. Each entry should link to a published reference species list/taxonomy. Avoid synonyms.|
 |taxonRank | factor | domain; kingdom; subkingdom; superhpylum [...] |http://fdschneider.de/bexis_traits/traitdatastandard.html#taxonrank | The taxonomic rank of the most specific name in the scientificName. Recommended best practice is to use a controlled vocabulary.|
 |kingdom | factor | |http://fdschneider.de/bexis_traits/traitdatastandard.html#kingdom | The full scientific name of the kingdom in which the taxon is classified.| 
 |traitName | character | |http://fdschneider.de/bexis_traits/traitdatastandard.html#traitname |Name of the trait as used by the data provider (kept for compatibility on provider side).|
@@ -161,12 +161,12 @@ Table 1: Minimal set of terms for the traitdata standard. valueType can be of ty
 |traitValue|character||http://fdschneider.de/bexis_traits/traitdatastandard.html#traitvalue |Measured raw value or factor level for this species trait as measured and provided by the author.|
 |traitUnit|character||http://fdschneider.de/bexis_traits/traitdatastandard.html#traitunit |Reports the unit that the author's raw data were measured in, if applicable (only for numeric values).|
 |scientificNameStd|character|	|http://fdschneider.de/bexis_traits/traitdatastandard.html#scientificnamestd |Full scientific name (with authorship and date information if known).|
-|traitNameStd|factor||http://fdschneider.de/bexis_traits/traitdatastandard.html#traitnamestd |Descriptive Name of the trait reported. This should follow the controlled vocabulary of a thesaurus of traits available online or published along with the dataset.|
+|traitNameStd|factor||http://fdschneider.de/bexis_traits/traitdatastandard.html#traitnamestd |Descriptive name of the trait reported. This should follow the controlled vocabulary of a thesaurus of traits available online or published along with the dataset.|
 |traitValueStd|character||http://fdschneider.de/bexis_traits/traitdatastandard.html#traitvaluestd |Standardised measured value or factor level for this species trait. Numerical values must use the correct unit. Factor levels must be compliant with the thesaurus of traits.|
 |traitUnitStd|character||http://fdschneider.de/bexis_traits/traitdatastandard.html#traitunitstd |The units associated with the measurementValue. The expected standard unit for this trait as defined in the traitlist/ thesaurus.|
 |measurementID|	character||	http://fdschneider.de/bexis_traits/traitdatastandard.html#measurementid |A unique, dataset-specific identifier. Links multi-value trait measurements, e.g. x-y-z coordinates of a morphometric landmark, biochemical compound quantities for different chainlengths. In this case, the trait names must specifiy the sub-measurement, e.g. "landmark32_x", and must be specified in a reference trait list, given in the field "measurementMethod".|
-|occurenceID|character|	|http://fdschneider.de/bexis_traits/traitdatastandard.html#occurenceid|A character string user defined by the data author. It is recommended best practice to use a globally unique identifier, if available, e.g. a museum ID referring to the individual specimen from which the data were measured. usually does not apply for literature data.|
-|warnings|character|	|	|warnings from the R-script will be stored here, e.g. ragarding a lack of match between the provided taxonID and the ontology, or the trait names or values, a mismatch in the units provided and the unit expected according to the trait table. User defined warnings and flags can be added as well, e.g. 'NOTUSE'.|
+|occurrenceID|character|	|http://fdschneider.de/bexis_traits/traitdatastandard.html#occurenceid|A character string user defined by the data author. It is recommended best practice to use a globally unique identifier, if available, e.g. a museum ID referring to the individual specimen from which the data were measured. Usually does not apply for literature data.|
+|warnings|character|	|	|Warnings from the R-script will be stored here, e.g. regarding a lack of match between the provided taxonID and the ontology, or the trait names or values, a mismatch in the units provided and the unit expected according to the trait table. User defined warnings and flags can be added as well, e.g. 'NOTUSE'.|
 
 <!-- Nadja: Is this the kind of table you had in mind? -->
 
@@ -178,20 +178,20 @@ The core data are also keeping a record of the scientific taxon for which the me
 
 *< global taxonomy standards >*
 
-To enable compatibility across datasets, conventions on trait definitions and taxon names are inevitable. We consider the fact that most authors have their own schemes for standardisation and may contribute to different communities by allowing for a double record of both user-specific and standardised entries (as practiced in TRY, -@kattge11 ). This dupliation of data enables continuity on the author and data owner side and quality checking and comparability on the data user side. Taxonomic standardisation, with respect to ongoing renamings and refinemenets, is a challenging issue in its own right. We propose to add a second set of columns that contain standardized entries of the taxon name (`scientificNameStd`) which map synonyms to an accepted species name according to a published taxonomic ontology (e.g. GBIF Backbone Terminology) and links to it using a globally unique identifier (`taxonID`). The field `taxonID` therefore should contain a globally accessible URI that maps to the precise taxon definition at the time of the description or measurement (e.g. for *Bellis perennis*, the taxonID would be  'https://www.gbif.org/species/3117424') . 
+To enable compatibility across datasets, conventions on trait definitions and taxon names are inevitable. We consider the fact that most authors have their own schemes for standardisation and may contribute to different communities by allowing for a double record of both user-specific and standardised entries (as practiced in TRY, -@kattge11 ). This dupliation of data enables continuity on the author and data owner side and quality checking and comparability on the data user side. Taxonomic standardisation, with respect to ongoing renamings and refinements, is a challenging issue in its own right. We propose to add a second set of columns that contain standardised entries of the taxon name (`scientificNameStd`) which map synonyms to an accepted species name according to a published taxonomic ontology (e.g. GBIF Backbone Terminology) and links to it using a globally unique identifier (`taxonID`). The field `taxonID` therefore should contain a globally accessible URI that maps to the precise taxon definition at the time of the description or measurement (e.g. for *Bellis perennis*, the taxonID would be  'https://www.gbif.org/species/3117424') . 
 Keeping an additional reference to a kingdom and class (using field `kingdom` or `class` as described by Darwin Core Standard) will avoid ambiguities with taxonomic homonyms. 
-Additionally, it is best practice to keep a record of the reported taxon rank (in column `taxonRank`) for filtering purposes for traits recorded at the family or genus level. This information can be used for trait inference of higher taxonomic resolution using hierarchical probabilistic matrix factorization [@schrodt15](Shan et al 2012, Schrodt et al 2015).
+Additionally, it is best practice to keep a record of the reported taxon rank (in column `taxonRank`) for filtering purposes for traits recorded at the family or genus level. This information can be used for trait inference of higher taxonomic resolution using hierarchical probabilistic matrix factorisation [@schrodt15](Shan et al 2012, Schrodt et al 2015).
 
 *< relating data to trait definitions >*
 
-A similar approach to standardised trait names (`traitNameStd`) and harmonized reported values (`traitValueStd` and `traitUnitStd`) in compliance with published ontologies is advised. 
-Similar as for `taxonID`, the field  `traitID` should refer to globally unique identifiers (URI or DOI) of trait definitions or a measurement methodology. 
+A similar approach to standardised trait names (`traitNameStd`) and harmonised reported values (`traitValueStd` and `traitUnitStd`) in compliance with published ontologies is advised. 
+Similar as for `taxonID`, the field `traitID` should refer to globally unique identifiers (URI or DOI) of trait definitions or a measurement methodology. 
 
 <!-- The initiatives to standardise traits into consensus terminology are usually formed around a specific research question, methodology, or organism group and therefore vary in the traits that they consider important.  -->
 Resources for semantic ontologies exist for plant traits (e.g., TOP Plant Trait Ontology [@garnier17]), soil invertebrates (T-Sita, @ref), or biomedical traits of vertebrates (Vertebrate Trait Ontology [@park13]). However, for most organism groups and research contexts we attest a deficit of public ontologies with openly accessible URIs. Therefore, if no published trait definition is available that can be referenced, trait-datasets should be accompanied by a dataset-specific glossary of traits, or thesaurus. In its simplest form, a trait thesaurus would provide a "controlled vocabulary designed to clarify the definition and structuring of key terms and associated concepts in a specific discipline" [@laporte12; @garnier17]. 
 This listing or table should at minimum provide a human readable, informative trait name (`traitName`) and a unique (alphanumeric) identifier (`traitID`) as well as an unambiguous verbal definition (`traitDescription`), the legit factor levels (for categorical data, `factorLevels`) or expected standard units (for numerical data). 
 
-Each trait definition may link to a broader or narrower term (`broaderTerm`, `narrowerTerm`), related Terms (`relatedTerm`) or synonyms (`synonym`). For instance, the definition of 'femur length of first leg, left side' is narrower than 'femur length' which is narrower than 'leg trait' which is narrower than 'locomotion trait' (@Ref semantic database methods). This extends the trait list into a semantic web resource and facilitates the classification of traits and allows cross-taxon comparative studies at the level of broader terms. (more detail on semantic web ontologies can be found ...) 
+Each trait definition may link to a broader or narrower term (`broaderTerm`, `narrowerTerm`), related Terms (`relatedTerm`) or synonyms (`synonym`). For instance, the definition of 'femur length of first leg, left side' is narrower than 'femur length' which is narrower than 'leg trait' which is narrower than 'locomotion trait' (@Ref semantic database methods). This extends the trait list into a semantic web resource, facilitates the classification of traits, and allows for cross-taxon comparative studies at the level of broader terms. (more detail on semantic web ontologies can be found ...) 
 
 <!-- Flo: For now removing this block on the steps necessary to create web ontologies of traits. The section above is covering the essentials and implies that further work is required. We might add this following section as a supplement or within the traitdata standard. -->
 <!--
@@ -204,10 +204,10 @@ An ontology is going one step further by providing an explicit definition of a t
 
 Traits are not only defined in terms of their interpretation, but are ideally also standardised in terms of numerical units and, even more important, the use of factor levels. This is challenging, given the range of data types that fall within datasets of functional traits. 
 
-Numerical values represent measurements of length, volumes, ratios, rates or timespans. Integer values may apply to count data (e.g. eggs per clutch). 
+Numerical values represent measurements of lengths, volumes, ratios, rates or timespans. Integer values may apply to count data (e.g. eggs per clutch). 
 Binary data (encoded as 0 or 1) or logical data (coded as TRUE or FALSE) may apply to qualitative traits such as specific behaviour during mating (e.g. are territories defended) or specialisation to a given habitat (e.g. species restricted to relicts of primeval forests). Many traits are categorical and allow for a constrained set of factor levels, such as sex differences in wing morphology (both sexes winged, both sexes unwinged, only males winged, only females winged) or unconstrained entries such as color. Categorical traits often are ordinal, i.e. they have a logical sequence as in the case of life stages or hibernation stages, or habitat preference traits such as horizontal stratum use. 
-Finally there are specific formats of multivariate trait values, e.g. x-y-z coordinates of a landmark measured in a standardized 3D space [ref] or relative abundance of chain-lengths in biochemical compounds [].
-To cope with this variety of data types, definitions should refer to other well-defined terms of other ontologies that describe standard units, morphological body parts, protein characteristics (Protein Ontology) or chemical terms (e.g. the ChEBI, http://www.obofoundry.org/ontology/chebi.html).
+Finally, there are specific formats of multivariate trait values, e.g. x-y-z coordinates of a landmark measured in a standardised 3D space [ref] or relative abundance of chain-lengths in biochemical compounds [].
+To cope with this variety of data types, definitions should refer to other well-defined terms of existing ontologies that describe standard units, morphological body parts, protein characteristics (Protein Ontology) or chemical terms (e.g. the ChEBI, http://www.obofoundry.org/ontology/chebi.html).
 
 Multiple approaches have spawned around the initialisation of trait databases. Such reference definitions are currently being published in methodological handbooks (Moretti et al , ) or lists of accepted traits (databases), or an online ontology or thesaurus (TOP, T-Sita, ), most advanced certainly for plant traits compiled in the Thesaurus of Plant characteristics (TOP, @garnier17).
 
@@ -227,20 +227,20 @@ Thus, a trait thesaurus or ontology would assign trait names with A) an unambigu
 
 The biggest challenge in community efforts of standardization of traits may be the investment in consensus building which leads to an acceptance and establishment of the standards. This effort is time consuming and lengthy, but is returns synergies and great scientific benefit by enabling a global synthesis, as the example of a global plant trait database TRY shows intricately [@diaz16]. 
 -->
-<!-- Nadja: I agree that this section is not needed in the paper, but it would certainly be nice to publish it in a supplement or with the traidata standard -->
+<!-- Nadja: I agree that this section is not needed in the paper, but it would certainly be nice to publish it in a supplement or with the traidata standard. Malte: Agreed. -->
 
 *< other identifiers >* 
 
 <!--Additional information may apply to different layers of the core data: on measurement or occurrence, co-variate analysis, environmental filters, spatial distribution. -->
 
-Further detail might be stored along with each measurement or fact reported in the dataset (i.e. each row of the dataset). Those information might refer to the origin of the information, the measurement method or statistical precision of the reported value and may be given in a related data sheet which is linked to the data using a unique identifier (`measurementID`) or in additional columns to the core dataset. The terms for this layer of information are defined by the measurement or fact extension. The `measurementID` would also be used to link multivariate measurement data that originate from the same measurement event. 
+Further detail might be stored along with each measurement or fact reported in the dataset (i.e. each row of the dataset). These details might refer to the origin of the information, the measurement method or statistical precision of the reported value and may be given in a related data sheet which is linked to the data using a unique identifier (`measurementID`) or in additional columns to the core dataset. The terms for this layer of information are defined by the measurement or fact extension. The `measurementID` would also be used to link multivariate measurement data that originate from the same measurement event. 
 
 The measurement may also be referred to a single specimen or occurrence via a uniue identifier (`occurrenceID`). For most measured trait data this is a vital information that links related measurements of different traits taken on the same specimen. 
 This identifier is usually dataset-specific and can be defined by the author and described with further detail in a separate data table using the columns provided in the occurrence extension detailed below. Some data-types may use global identifiers for occurrence data, e.g. a GBIF URI or a museum collection code that is publicly available.
  <!-- Malte: For readers not that familiar with trait data, the differences between measurement, occurrence and trait ID might not be that clear. It might be worth adding either a sentence explaining in an example what is what OR a tiny figure that shows how a specimen is sampled, processed, traits are measured etc. -->
  <!-- Nadja: I like the idea of having a figure explaining the different terms -->
 
-Additionally, information about the authorship and ownership of the data and the terms of use should be considered. These information may be kept in the metadata of the dataset, but if datasets from different sources are merged, those should be referred to by a unique identifier (`datasetID`) or be reported as additional columns in the merged dataset (`author`, `license`, ...; see Dublin Core Metadata standards, Ref). 
+Additionally, information about the authorship and ownership of the data and the terms of use should be considered. This information may be kept in the metadata of the dataset, but if datasets from different sources are merged, those should be referred to by a unique identifier (`datasetID`) or be reported as additional columns in the merged dataset (`author`, `license`, ...; see Dublin Core Metadata standards, Ref). 
 
 <!-- 
 (We conceptualize trait-datasets to  not include information about a species' interaction partners/associations of an organism, since they are -- to our understanding -- not within the scope of functional traits. However, such network data may be of interest to be combined with trait data. ) <!-- Malte: which can only be achieved if both types of datasets have been related to an ontology of species names. -->
@@ -282,7 +282,7 @@ Each trait dataset uploaded to BExIS and added to the trait database will be acc
 
 ## information on attribution and permissions to use 
 
-Individual measurements and facts will likely already belong to a larger set of traits or a separate trait database before they are added to a combined trait database. To retain the rights of the original data contributor, the field `rightsHolder` states the person or organization who owns or manages the rights to the data; `bibliographicCitation` states a bibliographic reference which should be cited when the data is used; and `license` specifies under which terms and conditions the data can be used, re-used and/or published. 
+Individual measurements and facts will likely already belong to a larger set of traits or a separate trait database before they are added to a combined trait database. To retain the rights of the original data contributor, the field `rightsHolder` states the person or organisation who owns or manages the rights to the data; `bibliographicCitation` states a bibliographic reference which should be cited when the data is used; and `license` specifies under which terms and conditions the data can be used, re-used and/or published. 
 This information always applies to one single fact or measurement, further information on the larger dataset which originally contained this entry can be stored in `datasetID`, `datasetName`,`authorLastname` and `authorFirstname`. These columns should hence give credit to the person who compiled the original dataset and signs responsible for the correct identification and reporting of the rights holder.
 
 <!-- 
@@ -302,7 +302,7 @@ We provide an R package to assist in producing data compliant with the trait dat
 There are two major use cases for the package:
 
 - preparation of own trait datasets for upload into public data bases, and
-- harmonizing trait datasets from different sources by moulding them into a unified format. 
+- harmonising trait datasets from different sources by moulding them into a unified format. 
 
 The key function of the package is `as.traitdata()` which moulds a species-trait-matrix or occurrence table data into a measurement longtable format. It also maps column names into terms provided in the trait data standard. 
 
@@ -315,11 +315,12 @@ The key function of the package is `as.traitdata()` which moulds a species-trait
 
 Scientific taxon names are matched automatically to the GBIF Backbone Taxonomy (taxonomic ontology server) by calling the function `standardize.taxonomy()`
 
-The `standardize.traits()` function matches user provided trait names onto public trait ontologies (for now using GBIF Backbone Taxonomy) and links it to a trait ontology or a user-provided table of trait definitions, i.e. a thesaurus of traits. The same function harmonizes trait values into target units and legit factor levels. 
+The `standardize.traits()` function matches user-provided trait names onto public trait ontologies (for now using GBIF Backbone Taxonomy) and links it to a trait ontology or a user-provided table of trait definitions, i.e. a thesaurus of traits. The same function harmonises trait values into target units and legit factor levels. 
 
 The output of these functions can easily be merged using the `rbind()` function of R base. 
+<!-- Malte: Shouldn't this be cbind() ? These functions do not add additional rows but additional columns, right?-->
 
-The package functions comprise a toolchain where each function can be piped as an input into the next. A wrapper function `standardize()` applies all functions sequentially, making transferring and harmonizing traitdata as simple as:
+The package functions comprise a toolchain where each function can be piped as an input into the next. A wrapper function `standardize()` applies all functions sequentially, making transferring and harmonising traitdata as simple as:
 
 ```r
 library("traitdataform")
@@ -337,9 +338,9 @@ For a detailed description on how to use the package see the package vignette (h
 In this paper, we propose a universal scheme for ecological trait data. 
 We also provide a toolbox in R to transfer data into this scheme. 
 
-We further encourage the development of trait definitions in semantic ontologies. The biggest challenge in community efforts of standardization of traits may be the investment in consensus building which leads to an acceptance and establishment of the standards. This effort is time consuming and lengthy, but it returns synergies and great scientific benefit by enabling a global synthesis, as the example of a global plant trait database TRY shows intricately [@diaz16]. 
+We further encourage the development of trait definitions in semantic ontologies. The biggest challenge in community efforts of standardisation of traits may be the investment in consensus building which leads to an acceptance and establishment of the standards. This effort is time consuming and lengthy, but it returns synergies and great scientific benefit by enabling a global synthesis, as the example of the global plant trait database TRY shows intricately [@diaz16]. 
 
-These tools help to standardize trait datasets before upload to central as well as distributed data repositories and to harmonize and combine raw data from heterogeneous sources. We hope this aids research on the response of traits to environmental and anthropogenic drivers, synthesis on trait patterns on all ecological scales [@messier10], as well as multi-trophic trait analysis [@ref]. 
+These tools help to standardize trait datasets before upload to central as well as distributed data repositories and to harmonise and combine raw data from heterogeneous sources. We hope this aids research on the response of traits to environmental and anthropogenic drivers, synthesis on trait patterns on all ecological scales [@messier10], as well as multi-trophic trait analysis [@ref]. 
 
 The trait data standard as well as the R package are published for open source community development. Contributions are invited and vital for the future development and extension of the package. 
 
@@ -368,7 +369,7 @@ infrastructure; Christiane Fischer and Jule Mangels for giving
 support through the central office, Michael Owonibi for
 managing the central data base, and Markus Fischer, Eduard Linsenmair,
 Dominik Hessenmöller, Daniel Prati, Ingo Schöning, François Buscot,
-Ernst-Detlef Schulze, Wolfgang W.Weisser and the late Elisabeth Kalko
+Ernst-Detlef Schulze, Wolfgang W. Weisser and the late Elisabeth Kalko
 for their role in setting up the Biodiversity Exploratories project. 
 
 The work has been partly funded by the DFG Priority Program
@@ -378,6 +379,7 @@ Baden-Württemberg, Thüringen, and Brandenburg (according to § 72
 BbgNatSchG).
 
 M.J. was supported by the German Research Foundation within the framework of the Jena Experiment (FOR 1451) and by the Swiss National Science Foundation.
+<!-- Malte: I just started adding personal funding sources here. -->
 
 # Authors' contributions
 
