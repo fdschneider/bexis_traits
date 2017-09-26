@@ -24,7 +24,7 @@ bibliography: div05.bib
 
 # Key-words: 
 
-functional ecology, traits, semantic web, ontologies, scientific data, 
+functional ecology, traits, semantic web, ontologies, data standard
 
 # Introduction
 
@@ -94,14 +94,14 @@ The latter format thus provides the highest resolution and is ideal for storing 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.85\textwidth, angle=0]{figures/fig1.png}
-\caption{Process chart of the functions provided within the R package.}
+\caption{Types of ecological trait data assume different entities or reported quantities. a) morphometric or morphological measurements of individual body features (lengths, areas, volumes, weights) or other quantities related to life history (e.g. reproductive rates, life spans); b) aggregated traits are reported as means taken on multiple measures of members of a taxon; c) quantities may be extracted from literature or existing databases, refering to the entire taxon (or a subset, e.g. a sex) as the entity of description; d) Qualitative traits are categorical or binary descriptors of the entire taxon.}
 
 \end{figure}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=1\textwidth, angle=0]{figures/fig2.png}
-\caption{Process chart of the functions provided within the R package.}
+\caption{Formats used for trait datasets. Identifiers relate the measurement to other layers of information on the specimen, the taxon or the trait measured. a) taxon-level traits are often published as a compiled species $\times$ traits matrix; b) measured data report measurements on the specimen-level, i.e. one physical occurence of a taxon; c) a measurement longtable is a well defined and tidy data format, reporting one single measurement per row and relating it to an occurrence and taxon via unambiguous identifiers.   }
 
 \end{figure}
 
