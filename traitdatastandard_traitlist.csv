@@ -11,27 +11,33 @@ traitID,traitName,trait_class,broaderTerm,type_of_data,traitUnit,MaxAllowedValue
 ,Nest_stratum,behaviour,Egg_protection_type,factor,NA,NA,NA,Burrow/Ground/Vegetation,stratum of the nest location,Vegetation includes low and dead vegetation,Ground,,
 ,Hibernation_in_conifers,behaviour,Hibernation_strategy,logical,NA,NA,NA,NA,coniferous tree species are used for hibernation,,TRUE,,
 ,Clustering_of_individuals,behaviour,Intraspecific_relation,logical,NA,NA,NA,NA,individuals usually occur in spatial clusters,,TRUE,,
-,Social_strategy,behaviour,Intraspecific_relation,factor,NA,NA,NA,eusocial/social/solitary,strategies regarding interindividual behaviour,"Any behavioural or ecological features that increase interindividual attraction, and tolerance.",eusocial,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Sociability
+,Social_strategy,behaviour,Intraspecific_relation,factor,NA,NA,NA,Subsocial / Solitary but social / Communal / Quasisocial / Semisocial / Eusocial,degree to which individuals in an animal population tend to associate in social groups and form cooperative societies,"Any behavioural or ecological features that increase interindividual attraction, and tolerance.",eusocial,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Sociability
 ,Activity_period,behaviour,Phenology,character,NA,NA,NA,NA,first and last month of a year when individuals can be observed,"First and last month are abbreviated to three letters based on english names. Months are connected with ""-"" for continous time spans or separated with ""."" for interupted time spans.",Apr-Aug.Nov,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Adult_activity
 ,Activity_period_length,behaviour,Phenology,integer,month,12,0,NA,number of months during individuals are active,Weeks and days are expressed as fractions of an an average month (i.e. 30 days),3,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Adult_activity
 ,Egg_protection_type,behaviour,Physical_eggs_protection,factor,NA,NA,NA,Nest/Internal/Parasitism,strategies for egg protection,Parasitims includes cuckoldry. Internal protection applies to viviparous strategies,Internal,,
 ,Hibernation_strategy,behaviour,Protection_behaviour,factor,NA,NA,NA,Dormancy/Rest/Freezing,"strategy against climatic adversity, such as low temperature or drought",,Dormancy,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Overwintering
 ,Physical_eggs_protection,behaviour,Reproduction_mode,logical,NA,NA,NA,NA,protection of eggs by physical means,Includes protection outside the parent and inside the parend,TRUE,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Physical_eggs_protection
 ,Pupal_location,behaviour,Reproduction_mode,factor,NA,NA,NA,,position of the pupa within the nest,Usually applies to burrows or tree holes,,,
+,Altitude,environment,Altitude,numeric,m,9999,0,NA,average elevation above sea level at which individuals have been observed,,250,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Altitude
 ,Altitude_max,environment,Altitude,numeric,m,9999,0,NA,highest elevation above sea level at which individuals have been observed,,250,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Altitude
 ,Altitude_min,environment,Altitude,numeric,m,9999,0,NA,lowest elevation above sea level at which individuals have been observed,,250,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Altitude
 ,Micro_habitat,environment,Ecological_niche,factor,NA,NA,NA,Living_tree/Litter/Faeces/Decaying_trunk/Tree_hole/Ant_hill/Mushroom/Mineral_surface/Root/Corpse_carcass/Detritus/Under_rocks/Moss/Sediment,species distribution along an environmental factor describing the microhabitat dimension of the ecological niche,microhabitat is defined as the smallest part of the environment that substitutes as habitat,Living_tree,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Microhabitat
 ,Humidity,environment,Ecological_niche,factor,NA,NA,NA,dry/humid/wet,humidity conditions in which individuals occur,"Humidity can be measured in different strata, e.g. in the soil or in the air",dry,broadens,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_humidity
-,Oxygen_water_max,environment,Ecological_niche,numeric,mg/L,1000000,0,,maximum amount of oxygen in the waterbody at which individuals were observed,,10,,
-,Oxygen_water_min,environment,Ecological_niche,numeric,mg/L,1000000,0,,minimum amount of oxygen in the waterbody at which individuals were observed,,5,,
-,Temperature_survival_max,environment,Ecological_niche,numeric,°C,1000,-1000,,maximum temperature under which individuals can survive,Temperature measured in the prefered microhabitat,45,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
-,Temperature_survival_min,environment,Ecological_niche,numeric,°C,1000,-1000,,minimum temperature under which individuals can survive,Temperature measured in the prefered microhabitat,-20,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
-,Temperature_activity_max,environment,Ecological_niche,numeric,°C,1000,-1000,,maximum temperature under which individuals are active,Temperature measured in the prefered microhabitat,30,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
-,Temperature_activity_min,environment,Ecological_niche,numeric,°C,1000,-1000,,minimum temperature under which individuals are active,Temperature measured in the prefered microhabitat,10,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
-,Temperature_reproduction_max,environment,Ecological_niche,numeric,°C,1000,-1000,,maximum temperature under which individuals reproduce,Temperature measured in the prefered microhabitat,25,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
-,Temperature_reproduction_min,environment,Ecological_niche,numeric,°C,1000,-1000,,minimum temperature under which individuals reproduce,Temperature measured in the prefered microhabitat,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
-,Temperature_development_max,environment,Ecological_niche,numeric,°C,1000,-1000,,maximum temperature under which juveniles develop into adults,Temperature measured in the prefered microhabitat,30,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
-,Temperature_development_min,environment,Ecological_niche,numeric,°C,1000,-1000,,minimum temperature under which juveniles develop into adults,Temperature measured in the prefered microhabitat,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,Oxygen_water,environment,Ecological_niche,numeric,mg/L,1000000,0,,average amount of oxygen in the waterbody at which individuals were observed,,10,,
+,Oxygen_water_max,environment,Oxygen_water,numeric,mg/L,1000000,0,,maximum amount of oxygen in the waterbody at which individuals were observed,,10,,
+,Oxygen_water_min,environment,Oxygen_water,numeric,mg/L,1000000,0,,minimum amount of oxygen in the waterbody at which individuals were observed,,5,,
+,Temperature_survival,environment,Ecological_niche,numeric,°C,1000,-1000,,average temperature under which individuals can survive,Temperature measured in the prefered microhabitat,45,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,Temperature_survival_max,environment,Temperature_survival,numeric,°C,1000,-1000,,maximum temperature under which individuals can survive,Temperature measured in the prefered microhabitat,45,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,Temperature_survival_min,environment,Temperature_survival,numeric,°C,1000,-1000,,minimum temperature under which individuals can survive,Temperature measured in the prefered microhabitat,-20,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,Temperature_activity,environment,Ecological_niche,numeric,°C,1000,-1000,,average temperature under which individuals are active,Temperature measured in the prefered microhabitat,30,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,Temperature_activity_max,environment,Temperature_activity,numeric,°C,1000,-1000,,maximum temperature under which individuals are active,Temperature measured in the prefered microhabitat,30,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,Temperature_activity_min,environment,Temperature_activity,numeric,°C,1000,-1000,,minimum temperature under which individuals are active,Temperature measured in the prefered microhabitat,10,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,Temperature_reproduction,environment,Ecological_niche,numeric,°C,1000,-1000,,average temperature under which individuals reproduce,Temperature measured in the prefered microhabitat,25,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,Temperature_reproduction_max,environment,Temperature_reproduction,numeric,°C,1000,-1000,,maximum temperature under which individuals reproduce,Temperature measured in the prefered microhabitat,25,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,Temperature_reproduction_min,environment,Temperature_reproduction,numeric,°C,1000,-1000,,minimum temperature under which individuals reproduce,Temperature measured in the prefered microhabitat,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,Temperature_development,environment,Ecological_niche,numeric,°C,1000,-1000,,average temperature under which juveniles develop into adults,Temperature measured in the prefered microhabitat,30,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,Temperature_development_max,environment,Temperature_development,numeric,°C,1000,-1000,,maximum temperature under which juveniles develop into adults,Temperature measured in the prefered microhabitat,30,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,Temperature_development_min,environment,Temperature_development,numeric,°C,1000,-1000,,minimum temperature under which juveniles develop into adults,Temperature measured in the prefered microhabitat,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
 ,Habitat_specialization ,environment,environment,logical,NA,NA,NA,NA,occurence of individuals is restricted to a certain habitat,Any level of habitat specialization should be indicated here.,TRUE,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Habitat
 ,Altitude,environment,environment,factor,NA,NA,NA,planar/kollin/montan/subalpin/alpin/nival,occurence of individuals is restricted to a certain altitude class,planar: to 400m/kollin: 400-800m/montan: 800-1.500/subalpin: 1.500-2.300/alpin: 2.300-2.700/nival: above 2.700,alpin,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Altitude
 ,Stratum_preference,environment,Habitat_preferences,factor,NA,NA,NA,s/s-(g)/s-(h)/s-(t)/g/(s)-g/g-(h)/g-(t)/h/(s)-h/(g)-h/h-(t)/t/(s)-t/(g)-t/(h)-t,vertical distribution of habitat,Stratum in which individuals are usually observed. Second prefered habitat is given in brackets. S:soil/g:ground/h:herb-layer/t:shrub & tree_layer,ground,takenfrom,https://www.nature.com/articles/sdata201513
@@ -44,10 +50,12 @@ traitID,traitName,trait_class,broaderTerm,type_of_data,traitUnit,MaxAllowedValue
 ,Habitat_preferences,environment,Habitat_specialization ,integer,NA,9999,0,NA,number of habitat types where individuals can be observed,"Obiquitos species are assigned 0, strict specialists are assigned 1.",2,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Habitat
 ,Relict_species,environment,Habitat_specialization ,logical,NA,NA,NA,,"species is dependent on pre-anthropogenic conditions (e.g. ""Urwald-Reliktarten"")",,TRUE,,
 ,Deadwood_dependent,environment,Habitat_specialization ,logical,NA,NA,NA,,species is obligat dependent on deadwood,Dependence needs to be critical for survival or reproduction,TRUE,,
-,Humidity_soil_max,environment,Humidity,numeric,g/kg,1000,0,,maximum value of mass water content in soil at which individuals were observed,,10,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_humidity
-,Humidity_soil_min,environment,Humidity,numeric,g/kg,1000,0,,minimum value of mass water content in soil at which individuals were observed,,0.5,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_humidity
-,Humidity_air_max,environment,Humidity,numeric,%,100,0,,maximum relative humidity in the air at which individuals were observed,,60,inheritsfrom,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_humidity
-,Humidity_air_min,environment,Humidity,numeric,%,,,,minimum relative humidity in the air at which individuals were observed,,5,inheritsfrom,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_humidity
+,Humidity_soil,environment,Humidity,numeric,g/kg,1000,0,,average value of mass water content in soil at which individuals were observed,,10,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_humidity
+,Humidity_soil_max,environment,Humidity_soil,numeric,g/kg,1000,0,,maximum value of mass water content in soil at which individuals were observed,,10,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_humidity
+,Humidity_soil_min,environment,Humidity_soil,numeric,g/kg,1000,0,,minimum value of mass water content in soil at which individuals were observed,,0.5,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_humidity
+,Humidity_air,environment,Humidity,numeric,%,100,0,,average relative humidity in the air at which individuals were observed,,60,inheritsfrom,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_humidity
+,Humidity_air_max,environment,Humidity_air,numeric,%,100,0,,maximum relative humidity in the air at which individuals were observed,,60,inheritsfrom,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_humidity
+,Humidity_air_min,environment,Humidity_air,numeric,%,,,,minimum relative humidity in the air at which individuals were observed,,5,inheritsfrom,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_humidity
 ,Stratum_phenology,environment,Stratum_preference,factor,NA,NA,NA,monoroph/allaxoroph/xeroph/monochor/allaxochor/xerochor/homotop/heterotop,individuals occur in the same or different habitats throughout the year,monoroph: only one stratum/allaxoroph: stratum change/xeroph: several strata at the same time/monochor: at specific locations within one stratum/allaxochor: change of location/xerochor: several locations within one stratum/homotop: complete life-cycle in one habitat/heterotop: life-cycle in different habitats,monoroph,takenfrom,Koch (1989) Die Käfer Mitteleuropas - Ökologie. Goecke & Evers Verlag. ISBN 3-87263-037-7
 ,Feeding_guild,feeding,feeding,factor,NA,NA,NA,h/c/f/d/o,feeding guild of the species,h: herbivor/ c: carnivor/ f: fungivores/ d: detritivor/ o: omnivores,c,takenfrom,https://www.nature.com/articles/sdata201513
 ,Feeding_guild_adults,feeding,Feeding_guild,factor,NA,NA,NA,h/c/f/d/o,feeding guild of the species in its adult stage,h: herbivor/ c: carnivor/ f: fungivores/ d: detritivor/ o: omnivores,c,takenfrom,https://www.nature.com/articles/sdata201513
@@ -67,29 +75,73 @@ traitID,traitName,trait_class,broaderTerm,type_of_data,traitUnit,MaxAllowedValue
 ,Trap_strategy,feeding,Feeding_behaviour,factor,NA,NA,NA,web/orb/funnel,type of trap constructed to catch prey,,web,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Trap_strategy
 ,Host,feeding,Feeding_specialization,character,NA,NA,NA,,scientific name or group of hosts or prey,,Quercus robur,,
 ,Host_number,feeding,Host,integer,,9999,1,,number of different known host or prey species,,5,,
-,Stable_Isotopes,feeding,Stoichiometry,numeric,delta per mill,,,,,,,,
-,clutch size,life-history,clutch_size,numeric,,,,,number of eggs in a clutch,,,,
-,Nr_eggs,life-history,clutch_size,numeric,,,,,,,,,
-,Nr_Ovariols,life-history,clutch_size,numeric,,,,,,,,,
-,egg length,life-history,egg_size,numeric,,,,,,,,,
-,egg volume,life-history,egg_size,numeric,,,,,,,,,
-,egg weight,life-history,egg_size,numeric,,,,,,,,,
-,Egg_biomass,life-history,egg_size,factor,,,,,,,,,
-,average life span,life-history,lifespan,numeric,[d],,,,,,,,
-,maximum lifespan,life-history,lifespan,numeric,,,,,,,,,
-,Age_at_maturity,life-history,maturation,numeric,month,999,0,NA,the age in months at which an individual's physiological development is complete,Weeks and days are expressed as fractions of an an average month (i.e. 30 days),0.5,,
-,Age_at_reproduction,life-history,maturation,numeric,month,999,0,NA,the age in months at which an individual starts reproducing,Weeks and days are expressed as fractions of an an average month (i.e. 30 days),0.5,,
-,nest habitat specialisation,life-history,nesting_habitat,factor,,,,,,,,,
-,Egg_development_time,life-history,ontogeny,factor,,,,,,,,,
-,mode of developmental stages,life-history,ontogeny,factor,,,,,,,,,
-,Nr_larval_stages,life-history,ontogeny,numeric,,,,,,,,,
-,number of developmental stages,life-history,ontogeny,numeric,,,,,,,,,
-,generation time,life-history,parity,numeric,,,,,,,,,
-,Egg_placement,life-history,reproduction_mode,factor,,,,,where eggs are placed (e.g. on the ground, at vegetation),,,
-,reproductive mode,life-history,reproduction_mode,factor,,,,,,,,,
-,fecundity,life-history,reproduction_mode,,,,,,,,,,
-,social structure,life-history,sociality,factor,,,, (single or more queens,,,,,
-,generations per year / Voltinism,life-history,voltinism,numeric,,,,,,,,,
+?,Stable_Isotopes,feeding,Stoichiometry,numeric,delta per mill,,,,,,,,
+,Sexuality,life-history,life-history,factor,NA,NA,NA,clonal / parthenogenetic / sexual / asexual,strategy for transfer of genes,,parthenogentic,,
+,Reproduction_mode,life-history,life-history,factor,NA,NA,NA,ovipar/vivipar/ovo-vivipar/ ovulipar / Histotrophic vivipar / Hemotrophic vivipar,mode of reprodruction,describes the state in which offspring are produced by the adults,ovipar,,
+,Reproduction_strategy,life-history,Reproduction_mode,factor,,,,iteroparous / semelparous,strategy for number of reproduction events before death,iteroparous: multiple events during life-time / semelparous: one event during life-span,iteroparous,,
+,Clutch_size,life-history,Reproduction_mode,numeric,number per clutch,9999,1,NA,number of eggs in a clutch,A clutch is a group of eggs which are released or laid within a defined time frame or cared for simultaneously (e.g. within one nest),5,,
+,Clutch_size_max,life-history,Clutch_size,numeric,number per clutch,9999,1,NA,maximum number of eggs in a clutch,A clutch is a group of eggs which are released or laid within a defined time frame or cared for simultaneously (e.g. within one nest),5,,
+,Clutch_size_min,life-history,Clutch_size,numeric,number per clutch,9999,1,NA,minimum number of eggs in a clutch,A clutch is a group of eggs which are released or laid within a defined time frame or cared for simultaneously (e.g. within one nest),5,,
+,Nr_eggs_lifetime,life-history,Reproduction_mode,numeric,count,9999,1,NA,number of eggs produced by one individual over their life-span,,500,,
+,Nr_eggs_lifetime_max,life-history,Nr_eggs_lifetime,numeric,count,9999,1,NA,maximum number of eggs produced by one individual over their life-span,,500,,
+,Nr_eggs_lifetime_min,life-history,Nr_eggs_lifetime,numeric,count,9999,1,NA,minimum number of eggs produced by one individual over their life-span,,500,,
+,Nr_Ovariols,life-history,Reproduction_mode,numeric,count,999,1,NA,number of ovariols per individual,,5,,
+,Nr_Ovariols_max,life-history,Nr_Ovariols,numeric,count,999,1,NA,maximum observed number of ovariols per individual,,5,,
+,Nr_Ovariols_min,life-history,Nr_Ovariols,numeric,count,999,1,NA,minimum observed number of ovariols per individual,,5,,
+,Egg_size,life-history,Reproduction_mode,factor,NA,NA,NA,<1mm / <1cm / <10cm / <100m,size class of indivdiual eggs,,<1cm,,
+,Egg_length,life-history,Egg_size,numeric,cm,999,0,,length of individual eggs,measured along the longest axis in oval shapes,0.2,,
+,Egg_length_max,life-history,Egg_length,numeric,cm,999,0,,maximum observed length of individual eggs,measured along the longest axis in oval shapes,1.5,,
+,Egg_length_min,life-history,Egg_length,numeric,cm,999,0,,minimum observed length of individual eggs,measured along the longest axis in oval shapes,0.1,,
+,Egg_width,life-history,Egg_size,numeric,cm,999,0,,width of individual eggs,measured along the shorter axis in oval shapes,0.2,,
+,Egg_width_max,life-history,Egg_width,numeric,cm,999,0,,maximum observed width of individual eggs,measured along the shorter axis in oval shapes,1.5,,
+,Egg_width_min,life-history,Egg_width,numeric,cm,999,0,,minimum observed width of individual eggs,measured along the shorter axis in oval shapes,0.1,,
+,Egg_diameter,life-history,Egg_size,numeric,cm,999,0,,diameter of individual eggs,,0.2,,
+,Egg_diameter_max,life-history,Egg_diameter,numeric,cm,999,0,,maximum observed diameter of individual eggs,,1.5,,
+,Egg_diameter_min,life-history,Egg_diameter,numeric,cm,999,0,,minimum observed diameter of individual eggs,,0.1,,
+,Egg_volume,life-history,Egg_size,numeric,cm³,9999,0,,volume of individual eggs,,0.125,,
+,Egg_volume_max,life-history,Egg_volume,numeric,cm³,9999,0,,maximum observed volume of individual eggs,,0.75,,
+,Egg_volume_min,life-history,Egg_volume,numeric,cm³,9999,0,,minimum observed volume of individual eggs,,0.1,,
+,Egg_weight,life-history,Egg_size,numeric,g,999,0,,weight of individual eggs,,2.5,,
+,Egg_weight_max,life-history,Egg_weight,numeric,g,999,0,,maximum observed weight of individual eggs,,2.5,,
+,Egg_weight_min,life-history,Egg_weight,numeric,g,999,0,,minimum observed weight of individual eggs,,2.5,,
+,Egg_biomass,life-history,Egg_size,numeric,g,999,0,,estimated biomass of individual eggs,Estimates can be based on volume or size measurements,1.5,,
+,Egg_development_time,life-history,Ontogeny,numeric,day,999,0,,time between fertilization and hatching,,5,,
+,Egg_development_time_max,life-history,Egg_development_time,numeric,day,999,0,,maximum observed time between fertilization and hatching,,15,,
+,Egg_development_time_min,life-history,Egg_development_time,numeric,day,999,0,,minimum observed time between fertilization and hatching,,3,,
+,Developmental_stages,life-history,Reproduction_mode,factor,NA,NA,NA,holometabol / hemimetabol / ametabol,mode of metamorphosis,describes development of juveniles between hatching and maturity,holometabol,,
+,Developmental_stages_number,life-history,Developmental_stages,numeric,count,999,0,,number of distinct metabolic stages during maturation,,7,,
+,Developmental_stages_time,life-history,Developmental_stages,numeric,days,999,0,,time between hatching and maturation,,15,,
+,Developmental_stages_time_max,life-history,Developmental_stages_time,numeric,days,999,0,,maximum observed time between hatching and maturation,,15,,
+,Developmental_stages_time_min,life-history,Developmental_stages_time,numeric,days,999,0,,minimum observed time between hatching and maturation,,15,,
+,Nr_larval_stages,life-history,Developmental_stages_number,numeric,count,999,0,,number of larval stages,,3,,
+,Mating_system,life-history,life-history,factor,NA,NA,NA,polyandry / polygamy /  polygynandry /  promiscuity,system of mate choice,,polyandry,,
+,Parental_care,life-history,life-history,factor,NA,NA,NA,females / males / both sexes / workers / none,investment in protection or nurturing of offspring,,females,,
+,Egg_placement,life-history,Reproduction_mode,factor,NA,NA,NA,soil / ground / vegetation / stem / leaf / leaf underside / leaf upside / bark / wood / living host / sedated host / carcass / dung,microhabitat in which eggs are placed,defined when eggs are placed without construction of additional supporting structures,ground,,
+,Age_at_maturity,life-history,maturation,numeric,day,9999,0,NA,the age in months at which an individual's physiological development is complete,,0.5,,
+,Age_at_maturity_max,life-history,Age_at_maturity,numeric,day,9999,0,NA,maximum observed age at which an individual's physiological development is complete,,1,,
+,Age_at_maturity_min,life-history,Age_at_maturity,numeric,day,9999,0,NA,minimum observed age at which an individual's physiological development is complete,,0.25,,
+,Age_at_reproduction,life-history,maturation,numeric,day,9999,0,NA,the age in months at which an individual starts reproducing,,0.5,,
+,Age_at_reproduction_max,life-history,Age_at_reproduction,numeric,day,9999,0,NA,maximum observed age at which an individual starts reproducing,,1,,
+,Age_at_reproduction_min,life-history,Age_at_reproduction,numeric,day,9999,0,NA,minimum observed age at which an individual starts reproducing,,0.25,,
+,Generation_number_year,life-history,Fecundity,numeric,count,999,0,NA,number of generations which are produced within one year,,2,,
+,Generation_number_year_max,life-history,Generation_number_year,numeric,count,999,0,NA,maximum observed number of generations which are produced within one year,,4,,
+,Generation_number_year_min,life-history,Generation_number_year,numeric,count,999,0,NA,minimum observed number of generations which are produced within one year,,1,,
+,Reproduction_events_year,life-history,Fecundity,numeric,count,999,0,NA,number of reproduction events per individual within one year or season,,2,,
+,Reproduction_events_year_max,life-history,Reproduction_events_year,numeric,count,999,0,NA,maximum observed number of reproduction events per individual within one year or season,,4,,
+,Reproduction_events_year_min,life-history,Reproduction_events_year,numeric,count,999,0,NA,minimum observed number of reproduction events per individual within one year or season,,1,,
+,Reproduction_events_life,life-history,Reproduction_strategy,numeric,count,999,0,NA,number of reproduction events per individual during ist life-span,,2,,
+,Reproduction_events_life_max,life-history,Reproduction_events_life,numeric,count,999,0,NA,maximum observed number of reproduction events per individual during ist life-span,,2,,
+,Reproduction_events_life_min,life-history,Reproduction_events_life,numeric,count,999,0,NA,minimum observed number of reproduction events per individual during ist life-span,,2,,
+,Fecundity,life-history,Reproduction_mode,factor,NA,NA,NA,low / medium / high,level of fecundity,,medium,,
+,Life_span_potential,life-history,life-history,numeric,day,9999,0,NA,average time between hatching and death due to age,length of life-span under optimal conditions excluding negative biotic and abiotic interactions,90,,
+,Life_span_potential_max,life-history,Life_span_potential,numeric,day,9999,0,NA,maximum observed time between hatching and death due to age,length of life-span under optimal conditions excluding negative biotic and abiotic interactions,150,,
+,Life_span_potential_min,life-history,Life_span_potential,numeric,day,9999,0,NA,minimum observed time between hatching and death due to age,length of life-span under optimal conditions excluding negative biotic and abiotic interactions,30,,
+,Life_span_observed,life-history,life-history,numeric,day,9999,0,NA,time between hatching and death,"length of life-span as observed under common natural conditions, including negative biotic and abiotic interactions",60,,
+,Life_span_observed_max,life-history,life-history,numeric,day,9999,0,NA,maximum observed time between hatching and death,"length of life-span as observed under common natural conditions, including negative biotic and abiotic interactions",90,,
+,Life_span_observed_min,life-history,life-history,numeric,day,9999,0,NA,minimum observed time between hatching and death,"length of life-span as observed under common natural conditions, including negative biotic and abiotic interactions",15,,
+,Social_structure,behaviour,Social_strategy,character,NA,NA,NA,NA,description of the social structure,"details wether cooperation includes feeding, reproduction or protection",NA,,
+,Number_queens,behaviour,Social_structure,numeric,count,999,0,NA,number of reproducing females within one colony/state/hive,,2,,
+,,,,,,,,,,,,,
 ,Antenna_segment1_length,morphology,antenna_size,numeric,cm,,,,,,,,
 ,Antenna_segment2_length,morphology,antenna_size,numeric,cm,,,,,,,,
 ,Antenna_segment3_length,morphology,antenna_size,numeric,cm,,,,,,,,
