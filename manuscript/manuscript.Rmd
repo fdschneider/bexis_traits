@@ -2,27 +2,27 @@
 title: "Towards an Ecological Trait-data Standard"
 author:
 - name: Florian D. Schneider \footnotemark[1] \footnotemark[2]
-- name: Malte Jochum \footnotemark[4] 
-- name: Gaetane LeProvost \footnotemark[2] 
-- name: Andreas Ostrowski \footnotemark[5] 
-- name: Caterina Penone \footnotemark[4] 
-- name: Nadja K. Simons \footnotemark[6] 
+- name: Malte Jochum \footnotemark[4]
+- name: Gaetane LeProvost \footnotemark[2]
+- name: Andreas Ostrowski \footnotemark[5]
+- name: Caterina Penone \footnotemark[4]
+- name: Nadja K. Simons \footnotemark[6]
 csl: amnat.csl
 output:
+  word_document:
+    fig_caption: yes
+    fig_width: 6
   pdf_document:
     fig_caption: yes
     fig_crop: no
-    template: pretty.template
     keep_tex: yes
+    template: pretty.template
   html_document:
     fig_caption: yes
     fig_width: 4
     highlight: null
     keep_md: yes
     theme: united
-  word_document:
-    fig_caption: yes
-    fig_width: 6
 bibliography: div05.bib
 ---
 
@@ -155,7 +155,7 @@ The latter format thus provides the highest resolution and is ideal for storing 
 \begin{figure}[t]
 \centering
 \includegraphics[width=1\textwidth, angle=0]{figures/fig2.png}
-\caption{Formats used for trait datasets. Identifiers relate the measurement to other layers of information on the specimen, the taxon or the trait measured. a) taxon-level traits are often published as a compiled species $\times$ traits matrix; b) measured data report measurements on the specimen-level, i.e. one physical occurrence of a taxon; c) a measurement long-table is a well defined and tidy data format, reporting one single measurement per row and relating it to an occurrence and taxon via unambiguous identifiers.   }
+\caption{Formats used for trait datasets.  a) taxon-level trait data compiled from literature or aggregated from measurements are often published as a compiled species $\times$ traits matrix; b) wide-tables report measurements on the specimen-level, i.e. one physical occurrence of a taxon; c) a measurement long-table is a well defined and tidy data format, reporting one single measurement per row and relating it to a trait definition and taxon via unambiguous identifiers. Additional identifiers relate each row to other layers of information on d) the specimen (occurrence) or e) the origin or confidence on the reported measurement or fact.}
 
 \end{figure}
 
