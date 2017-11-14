@@ -1,5 +1,5 @@
 ---
-title: "Towards an Ecological Trait-data Standard"
+title: "Introducing an Ecological Trait-data Standard"
 author:
 - name: Florian D. Schneider \footnotemark[1] \footnotemark[2]
 - name: Malte Jochum \footnotemark[4]
@@ -165,7 +165,7 @@ The latter format thus provides the highest resolution and is ideal for storing 
 With this paper, we propose a versatile, minimal data structure, as well as a defined vocabulary that captures the different degrees of resolution and measurement detail for multiple use cases of trait-based research. We were drawing on the combined expertise of empirical biodiversity researchers (data providers), biodiversity synthesis researchers (data users), and biodiversity informatics researchers (data managers).  
 We were particularly considering the work of @kattge11, and @garnier17, as well as @parr16 to ensure compatibility of datasets with major web-services and existing standards for biodiversity data management. 
 
-The online reference glossary of terms and description of the proposed structure is found at https://ecologicaltraitdata.github.io/TraitDataStandard/.
+The online reference glossary of terms and description of the proposed structure is found at https://ecologicaltraitdata.github.io/ETS/.
 
 The vocabulary proposed will not capture the entire complexity of trait-based research in ecology and evolution. We invite researchers to comment on and contribute to the next iterations of this standard and develop own applications and ontologies. 
 
@@ -177,7 +177,7 @@ To enable a better standardisation of nomenclatures and values, the entries of t
 If data contain multi-layered information on the measurement or occurrence (including geolocation and date information), further columns may be added to the core set (see description for Extensions below). 
 For reasons of reproducibility and openness, data should not be uploaded in proprietary spreadsheet formats (like '.xlsx') but rather in comma-separated text files ('.csv' or '.txt').
 
-The metadata of any dataset that employs this data structure should refer to the online version as "Schneider et al. 2017 Ecological Traitdata Standard v1.0, DOI: XXXX.xxxx, URL: https://ecologicaltraitdata.github.io/TraitDataStandard/v1.0/". In addition to the versioned online reference, the dataset should also cite this paper for an explanation of the rationale.  
+The metadata of any dataset that employs this data structure should refer to the online version as "Schneider et al. 2017 Ecological Traitdata Standard v1.0, DOI: XXXX.xxxx, URL: https://ecologicaltraitdata.github.io/ETS/v1.0/". In addition to the versioned online reference, the dataset should also cite this paper for an explanation of the rationale.  
 
 In very complex datasets repetition of verbose entries and long character strings in a single data table should be avoided [@wickham14]. Therefore we recommend use of  Darwin Core Archives [DwC-A, @robertson09], the structure proposed for GBIF [@gbif17,  http://tools.gbif.org/dwca-assistant/] or EOL TraitBank [@parr16,  http://eol.org/info/cp_archives]. This also integrates a defined framework for metadata in the Ecological Metadata Language [@knb11], which should be used for describing and linking the data tables. 
 
@@ -189,7 +189,7 @@ A general definition, whether a column describes asset data or is part of the ce
 
 ## vocabulary for trait data
 
-Column names and, where possible, field entries should follow the defined vocabulary listed at https://ecologicaltraitdata.github.io/TraitDataStandard/. 
+Column names and, where possible, field entries should follow the defined vocabulary listed at https://ecologicaltraitdata.github.io/ETS/. 
 Individual terms should be referenced via their global identifier, which is hosted by the GFBio Terminology Service and also can be accessed programmatically (i.e. via the Application Programming Interface, API). Wherever our glossary refines or duplicates existing terms from other ontologies for biological data, like the Glossary of EOL (http://eol.org/info/516) and Darwin Core (http://rs.tdwg.org/dwc/terms/), we indicate this in the fields 'refines' or 'identical', respectively.
 
 ### Core columns
@@ -208,14 +208,14 @@ The existing thesauri and ontologies for traits differ widely in terms of hierar
 
 If no published trait definition is available that can be referenced, trait-datasets should be accompanied by a dataset-specific glossary of traits, or thesaurus. A thesaurus provides a "controlled vocabulary designed to clarify the definition and structuring of key terms and associated concepts in a specific discipline" [@laporte13; @garnier17]. 
 Thus, in its simplest form,  a trait thesaurus would assign trait names with A) an unambiguous definition of the trait and B) an expected format (e.g. units or legit factor levels) of measured values or reported facts. It might additionally provide semantic relationships between terms for deriving a hierarchical or tree-based classification of traits. 
-By providing a minimal vocabulary for this case (https://ecologicaltraitdata.github.io/TraitDataStandard/#terms-for-traitlists-a-trait-thesaurus), we hope to facilitate the publication of trait thesauri developed for the own project context which always should be referenced in the core trait dataset. The thesaurus might accompany the core data in a Darwin Core Archive, or be published on any other stable webservice. 
+By providing a minimal vocabulary for this case (https://ecologicaltraitdata.github.io/ETS/#terms-for-traitlists-a-trait-thesaurus), we hope to facilitate the publication of trait thesauri developed for the own project context which always should be referenced in the core trait dataset. The thesaurus might accompany the core data in a Darwin Core Archive, or be published on any other stable webservice. 
 
-See our online reference for recommendations how to publish a minimal Thesaurus compliant with semantic web standards [http://ecologicaltraitdata.github.io/TraitDataStandard/#terms-for-traitlists-a-trait-thesaurus].  We also provide an example thesaurus, that has been developed to capture traits assessed within the German Biodiversity Exploratories project on Github (http://ecologicaltraitdata.github.io/TraitDataList/). 
+See our online reference for recommendations how to publish a minimal Thesaurus compliant with semantic web standards [http://ecologicaltraitdata.github.io/ETS/#terms-for-traitlists-a-trait-thesaurus].  We also provide an example thesaurus, that has been developed to capture traits assessed within the German Biodiversity Exploratories project on Github (http://ecologicaltraitdata.github.io/TraitDataList/). 
 
 ### Metadata
 
 Information about the authorship and ownership of the data and the terms of use should be considered when sharing and working with trait datasets.
-We define a set of terms (https://ecologicaltraitdata.github.io/TraitDataStandard/#metadata-vocabulary) that allows to relate trait data to authorship and define a bibliographic reference and license model. 
+We define a set of terms (https://ecologicaltraitdata.github.io/ETS/#metadata-vocabulary) that allows to relate trait data to authorship and define a bibliographic reference and license model. 
 
 In the case of raw measurement data, these information apply to the entire trait dataset, which classifies them as metadata stored in the information structure where the data are published. 
 In cases, where individual measurements and facts from different sources are compiled into a trait database, these metadata information must be linked to the measurement level, via an unambiguous `datasetID` and a descriptive `datasetName`. 
@@ -229,8 +229,8 @@ Beyond measurement units or higher taxon information, further information might 
 
 The data standard provides two extensions of the vocabulary that should be used to describe these information:
 
-- the `occurrence` extension (https://ecologicaltraitdata.github.io/TraitDataStandard/#extension-occurrence) contains vocabulary to describe information on the level of individual specimens, such as physiological specifications of the phenotype, such as sex, life stage or age. This also includes the date and geographical location, as well as the method of sampling and preservation, which provides an important resource to analyse trait variation due to differences in space and time.
-- the `measurementOrFact` extension (https://ecologicaltraitdata.github.io/TraitDataStandard/#extension-measurement-or-fact) provides terms to describe information at the level of single measurements or reported facts, such as the original literature from where the value is cited, the method of measurement or statistical method of aggregation. It aims at important information to track potential sources of noise or bias in measured data (e.g. variation in measurement method) or aggregated values (e.g. statistical method applied), as well as the source of reported facts (e.g. literature source or expert reference).   
+- the `occurrence` extension (https://ecologicaltraitdata.github.io/ETS/#extension-occurrence) contains vocabulary to describe information on the level of individual specimens, such as physiological specifications of the phenotype, such as sex, life stage or age. This also includes the date and geographical location, as well as the method of sampling and preservation, which provides an important resource to analyse trait variation due to differences in space and time.
+- the `measurementOrFact` extension (https://ecologicaltraitdata.github.io/ETS/#extension-measurement-or-fact) provides terms to describe information at the level of single measurements or reported facts, such as the original literature from where the value is cited, the method of measurement or statistical method of aggregation. It aims at important information to track potential sources of noise or bias in measured data (e.g. variation in measurement method) or aggregated values (e.g. statistical method applied), as well as the source of reported facts (e.g. literature source or expert reference).   
 
 Many terms of these extensions refine terms of the Darwin Core Standard and their own [MeasurementOrFact](http://rs.tdwg.org/dwc/terms/index.htm#measureindex) and [Occurrence](http://rs.tdwg.org/dwc/terms/index.htm#Occurrence) extensions and EOL TraitBank's use of those terms (http://eol.org/info/structured_data_archives). 
 
@@ -251,7 +251,7 @@ We provide the R package 'traitdataform' to assist in producing data compliant w
 
 A comprehensive documentation of the package is found in the package vignette, and on its Github repository (https://github.com/EcologicalTraitData/traitdataform) and the documentation website (http://EcologicalTraitData.github.io/traitdataform/). 
 
-The package is under continuous open source development and invites participation in development, comments or bug reports via the Github Issue page (https://github.com/fdschneider/traitdataform/issues). 
+The package is under continuous open source development and invites participation in development, comments or bug reports via the Github Issue page (https://github.com/EcologicalTraitData/traitdataform/issues). 
 
 The key function of the package is `as.traitdata()` which moulds a species-trait-matrix or occurrence table into a measurement longtable format. It also maps column names into terms provided in the trait data standard and adds metadata as attributes to the output object. This example converts an own file 'data.csv' into a dataset of long-table structure that employs the standard vocabulary for core data:
 
