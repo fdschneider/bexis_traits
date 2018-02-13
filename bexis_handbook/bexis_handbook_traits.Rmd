@@ -1,0 +1,76 @@
+---
+title: "BExIS Manual for Traitdata"
+author: "Florian D. Schneider"
+date: "13 February 2018"
+output:  pdf_document
+bibliography: ../manuscript/div05.bib
+csl: ../manuscript/amnat.csl
+---
+
+Functional traits have become a core concept of ecological research and have been assessed for many organism groups within the Biodiversity Exploratories project. 
+
+Sharing and harmonizing trait data into databases is a key task of biodiversity data management, but it relies on an unambiguous assignment of trait definitions and taxa, as well as clearly defined datasets. To facilitate the data handling by BExIS and other downstream services (e.g. GFBio or TRY) we defined a standard vocabulary for publishing trait datasets.
+
+This document describes the main features of the standard vocabulary and how to prepare traitdata for upload into BExIS. 
+
+
+# Traitdata vocabulary
+
+The full set of terms can be accessed at https://ecologicaltraitdata.github.io/ETS/. 
+
+The vocabulary proposed here is meant for two-dimensional spreadsheet data. These simple table formats are what a typical research project on a particular organism group and locality produces. The vocabulary includes a core section, as well as a series of terms which are used to define the level of the reported measurement or fact (e.g. measured on individuals, or reported for an entire species), or to relate it to a broader experimental or ecosystem context. The vocabulary also contains terms for describing metadata acompanying the trait dataset.^[Two-dimensional spreadsheets are limited in the number and complexity of measurements they can contain. For datasets containing multi-layered information on observations, traits, taxa and environmental context, we recommend the use relational datatabase structures composed of multiple spreadsheets linked via identifiers, like for example the generic trait database structure proposed by @kattge11a or the Traitbank structure proposed by @parr15, ideally compiled into Darwin Core Archives [DwC-A, @robertson09]. ]
+
+We assume that data are stored in a observation table, where each row is the reported measurement or fact for a single observation. At minimum, the following columns are required: 1. a value (column `traitValue`) and -- for numeric values -- a standard unit (`traitUnit`); 2. a descriptive trait name (`traitName`);  3. the scientific taxon for which the measurement or fact was obtained (`scientificName`). 
+<!--For these core values, we highly recommend to use unambiguous and self-explanatory vocabularies for trait names and taxa. However, in order to keep the data compatible with own databases or analytical code, it might be necessary to use abbreviations or own identifiers. -->
+
+## Identifiers
+
+To make data compatible with a consensus standard of taxon names or or look-up tables of traits, it is highly recommended to map them to globally valid terminologies by adding globally valid identifiers for taxa (`taxonID`) and trait definitions (`traitID`), complemented by the more readable accepted names (`ScientificNameStd` and `traitNameStd`, respectively; e.g. GBIF Backbone Terminology; for *Bellis perennis*, the taxonID would be  'https://www.gbif.org/species/3117424'; in TOP Thesaurus, the traitID for 'fruit mass' would be  'http://top-thesaurus.org/annotationInfo?viz=1&&trait=Fruit_mass').  
+
+By allowing for a double record of both user-specific and standardised entries, we acknowledge the fact that most authors have their own schemes for standardisation which may refer to different scientific community standards  [as practiced in TRY; @kattge11]. This redundancy of data allows for continuity on the authors and data owners side while also ensuring quality checks and comparability for the data user.
+
+## Extensions
+
+Beyond measurement units or higher taxon information, further information might be available that may not be core data, but are related to the individual or specimen, or to the reported fact, measurement or sampling event. Here, the assignment of a unique identifier per single measurement event (`measurementID`) or individual occurrence (`occurrenceID`), defines the structure these data would take in a relational database context. 
+
+The data standard provides two extensions of the vocabulary that should be used to describe these information:
+
+- The `occurrence` extension (https://ecologicaltraitdata.github.io/ETS/#extension-occurrence) contains vocabulary to describe information on the level of individual specimens, such as sex, life stage or age. This also includes the method of sampling and preservation, as well as date and geographical location, which provides an important resource to analyse trait variation due to differences in space and time.
+- The `measurementOrFact` extension (https://ecologicaltraitdata.github.io/ETS/#extension-measurement-or-fact) provides terms to describe information at the level of single measurements or reported facts, such as the original literature from where the value is cited, the method of measurement or statistical method of aggregation. It provides important information that allows for the tracking of potential sources of noise or bias in measured data (e.g. variation in measurement method) or aggregated values (e.g. statistical method applied), as well as the source of reported facts (e.g. literature source or expert reference).   
+
+# R-package 'traitdataform'
+
+We provide the R package 'traitdataform' to assist the production of data compliant with the trait data standard proposed here. There are two major use cases for the package:
+
+1. preparing of own trait datasets for publication on low-threshold file-servers and project databases, and
+2. automating the harmonisation of trait datasets from different sources by moulding them into a unified format. 
+
+A comprehensive documentation of the package is found in the package vignette, and on its Github repository (https://github.com/EcologicalTraitData/traitdataform) and the documentation website (http://EcologicalTraitData.github.io/traitdataform/). 
+
+The key function of the package is `as.traitdata()` which moulds a species-trait-matrix or occurrence table into a measurement longtable format (Fig. 2). This function also maps column names into terms provided in the trait data standard and adds metadata as attributes to the output object. This example converts an own file 'data.csv' into a dataset of long-table structure that employs the standard vocabulary for core data:
+
+```
+library("traitdataform")
+dataset <- as.traitdata(read.csv("path/to/data.csv"), 
+             traits = c("body_length", "antenna_length", 
+                        "metafemur_length"),
+             units = "mm",
+             taxa = "name_correct", 
+             keep = c(locationID = "location")
+             )
+
+```
+
+The column containing taxon names is given in parameter 'taxa'. Note that the parameter 'keep' specifies and renames any data that should be maintained in the output. The parameter 'units' is used to specify the input units of measurement. 
+
+
+In order to map user-provided names to unambiguous and globally unique identifiers, the function `standardize.taxonomy()` matches scientific taxon names automatically to the GBIF Backbone Taxonomy and adds the column `taxonID` to the core data. 
+<!-- BKR: In the example below, this looks like a manual matching. What is done automatically here and which information does the user have to provide?  FDS: taxon is matched automatically, traits not. lack of trait APIs and webservices. --> 
+Similarly, the `standardize.traits()` function matches user-provided trait names onto a given trait vocabulary and links it to an existing trait ontology or a user-provided table of trait definitions, i.e. a thesaurus of traits. The same function harmonises trait values by converting values into target units and unified factor levels. 
+
+# Upload to BExIS
+
+When uploading the dataset to BExIS, 
+
+
+# References
