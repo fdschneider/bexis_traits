@@ -2,12 +2,21 @@
 title: "BExIS Manual for Traitdata"
 author: "Florian D. Schneider"
 date: "13 February 2018"
-output:  pdf_document
+output:  
+  pdf_document:
+    includes:
+      in_header: header.tex
+    toc: yes
+fontsize: 10pt
+geometry: margin=1.5in
 bibliography: ../manuscript/div05.bib
 csl: ../manuscript/amnat.csl
 ---
 
-Functional traits have become a core concept of ecological research and have been assessed for many organism groups within the Biodiversity Exploratories project. 
+
+# Ecological Traits
+
+Ecological traits have become a core concept of ecological research and have been assessed for many organism groups within the Biodiversity Exploratories project. 
 
 Sharing and harmonizing trait data into databases is a key task of biodiversity data management, but it relies on an unambiguous assignment of trait definitions and taxa, as well as clearly defined datasets. To facilitate the data handling by BExIS and other downstream services (e.g. GFBio or TRY) we defined a standard vocabulary for publishing trait datasets.
 
@@ -36,8 +45,8 @@ Beyond measurement units or higher taxon information, further information might 
 The data standard provides two extensions of the vocabulary that should be used to describe these information:
 
 - The `occurrence` extension (https://ecologicaltraitdata.github.io/ETS/#extension-occurrence) contains vocabulary to describe information on the level of individual specimens, such as sex, life stage or age. This also includes the method of sampling and preservation, as well as date and geographical location, which provides an important resource to analyse trait variation due to differences in space and time.
-- The `measurementOrFact` extension (https://ecologicaltraitdata.github.io/ETS/#extension-measurement-or-fact) provides terms to describe information at the level of single measurements or reported facts, such as the original literature from where the value is cited, the method of measurement or statistical method of aggregation. It provides important information that allows for the tracking of potential sources of noise or bias in measured data (e.g. variation in measurement method) or aggregated values (e.g. statistical method applied), as well as the source of reported facts (e.g. literature source or expert reference).   
-- The `BiodiversityExploratories` extension provides terms to relate the trait measurement to plots and sites in the exploratories framework, including `ExploratoriesPlotID`, `Exploratory` and `ExploType`
+- The `measurementOrFact` extension (https://ecologicaltraitdata.github.io/ETS/#extension-measurement-or-fact) provides terms to describe information at the level of single measurements or reported facts, such as the original literature from where the value is cited, the method of measurement or statistical method of aggregation. It provides important information that allows for the tracking of potential sources of noise or bias in measured data (e.g. variation in measurement method) or aggregated values (e.g. statistical method applied), as well as the source of reported facts (e.g. literature source or expert reference).
+- The `BiodiversityExploratories` extension  (http://ecologicaltraitdata.github.io/ETS/#extension-biodiversity-exploratories)  provides terms to relate the trait measurement to plots and sites in the exploratories framework, including `ExploratoriesPlotID`, `Exploratory` and `ExploType`
 
 
 # R-package 'traitdataform'
@@ -86,7 +95,13 @@ datasetStd <- standardize(read.csv("path/to/data.csv"),
             )
 ```
 
-When saving your data, it is recommended to use 
+For saving your data for upload in BExIS, you would use 
+
+```
+write.csv(datasetStd, file = "filename.csv", row.names = FALSE)
+```
+
+which and omits the row names when produces a comma separated file with points as decimal delimiter. 
 
 # Upload to BExIS
 
@@ -107,7 +122,6 @@ On page 6: Set 'exploratory' and 'keyPlots' to 'none' if your trait data are not
 --> 
 
 On page 7: if the trait data are extracted from one or multiple existing databases, it is necessary to refer to those here (by name and by original paper reference). If the data have been uploaded before in a non-standard format, please provide the dataset ID. 
-
 
 
 # References
