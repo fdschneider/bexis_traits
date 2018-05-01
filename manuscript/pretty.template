@@ -15,6 +15,8 @@
   labelsep=bar
 }
 
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
