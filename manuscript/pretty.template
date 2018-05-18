@@ -14,7 +14,7 @@
 \captionsetup{
   labelsep=bar
 }
-
+\usepackage{longtable,colortbl}
 \usepackage[bitstream-charter]{mathdesign}
 \usepackage[T1]{fontenc}
 

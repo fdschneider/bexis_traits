@@ -1,0 +1,63 @@
+---
+title: "Towards an Ecological Trait-data Standard - Appendix A"
+author:
+- name: Florian D. Schneider \footnotemark[1] \footnotemark[2] \footnotemark[3]
+- name: Malte Jochum \footnotemark[4]
+- name: Gaetane Le Provost \footnotemark[3]
+- name: Andreas Ostrowski \footnotemark[5]
+- name: Caterina Penone \footnotemark[4]
+- name: David Fichtmüller \footnotemark[5]
+- name: Anton Güntsch \footnotemark[5]
+- name: Pete Manning \footnotemark[3]
+- name: Birgitta König-Ries\footnotemark[6]
+- name: Nadja K. Simons \footnotemark[7]
+fontsize: 12pt
+geometry: margin=0.5in
+classoption: landscape
+output:
+  pdf_document:
+    fig_caption: yes
+    fig_crop: no
+    keep_tex: yes
+    template: pretty.template
+  html_document:
+    fig_caption: yes
+    fig_width: 4
+    highlight: null
+    keep_md: yes
+    theme: united
+  word_document:
+    fig_caption: yes
+    fig_width: 6
+---
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\footnotetext[1]{Corresponding author: florian.dirk.schneider@gmail.com}
+\footnotetext[2]{Institute of Linguistics and Literary Studies, Technische Universität Darmstadt, Darmstadt, Germany}
+\footnotetext[3]{Senckenberg Biodiversity and Climate Research Centre (BiK-F) Frankfurt am Main, Germany}
+\footnotetext[4]{Institute of Plant Sciences, University of Bern, Bern, Switzerland}
+\footnotetext[5]{Botanic Garden and Botanical Museum Berlin, Freie Universität Berlin, Berlin, Germany}
+\footnotetext[6]{Department of Mathematics and Computer Science, Friedrich-Schiller-Universität Jena, Jena, Germany}
+\footnotetext[7]{Department for Ecology and Ecosystem Management, Center for Life and Food Sciences Weihenstephan, Technische Universität München, Freising, Germany}
+
+\newpage
+
+```{r, echo = FALSE, warning = FALSE}
+options(knitr.table.format = "latex")
+library(kableExtra)
+gg <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTfQOIHjJv5x_YHgq14DR7VLTvycfsl2Njj2Ip4p2a5kca8AX5t5cmaial6Bg-MX9pBDOJaJfnlR7Qj/pub?gid=0&single=true&output=csv", encoding = "UTF-8")
+dt <- subset(gg, select = c(datasetName, type, DOI, NumberTaxa, NumberTraits, Responsible, CiteAs, TermsOfUse))
+
+kable(dt, longtable=TRUE, 
+      caption = "List of published trait datasets and databases", 
+      booktabs = T) %>%
+kable_styling(latex_options = c("scale_down", "repeat_header"), font_size = 7) %>%
+  column_spec(1, width = "15em") %>%
+  column_spec(2, width = "5em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(6, width = "10em") %>%
+  column_spec(7, width = "25em") %>%
+  column_spec(8, width = "11em") 
+```
+
