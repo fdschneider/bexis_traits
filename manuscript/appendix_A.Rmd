@@ -47,17 +47,21 @@ output:
 options(knitr.table.format = "latex")
 library(kableExtra)
 gg <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTfQOIHjJv5x_YHgq14DR7VLTvycfsl2Njj2Ip4p2a5kca8AX5t5cmaial6Bg-MX9pBDOJaJfnlR7Qj/pub?gid=0&single=true&output=csv", encoding = "UTF-8")
-dt <- subset(gg, select = c(datasetName, type, DOI, NumberTaxa, NumberTraits, Responsible, CiteAs, TermsOfUse))
+dt <- subset(gg, select = c(datasetName, type, DOI, organismFocus, regionalFocus, NumberTaxa, NumberTraits, Responsible, CiteAs, TermsOfUse))
 
 kable(dt, longtable=TRUE, 
-      caption = "List of published trait datasets and databases", 
+      caption = paste0("List of published trait datasets and databases; static copy of the living spreadsheet at https://goo.gl/QxzfHy (access date ",
+        format(Sys.time(), '%Y-%m-%d'), ")"), 
       booktabs = T) %>%
-kable_styling(latex_options = c("scale_down", "repeat_header"), font_size = 7) %>%
+kable_styling(latex_options = c("scale_down", "repeat_header"), font_size = 6) %>%
   column_spec(1, width = "15em") %>%
   column_spec(2, width = "5em") %>%
-  column_spec(3, width = "10em") %>%
-  column_spec(6, width = "10em") %>%
-  column_spec(7, width = "25em") %>%
-  column_spec(8, width = "11em") 
+  column_spec(3, width = "12em") %>%
+  column_spec(4, width = "6em") %>%
+  column_spec(5, width = "6em") %>%
+  column_spec(6, width = "6em") %>%
+  column_spec(8, width = "10em") %>%
+  column_spec(9, width = "25em") %>%
+  column_spec(10, width = "11em") 
 ```
 
