@@ -2,14 +2,14 @@
 title: "Towards an Ecological Trait-data Standard - Appendix A"
 author:
 - name: Florian D. Schneider \footnotemark[1] \footnotemark[2] \footnotemark[3]
-- name: Malte Jochum \footnotemark[4]
-- name: Gaetane Le Provost \footnotemark[3]
-- name: Andreas Ostrowski \footnotemark[5]
-- name: Caterina Penone \footnotemark[4]
 - name: David Fichtmüller \footnotemark[5]
 - name: Anton Güntsch \footnotemark[5]
-- name: Pete Manning \footnotemark[3]
+- name: Malte Jochum \footnotemark[4]
 - name: Birgitta König-Ries\footnotemark[6]
+- name: Gaetane Le Provost \footnotemark[3]
+- name: Pete Manning \footnotemark[3]
+- name: Andreas Ostrowski \footnotemark[5]
+- name: Caterina Penone \footnotemark[4]
 - name: Nadja K. Simons \footnotemark[7]
 fontsize: 12pt
 geometry: margin=0.5in
@@ -46,21 +46,42 @@ output:
 ```{r, echo = FALSE, warning = FALSE}
 options(knitr.table.format = "latex")
 library(kableExtra)
-gg <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTfQOIHjJv5x_YHgq14DR7VLTvycfsl2Njj2Ip4p2a5kca8AX5t5cmaial6Bg-MX9pBDOJaJfnlR7Qj/pub?gid=0&single=true&output=csv", encoding = "UTF-8")
+gg <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTfQOIHjJv5x_YHgq14DR7VLTvycfsl2Njj2Ip4p2a5kca8AX5t5cmaial6Bg-MX9pBDOJaJfnlR7Qj/pub?output=csv", encoding = "UTF-8")
 dt <- subset(gg, select = c(datasetName, type, DOI, organismFocus, regionalFocus, NumberTaxa, NumberTraits, Responsible, CiteAs, TermsOfUse))
 
-kable(dt, longtable=TRUE, 
-      caption = paste0("List of published trait datasets and databases; static copy of the living spreadsheet at https://goo.gl/QxzfHy (access date ",
-        format(Sys.time(), '%Y-%m-%d'), ")"), 
+#dt$DOI <- paste0("[http://dx.doi.org/", gg$DOI, "](", gg$DOI, ")")
+URL <- sapply(as.character(gg$URL), function(x) unlist(strsplit(x, split = "\n"))[1] )
+URL_resolved <- paste0("\\href{",URL,"}{", sapply(URL, substr, start = 1, stop = 30), "... \\ExternalLink} ") #
+dt$DOI <- paste0("\\href{http://dx.doi.org/", gg$DOI, "}{", gg$DOI, " \\ExternalLink} ") 
+empty <- which(dt$DOI %in% c("\\href{http://dx.doi.org/NA}{NA \\ExternalLink} ", "\\href{http://dx.doi.org/}{ \\ExternalLink} "))
+dt$DOI[empty] <- URL_resolved[empty]
+
+#dt$DOI <-  cell_spec(gg$DOI, "latex", link = paste0("http://dx.doi.org/", gg$DOI ) )
+caption = paste0("Collection of trait datasets and databases; excerpt of the living spreadsheet at https://goo.gl/QxzfHy (access date ", format(Sys.time(), '%Y-%m-%d'), ")")
+
+order <- c(14, 15,30,  # all organisms
+           1,4,5,13,18,20,21, # plants
+           11,16,25,33, # all animals
+           3,17,31, ## birds
+           7,34,12, # mammals
+           26,8,27, # other vertebrates
+           32,2, 6,9,23,10,22,29,# invertebrates
+           24,28, # fungi
+           19 # other
+           )
+
+kable(dt[order,], longtable=TRUE, escape = FALSE, row.names = FALSE,
+      caption = caption,
       booktabs = T) %>%
 kable_styling(latex_options = c("scale_down", "repeat_header"), font_size = 6) %>%
   column_spec(1, width = "15em") %>%
   column_spec(2, width = "5em") %>%
-  column_spec(3, width = "12em") %>%
+  column_spec(3, width = "16em") %>%
   column_spec(4, width = "6em") %>%
   column_spec(5, width = "6em") %>%
-  column_spec(6, width = "6em") %>%
-  column_spec(8, width = "10em") %>%
+  column_spec(6, width = "5em") %>%
+  column_spec(7, width = "5em") %>%
+  column_spec(8, width = "8em") %>%
   column_spec(9, width = "25em") %>%
   column_spec(10, width = "11em") 
 ```
