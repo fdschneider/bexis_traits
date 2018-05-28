@@ -14,7 +14,9 @@
 \captionsetup{
   labelsep=bar
 }
-\usepackage{longtable,colortbl}
+
+\usepackage[table]{xcolor}
+\usepackage{longtable}
 \usepackage[bitstream-charter]{mathdesign}
 \usepackage[T1]{fontenc}
 
@@ -96,13 +98,45 @@ $endif$
 \urlstyle{same}  % don't use monospace font for urls
 
 
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setlength{\parindent}{12pt}
+\setlength{\parskip}{0pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{1em}  % prevent overfull lines
 
 \usepackage[onehalfspacing]{setspace}
 
 \setcounter{secnumdepth}{0}
+
+\usepackage{tikz}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
+% define lightgray
+\definecolor{lightgray}{gray}{0.95}
+
+% alternate rowcolors for all long-tables
+\let\oldlongtable\longtable
+\let\endoldlongtable\endlongtable
+\renewenvironment{longtable}{\rowcolors{2}{white}{lightgray}\oldlongtable} {
+\endoldlongtable}
 
 
 \makeatletter
@@ -165,23 +199,31 @@ $if(toc)$
 $endif$
 $body$
 
+
 $if(natbib)$
+
 $if(biblio-files)$
 $if(biblio-title)$
+
 $if(book-class)$
 \renewcommand\bibname{$biblio-title$}
 $else$
 \renewcommand\refname{$biblio-title$}
 $endif$
 $endif$
+
+  
 \bibliography{$biblio-files$}
 
 $endif$
 $endif$
+
 $if(biblatex)$
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
 
 $endif$
+
+  
 $for(include-after)$
 $include-after$
 
