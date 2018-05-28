@@ -2,14 +2,15 @@
 title: "Towards an Ecological Trait-data Standard - Appendix A"
 author:
 - name: Florian D. Schneider \footnotemark[1] \footnotemark[2] \footnotemark[3]
-- name: David Fichtmüller \footnotemark[5]
-- name: Anton Güntsch \footnotemark[5]
 - name: Malte Jochum \footnotemark[4]
-- name: Birgitta König-Ries\footnotemark[6]
-- name: Gaetane Le Provost \footnotemark[3]
-- name: Pete Manning \footnotemark[3]
-- name: Andreas Ostrowski \footnotemark[5]
+- name: Gaëtane Le Provost \footnotemark[3]
+- name: Andreas Ostrowski \footnotemark[6]
 - name: Caterina Penone \footnotemark[4]
+- name: David Fichtmüller \footnotemark[5]
+- name: Martin Gossner \footnotemark[8]
+- name: Anton Güntsch \footnotemark[5]
+- name: Birgitta König-Ries\footnotemark[6]
+- name: Pete Manning \footnotemark[3]
 - name: Nadja K. Simons \footnotemark[7]
 fontsize: 12pt
 geometry: margin=0.5in
@@ -39,9 +40,13 @@ output:
 \footnotetext[4]{Institute of Plant Sciences, University of Bern, Bern, Switzerland}
 \footnotetext[5]{Botanic Garden and Botanical Museum Berlin, Freie Universität Berlin, Berlin, Germany}
 \footnotetext[6]{Department of Mathematics and Computer Science, Friedrich-Schiller-Universität Jena, Jena, Germany}
-\footnotetext[7]{Department for Ecology and Ecosystem Management, Center for Life and Food Sciences Weihenstephan, Technische Universität München, Freising, Germany}
+\footnotetext[8]{Forest Entomology, Swiss Federal Research Institute WSL, Birmensdorf, Switzerland} <!--  Zürcherstrasse 111, CH-8903 -->
+\footnotetext[7]{Chair for Terrestrial Ecology, Department of Ecology and Ecosystemmanagement,
+Technische Universität München, Freising, Germany}
 
 \newpage
+
+\renewcommand{\thetable}{A\arabic{table}}
 
 ```{r, echo = FALSE, warning = FALSE}
 options(knitr.table.format = "latex")
