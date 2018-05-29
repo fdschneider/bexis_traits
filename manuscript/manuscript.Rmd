@@ -7,7 +7,7 @@ author:
 - name: Andreas Ostrowski \footnotemark[6]
 - name: Caterina Penone \footnotemark[4]
 - name: David Fichtmüller \footnotemark[5]
-- name: Martin Gossner \footnotemark[8]
+- name: Martin M. Gossner \footnotemark[8]
 - name: Anton Güntsch \footnotemark[5]
 - name: Birgitta König-Ries\footnotemark[6]
 - name: Pete Manning \footnotemark[3]
@@ -425,7 +425,7 @@ The standard vocabulary proposed here may still be applied to describe columns w
 
 For reasons of long-term accessibility, data should not be uploaded in proprietary spreadsheet formats (like '.xlsx') but rather in comma-separated text files  ('.csv' or '.txt') that are compatible with all computing platforms and internationalisation settings by applying a unified character encoding (e.g. UTF-8 or ASCII).
 
-In order to ensure traceability, the metadata of any dataset that employs this vocabulary should refer to the specific online version that was used to build the dataset, e.g. "Schneider, F.D., Jochum, M.,  Le Provost, G., Penone, C., Ostrowski, A. and Simons, N.K., 2017 Ecological Traitdata Standard v0.7, DOI: 10.5281/zenodo.1048956, URL: https://ecologicaltraitdata.github.io/ETS/v0.7/". In addition to this versioned online reference, the dataset should also cite this paper for an explanation of the rationale.
+In order to ensure traceability, the metadata of any dataset that employs this vocabulary should refer to the specific online version that was used to build the dataset, e.g. "Schneider, F.D., Jochum, M.,  Le Provost, G., Penone, C., Ostrowski, A. and Simons, N.K., 2018 Ecological Traitdata Standard v0.8, DOI:  10.5281/zenodo.1255287, URL: https://ecologicaltraitdata.github.io/ETS/v0.8/". In addition to this versioned online reference, the dataset should also cite this paper for an explanation of the rationale.
 Wherever referring to individual terms of the vocabulary in publications or metadata, this should be done via their global identifiers, which will be hosted by the GFBio Terminology Service [@karam16, https://terminologies.gfbio.org/] and can be accessed programmatically (i.e. via the API; **in preparation!**). 
 Wherever our glossary refines or duplicates existing terms from other ontologies for biological data, like the Glossary of EOL (http://eol.org/info/516) and Darwin Core (http://rs.tdwg.org/dwc/terms/), we indicate this in the fields 'refines' or 'identical', respectively.
 
@@ -473,7 +473,7 @@ Some data-types may directly refer to existing global identifiers for occurrence
 Wherever possible, the column `traitID` should point to a publicly available, unambiguous trait definition in a published ontology. 
 If no globally available trait definition exists as an external reference, trait datasets should always be accompanied by a dataset-specific list of traits as part of the metadata or as an accompanying data table.
 Such a controlled vocabulary would, in its simplest form, assign trait names with an unambiguous definition of the trait and an expected format of measured values or reported facts (e.g. units or legit factor levels). Ideally, this definition refers to or refines terms from published trait ontologies.
-By providing a minimal vocabulary for trait lists (see https://ecologicaltraitdata.github.io/ETS/#terms-for-thesauri), we hope to facilitate the unambiguous definition of traits for trait datasets.
+By providing a minimal vocabulary for trait lists (see https://ecologicaltraitdata.github.io/ETS/#terms-for-trait-definitions), we hope to facilitate the unambiguous definition of traits for trait datasets.
 This vocabulary might also prove useful for the future publication of trait ontologies. 
 <!--See our online reference for recommendations how to prepare a traitlist for  (https://ecologicaltraitdata.github.io/ETS/thesauri.html). We also provide an example thesaurus on Github (http://ecologicaltraitdata.github.io/TraitDataList/), which has been developed to capture traits assessed for multiple animal taxa within the German Biodiversity Exploratories project [@fischer10]. -->
 

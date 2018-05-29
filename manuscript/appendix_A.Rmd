@@ -7,7 +7,7 @@ author:
 - name: Andreas Ostrowski \footnotemark[6]
 - name: Caterina Penone \footnotemark[4]
 - name: David Fichtmüller \footnotemark[5]
-- name: Martin Gossner \footnotemark[8]
+- name: Martin M. Gossner \footnotemark[8]
 - name: Anton Güntsch \footnotemark[5]
 - name: Birgitta König-Ries\footnotemark[6]
 - name: Pete Manning \footnotemark[3]
@@ -41,8 +41,7 @@ output:
 \footnotetext[5]{Botanic Garden and Botanical Museum Berlin, Freie Universität Berlin, Berlin, Germany}
 \footnotetext[6]{Department of Mathematics and Computer Science, Friedrich-Schiller-Universität Jena, Jena, Germany}
 \footnotetext[8]{Forest Entomology, Swiss Federal Research Institute WSL, Birmensdorf, Switzerland} <!--  Zürcherstrasse 111, CH-8903 -->
-\footnotetext[7]{Chair for Terrestrial Ecology, Department of Ecology and Ecosystemmanagement,
-Technische Universität München, Freising, Germany}
+\footnotetext[7]{Department of Ecology and Ecosystem Management, Technische Universität München, Freising, Germany}
 
 \newpage
 
