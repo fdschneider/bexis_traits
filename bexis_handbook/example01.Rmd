@@ -4,16 +4,20 @@ output:
   pdf_document:
     includes:
       in_header: header.tex
-fontsize: 10pt
+fontsize: 7pt
 geometry: margin=1.5in
 ---
 
-```{r, eval = FALSE}
 
-# load library
+```
+
+
+# load library:
+
 library(traitdataform)
 
-# load non-standardized dataset from BExIS 
+
+# load non-standardized dataset from BExIS:
 # (requires access credentials and access rights)
 
 moths <- read.service(21247, dec = ",")
@@ -28,36 +32,43 @@ dataset1 <- as.traitdata(moths,
                              "wing_area", "wing_loading"
                              ),
                   units = c("mg", "mm", # which units do apply
-                            "mm", "mm2", "mg/mm2"), 
+                            "mm", "mm2", "mg mm-2"), 
                   keep = c(locationID = "plot") # which other cols to keep
                   )  
 
 
 # standardize taxonomy:
-# applies a matching of taxonomic names to GBIF backbone taxonomy
+# (applies a matching of taxonomic names to GBIF backbone taxonomy)
 
 dataset1Std <- standardize.taxonomy(dataset1)  
 
+
 # define a user-provided trait thesaurus:
 
-traitlist <- as.thesaurus(data.frame(
-  trait = c(
-    "weight", 
-    "wing_length",
-    "wing_width",
-    "wing_area",
-    "wing_loading"
-  ),
-  traitDescription = c("dry weight of the individual", 
-                       "the distance between base and apex (xi)", 
-                       "the distance between tornus and costa (yi)", 
-                       "wing_width x wing_length", 
-                       "ratio of wing_area to body_mass"
-                       ),
-  valueType = c("numeric"),
-  expectedUnit = c("mg", "mm", "mm", "mm2", "mg/mm2")
+traitlist <- as.thesaurus(
+  weight = as.trait("body_weight",
+       expectedUnit = "mg", valueType = "numeric",
+       identifier = "http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_weight"),
+  wing_length = as.trait("wing_length",
+       expectedUnit = "mm", valueType = "numeric",
+       identifier = ""),
+  wing_width = as.trait("wing_width",
+       expectedUnit = "mm", valueType = "numeric",
+       identifier = ""),
+  wing_area = as.trait("wing_area",
+       expectedUnit = "mm2", valueType = "numeric",
+       identifier = "http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Wing_surface"),
+  wing_loading = as.trait("wing_loading",
+       expectedUnit = "mg mm-2", valueType = "numeric",
+       identifier = "")
 )
-)
+
+
+# This example does not specify identifiers, i.e. URI references to definitions
+# on the internet, for all traits. It would be advisable to provide such links,
+# but published ontologies do not cover all possible definitions of traits to
+# date. The metadata file should therefore include a definition of the traits in
+# a clear and unambiguous format.
 
 
 # standardize traits:
@@ -67,17 +78,17 @@ dataset1Std <- standardize.traits(dataset1Std, traitlist)
 
 # standardize occurrence context by Exploratories Plot ID:
 
-dataset1Std <- standardize.exploratories(dataset1Std)
-
+dataset1Std <- standardize.exploratories(dataset1Std, plots = "locationID")
 
 # save to txt file, ready for BExIS upload: 
-# omitting row names, use tab as field delimiter, 
-# point as decimal delimiter, NA as missing value
+# (omitting row names, use tab as field delimiter, 
+# point as decimal delimiter, NA as missing value)
 
 write.table(dataset1Std, file = "mothtraitsStd.txt", 
             row.names = FALSE, 
             sep = "\t", 
             na = "NA", 
+            quote = FALSE,
             dec = "."
             )
 
