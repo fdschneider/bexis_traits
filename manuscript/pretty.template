@@ -4,8 +4,10 @@
 %\usepackage{concmath}
 \usepackage{amssymb,amsmath}
 \usepackage{array}
+\usepackage{pdflscape}
 \usepackage{fixltx2e} % provides \textsubscript
 \usepackage[utf8]{inputenc}
+\usepackage{gensymb}
 \usepackage[pdftex]{graphicx}
 \usepackage{units, calc}
 \usepackage[english]{babel}
@@ -19,9 +21,14 @@
 \usepackage{longtable}
 \usepackage[bitstream-charter]{mathdesign}
 \usepackage[T1]{fontenc}
+\addtokomafont{disposition}{\rmfamily}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+  
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
 
 $if(euro)$
   \usepackage{eurosym}
@@ -51,6 +58,15 @@ $endif$
 \usepackage{longtable}
 \usepackage{booktabs}
 
+
+\newcolumntype{R}[2]{%
+    >{\adjustbox{angle=#1,lap=\width-(#2)}\bgroup}%
+    l%
+    <{\egroup}%
+}
+\newcommand*\rot{\multicolumn{1}{R{45}{1em}}}% no optional argument here, please!
+
+
 % \usepackage[nomarkers,figuresonly, nofiglist]{endfloat}
 
 $if(graphics)$
@@ -76,6 +92,8 @@ $if(graphics)$
 }%
 $endif$
 
+\newcommand{\blandscape}{\begin{landscape}}
+\newcommand{\elandscape}{\end{landscape}}
 
 \usepackage{etoolbox}
 \makeatletter
@@ -144,8 +162,8 @@ $endif$
 \makeatother
 
 \usepackage{lineno}
-\linenumbers
-\renewcommand\linenumberfont{\normalfont\tiny}
+%\linenumbers
+%\renewcommand\linenumberfont{\normalfont\tiny}
 
 
 \setlength{\intextsep}{1000pt}
