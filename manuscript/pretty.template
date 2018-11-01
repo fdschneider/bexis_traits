@@ -120,7 +120,7 @@ $endif$
 \setlength{\parskip}{0pt plus 2pt minus 1pt}
 \setlength{\emergencystretch}{1em}  % prevent overfull lines
 
-\usepackage[onehalfspacing]{setspace}
+\usepackage[doublespacing]{setspace}
 
 \setcounter{secnumdepth}{0}
 
