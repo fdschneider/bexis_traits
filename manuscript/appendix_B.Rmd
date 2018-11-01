@@ -53,12 +53,12 @@ output:
 
 This tutorial provides best-practice principles when standardising traits with terms of the Ecological Trait-data Standard (ETS, https://terminologies.gfbio.org/terms/ets/pages/).
 
-We focus this document on the first of the three use-cases for the ETS vocabulary: The publication of project-specific primary data.  
+We focus this document on the first of the three use-cases for the ETS vocabulary: The publication of project-specific primary data.
 To comply with the FAIR principles of scientific data management and aim at findability, accessibility, interoperability and reusability [@wilkinson16], trait data should apply the following principles when preparing data for publication:
 
 - **Label your dataset!** data should be published with appropriate metadata and provide  a descriptive title and keywords to be findable by search engines. Keywords should include the general label "trait-data", and more specific labels such as "functional traits" or "morphometric traits", as well as the taxa covered by the dataset. 
 
-- **State terms of use!** To enable re-use, the metadata must contain the name of the author or owner of the data, the suggested citation for the data, as well as the license model or terms of use of the data. Ideally, these statements are provided by the data-hoster in a machine-readable way. 
+- **State terms of use!** To enable re-use, the metadata must contain the name of the author or owner of the data, the suggested citation for the data, as well as the license model or terms of use of the data. Recommended are copyright wavers and licenses that permit re-use without seeking authorization from the rights holder, such as Creative Commons (CC) licenses, which also can warrant attribution and citation (CC by) [@kissling18]. Ideally, these statements are provided by the data-hoster in a machine-readable way, by using standardised fields of metadata or hyperlink references. 
 
 - **Use independent file formats!** For reasons of long-term accessibility, data should not be uploaded in proprietary spreadsheet formats (like '.xlsx') but rather in comma- or tab-separated text files  ('.csv' or '.tsv') that are compatible with all computing platforms and internationalisation settings by applying a unified character encoding (e.g. UTF-8 or ASCII). For internationalisation, use points as decimal delimiters and set date-formats to ISO 8601, i.e. "YYYY-MM-DD". 
 
@@ -219,7 +219,7 @@ mothsStd <- mothsStd[order(as.numeric(substr(mothsStd$occurrenceID,2,10))),]
 caption <- "Example 2 after standardisation into measurement long-table format. Each row contains a single measurement linked to an observation of an individual specimen, i.e. an occurrence, via identifiers."
 select_cols <- c("scientificName","traitName","traitValue","traitUnit","traitID","scientificNameStd","taxonID","occurrenceID", "measurementID", "locationID")
 
-kable(mothsStd[1:35,select_cols], longtable=TRUE, escape = TRUE, row.names = FALSE,
+kable(mothsStd[1:28,select_cols], longtable=TRUE, escape = TRUE, row.names = FALSE,
       booktabs = T, caption = caption) %>%
 kable_styling(latex_options = c("scale_down", "repeat_header", "striped"), font_size = 5)
 
@@ -248,7 +248,7 @@ select_cols <- c(1:7,9,11,12:15)
 # https://figshare.com/collections/Morphometric_measures_of_Heteroptera_sampled_in_grasslands_across_three_regions_of_Germany/3307611/1
 caption = "Example 3 before standardisation; Excerpt of data from Gossner et al. (2015b) Ecology, 96, 1154–1154. doi: \\href{https://doi.org/10.1890/14-2159.1}{10.1890/14-2159.1} on measurements of traits in Heteroptera."
 
-kable(heteroptera_raw[1:35,select_cols], longtable=TRUE, escape = TRUE, row.names = FALSE,
+kable(heteroptera_raw[1:28,select_cols], longtable=TRUE, escape = TRUE, row.names = FALSE,
       booktabs = T, caption = caption) %>%
 kable_styling(latex_options = c("scale_down", "repeat_header", "striped"), font_size = 5)
 
@@ -274,7 +274,7 @@ heteroptera_long$basisOfRecord <- as.factor("PreservedSpecimen")
 caption = "Example 3 after standardisation; application of terms of the ETS extensions structure the two-dimensional data table. Excerpt of data from Gossner et al. (2015b) Ecology, 96, 1154–1154. doi: \\href{https://doi.org/10.1890/14-2159.1}{10.1890/14-2159.1}."
 
 select_cols <- c(1,2,3,4,8,6,15,18,22,16,20,21)
-kable(heteroptera_long[heteroptera_long$traitName %in% c("Body_length", "Body_width", "Body_height", "Thorax_width"),select_cols][30:65,], longtable=TRUE, escape = TRUE, row.names = FALSE,
+kable(heteroptera_long[heteroptera_long$traitName %in% c("Body_length", "Body_width", "Body_height", "Thorax_width"),select_cols][30:58,], longtable=TRUE, escape = TRUE, row.names = FALSE,
       booktabs = T, caption = caption) %>%
 kable_styling(latex_options = c("scale_down", "repeat_header", "striped"), font_size = 5)
 
