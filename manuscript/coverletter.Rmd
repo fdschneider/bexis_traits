@@ -1,0 +1,70 @@
+---
+output:
+  rmarkdown::tufte_handout:
+    keep_tex: true
+    fig_width: 1
+  pdf_document: default
+  word_document: default
+  html_document:
+    fig_caption: yes
+    fig_width: 1
+    highlight: null
+    theme: united
+---
+
+
+\vspace{3.1cm}
+\setlength{\fboxsep}{3pt}
+\setlength{\fboxrule}{0pt}
+\fbox{
+  \parbox[b]{8cm}{
+  \small
+Methods in Ecology and Evolution \\
+The British Ecological Society\\
+Charles Darwin House\\
+12, Roger Street\\
+London, UK\\
+WC1N 2JU\\
+  }
+}
+
+  
+\vspace{4.2cm}
+
+\noindent Dear editors,   \marginpar{01 November 2018}
+\vspace{0.3cm}
+
+
+
+We would like to submit our manuscript "Towards an Ecological Trait-data Standard" for consideration as a review article at Methods in Ecology and Evolution. The manuscript discusses the need for, and potential of, a better standardisation of trait data on the data-provider side. 
+
+Trait-based approaches are on the rise in many fields, ranging from local-scale functional ecology to global ecological synthesis. These works rely on the compilation of trait-data from heterogeneous sources. At the same time a wealth of often unused data is available in open-access repositories. Presently trait-data harmonization is time-consuming and error-prone due to an insufficient implementation of unified data standards in primary data publications. As it stands, the wealth of data is not easy to integrate in the semantic web of biodiversity data and downstream data synthesis is inhibited. We propose a simple and versatile vocabulary for primary data publications of trait-data to close this gap: the Ecological Trait-data Standard. We also discuss incentives and provide best-practice guidelines to facilitate the standardisation of trait-data before data publication. 
+
+We presented a pre-print version of this paper and our standard terminology earlier this year (https://doi.org/10.1101/328302).This received a lot of attention for a pre-print (1000+ reads on biorxiv.org and Researchgate) and initiated interactions with a broad community of researchers (in particular, with the OpenTraits.org community and the TRY plant trait database). Community feedback on this pre-print has been integrated in the current version of the standard (v0.9), and of this manuscript. 
+
+We consider Methods in Ecology and Evolution to be a perfect venue to disseminate this work, due to the general and international audience of the journal, many of whom work with trait data. By providing a primer on standardisation and interoperability of trait-data we feel that our paper makes an important contribution to both open science and trait-based ecology and evolution.
+
+While we feel the paper is of importance, and an excellent fit to MEE, its format differs from those which are standard at the journal. The manuscript is structured into two chapters that we consider strongly interrelated: first, a review of the current state of implementation and the rationale for trait-data standardisation, and second, a proposal for a standard terminology to remediate the deficiencies in current standardisation practice for trait data publications. Due to this structure, it comes with a rather high word count of slightly below 10.000 words (including 2.470 for References and 250 for figure and table captions). Although these two chapters could in principle go into separate "Review" and "Practical Tools" papers, we would like to argue for keeping those two chapters in one single paper to have them well aligned, and to strengthen the impact of the work.
+
+As reviewers, we suggest 
+
+-	Josh Madin (University of Hawaii), who knows all aspects of trait-data standardisation, including authoring and analysing trait data, as well compilation and management of large databases.,
+-	Ramona Walls (University of Arizona), who developed seminal papers on the topic of biodiversity data management and ontologies, with particular focus on trait-data, 
+-	Joseph Tobias (Imperial College London), who works on trait evolution and employs large compilations of trait data, and
+-	Gavin Thomas (Sheffield University), who works on trait data measurements on birds. 
+
+We would like to oppose to inviting reviews from the lead authors of the TRY plant trait database (namely Jens Kattge, Gerhard Bönisch) who opposed to our vocabulary in a comment on biorxiv.org (https://www.biorxiv.org/content/early/2018/05/31/328302#comment-4010197361) highlighting competing interests with their centralised approach to data standardisation. Although we had a friendly exchange and took their concern into account and highlighted the complementarity of the two approaches when revising the manuscript, they might still perceive our proposal as competitive. 
+
+We look forward to hearing from you. 
+
+\vspace{1.5mm}
+
+\noindent On behalf of all authors
+
+
+\vspace{1.5mm}
+
+\includegraphics[width=5.2cm]{FSchneider.eps}
+
+
+\noindent Florian D. Schneider 
