@@ -17,20 +17,20 @@ fontsize: 11pt
 geometry: margin=1.4in
 documentclass: scrartcl
 output:
-  word_document:
+  pdf_document:
     fig_caption: yes
-    fig_width: 6
+    fig_crop: no
+    keep_tex: yes
+    template: pretty.template
   html_document:
     fig_caption: yes
     fig_width: 4
     highlight: null
     keep_md: yes
     theme: united
-  pdf_document:
+  word_document:
     fig_caption: yes
-    fig_crop: no
-    keep_tex: yes
-    template: pretty.template
+    fig_width: 6
 bibliography: div05.bib
 ---
 
@@ -418,11 +418,8 @@ Rather than prescribing a data structure, the vocabulary is intended as a more i
 2. by data users and curators: as a consensus vocabulary when compiling data from distributed sources into aggregate datasets, e.g. to map standardised columns and refer to taxa and trait definitions in a uniform way, and
 3. by data managers: as a data exchange format of between online resources, web services and software tools, e.g. when providing database queries via a web service or defining input and output formats of software packages.
 
-By using this standard vocabulary, authors can ensure that the description of trait measurements uploaded into distributed data repositories will be unambiguous and generally applicable. It will facilitate interoperability of published data and enable their re-use for future data aggregation initiatives, data synthesis and ensure long-term accessibility. By adopting the standard vocabulary, trait-data will support the FAIR principles for scientific data [@wilkinson16]. 
-We describe best practice principles and give examples for the application of the vocabulary in Supplementary Material B. 
-
-In designing this vocabulary, we drew on the combined expertise of empirical biodiversity researchers (data providers), biodiversity synthesis researchers (data users and curators), and biodiversity informatics researchers (data managers).
-We paid particular attention to existing data standards [particularly @madin07; @kattge11; @kattge11a; @garnier17; @parr16] to ensure compatibility of our proposed data structure with major trait databases and existing standards for biodiversity data management. 
+All terms may be applied to describe columns of a data table, or to label content of a database (Fig. 2; see Supplementary Material B for best practice principles and examples for publishing primary data).
+By applying standard terms, authors can ensure that the description of trait measurements uploaded into distributed data repositories will be unambiguous and generally applicable. It will facilitate interoperability of published data and enable their re-use for future data aggregation initiatives, data synthesis and ensure long-term accessibility. By adopting the standard vocabulary, trait-data will eventually support the FAIR principles for scientific data [@wilkinson16]. 
 
 <!--
 ## Why use the vocabulary
@@ -438,7 +435,10 @@ The trait values may be quantitative measurements or qualitative facts.
 Quantitative measurements are values obtained either by direct morphological, physiological or behavioural observations on single specimens (Fig. 1*a*), by aggregating replicated measurements on multiple entities (Fig. 1*b*) or by estimating the means or ranges for the respective taxon as reported in the literature or other published sources (e.g. databases, Fig. 1*c*). This encompasses a wide range of numeric data types, including continuous, binary, integer, intervals or ratios, as well as ordinal values. 
 Qualitative facts are assignments of an entity to a categorical level, e.g. of a behavioural or life-history trait (Fig. 1*d*). 
 Beyond these core observations, further information might be available that further specify the taxon concept applied, provide detail on the measurement method, or that place the reported measurement in a broader observation context (including geolocation and date information).
-These information may be useful for future analysis of the causal reasons of trait variation and should always be published along with the core data.
+These information may be useful for future analysis of the causal reasons of trait variation and should always be published along with the core data. Our vocabulary thus offers three extensions to contain ancillary information on different layers of the core data ("Measurement or Fact", "Occurrence", and "Taxon"; see section on extensions below). 
+Additional terms are provided for metadata and for defining trait concepts (see section on metadata below). 
+Aspects not covered by the vocabulary may draw from terms provided by DwC and it's extensions or be added as user-defined columns (which should be clearly specified in the meta-information accompanying the dataset). 
+
 
 \begin{figure}[t]
 \centering
@@ -448,13 +448,13 @@ These information may be useful for future analysis of the causal reasons of tra
 \end{figure}
 <!-- DF : The “variables” for the taxa etc should only be reused for the different examples when they refer to something similar: “a) Entity: an individual X of taxon Y”, “b) Entity: taxon Y”, “c) Entity: males of taxon Z” and “d) Entity: genus U”. Alternatively, since these are already example, why use variables here in the first place and not just specific example for the taxa as well: “a) Entity: an individual X of taxon Tettigonia viridissima” -->
 
-Our vocabulary thus provides core terms to reflect the minimal Entity-Quality structure of trait data. 
-We further offer three extensions to contain ancillary information on different layers of the core data ("Measurement or Fact", "Occurrence", and "Taxon"; see section on extensions below). 
-All terms may be applied to describe columns of a data table, or to label content of a database (see Box 1 / Supplementary Material B for best practice principles and examples for publishing primary data).
-Additional terms are provided for metadata and for providing trait concepts (see section on metadata below).
-Some of the terms expand and refine terms of DwC and its extensions (http://rs.tdwg.org/dwc/terms/) or the Glossary of EOL (http://eol.org/info/516). Wherever our vocabulary refines or duplicates existing terms, we indicate this in the fields 'refines' or 'identical', respectively. The vocabulary can be mapped onto other existing ontologies (e.g. @madin07) or database structures (e.g. @kattge11a).
-Aspects not covered by the terminology may draw from terms provided by DwC and it's extensions or be added as user-defined columns (which should be clearly specified in the meta-information accompanying the dataset). 
+## Building community consensus
 
+In designing this vocabulary, we drew on the combined expertise of empirical biodiversity researchers (data providers), biodiversity synthesis researchers (data users and curators), and biodiversity informatics researchers (data managers).
+The aim was to develop a simple, easy-to-use template for standalone trait data publications or data compilations, to facilitate their integration into databases. Earlier proposals for trait-data standards [e.g. @kattge11a; @parr16] have been designed for more complex database structures and from a data manager perspective only, which may be the reason why they have so far not been adopted for primary data publications.
+We paid particular attention to these existing data standards [particularly @madin07; @kattge11; @kattge11a; @garnier17; @parr16] to ensure compatibility of our vocabulary with major trait databases and existing concepts for biodiversity data management.
+Nonetheless, we are aware of the diverse use-cases of trait data that might not yet be covered by the current version of the vocabulary. The version presented here is a mere starting point of a community effort towards a consolidated and comprehensive Ecological Trait-data Standard, as a key ressource for trait-data standardisation. We invite communities of all trait-based research fields to discuss, revise and submit terms and extensions of the vocabulary (coordinated via Github Issues at https://github.com/EcologicalTraitData/ETS/issues).
+The standard vocabulary will be released in subsequent versions and published as a stable reference on the GFBio Terminology Service (https://terminologies.gfbio.org/terms/ets/pages/).  
 
 ## Specification of core terms
 
@@ -529,17 +529,16 @@ The definitions of terms are hosted on the GFBio Terminology Service [@karam16, 
 To serve the demand for the standardisation and harmonisation of ecological trait data which has arisen from a growing number of distributed datasets of different research contexts, we propose a versatile vocabulary for the publication of new datasets, for the creation of data compilations, as well as for the exchange and handling of trait data in the context of a 'semantic web'.
 
 <!-- community effort and consensus -->
-While it is clear, that a single vocabulary standard is not able to fulfil the needs of all research fields working with traits, we believe that our proposal captures a common core concept of trait data. 
+While it is clear, that a single vocabulary standard is not able to fulfil the needs of all research fields working with traits, we believe that our proposal captures the common core concept of trait data in a single resource terminology. 
 Consensus building on how traits are to be used and evaluated is currently under way in several fields with their taxonomic focus and project-specific questions [@kissling18; @garnier17; @pey14; @moretti17]. While community discussions on trait definitions and measurement practices are leading to a better quality of data, naturally, the heterogeneity in trait-data quality and detail across fields will remain. 
 With our proposal of an Ecological Trait-data Standard vocabulary, we provide a starting point for the development of a joint language and terminology around traits as a cross-sectoral topic of ecological and evolutionary research. 
 Therefore, we invite researchers to contribute to future versions of the standard vocabulary and develop own applications and ontologies that interact with it.
-The standard vocabulary will be released in subsequent versions and published as a stable reference on the GFBio Terminology Service (https://terminologies.gfbio.org/terms/ets/pages/). 
 
 <!-- ETS investment and pay-off for data providers, incentives -->
 For individual researchers and small research projects, the investment of time and resources in trait-data standardisation before publication seems currently not to be yielding a direct benefit.
 However, data released according to consensus standards, especially if published under open-access licenses, will be more easily re-used in compilations and synthesis studies. 
 A well-defined vocabulary for metadata will also ensure that authorship and terms of use are appropriately documented along the data life-cycle.
-However, for these incentives to take effect, data publications and data citations must become viewed as a valid scientific contribution to the community, and  recognized in the professional evaluation of individual researchers [@costello09; @roche15].
+However, for these incentives to take effect, data publications and data citations must become viewed as a valid scientific contribution to the community, and recognized in the professional evaluation of individual researchers [@costello09; @roche15].
 To mitigate the cost of data standardisation efforts, supporting tools and infrastructures should be developed for readying trait data for the 'semantic web' of biodiversity data.
 
 <!-- ETS solving Data compilation issues --> 
@@ -555,11 +554,11 @@ Even further downstream, readying the primary data for the semantic web via refe
 
 # Conclusion
 
-To date, there is a rich distributed body of independently published trait datasets, with different focus on particular organism groups, ecosystem types or regions. These distributed data are heterogeneous in form and description, and initiatives to harmonise, compile and analyse these data require significant amounts of funding.
+To date, there is a rich distributed body of independently published trait datasets, with different focus on particular organism groups, ecosystem types or regions. These distributed data are heterogeneous in form and description, hampering endeavours to harmonise, compile and analyse these data.
 
 Using a standard vocabulary with globally accessible definitions of terms,  would allow distributed trait data to be more easily re-used and harmonised into aggregated datasets. 
-The biggest challenge in future standardisation of trait data may be consensus building for standard terms, the establishment of incentives and the development of tools for a user-side standardisation and publication of data.
-This requires significant effort, but it returns  great scientific benefit by enabling data-heavy synthesis for a general understanding of biodiversity and ecosystem functioning. 
+The biggest challenge in future standardisation of trait data may be consensus building for standard terms, the establishment of incentives and the development of tools for a user-side standardisation before the publication of data.
+This requires significant effort, but it returns great scientific benefit by enabling data-heavy synthesis for a general understanding of biodiversity and ecosystem functioning. 
 
 # Acknowledgements
 
@@ -581,7 +580,7 @@ The online reference for the Ecological Trait-data Standard Vocabulary described
 
 Supplementary Material A - static excerpt of a living spreadsheet (https://goo.gl/QxzfHy) which lists published trait datasets, their regional and taxonomic focus, the number and scope of traits covered, their location on the internet and the terms of use. We invite data owners and users to add further trait datasets to this spreadsheet.  
 
-Supplementary Material B - contains three worked examples of how to  1.) apply the core ETS vocabulary to species$\times$traits wide-trables, 2.) convert data to long-table format using identifiers 3.) apply ETS extensions and identifiers to include co-variate information on different layers of the dataset.
+Supplementary Material B - contains best-practice guidelines and three worked examples of how to  1.) apply the core ETS vocabulary to species$\times$traits wide-trables, 2.) convert data to long-table format using identifiers 3.) apply ETS extensions and identifiers to include co-variate information on different layers of the dataset.
 
 <!--The development website for the R-package 'traitdataform' is https://github.com/EcologicalTraitData/traitdataform.
 <!--An example of a published trait thesaurus for the Biodiversity Exploratories (www.biodiversity-exploratories.de) can be found at https://ecologicaltraitdata.github.io/TraitDataList/.-->
