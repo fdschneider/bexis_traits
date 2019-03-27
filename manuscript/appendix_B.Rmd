@@ -3,16 +3,16 @@ title: "Best practice examples for primary data publication"
 subtitle: "Towards an Ecological Trait-data Standard - Supplementary Material B"
 author:
 - name: Florian D. Schneider \footnotemark[1]  \footnotemark[2]
-- name: David Fichtmüller \footnotemark[5]
-- name: Martin M. Gossner \footnotemark[8]
-- name: Anton Güntsch \footnotemark[5]
-- name: Malte Jochum \footnotemark[4]
+- name: David Fichtmüller \footnotemark[3]
+- name: Martin M. Gossner \footnotemark[4]
+- name: Anton Güntsch \footnotemark[3]
+- name: Malte Jochum \footnotemark[5] \hspace{1mm} \footnotemark[8]
 - name: Birgitta König-Ries\footnotemark[6]
 - name: Gaëtane Le Provost \footnotemark[2]
 - name: Pete Manning \footnotemark[2]
 - name: Andreas Ostrowski \footnotemark[6]
-- name: Caterina Penone \footnotemark[4]
-- name: Nadja K. Simons \footnotemark[7]
+- name: Caterina Penone \footnotemark[5]
+- name: Nadja K. Simons \footnotemark[7] \hspace{1mm} \footnotemark[9]
 fontsize: 11pt
 geometry: margin=1.2in
 documentclass: scrartcl
@@ -41,13 +41,17 @@ output:
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
-\footnotetext[1]{Corresponding author: florian.dirk.schneider@gmail.com}
+\footnotetext[1]{Corresponding author: florian.dirk.schneider@gmail.com,  \newline
+c/o Birgitta König-Ries, Department of Mathematics and Computer Science, Friedrich-Schiller-Universität Jena, Ernst-Abbe-Platz 2, 07743 Jena, Germany
+}
 \footnotetext[2]{Senckenberg Biodiversity and Climate Research Centre (BiK-F) Frankfurt am Main, Germany}
-\footnotetext[5]{Botanic Garden and Botanical Museum Berlin, Freie Universität Berlin, Berlin, Germany}
-\footnotetext[8]{Forest Entomology, Swiss Federal Research Institute WSL, Birmensdorf, Switzerland} <!--  Zürcherstrasse 111, CH-8903 -->
-\footnotetext[4]{Institute of Plant Sciences, University of Bern, Bern, Switzerland}
+\footnotetext[3]{Botanic Garden and Botanical Museum Berlin, Freie Universität Berlin, Berlin, Germany}
+\footnotetext[4]{Forest Entomology, Swiss Federal Research Institute WSL, Birmensdorf, Switzerland} <!--  Zürcherstrasse 111, CH-8903 -->
+\footnotetext[5]{Institute of Plant Sciences, University of Bern, Bern, Switzerland}
+\footnotetext[8]{German Centre for Integrative Biodiversity Research (iDiv) Halle‐Jena‐Leipzig, Leipzig, Germany \& Leipzig University, Institute of Biology, Leipzig, Germany}
 \footnotetext[6]{Department of Mathematics and Computer Science, Friedrich-Schiller-Universität Jena, Jena, Germany}
 \footnotetext[7]{Department of Ecology and Ecosystem Management, Technische Universität München, Freising, Germany}
+\footnotetext[9]{Ecological Networks, Department of Biology, Technische Universität Darmstadt, Darmstadt, Germany}
 
 \newpage
 
@@ -60,7 +64,7 @@ To comply with the FAIR principles of scientific data management and aim at find
 
 - **State terms of use!** To enable re-use, the metadata must contain the name of the author or owner of the data, the suggested citation for the data, as well as the license model or terms of use of the data. Recommended are copyright wavers and licenses that permit re-use without seeking authorization from the rights holder, such as Creative Commons (CC) licenses, which also can warrant attribution and citation (CC by) [@kissling18]. Ideally, these statements are provided by the data-hoster in a machine-readable way, by using standardised fields of metadata or hyperlink references. 
 
-- **Use independent file formats!** For reasons of long-term accessibility, data should not be uploaded in proprietary spreadsheet formats (like '.xlsx') but rather in comma- or tab-separated text files  ('.csv' or '.tsv') that are compatible with all computing platforms and internationalisation settings by applying a unified character encoding (e.g. UTF-8 or ASCII). For internationalisation, use points as decimal delimiters and set date-formats to ISO 8601, i.e. "YYYY-MM-DD". 
+- **Use independent file formats!** For reasons of long-term accessibility, data should not be uploaded in proprietary spreadsheet formats but rather in software-independent file formats (like .xlsx or .odt), or comma- or tab-separated text files ('.csv' or '.tsv') that are compatible with all computing platforms and internationalisation settings by applying a unified character encoding (e.g. UTF-8 or ASCII). For internationalisation, use points as decimal delimiters and set date-formats to ISO 8601, i.e. "YYYY-MM-DD". 
 
 - **Use standard terms!** Draw column or field names from the ETS vocabulary wherever possible. If co-variates or any ancillary data are not covered by the vocabulary, apply terms of the Darwin Core Standard (DwC).  
 
@@ -68,7 +72,7 @@ To comply with the FAIR principles of scientific data management and aim at find
 
 - **Provide definitions!** Metadata must reference the data standards, taxonomic concepts and trait ontologies applied in the dataset as well as any user-defined terms and trait concepts. To provide own trait-concepts, use the terms provided within the ETS section "Terms for traitlists". 
 
-- **Publish raw data!** When publishing trait-data, priority is on containing measurement values while minimizing the risk of purporting errors through data conversion or aggregation. Thus, data should be published as they have been recorded, i.e. in original units and raw values, along with standardised values that match a unified and compatible scheme of a data standard. This is true for the core terms, i.e. the trait value (the quality) and observation entity, but also for any co-variates reported along with it. 
+- **Publish raw data!** When publishing trait-data, priority is on containing measurement values while minimizing the risk of purporting errors through data conversion or aggregation. Thus, data should be published as they have been recorded, i.e. in original units and raw values, along with standardised values that match a unified and compatible scheme of a data standard. This is true for the core terms, i.e. the trait value and the item of observation and its taxon assignment, but also for any co-variates reported along with it. 
 
 - **Keep original values!** For the core terms, data providers should complement user-defined entries (such as project specific taxon abbreviations) with standardised values by applying the '\*Std'-terms. For co-variates, the extensions of the vocabulary provide column names for standardised values only, e.g. elevation above sea-level. These should adhere to accepted standards wherever possible. If any conversion was applied to obtain these data, users should keep the original values in user-defined columns, e.g. by appending '\*Orig' to the column name. Also, additional co-variates, e.g. on environmental growth conditions of the specimen, should be provided in user-defined columns. Any user-defined columns must be adequately defined in the accompanying meta-information. 
 
@@ -155,7 +159,7 @@ Those data are common in investigations of evolutionary trade-offs and trait cor
 This format is the most intuitive for recording own empirical measurements and therefore is common for measured quantitative data but rarely found for reported qualitative facts obtained from the literature.
 
 A more effective method that allows for high flexibility and easier data merging is the storage of traitdata in long-table formats [@wickham14; @parr16]. 
-This data format corresponds to the Entity-Quality Model: each row contains a single measurement or fact of a specific trait, referenced to a single specimen  (i.e., one occurrence)  which is assigned to a specific taxon  (see Table B2). 
+This data format corresponds has a row-based structure: each row contains a single measurement or fact of a specific trait, referenced to a single specimen  (or one occurrence of an individual organism at a particular space and time) which is assigned to a specific taxon  (see Table B2). 
 Identifiers can provide structure and link measurements that are correlated by assigning a unique ID for each single individual. 
 Also, multivariate trait measurements can be recorded in this format by linking multiple rows via a unique measurement identifier. 
 Long-table datasets purport multiple advantages for data handling (e.g. filtering, sub-setting and aggregating data), visualization (e.g. plot measured values by factor variable or taxon) and statistical modelling (e.g. ANOVA for testing difference of trait value by sex) [@wickham14]. 
@@ -166,7 +170,34 @@ However, a disadvantage of the long-table data structure is the mixing of units 
 \newpage
 
 ```{r,  echo = FALSE, warning = FALSE, message=FALSE}
+library(XML)
+library(RCurl)
+library(getPass)
 
+read.service <- function(datasetid, 
+                         user = NULL, pswd = NULL, 
+                         dec=".", 
+                         na.strings="NA", 
+                         fill=FALSE, sep="\t", 
+                         quote=if(identical(sep, "\n")) "" else "'\"",
+                         fileEncoding = "UTF-8")
+{
+  
+  if(is.null(user)) user <- readline("user name: ") 
+  if(is.null(pswd)) pswd <- getPass::getPass("password: ", noblank = FALSE)
+  
+  
+  opts = curlOptions(encoding="CE_UTF8" ,ssl.verifypeer = FALSE, httpheader=c(Accept = "text/plain"))
+  params = c("datasetId"=datasetid, "username"=user, "password"=pswd)
+  data <- postForm(uri="https://www.bexis.uni-jena.de/WebServices/DataService.asmx/DownloadData", .params=params, .opts=opts, style="post")  
+  x <- xmlTreeParse(data, asText = T, trim=FALSE)
+  txt <- xmlValue(xmlRoot(x)[[1]])
+  txt <-gsub("#","?", txt)
+  f <- textConnection(toString(txt))   
+  d <- utils::read.table(file=f, sep=sep, header=T, dec=dec, na.strings=na.strings, fill=fill, quote=quote, fileEncoding = fileEncoding)
+  close(f)
+  d
+}
 # 21228 life history traits of moths
 
 # 21247 morphological traits of moths
@@ -193,16 +224,17 @@ attr(moths, 'thesaurus') <-  traitdataform:::as.thesaurus(
 
 attr(moths, 'taxa') <- "species"
 attr(moths, 'keep') <-  c(locationID = "plot")
-attr(moths, 'individuals') <- "label"
+attr(moths, 'occurrences') <- "label"
 attr(moths, 'units') <- c(weight = "mg", wing_length = "mm", wing_width = "mm", wing_area = "mm2", wing_loading = "mg mm-2")
 
 
+select_rows <- 1:12
 
 caption <- "Example 2 before standardisation. Data are stored in observation wide-table format, i.e. one row contains a single specimen with multiple trait measurements (in columns). Units and specific information on measurements must be reported in the metadata of the dataset. Data originate from Mangels et al. (unpublished)."
 select_cols <- c("label","species","plot","weight","wing_length","wing_width","wing_area","wing_loading")
 
-kable(moths[1:45,select_cols], longtable=TRUE, escape = TRUE, row.names = FALSE,
-      booktabs = T, caption = caption) %>%
+kable(rbind(moths[select_rows, select_cols]), longtable=TRUE, escape = TRUE, row.names = FALSE,
+      booktabs = T, caption = caption, digits = c(NA,NA,NA,3, 2, 2,4,4)) %>%
 kable_styling(latex_options = c("scale_down", "repeat_header", "striped"), font_size = 5)
 
 
@@ -215,12 +247,14 @@ kable_styling(latex_options = c("scale_down", "repeat_header", "striped"), font_
 
 mothsStd <- standardize(moths)
 mothsStd <- mothsStd[order(as.numeric(substr(mothsStd$occurrenceID,2,10))),]
+names(mothsStd)[c(1,2,6,7)] <- c("verbatimScientificName", "verbatimTraitName", "scientificName", "traitName")     
 
 caption <- "Example 2 after standardisation into measurement long-table format. Each row contains a single measurement linked to an observation of an individual specimen, i.e. an occurrence, via identifiers."
-select_cols <- c("scientificName","traitName","traitValue","traitUnit","traitID","scientificNameStd","taxonID","occurrenceID", "measurementID", "locationID")
+select_cols <- c("scientificName","traitName","traitValue","traitUnit","traitID","verbatimTraitName","taxonID","occurrenceID", "measurementID", "locationID")
+select_rows <- which(mothsStd$traitName %in% c("body_weight", "wing_area", "wing_length") )
 
-kable(mothsStd[1:28,select_cols], longtable=TRUE, escape = TRUE, row.names = FALSE,
-      booktabs = T, caption = caption) %>%
+kable(mothsStd[select_rows[1:28],select_cols], longtable=TRUE, escape = TRUE, row.names = FALSE,
+      booktabs = T, caption = caption, digits = c(4)) %>%
 kable_styling(latex_options = c("scale_down", "repeat_header", "striped"), font_size = 5)
 
 ```
