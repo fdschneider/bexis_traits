@@ -17,6 +17,9 @@
   labelsep=bar
 }
 
+\usepackage[doublespacing]{setspace}
+\usepackage[hang,flushmargin,ragged]{footmisc}
+
 \usepackage[table]{xcolor}
 \usepackage{longtable}
 \usepackage[bitstream-charter]{mathdesign}
@@ -119,8 +122,6 @@ $endif$
 \setlength{\parindent}{12pt}
 \setlength{\parskip}{0pt plus 2pt minus 1pt}
 \setlength{\emergencystretch}{1em}  % prevent overfull lines
-
-\usepackage[doublespacing]{setspace}
 
 \setcounter{secnumdepth}{0}
 
