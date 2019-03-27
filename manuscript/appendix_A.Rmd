@@ -3,16 +3,16 @@ title: "List of published trait datasets and databases"
 subtitle: "Towards an Ecological Trait-data Standard - Supplementary Material A"
 author:
 - name: Florian D. Schneider \footnotemark[1]  \footnotemark[2]
-- name: David Fichtmüller \footnotemark[5]
-- name: Martin M. Gossner \footnotemark[8]
-- name: Anton Güntsch \footnotemark[5]
-- name: Malte Jochum \footnotemark[4]
+- name: David Fichtmüller \footnotemark[3]
+- name: Martin M. Gossner \footnotemark[4]
+- name: Anton Güntsch \footnotemark[3]
+- name: Malte Jochum \footnotemark[5] \hspace{1mm} \footnotemark[8]
 - name: Birgitta König-Ries\footnotemark[6]
 - name: Gaëtane Le Provost \footnotemark[2]
 - name: Pete Manning \footnotemark[2]
 - name: Andreas Ostrowski \footnotemark[6]
-- name: Caterina Penone \footnotemark[4]
-- name: Nadja K. Simons \footnotemark[7]
+- name: Caterina Penone \footnotemark[5]
+- name: Nadja K. Simons \footnotemark[7] \hspace{1mm} \footnotemark[9]
 fontsize: 12pt
 geometry: margin=0.5in
 documentclass: scrartcl
@@ -36,14 +36,17 @@ output:
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
-\footnotetext[1]{Corresponding author: florian.dirk.schneider@gmail.com}
+\footnotetext[1]{Corresponding author: florian.dirk.schneider@gmail.com,  \newline
+c/o Birgitta König-Ries, Department of Mathematics and Computer Science, Friedrich-Schiller-Universität Jena, Ernst-Abbe-Platz 2, 07743 Jena, Germany
+}
 \footnotetext[2]{Senckenberg Biodiversity and Climate Research Centre (BiK-F) Frankfurt am Main, Germany}
-\footnotetext[5]{Botanic Garden and Botanical Museum Berlin, Freie Universität Berlin, Berlin, Germany}
-\footnotetext[8]{Forest Entomology, Swiss Federal Research Institute WSL, Birmensdorf, Switzerland} <!--  Zürcherstrasse 111, CH-8903 -->
-\footnotetext[4]{Institute of Plant Sciences, University of Bern, Bern, Switzerland}
+\footnotetext[3]{Botanic Garden and Botanical Museum Berlin, Freie Universität Berlin, Berlin, Germany}
+\footnotetext[4]{Forest Entomology, Swiss Federal Research Institute WSL, Birmensdorf, Switzerland} <!--  Zürcherstrasse 111, CH-8903 -->
+\footnotetext[5]{Institute of Plant Sciences, University of Bern, Bern, Switzerland}
+\footnotetext[8]{German Centre for Integrative Biodiversity Research (iDiv) Halle‐Jena‐Leipzig, Leipzig, Germany \& Leipzig University, Institute of Biology, Leipzig, Germany}
 \footnotetext[6]{Department of Mathematics and Computer Science, Friedrich-Schiller-Universität Jena, Jena, Germany}
 \footnotetext[7]{Department of Ecology and Ecosystem Management, Technische Universität München, Freising, Germany}
-
+\footnotetext[9]{Ecological Networks, Department of Biology, Technische Universität Darmstadt, Darmstadt, Germany}
 \newpage
 
 \renewcommand{\thetable}{A\arabic{table}}
@@ -82,7 +85,7 @@ kable(dt[order,], longtable=TRUE, escape = FALSE, row.names = FALSE,
 kable_styling(latex_options = c("scale_down", "repeat_header"), font_size = 6) %>%
   column_spec(1, width = "15em") %>%
   column_spec(2, width = "5em") %>%
-  column_spec(3, width = "16em") %>%
+  column_spec(3, width = "18em") %>%
   column_spec(4, width = "6em") %>%
   column_spec(5, width = "6em") %>%
   column_spec(6, width = "5em") %>%
