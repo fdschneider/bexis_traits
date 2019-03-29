@@ -331,7 +331,7 @@ kable_styling(latex_options = c("scale_down", "repeat_header", "striped"), font_
 
 
 
-# Example 4 - apply ETS extensions in relational databse
+# Example 4 - apply ETS extensions in relational database
 
 Two-dimensional spreadsheets are however limited in the number and complexity of co-variates they can contain. As such, for datasets containing multi-layered information on observations, traits, taxa and environmental context, the use of relational database structures may be indicated.
 Relational databases help to avoid content duplication, as the core table will only maintain identifiers, that relate to secondary data tables containing multiple specifications on the identifier level. 
